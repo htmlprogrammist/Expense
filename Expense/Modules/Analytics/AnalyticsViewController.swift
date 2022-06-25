@@ -19,7 +19,7 @@ class AnalyticsViewController: UIViewController {
 // MARK: - Helper methods
 private extension AnalyticsViewController {
     func setupView() {
-        view.backgroundColor = Colors.backgroundColor
+        view.backgroundColor = .systemBackground
         title = Texts.Analytics.title
     }
 }

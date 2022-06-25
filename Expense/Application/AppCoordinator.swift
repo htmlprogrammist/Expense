@@ -36,17 +36,17 @@ final class AppCoordinator {
 
 private extension AppCoordinator {
     func setupHome() {
-        let homeViewController = createNavController(viewController: HomeViewController(), itemName: Texts.Home.title, itemImage: Icons.home)
+        let homeViewController = createNavController(viewController: HomeViewController(), itemName: Texts.Home.title, itemImage: Images.home)
         viewControllers.append(homeViewController)
     }
     
     func setupHistory() {
-        let historyViewController = createNavController(viewController: HistoryViewController(), itemName: Texts.History.title, itemImage: Icons.history)
+        let historyViewController = createNavController(viewController: HistoryViewController(), itemName: Texts.History.title, itemImage: Images.history)
         viewControllers.append(historyViewController)
     }
     
     func setupAnalytics() {
-        let analyticsViewController = createNavController(viewController: AnalyticsViewController(), itemName: Texts.Analytics.title, itemImage: Icons.analytics)
+        let analyticsViewController = createNavController(viewController: AnalyticsViewController(), itemName: Texts.Analytics.title, itemImage: Images.analytics)
         viewControllers.append(analyticsViewController)
     }
     

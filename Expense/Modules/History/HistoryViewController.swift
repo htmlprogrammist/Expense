@@ -19,7 +19,7 @@ class HistoryViewController: UIViewController {
 // MARK: - Helper methods
 private extension HistoryViewController {
     func setupView() {
-        view.backgroundColor = Colors.backgroundColor
+        view.backgroundColor = .systemBackground
         title = Texts.History.title
     }
 }

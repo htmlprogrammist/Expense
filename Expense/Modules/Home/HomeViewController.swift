@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
 // MARK: - Helper methods
 private extension HomeViewController {
     func setupView() {
-        view.backgroundColor = Colors.backgroundColor
+        view.backgroundColor = .systemBackground
         title = Texts.Home.title
     }
 }

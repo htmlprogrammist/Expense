@@ -8,7 +8,7 @@
 
 // General
 
-// Tab bar items
+// Tab bar items & titles
 home = "Расходы";
 history = "История";
 analytics = "Аналитика";
@@ -18,5 +18,9 @@ analytics = "Аналитика";
 // Home
 
 // History
+day = "Д";
+week = "Н";
+month = "М";
+year = "Г";
 
 // Analytics

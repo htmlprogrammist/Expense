@@ -24,7 +24,7 @@
 		F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BA2866EFAD0002208F /* AppCoordinator.swift */; };
 		F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BC2866F0AA0002208F /* HistoryViewController.swift */; };
 		F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */; };
-		F042C2C12866F10C0002208F /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2C02866F10C0002208F /* Icons.swift */; };
+		F042C2C12866F10C0002208F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2C02866F10C0002208F /* Images.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
@@ -34,7 +34,6 @@
 		F0A9D64F27D2AD4100E63CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */; };
 		F0A9D65227D2AD4200E63CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */; };
 		F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E89CC0285F11A800036575 /* HomeViewController.swift */; };
-		F0F70A202864820000656370 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A1F2864820000656370 /* Colors.swift */; };
 		F0F70A222864825700656370 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A212864825700656370 /* Texts.swift */; };
 		F0F70A252864826D00656370 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A242864826D00656370 /* String.swift */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,7 @@
 		F042C2BA2866EFAD0002208F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F042C2BC2866F0AA0002208F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
-		F042C2C02866F10C0002208F /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		F042C2C02866F10C0002208F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259A22854F9A900C23B1B /* ExpenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +91,6 @@
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0E89CC0285F11A800036575 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F0F70A1F2864820000656370 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F0F70A212864825700656370 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		F0F70A242864826D00656370 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F0FA87172854FA05005964EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -214,9 +212,8 @@
 		F0A9D65927D2AD7D00E63CD2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F0F70A1F2864820000656370 /* Colors.swift */,
 				F0F70A212864825700656370 /* Texts.swift */,
-				F042C2C02866F10C0002208F /* Icons.swift */,
+				F042C2C02866F10C0002208F /* Images.swift */,
 				F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */,
 				F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */,
 				F042C2B82866EDAA0002208F /* Localizable.strings */,
@@ -492,7 +489,7 @@
 				F00C9EBC286714DC00A93285 /* Category+CoreDataProperties.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
-				F042C2C12866F10C0002208F /* Icons.swift in Sources */,
+				F042C2C12866F10C0002208F /* Images.swift in Sources */,
 				F00C9EB8286714DC00A93285 /* Budget+CoreDataProperties.swift in Sources */,
 				F00C9EC0286714DC00A93285 /* Transaction+CoreDataProperties.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
@@ -503,7 +500,6 @@
 				F00C9EBE286714DC00A93285 /* Goal+CoreDataClass.swift in Sources */,
 				F00C9EBF286714DC00A93285 /* Wallet+CoreDataProperties.swift in Sources */,
 				F00C9EBB286714DC00A93285 /* Wallet+CoreDataClass.swift in Sources */,
-				F0F70A202864820000656370 /* Colors.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F0F70A222864825700656370 /* Texts.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
@@ -677,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -733,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -758,7 +754,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -787,7 +783,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

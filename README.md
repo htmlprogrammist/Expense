@@ -16,8 +16,8 @@ In this project I demonstrated the knowledge of:
 - The app looks correct for iPhone SE (1st gen.) and above
 - Minimum version: iOS 13
 - The application must be written using an architectural pattern MVVM with RxSwift
-- To cover the code with tests, you must use [RxTest](https://github.com/Reactive/RxSwift/blog/main/Documentation/UnitTests.md). Tests should cover at least half of the written code
-- For permanent data storage, you need to use only Core Data
+- To cover the code with tests, you must use RxTest. Tests should cover at least half of the written code
+- For permanent data storage, you need to use Core Data
 - No storyboard or Xib is allowed
 - The project should use the [SwiftLint](https://github.com/realm/SwiftLint) linter
 
@@ -42,5 +42,5 @@ In this project I demonstrated the knowledge of:
 - Приложение должно быть написано с использованием архитектурного шаблона MVVM с RxSwift
 - Для постоянного хранения данных необходимо использовать Core Data
 - Использование Storyboard/Xib запрещено
-- Для покрытия кода тестами необходимо использовать [RxTest](https://github.com/ReactiveX/RxSwift/blob/main/Documentation/UnitTests.md). Тесты должны покрывать не менее половины написанного кода
+- Для покрытия кода тестами необходимо использовать RxTest. Тесты должны покрывать не менее половины написанного кода
 - В проекте должен быть использован линтер [SwiftLint](https://github.com/realm/SwiftLint)

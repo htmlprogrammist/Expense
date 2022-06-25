@@ -18,5 +18,9 @@ analytics = "Analytics";
 // Home
 
 // History
+day = "D";
+week = "W";
+month = "M";
+year = "Y";
 
 // Analytics

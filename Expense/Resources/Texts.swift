@@ -12,6 +12,10 @@ enum Texts {
     
     enum History {
         static let title = "history".localized
+        static let day = "day".localized
+        static let week = "week".localized
+        static let month = "month".localized
+        static let year = "year".localized
     }
     
     enum Analytics {
