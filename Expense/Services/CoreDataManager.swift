@@ -8,15 +8,40 @@
 import CoreData
 import UIKit
 
-protocol CoreDataManagerProtocol {
-    
+protocol WalletsCoreDataManagerProtocol {
+    func fetchWallets()
+    func createWallet()
+    func deleteWallet()
 }
 
-final class CoreDataManager: CoreDataManagerProtocol {
-    let managedObjectContext: NSManagedObjectContext
-    let persistentContainer: NSPersistentContainer
+/// Operations contains everything connected with _Transaction_ and _Category_, because they always go side-by-side
+protocol OperationsCoreDataManagerProtocol {
+    func fetchTransactions()
+    func fetchPlannedTransactions()
+    func fetchCategories()
     
-    init(containerName: String) {
+    func createTransaction()
+    func deleteTransaction()
+}
+
+protocol GoalsCoreDataManagerProtocol {
+    func fetchGoals()
+    func createGoal()
+    func deleteGoal()
+}
+
+protocol BudgetsCoreDataManagerProtocol {
+    func fetchBudgets()
+    func createBudget()
+    func deleteBudget()
+}
+
+final class CoreDataManager {
+    
+    private let managedObjectContext: NSManagedObjectContext
+    private let persistentContainer: NSPersistentContainer
+    
+    public init(containerName: String) {
         persistentContainer = NSPersistentContainer(name: containerName)
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -24,24 +49,87 @@ final class CoreDataManager: CoreDataManagerProtocol {
             }
         })
         managedObjectContext = persistentContainer.newBackgroundContext()
-        /// Subscribe to Notification center so CoreDataManager will save context when app enters background
-        NotificationCenter.default.addObserver(self, selector: #selector(saveContext), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
-    deinit {
-        /// Unsubscribe from notification center when Core Data manager deinits
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+    public func saveContext() {
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+}
+
+// MARK: - Wallets
+extension CoreDataManager: WalletsCoreDataManagerProtocol {
+    func fetchWallets() {
+        
     }
     
-    @objc
-    private func saveContext() {
-//        if managedObjectContext.hasChanges {
-//            do {
-//                try managedObjectContext.save()
-//            } catch {
-//                let nserror = error as NSError
-//                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-//            }
-//        }
+    func createWallet() {
+        
+    }
+    
+    func deleteWallet() {
+        
+    }
+}
+
+// MARK: - Operations
+extension CoreDataManager: OperationsCoreDataManagerProtocol {
+    /// Fetches all past transactions
+    func fetchTransactions() {
+        
+    }
+    
+    /// Fetches transactions that have `date` > `Date.now()`
+    func fetchPlannedTransactions() {
+        
+    }
+    
+    // TODO: Не забыть не делать fetch объекта с именем "Unknown" (достигается через NSPredicate)
+    func fetchCategories() {
+        
+    }
+    
+    func createTransaction() {
+        
+    }
+    
+    func deleteTransaction() {
+        
+    }
+}
+
+// MARK: - Goals
+extension CoreDataManager: GoalsCoreDataManagerProtocol {
+    func fetchGoals() {
+        
+    }
+    
+    func createGoal() {
+        
+    }
+    
+    func deleteGoal() {
+        
+    }
+}
+
+// MARK: - Budgets
+extension CoreDataManager: BudgetsCoreDataManagerProtocol {
+    func fetchBudgets() {
+        
+    }
+    
+    func createBudget() {
+        
+    }
+    
+    func deleteBudget() {
+        
     }
 }

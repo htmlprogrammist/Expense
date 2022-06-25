@@ -18,6 +18,7 @@
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
+		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
 		F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */; };
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
 		F0A9D64F27D2AD4100E63CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A9D64C27D2AD3E00E63CD2 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
@@ -127,6 +129,22 @@
 			path = ExpenseUITests;
 			sourceTree = "<group>";
 		};
+		F0A452D528670F81005B5450 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0A452D628670F91005B5450 /* CoreData */,
+				F0A452D728670FA0005B5450 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0A452D628670F91005B5450 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F0A9D63627D2AD3E00E63CD2 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,7 @@
 			children = (
 				F0A9D65A27D2ADFE00E63CD2 /* Application */,
 				F0E89CBD285F116700036575 /* Modules */,
+				F0A452D528670F81005B5450 /* Models */,
 				F0A9D65E27D2AED800E63CD2 /* Services */,
 				F0F70A232864825E00656370 /* Extensions */,
 				F0A9D65927D2AD7D00E63CD2 /* Resources */,
@@ -441,6 +460,7 @@
 			files = (
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
+				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F042C2C12866F10C0002208F /* Icons.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
