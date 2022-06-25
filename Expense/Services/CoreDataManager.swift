@@ -9,14 +9,14 @@ import CoreData
 import UIKit
 
 protocol WalletsCoreDataManagerProtocol {
-    func fetchWallets()
+    func fetchWallets() -> [Wallet]?
     func createWallet()
     func deleteWallet()
 }
 
 /// Operations contains everything connected with _Transaction_ and _Category_, because they always go side-by-side
 protocol OperationsCoreDataManagerProtocol {
-    func fetchTransactions()
+    func fetchTransactions() -> [Transaction]?
     func fetchPlannedTransactions()
     func fetchCategories()
     
@@ -25,13 +25,13 @@ protocol OperationsCoreDataManagerProtocol {
 }
 
 protocol GoalsCoreDataManagerProtocol {
-    func fetchGoals()
+    func fetchGoals() -> [Goal]?
     func createGoal()
     func deleteGoal()
 }
 
 protocol BudgetsCoreDataManagerProtocol {
-    func fetchBudgets()
+    func fetchBudgets() -> [Budget]?
     func createBudget()
     func deleteBudget()
 }
@@ -65,8 +65,9 @@ final class CoreDataManager {
 
 // MARK: - Wallets
 extension CoreDataManager: WalletsCoreDataManagerProtocol {
-    func fetchWallets() {
-        
+    func fetchWallets() -> [Wallet]? {
+        let wallets = try? managedObjectContext.fetch(Wallet.fetchRequest())
+        return wallets
     }
     
     func createWallet() {
@@ -81,8 +82,9 @@ extension CoreDataManager: WalletsCoreDataManagerProtocol {
 // MARK: - Operations
 extension CoreDataManager: OperationsCoreDataManagerProtocol {
     /// Fetches all past transactions
-    func fetchTransactions() {
-        
+    func fetchTransactions() -> [Transaction]? {
+        let transactions = try? managedObjectContext.fetch(Transaction.fetchRequest())
+        return transactions
     }
     
     /// Fetches transactions that have `date` > `Date.now()`
@@ -106,8 +108,9 @@ extension CoreDataManager: OperationsCoreDataManagerProtocol {
 
 // MARK: - Goals
 extension CoreDataManager: GoalsCoreDataManagerProtocol {
-    func fetchGoals() {
-        
+    func fetchGoals() -> [Goal]? {
+        let goals = try? managedObjectContext.fetch(Goal.fetchRequest())
+        return goals
     }
     
     func createGoal() {
@@ -121,8 +124,9 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
 
 // MARK: - Budgets
 extension CoreDataManager: BudgetsCoreDataManagerProtocol {
-    func fetchBudgets() {
-        
+    func fetchBudgets() -> [Budget]? {
+        let budgets = try? managedObjectContext.fetch(Budget.fetchRequest())
+        return budgets
     }
     
     func createBudget() {

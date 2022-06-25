@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4A1E6CB75742E45325C515E3 /* Pods_Expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */; };
+		F00C9EB8286714DC00A93285 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EAE286714DC00A93285 /* Budget+CoreDataProperties.swift */; };
+		F00C9EB9286714DC00A93285 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EAF286714DC00A93285 /* Category+CoreDataClass.swift */; };
+		F00C9EBA286714DC00A93285 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB0286714DC00A93285 /* Goal+CoreDataProperties.swift */; };
+		F00C9EBB286714DC00A93285 /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB1286714DC00A93285 /* Wallet+CoreDataClass.swift */; };
+		F00C9EBC286714DC00A93285 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB2286714DC00A93285 /* Category+CoreDataProperties.swift */; };
+		F00C9EBD286714DC00A93285 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB3286714DC00A93285 /* Transaction+CoreDataClass.swift */; };
+		F00C9EBE286714DC00A93285 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB4286714DC00A93285 /* Goal+CoreDataClass.swift */; };
+		F00C9EBF286714DC00A93285 /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB5286714DC00A93285 /* Wallet+CoreDataProperties.swift */; };
+		F00C9EC0286714DC00A93285 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB6286714DC00A93285 /* Transaction+CoreDataProperties.swift */; };
+		F00C9EC1286714DC00A93285 /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C9EB7286714DC00A93285 /* Budget+CoreDataClass.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
 		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2B62866EDAA0002208F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F042C2B82866EDAA0002208F /* Localizable.strings */; };
@@ -19,16 +29,6 @@
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
 		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
-		F0A452FC2867133D005B5450 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F22867133D005B5450 /* Category+CoreDataClass.swift */; };
-		F0A452FD2867133D005B5450 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F32867133D005B5450 /* Category+CoreDataProperties.swift */; };
-		F0A452FE2867133D005B5450 /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F42867133D005B5450 /* Budget+CoreDataClass.swift */; };
-		F0A452FF2867133D005B5450 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F52867133D005B5450 /* Budget+CoreDataProperties.swift */; };
-		F0A453002867133D005B5450 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F62867133D005B5450 /* Transaction+CoreDataClass.swift */; };
-		F0A453012867133D005B5450 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F72867133D005B5450 /* Transaction+CoreDataProperties.swift */; };
-		F0A453022867133D005B5450 /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F82867133D005B5450 /* Wallet+CoreDataClass.swift */; };
-		F0A453032867133D005B5450 /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452F92867133D005B5450 /* Wallet+CoreDataProperties.swift */; };
-		F0A453042867133D005B5450 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452FA2867133D005B5450 /* Goal+CoreDataClass.swift */; };
-		F0A453052867133D005B5450 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452FB2867133D005B5450 /* Goal+CoreDataProperties.swift */; };
 		F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */; };
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
 		F0A9D64F27D2AD4100E63CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */; };
@@ -60,6 +60,16 @@
 		3383092DE6613391D227F52E /* Pods-Expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.release.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.release.xcconfig"; sourceTree = "<group>"; };
 		35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.debug.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.debug.xcconfig"; sourceTree = "<group>"; };
+		F00C9EAE286714DC00A93285 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F00C9EAF286714DC00A93285 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F00C9EB0286714DC00A93285 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F00C9EB1286714DC00A93285 /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F00C9EB2286714DC00A93285 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F00C9EB3286714DC00A93285 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F00C9EB4286714DC00A93285 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F00C9EB5286714DC00A93285 /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F00C9EB6286714DC00A93285 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F00C9EB7286714DC00A93285 /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -75,16 +85,6 @@
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		F0A452F22867133D005B5450 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F32867133D005B5450 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F42867133D005B5450 /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F52867133D005B5450 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F62867133D005B5450 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F72867133D005B5450 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F82867133D005B5450 /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452F92867133D005B5450 /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452FA2867133D005B5450 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F0A452FB2867133D005B5450 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A9D64C27D2AD3E00E63CD2 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
@@ -161,16 +161,16 @@
 		F0A452F128671324005B5450 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F0A452F22867133D005B5450 /* Category+CoreDataClass.swift */,
-				F0A452F32867133D005B5450 /* Category+CoreDataProperties.swift */,
-				F0A452F42867133D005B5450 /* Budget+CoreDataClass.swift */,
-				F0A452F52867133D005B5450 /* Budget+CoreDataProperties.swift */,
-				F0A452F62867133D005B5450 /* Transaction+CoreDataClass.swift */,
-				F0A452F72867133D005B5450 /* Transaction+CoreDataProperties.swift */,
-				F0A452F82867133D005B5450 /* Wallet+CoreDataClass.swift */,
-				F0A452F92867133D005B5450 /* Wallet+CoreDataProperties.swift */,
-				F0A452FA2867133D005B5450 /* Goal+CoreDataClass.swift */,
-				F0A452FB2867133D005B5450 /* Goal+CoreDataProperties.swift */,
+				F00C9EB7286714DC00A93285 /* Budget+CoreDataClass.swift */,
+				F00C9EAE286714DC00A93285 /* Budget+CoreDataProperties.swift */,
+				F00C9EAF286714DC00A93285 /* Category+CoreDataClass.swift */,
+				F00C9EB2286714DC00A93285 /* Category+CoreDataProperties.swift */,
+				F00C9EB4286714DC00A93285 /* Goal+CoreDataClass.swift */,
+				F00C9EB0286714DC00A93285 /* Goal+CoreDataProperties.swift */,
+				F00C9EB3286714DC00A93285 /* Transaction+CoreDataClass.swift */,
+				F00C9EB6286714DC00A93285 /* Transaction+CoreDataProperties.swift */,
+				F00C9EB1286714DC00A93285 /* Wallet+CoreDataClass.swift */,
+				F00C9EB5286714DC00A93285 /* Wallet+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -489,27 +489,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
+				F00C9EBC286714DC00A93285 /* Category+CoreDataProperties.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
-				F0A453012867133D005B5450 /* Transaction+CoreDataProperties.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F042C2C12866F10C0002208F /* Icons.swift in Sources */,
-				F0A453052867133D005B5450 /* Goal+CoreDataProperties.swift in Sources */,
-				F0A453002867133D005B5450 /* Transaction+CoreDataClass.swift in Sources */,
-				F0A453022867133D005B5450 /* Wallet+CoreDataClass.swift in Sources */,
-				F0A452FE2867133D005B5450 /* Budget+CoreDataClass.swift in Sources */,
+				F00C9EB8286714DC00A93285 /* Budget+CoreDataProperties.swift in Sources */,
+				F00C9EC0286714DC00A93285 /* Transaction+CoreDataProperties.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
+				F00C9EC1286714DC00A93285 /* Budget+CoreDataClass.swift in Sources */,
+				F00C9EBA286714DC00A93285 /* Goal+CoreDataProperties.swift in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
-				F0A452FF2867133D005B5450 /* Budget+CoreDataProperties.swift in Sources */,
-				F0A453032867133D005B5450 /* Wallet+CoreDataProperties.swift in Sources */,
+				F00C9EBD286714DC00A93285 /* Transaction+CoreDataClass.swift in Sources */,
+				F00C9EBE286714DC00A93285 /* Goal+CoreDataClass.swift in Sources */,
+				F00C9EBF286714DC00A93285 /* Wallet+CoreDataProperties.swift in Sources */,
+				F00C9EBB286714DC00A93285 /* Wallet+CoreDataClass.swift in Sources */,
 				F0F70A202864820000656370 /* Colors.swift in Sources */,
-				F0A452FD2867133D005B5450 /* Category+CoreDataProperties.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F0F70A222864825700656370 /* Texts.swift in Sources */,
-				F0A452FC2867133D005B5450 /* Category+CoreDataClass.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
-				F0A453042867133D005B5450 /* Goal+CoreDataClass.swift in Sources */,
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
+				F00C9EB9286714DC00A93285 /* Category+CoreDataClass.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
