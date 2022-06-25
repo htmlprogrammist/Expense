@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Expense
+
+  Created by Егор Бадмаев on 25.06.2022.
+  
+*/
+
+// General
+
+// Tab bar items & titles
+home = "Expense";
+history = "History";
+analytics = "Analytics";
+
+// Onboarding
+
+// Home
+
+// History
+
+// Analytics
