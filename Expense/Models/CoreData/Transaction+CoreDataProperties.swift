@@ -22,6 +22,6 @@ extension Transaction {
     @NSManaged public var repeatEvery: NSDecimalNumber?
     @NSManaged public var isExpense: Bool
     @NSManaged public var wallet: Wallet
-    @NSManaged public var category: Category
+    @NSManaged public var category: Category?
 
 }

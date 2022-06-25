@@ -11,13 +11,13 @@ enum Images {
     static let info = UIImage(named: "info")
     
     // Tab bar items
-    static let home = UIImage(named: "creditcard.fill")
-    static let history = UIImage(named: "clock.fill")
-    static let analytics = UIImage(named: "chart.bar.fill")
+    static let home = UIImage(named: "creditcard")
+    static let history = UIImage(named: "clock")
+    static let analytics = UIImage(named: "chart.bar")
     
     // Home
     static let settings = UIImage(named: "gear")
-    static let add = UIImage(named: "plus.circle.fill")
+    static let add = UIImage(named: "plus")
     static let calendar = UIImage(named: "calendar")
     
     // History & Analytics

@@ -9,30 +9,34 @@ import CoreData
 
 protocol WalletsCoreDataManagerProtocol {
     func fetchWallets() -> [Wallet]?
-    func createWallet()
-    func deleteWallet()
+    func createWallet(with data: BaseInfo)
+    func deleteWallet(_ wallet: Wallet)
 }
 
-/// Operations contains everything connected with _Transaction_ and _Category_, because they always go side-by-side
-protocol OperationsCoreDataManagerProtocol {
+protocol TransactionsCoreDataManagerProtocol {
     func fetchTransactions() -> [Transaction]?
-    func fetchPlannedTransactions()
-    func fetchCategories()
+    func fetchPlannedTransactions() -> [Transaction]?
     
-    func createTransaction()
-    func deleteTransaction()
+    func createTransaction(with data: TransactionInfo)
+    func deleteTransaction(_ transaction: Transaction)
+}
+
+protocol CategoriesCoreDataManagerProtocol {
+    func fetchCategories() -> [Category]?
+    func createCategory(with data: BaseInfo)
+    func deleteCategory(_ category: Category)
 }
 
 protocol GoalsCoreDataManagerProtocol {
     func fetchGoals() -> [Goal]?
-    func createGoal()
-    func deleteGoal()
+    func createGoal(with data: GoalInfo)
+    func deleteGoal(_ goal: Goal)
 }
 
 protocol BudgetsCoreDataManagerProtocol {
     func fetchBudgets() -> [Budget]?
-    func createBudget()
-    func deleteBudget()
+    func createBudget(with data: BudgetInfo)
+    func deleteBudget(_ budget: Budget)
 }
 
 final class CoreDataManager {
@@ -69,39 +73,76 @@ extension CoreDataManager: WalletsCoreDataManagerProtocol {
         return wallets
     }
     
-    func createWallet() {
-        
+    func createWallet(with data: BaseInfo) {
+        let wallet = Wallet(context: managedObjectContext)
+        wallet.emoji = data.emoji
+        wallet.name = data.name
+        saveContext()
     }
     
-    func deleteWallet() {
-        
+    func deleteWallet(_ wallet: Wallet) {
+        managedObjectContext.delete(wallet)
+        saveContext()
     }
 }
 
-// MARK: - Operations
-extension CoreDataManager: OperationsCoreDataManagerProtocol {
+// MARK: - Transactions
+extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     /// Fetches all past transactions
     func fetchTransactions() -> [Transaction]? {
-        let transactions = try? managedObjectContext.fetch(Transaction.fetchRequest())
+        let fetchRequest = Transaction.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "date < %@", Date() as CVarArg)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let transactions = try? managedObjectContext.fetch(fetchRequest)
         return transactions
     }
     
     /// Fetches transactions that have `date` > `Date.now()`
-    func fetchPlannedTransactions() {
-        
+    func fetchPlannedTransactions() -> [Transaction]? {
+        let fetchRequest = Transaction.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "date > %@", Date() as CVarArg)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let transactions = try? managedObjectContext.fetch(fetchRequest)
+        return transactions
     }
     
-    // TODO: Не забыть не делать fetch объекта с именем "Unknown" (достигается через NSPredicate)
-    func fetchCategories() {
-        
+    func createTransaction(with data: TransactionInfo) {
+        let transaction = Transaction(context: managedObjectContext)
+        transaction.date = Date()
+        transaction.wallet = data.wallet
+        transaction.sum = Int64(data.sum)
+        transaction.isExpense = data.isExpense
+        transaction.category = data.category
+        transaction.repeatEvery = data.repeatEvery?.rawValue as? NSDecimalNumber
+        transaction.notes = data.notes
+        saveContext()
     }
     
-    func createTransaction() {
-        
+    func deleteTransaction(_ transaction: Transaction) {
+        managedObjectContext.delete(transaction)
+        saveContext()
+    }
+}
+
+// MARK: - Categories
+extension CoreDataManager: CategoriesCoreDataManagerProtocol {
+    func fetchCategories() -> [Category]? {
+        let categories = try? managedObjectContext.fetch(Category.fetchRequest())
+        return categories
     }
     
-    func deleteTransaction() {
-        
+    func createCategory(with data: BaseInfo) {
+        let category = Category(context: managedObjectContext)
+        category.emoji = data.emoji
+        category.name = data.name
+        saveContext()
+    }
+    
+    func deleteCategory(_ category: Category) {
+        managedObjectContext.delete(category)
+        saveContext()
     }
 }
 
@@ -112,12 +153,13 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
         return goals
     }
     
-    func createGoal() {
+    func createGoal(with data: GoalInfo) {
         
     }
     
-    func deleteGoal() {
-        
+    func deleteGoal(_ goal: Goal) {
+        managedObjectContext.delete(goal)
+        saveContext()
     }
 }
 
@@ -128,11 +170,12 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
         return budgets
     }
     
-    func createBudget() {
+    func createBudget(with data: BudgetInfo) {
         
     }
     
-    func deleteBudget() {
-        
+    func deleteBudget(_ budget: Budget) {
+        managedObjectContext.delete(budget)
+        saveContext()
     }
 }
