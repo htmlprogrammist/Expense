@@ -9,14 +9,13 @@ import UIKit
 
 final class AppCoordinator {
     /// Service is used for using Core Data in the project
-    public let coreDataManager = CoreDataManager(containerName: "Expense")
-    /// View controllers to set in the tab bar controller
-    public var viewControllers = [UIViewController]()
-    
+    private let coreDataManager = CoreDataManager(containerName: "Expense")
     /// `UIWindow` of the application, provided from the SceneDelegate
     private let window: UIWindow
     /// Root view controller of the application
     private let tabBarController = UITabBarController()
+    /// View controllers to set in the tab bar controller
+    private var viewControllers = [UIViewController]()
     
     init(window: UIWindow) {
         self.window = window

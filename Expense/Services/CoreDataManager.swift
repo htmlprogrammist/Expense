@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 protocol CoreDataManagerProtocol {
     
@@ -23,16 +24,24 @@ final class CoreDataManager: CoreDataManagerProtocol {
             }
         })
         managedObjectContext = persistentContainer.newBackgroundContext()
+        /// Subscribe to Notification center so CoreDataManager will save context when app enters background
+        NotificationCenter.default.addObserver(self, selector: #selector(saveContext), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
-    func saveContext() {
-        if managedObjectContext.hasChanges {
-            do {
-                try managedObjectContext.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
+    deinit {
+        /// Unsubscribe from notification center when Core Data manager deinits
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+    
+    @objc
+    private func saveContext() {
+//        if managedObjectContext.hasChanges {
+//            do {
+//                try managedObjectContext.save()
+//            } catch {
+//                let nserror = error as NSError
+//                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+//            }
+//        }
     }
 }
