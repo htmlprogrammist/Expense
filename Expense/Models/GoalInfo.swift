@@ -5,6 +5,12 @@
 //  Created by Егор Бадмаев on 25.06.2022.
 //
 
+import Foundation
+
 struct GoalInfo {
-    
+    let name: String
+    let emoji: String
+    let aim: Int64
+    let dateDeadline: Date?
+    var current: Int64 = 0
 }

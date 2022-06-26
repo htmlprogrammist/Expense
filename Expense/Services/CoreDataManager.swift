@@ -110,12 +110,12 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     
     func createTransaction(with data: TransactionInfo) {
         let transaction = Transaction(context: managedObjectContext)
-        transaction.date = Date()
+        transaction.date = Date() // now
         transaction.wallet = data.wallet
         transaction.sum = Int64(data.sum)
         transaction.isExpense = data.isExpense
         transaction.category = data.category
-        transaction.repeatEvery = data.repeatEvery?.rawValue as? NSDecimalNumber
+        transaction.repeatEvery = Int64(data.repeatEvery?.rawValue ?? 0)
         transaction.notes = data.notes
         saveContext()
     }
@@ -154,7 +154,14 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
     }
     
     func createGoal(with data: GoalInfo) {
-        
+        let goal = Goal(context: managedObjectContext)
+        goal.name = data.name
+        goal.emoji = data.emoji
+        goal.current = data.current
+        goal.aim = data.aim
+        goal.dateCreated = Date()
+        goal.dateDeadline = data.dateDeadline
+        saveContext()
     }
     
     func deleteGoal(_ goal: Goal) {
@@ -171,7 +178,12 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
     }
     
     func createBudget(with data: BudgetInfo) {
-        
+        let budget = Budget(context: managedObjectContext)
+        budget.date = Date()
+        budget.sum = data.sum
+        budget.category = data.category
+        budget.period = Int64(data.period.rawValue)
+        saveContext()
     }
     
     func deleteBudget(_ budget: Budget) {

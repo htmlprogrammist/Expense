@@ -140,6 +140,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F0409B63286845D2006F2AFE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F0F70A212864825700656370 /* Texts.swift */,
+				F042C2B82866EDAA0002208F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		F0409B64286845DF006F2AFE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F042C2C02866F10C0002208F /* Images.swift */,
+				F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F09259A12854F9A900C23B1B /* ExpenseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,12 +245,10 @@
 		F0A9D65927D2AD7D00E63CD2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F0F70A212864825700656370 /* Texts.swift */,
-				F042C2C02866F10C0002208F /* Images.swift */,
-				F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */,
-				F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */,
-				F042C2B82866EDAA0002208F /* Localizable.strings */,
+				F0409B64286845DF006F2AFE /* Images */,
+				F0409B63286845D2006F2AFE /* Localization */,
 				F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */,
+				F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */,
 				F0A9D65327D2AD4200E63CD2 /* Info.plist */,
 			);
 			path = Resources;

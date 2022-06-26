@@ -17,9 +17,9 @@ extension Goal {
     }
 
     @NSManaged public var name: String
+    @NSManaged public var emoji: String
     @NSManaged public var current: Int64
     @NSManaged public var aim: Int64
-    @NSManaged public var emoji: String
     @NSManaged public var dateCreated: Date
     @NSManaged public var dateDeadline: Date?
 

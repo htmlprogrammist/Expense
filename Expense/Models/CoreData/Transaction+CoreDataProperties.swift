@@ -19,7 +19,7 @@ extension Transaction {
     @NSManaged public var sum: Int64
     @NSManaged public var date: Date
     @NSManaged public var notes: String?
-    @NSManaged public var repeatEvery: NSDecimalNumber?
+    @NSManaged public var repeatEvery: Int64?
     @NSManaged public var isExpense: Bool
     @NSManaged public var wallet: Wallet
     @NSManaged public var category: Category?

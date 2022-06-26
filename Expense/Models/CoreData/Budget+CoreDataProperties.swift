@@ -17,7 +17,7 @@ extension Budget {
     }
 
     @NSManaged public var sum: Int64
-    @NSManaged public var period: NSDecimalNumber
+    @NSManaged public var period: Int64
     @NSManaged public var date: Date
     @NSManaged public var category: Category
 

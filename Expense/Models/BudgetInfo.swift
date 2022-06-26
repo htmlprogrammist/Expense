@@ -6,5 +6,7 @@
 //
 
 struct BudgetInfo {
-    
+    let sum: Int64
+    let period: Period
+    let category: Category
 }
