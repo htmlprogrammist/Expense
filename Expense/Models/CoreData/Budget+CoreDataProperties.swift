@@ -16,9 +16,13 @@ extension Budget {
         return NSFetchRequest<Budget>(entityName: "Budget")
     }
 
-    @NSManaged public var sum: Int64
-    @NSManaged public var period: Int64
     @NSManaged public var date: Date
+    @NSManaged public var period: Period
+    @NSManaged public var sum: Int64
     @NSManaged public var category: Category
+
+}
+
+extension Budget : Identifiable {
 
 }

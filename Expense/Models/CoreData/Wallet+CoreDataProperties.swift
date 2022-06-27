@@ -38,3 +38,7 @@ extension Wallet {
     @NSManaged public func removeFromTransactions(_ values: NSSet)
 
 }
+
+extension Wallet : Identifiable {
+
+}

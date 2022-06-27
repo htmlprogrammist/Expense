@@ -15,6 +15,8 @@ protocol WalletsCoreDataManagerProtocol {
 
 protocol TransactionsCoreDataManagerProtocol {
     func fetchTransactions() -> [Transaction]?
+    func fetchTransactions(by category: Category) -> [Transaction]?
+//    func fetchTransactions(by goal: Goal) -> [Transaction]?
     func fetchPlannedTransactions() -> [Transaction]?
     
     func createTransaction(with data: TransactionInfo)
@@ -98,6 +100,24 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         return transactions
     }
     
+    func fetchTransactions(by category: Category) -> [Transaction]? {
+        let fetchRequest = Transaction.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "category = %@", category)
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let transactions = try? managedObjectContext.fetch(fetchRequest)
+        return transactions
+    }
+    // можно попробовать через goal.transactions достучаться до транзакций, и не нужно делать фетч каждый раз (слишком дорого) (и потом просто сортировать их отдельно уже)
+//    func fetchTransactions(by goal: Goal) -> [Transaction]? {
+//        let fetchRequest = Transaction.fetchRequest()
+//        fetchRequest.predicate = NSPredicate(format: "goal = %@", goal)
+//        let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: false)
+//        fetchRequest.sortDescriptors = [sortDescriptor]
+//        let transactions = try? managedObjectContext.fetch(fetchRequest)
+//        return transactions
+//    }
+    
     /// Fetches transactions that have `date` > `Date.now()`
     func fetchPlannedTransactions() -> [Transaction]? {
         let fetchRequest = Transaction.fetchRequest()
@@ -115,7 +135,7 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         transaction.sum = Int64(data.sum)
         transaction.isExpense = data.isExpense
         transaction.category = data.category
-        transaction.repeatEvery = Int64(data.repeatEvery?.rawValue ?? 0)
+        transaction.repeatEvery = data.repeatEvery
         transaction.notes = data.notes
         saveContext()
     }
@@ -182,7 +202,7 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
         budget.date = Date()
         budget.sum = data.sum
         budget.category = data.category
-        budget.period = Int64(data.period.rawValue)
+        budget.period = data.period
         saveContext()
     }
     

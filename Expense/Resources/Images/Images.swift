@@ -8,20 +8,27 @@
 import UIKit
 
 enum Images {
-    static let info = UIImage(named: "info")
+    static let info = Image("info.circle.fill")
     
     // Tab bar items
-    static let home = UIImage(named: "creditcard")
-    static let history = UIImage(named: "clock")
-    static let analytics = UIImage(named: "chart.bar")
+    static let home = Image("creditcard.fill")
+    static let history = Image("clock.fill")
+    static let analytics = Image("chart.bar.fill")
     
     // Home
-    static let settings = UIImage(named: "gear")
-    static let add = UIImage(named: "plus")
-    static let calendar = UIImage(named: "calendar")
+    static let settings = Image("gear")
+    static let add = Image("plus.circle.fill")
+    static let calendar = Image("calendar.circle.fill")
     
     // History & Analytics
-    static let filter = UIImage(named: "filter")
-    static let forward = UIImage(named: "forward")
-    static let backward = UIImage(named: "backward")
+    static let filter = Image("line.3.horizontal.decrease.circle")
+    static let forward = Image("chevron.forward.circle.fill")
+    static let backward = Image("chevron.backward.circle.fill")
 }
+
+extension Images {
+    static func Image(_ name: String, renderingMode: UIImage.RenderingMode = .alwaysTemplate) -> UIImage {
+        return UIImage(named: name)!.withRenderingMode(renderingMode)
+    }
+}
+

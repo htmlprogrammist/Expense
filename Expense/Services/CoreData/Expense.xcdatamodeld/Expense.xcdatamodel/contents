@@ -2,13 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Budget" representedClassName=".Budget" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="period" attributeType="Integer 64" minValueString="0" maxValueString="3" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="period" attributeType="Integer 32" minValueString="0" maxValueString="3" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sum" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="budget" inverseEntity="Category"/>
     </entity>
     <entity name="Category" representedClassName=".Category" syncable="YES">
-        <attribute name="emoji" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="emoji" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
         <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="category" inverseEntity="Budget"/>
         <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction"/>
     </entity>
@@ -19,14 +19,16 @@
         <attribute name="dateDeadline" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="emoji" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="goal" inverseEntity="Transaction"/>
     </entity>
     <entity name="Transaction" representedClassName=".Transaction" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isExpense" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="repeatEvery" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="repeatEvery" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sum" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transaction" inverseEntity="Category"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="transactions" inverseEntity="Goal"/>
         <relationship name="wallet" maxCount="1" deletionRule="Nullify" destinationEntity="Wallet" inverseName="transactions" inverseEntity="Wallet"/>
     </entity>
     <entity name="Wallet" representedClassName=".Wallet" syncable="YES">
@@ -37,8 +39,8 @@
     <elements>
         <element name="Budget" positionX="0" positionY="45" width="128" height="89"/>
         <element name="Category" positionX="-36" positionY="9" width="128" height="89"/>
-        <element name="Goal" positionX="-18" positionY="27" width="128" height="119"/>
-        <element name="Transaction" positionX="-54" positionY="-9" width="128" height="134"/>
+        <element name="Goal" positionX="-18" positionY="27" width="128" height="134"/>
+        <element name="Transaction" positionX="-54" positionY="-9" width="128" height="149"/>
         <element name="Wallet" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

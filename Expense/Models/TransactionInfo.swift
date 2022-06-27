@@ -12,6 +12,6 @@ struct TransactionInfo {
     let sum: Int
     let isExpense: Bool
     let category: Category?
-    let repeatEvery: Period?
     let notes: String?
+    var repeatEvery: Period = .none
 }

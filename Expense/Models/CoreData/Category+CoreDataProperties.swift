@@ -18,7 +18,11 @@ extension Category {
 
     @NSManaged public var name: String
     @NSManaged public var emoji: String
-    @NSManaged public var transaction: Transaction?
     @NSManaged public var budget: Budget?
+    @NSManaged public var transaction: Transaction?
+
+}
+
+extension Category : Identifiable {
 
 }
