@@ -9,7 +9,7 @@ import CoreData
 
 protocol WalletsCoreDataManagerProtocol {
     func fetchWallets() -> [Wallet]?
-    func createWallet(with data: BaseInfo)
+    func createWallet(with data: WalletInfo)
     func deleteWallet(_ wallet: Wallet)
 }
 
@@ -25,7 +25,7 @@ protocol TransactionsCoreDataManagerProtocol {
 
 protocol CategoriesCoreDataManagerProtocol {
     func fetchCategories() -> [Category]?
-    func createCategory(with data: BaseInfo)
+    func createCategory(with data: CategoryInfo)
     func deleteCategory(_ category: Category)
 }
 
@@ -75,7 +75,7 @@ extension CoreDataManager: WalletsCoreDataManagerProtocol {
         return wallets
     }
     
-    func createWallet(with data: BaseInfo) {
+    func createWallet(with data: WalletInfo) {
         let wallet = Wallet(context: managedObjectContext)
         wallet.emoji = data.emoji
         wallet.name = data.name
@@ -83,6 +83,18 @@ extension CoreDataManager: WalletsCoreDataManagerProtocol {
     }
     
     func deleteWallet(_ wallet: Wallet) {
+        if let goals = wallet.goals?.allObjects as? [Goal] {
+            goals.forEach { managedObjectContext.delete($0) }
+        }
+        if let budgets = wallet.budgets?.allObjects as? [Budget] {
+            budgets.forEach { managedObjectContext.delete($0) }
+        }
+        if let transactions = wallet.transactions?.allObjects as? [Transaction] {
+            transactions.forEach { managedObjectContext.delete($0) }
+        }
+        if let categories = wallet.categories?.allObjects as? [Category] {
+            categories.forEach { managedObjectContext.delete($0) }
+        }
         managedObjectContext.delete(wallet)
         saveContext()
     }
@@ -91,6 +103,7 @@ extension CoreDataManager: WalletsCoreDataManagerProtocol {
 // MARK: - Transactions
 extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     /// Fetches all past transactions
+    /// - Returns: Transactions that took place before the current time
     func fetchTransactions() -> [Transaction]? {
         let fetchRequest = Transaction.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "date < %@", Date() as CVarArg)
@@ -100,6 +113,9 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         return transactions
     }
     
+    /// Fetches transactions by provided category
+    /// - Parameter category: The category by which transactions will be extracted
+    /// - Returns: Transactions by provided category
     func fetchTransactions(by category: Category) -> [Transaction]? {
         let fetchRequest = Transaction.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "category = %@", category)
@@ -118,7 +134,8 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
 //        return transactions
 //    }
     
-    /// Fetches transactions that have `date` > `Date.now()`
+    /// Fetches all transactions that have a date later than the current one
+    /// - Returns: Transactions that will take place after the current time
     func fetchPlannedTransactions() -> [Transaction]? {
         let fetchRequest = Transaction.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "date > %@", Date() as CVarArg)
@@ -128,15 +145,19 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         return transactions
     }
     
+    /// Creates transaction with provided data
+    /// - Parameter data: Model with data to create transaction
     func createTransaction(with data: TransactionInfo) {
         let transaction = Transaction(context: managedObjectContext)
         transaction.date = Date() // now
         transaction.wallet = data.wallet
         transaction.sum = Int64(data.sum)
         transaction.isExpense = data.isExpense
+        /// The next two properties are optionals, but one of them must be provided
         transaction.category = data.category
-        transaction.repeatEvery = data.repeatEvery
-        transaction.notes = data.notes
+        transaction.goal = data.goal
+        transaction.repeatEvery = data.repeatEvery // `none` by default
+        transaction.notes = data.notes // optional
         saveContext()
     }
     
@@ -153,14 +174,18 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
         return categories
     }
     
-    func createCategory(with data: BaseInfo) {
+    func createCategory(with data: CategoryInfo) {
         let category = Category(context: managedObjectContext)
+        category.wallet = data.wallet
         category.emoji = data.emoji
         category.name = data.name
         saveContext()
     }
     
     func deleteCategory(_ category: Category) {
+        if let budget = category.budget {
+            managedObjectContext.delete(budget)
+        }
         managedObjectContext.delete(category)
         saveContext()
     }
@@ -175,6 +200,7 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
     
     func createGoal(with data: GoalInfo) {
         let goal = Goal(context: managedObjectContext)
+        goal.wallet = data.wallet
         goal.name = data.name
         goal.emoji = data.emoji
         goal.current = data.current
@@ -185,6 +211,9 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
     }
     
     func deleteGoal(_ goal: Goal) {
+        if let transactions = goal.transactions?.allObjects as? [Transaction] {
+            transactions.forEach { managedObjectContext.delete($0) }
+        }
         managedObjectContext.delete(goal)
         saveContext()
     }
@@ -199,6 +228,7 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
     
     func createBudget(with data: BudgetInfo) {
         let budget = Budget(context: managedObjectContext)
+        budget.wallet = data.wallet
         budget.date = Date()
         budget.sum = data.sum
         budget.category = data.category

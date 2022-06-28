@@ -16,10 +16,11 @@ extension Goal {
         return NSFetchRequest<Goal>(entityName: "Goal")
     }
 
+    @NSManaged public var wallet: Wallet
     @NSManaged public var name: String
     @NSManaged public var emoji: String
-    @NSManaged public var current: Int64
     @NSManaged public var aim: Int64
+    @NSManaged public var current: Int64
     @NSManaged public var dateCreated: Date
     @NSManaged public var dateDeadline: Date?
     @NSManaged public var transactions: NSSet?

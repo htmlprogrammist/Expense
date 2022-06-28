@@ -16,12 +16,12 @@ extension Transaction {
         return NSFetchRequest<Transaction>(entityName: "Transaction")
     }
 
+    @NSManaged public var wallet: Wallet
+    @NSManaged public var sum: Int64
     @NSManaged public var date: Date
     @NSManaged public var isExpense: Bool
-    @NSManaged public var notes: String?
     @NSManaged public var repeatEvery: Period
-    @NSManaged public var sum: Int64
-    @NSManaged public var wallet: Wallet
+    @NSManaged public var notes: String?
     @NSManaged public var category: Category?
     @NSManaged public var goal: Goal?
 

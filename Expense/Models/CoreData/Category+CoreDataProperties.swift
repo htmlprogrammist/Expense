@@ -16,10 +16,11 @@ extension Category {
         return NSFetchRequest<Category>(entityName: "Category")
     }
 
+    @NSManaged public var wallet: Wallet
     @NSManaged public var name: String
     @NSManaged public var emoji: String
     @NSManaged public var budget: Budget?
-    @NSManaged public var transaction: Transaction?
+    @NSManaged public var transactions: NSSet?
 
 }
 

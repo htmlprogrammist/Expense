@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4A1E6CB75742E45325C515E3 /* Pods_Expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */; };
-		F0428D2D2869E553004B503F /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D232869E553004B503F /* Budget+CoreDataClass.swift */; };
-		F0428D2E2869E553004B503F /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D242869E553004B503F /* Budget+CoreDataProperties.swift */; };
-		F0428D2F2869E553004B503F /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D252869E553004B503F /* Category+CoreDataClass.swift */; };
-		F0428D302869E553004B503F /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D262869E553004B503F /* Category+CoreDataProperties.swift */; };
-		F0428D312869E553004B503F /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D272869E553004B503F /* Transaction+CoreDataClass.swift */; };
-		F0428D322869E553004B503F /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D282869E553004B503F /* Transaction+CoreDataProperties.swift */; };
-		F0428D332869E553004B503F /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D292869E553004B503F /* Wallet+CoreDataClass.swift */; };
-		F0428D342869E553004B503F /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D2A2869E553004B503F /* Wallet+CoreDataProperties.swift */; };
-		F0428D352869E553004B503F /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D2B2869E553004B503F /* Goal+CoreDataClass.swift */; };
-		F0428D362869E553004B503F /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0428D2C2869E553004B503F /* Goal+CoreDataProperties.swift */; };
+		F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */; };
+		F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */; };
+		F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */; };
+		F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55C286B7DC40073C74D /* Goal+CoreDataProperties.swift */; };
+		F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55D286B7DC40073C74D /* Transaction+CoreDataClass.swift */; };
+		F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */; };
+		F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */; };
+		F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */; };
+		F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */; };
+		F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */; };
+		F007E572286B80010073C74D /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E571286B80000073C74D /* CategoryInfo.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
 		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2B62866EDAA0002208F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F042C2B82866EDAA0002208F /* Localizable.strings */; };
@@ -27,7 +28,7 @@
 		F042C2C12866F10C0002208F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2C02866F10C0002208F /* Images.swift */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
-		F057E9EA28678B180083C003 /* BaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* BaseInfo.swift */; };
+		F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* WalletInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
@@ -64,16 +65,17 @@
 		3383092DE6613391D227F52E /* Pods-Expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.release.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.release.xcconfig"; sourceTree = "<group>"; };
 		35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.debug.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.debug.xcconfig"; sourceTree = "<group>"; };
-		F0428D232869E553004B503F /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0428D242869E553004B503F /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0428D252869E553004B503F /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0428D262869E553004B503F /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0428D272869E553004B503F /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0428D282869E553004B503F /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0428D292869E553004B503F /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0428D2A2869E553004B503F /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0428D2B2869E553004B503F /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F0428D2C2869E553004B503F /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E55C286B7DC40073C74D /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E55D286B7DC40073C74D /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E571286B80000073C74D /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 		F042C2C02866F10C0002208F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F057E9E5286788D40083C003 /* TransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
 		F057E9E72867890E0083C003 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
-		F057E9E928678B180083C003 /* BaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfo.swift; sourceTree = "<group>"; };
+		F057E9E928678B180083C003 /* WalletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F007E558286B7DAD0073C74D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */,
+				F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */,
+				F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */,
+				F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */,
+				F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */,
+				F007E55C286B7DC40073C74D /* Goal+CoreDataProperties.swift */,
+				F007E55D286B7DC40073C74D /* Transaction+CoreDataClass.swift */,
+				F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */,
+				F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */,
+				F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F02BC8F7286A5F15009D2415 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,23 +204,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		F0428D222869E535004B503F /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				F0428D232869E553004B503F /* Budget+CoreDataClass.swift */,
-				F0428D242869E553004B503F /* Budget+CoreDataProperties.swift */,
-				F0428D252869E553004B503F /* Category+CoreDataClass.swift */,
-				F0428D262869E553004B503F /* Category+CoreDataProperties.swift */,
-				F0428D272869E553004B503F /* Transaction+CoreDataClass.swift */,
-				F0428D282869E553004B503F /* Transaction+CoreDataProperties.swift */,
-				F0428D292869E553004B503F /* Wallet+CoreDataClass.swift */,
-				F0428D2A2869E553004B503F /* Wallet+CoreDataProperties.swift */,
-				F0428D2B2869E553004B503F /* Goal+CoreDataClass.swift */,
-				F0428D2C2869E553004B503F /* Goal+CoreDataProperties.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		F09259A12854F9A900C23B1B /* ExpenseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,10 +224,11 @@
 		F0A452D528670F81005B5450 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F0428D222869E535004B503F /* CoreData */,
+				F007E558286B7DAD0073C74D /* CoreData */,
 				F057E9E72867890E0083C003 /* Period.swift */,
+				F057E9E928678B180083C003 /* WalletInfo.swift */,
+				F007E571286B80000073C74D /* CategoryInfo.swift */,
 				F057E9E5286788D40083C003 /* TransactionInfo.swift */,
-				F057E9E928678B180083C003 /* BaseInfo.swift */,
 				F057E9EB28678B4E0083C003 /* GoalInfo.swift */,
 				F057E9ED28678B680083C003 /* BudgetInfo.swift */,
 			);
@@ -532,31 +535,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
+				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
-				F0428D312869E553004B503F /* Transaction+CoreDataClass.swift in Sources */,
+				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
-				F0428D2D2869E553004B503F /* Budget+CoreDataClass.swift in Sources */,
+				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
+				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
 				F042C2C12866F10C0002208F /* Images.swift in Sources */,
-				F057E9EA28678B180083C003 /* BaseInfo.swift in Sources */,
-				F0428D302869E553004B503F /* Category+CoreDataProperties.swift in Sources */,
+				F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */,
+				F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,
+				F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
-				F0428D362869E553004B503F /* Goal+CoreDataProperties.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
-				F0428D2F2869E553004B503F /* Category+CoreDataClass.swift in Sources */,
+				F007E572286B80010073C74D /* CategoryInfo.swift in Sources */,
+				F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */,
 				F0F70A222864825700656370 /* Texts.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
-				F0428D332869E553004B503F /* Wallet+CoreDataClass.swift in Sources */,
-				F0428D342869E553004B503F /* Wallet+CoreDataProperties.swift in Sources */,
-				F0428D352869E553004B503F /* Goal+CoreDataClass.swift in Sources */,
-				F0428D2E2869E553004B503F /* Budget+CoreDataProperties.swift in Sources */,
+				F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */,
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
-				F0428D322869E553004B503F /* Transaction+CoreDataProperties.swift in Sources */,
+				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
 			);
