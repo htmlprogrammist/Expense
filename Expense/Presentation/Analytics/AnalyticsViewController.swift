@@ -8,10 +8,10 @@
 import UIKit
 
 final class AnalyticsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
     }
 }

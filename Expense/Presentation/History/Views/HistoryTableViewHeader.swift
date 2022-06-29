@@ -13,17 +13,19 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     private lazy var incomeLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     private lazy var expenseLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -46,9 +48,10 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     }
     
     public func configure() {
+        // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
         dateLabel.text = "6-12 июня 2022 г."
-        incomeLabel.text = "Доход: 3674 ₽"
-        expenseLabel.text = "Расход: 2856 ₽"
+        incomeLabel.attributedText = getAttributedStringWithBold("Доход: 3674 ₽", after: ":")
+        expenseLabel.attributedText = getAttributedStringWithBold("Расход: 2856 ₽", after: ":")
     }
     
     private func setupView() {
@@ -65,5 +68,13 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
             labelsStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
             labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
         ])
+    }
+    
+    private func getAttributedStringWithBold(_ text: String, after character: Character) -> NSAttributedString {
+        let labelAttributedText = NSMutableAttributedString(string: text)
+        let index = text.lastIndex(of: character) ?? text.startIndex
+        let length = 8
+        labelAttributedText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14, weight: .medium), range: NSRange(location: (text.distance(from: text.startIndex, to: index)), length: length))
+        return labelAttributedText
     }
 }

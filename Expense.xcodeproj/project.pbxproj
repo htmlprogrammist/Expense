@@ -32,7 +32,7 @@
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
-		F0612D5A286C691C009B641A /* HistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableView.swift */; };
+		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
@@ -93,7 +93,7 @@
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
-		F0612D59286C691C009B641A /* HistoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableView.swift; sourceTree = "<group>"; };
+		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259A22854F9A900C23B1B /* ExpenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +251,7 @@
 			children = (
 				F042C2BC2866F0AA0002208F /* HistoryViewController.swift */,
 				F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */,
-				F0612D59286C691C009B641A /* HistoryTableView.swift */,
+				F0612D59286C691C009B641A /* HistoryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
-				F0612D5A286C691C009B641A /* HistoryTableView.swift in Sources */,
+				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,

@@ -18,3 +18,9 @@ struct TransactionInfo {
     let notes: String?
     var repeatEvery: Period = .none
 }
+
+extension Transaction {
+    var transactionInfo: TransactionInfo {
+        TransactionInfo(wallet: wallet, sum: Int(sum), isExpense: isExpense, category: category, goal: goal, notes: notes, repeatEvery: repeatEvery)
+    }
+}

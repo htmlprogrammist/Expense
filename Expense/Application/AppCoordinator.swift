@@ -29,9 +29,17 @@ final class AppCoordinator {
         setupAnalytics()
         
         tabBarController.setViewControllers(viewControllers, animated: false)
-        tabBarController.tabBar.backgroundColor = .systemBackground
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
+        
+        /// Setup tab bar appearence like in earlier versions of iOS, because in iOS 15 it does not look good
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .systemBackground
+            tabBarController.tabBar.standardAppearance = appearance
+            tabBarController.tabBar.scrollEdgeAppearance = appearance
+        }
     }
 }
 

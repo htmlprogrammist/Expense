@@ -10,3 +10,9 @@ struct CategoryInfo {
     let name: String
     let emoji: String
 }
+
+extension Category {
+    var categoryInfo: CategoryInfo {
+        CategoryInfo(wallet: wallet, name: name, emoji: emoji)
+    }
+}
