@@ -31,6 +31,8 @@
 		F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* WalletInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
+		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
+		F0612D5A286C691C009B641A /* HistoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableView.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
@@ -90,6 +92,8 @@
 		F057E9E928678B180083C003 /* WalletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
+		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
+		F0612D59286C691C009B641A /* HistoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableView.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259A22854F9A900C23B1B /* ExpenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,13 +163,13 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		F02BC8F7286A5F15009D2415 /* Services */ = {
+		F02BC8F7286A5F15009D2415 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				F02BC8F8286A5F46009D2415 /* CoreData */,
 				F02BC8F9286A5F4B009D2415 /* UserDefaults */,
 			);
-			path = Services;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F02BC8F8286A5F46009D2415 /* CoreData */ = {
@@ -204,6 +208,54 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		F0612D50286C6463009B641A /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F0F70A242864826D00656370 /* String.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F0612D51286C6469009B641A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F0612D52286C646F009B641A /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		F0612D53286C648A009B641A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F0612D54286C649A009B641A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F0A452D528670F81005B5450 /* Entities */,
+				F0612D53286C648A009B641A /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F0612D56286C67A9009B641A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F042C2BC2866F0AA0002208F /* HistoryViewController.swift */,
+				F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */,
+				F0612D59286C691C009B641A /* HistoryTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F09259A12854F9A900C23B1B /* ExpenseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +273,7 @@
 			path = ExpenseUITests;
 			sourceTree = "<group>";
 		};
-		F0A452D528670F81005B5450 /* Models */ = {
+		F0A452D528670F81005B5450 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				F007E558286B7DAD0073C74D /* CoreData */,
@@ -232,7 +284,7 @@
 				F057E9EB28678B4E0083C003 /* GoalInfo.swift */,
 				F057E9ED28678B680083C003 /* BudgetInfo.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		F0A9D63627D2AD3E00E63CD2 = {
@@ -262,10 +314,10 @@
 			isa = PBXGroup;
 			children = (
 				F0A9D65A27D2ADFE00E63CD2 /* Application */,
+				F0F70A232864825E00656370 /* Common */,
+				F02BC8F7286A5F15009D2415 /* Data */,
+				F0612D54286C649A009B641A /* Domain */,
 				F0E89CBD285F116700036575 /* Presentation */,
-				F0A452D528670F81005B5450 /* Models */,
-				F02BC8F7286A5F15009D2415 /* Services */,
-				F0F70A232864825E00656370 /* Extensions */,
 				F0A9D65927D2AD7D00E63CD2 /* Resources */,
 			);
 			path = Expense;
@@ -312,7 +364,7 @@
 		F0E89CBE285F117300036575 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				F042C2BC2866F0AA0002208F /* HistoryViewController.swift */,
+				F0612D56286C67A9009B641A /* Views */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -325,12 +377,14 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
-		F0F70A232864825E00656370 /* Extensions */ = {
+		F0F70A232864825E00656370 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F0F70A242864826D00656370 /* String.swift */,
+				F0612D50286C6463009B641A /* Foundation */,
+				F0612D51286C6469009B641A /* UIKit */,
+				F0612D52286C646F009B641A /* Rx */,
 			);
-			path = Extensions;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F6A39DB9D24881DA8336DDC5 /* Pods */ = {
@@ -541,6 +595,8 @@
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
+				F0612D5A286C691C009B641A /* HistoryTableView.swift in Sources */,
+				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,

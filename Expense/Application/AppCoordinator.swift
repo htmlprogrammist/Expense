@@ -29,6 +29,7 @@ final class AppCoordinator {
         setupAnalytics()
         
         tabBarController.setViewControllers(viewControllers, animated: false)
+        tabBarController.tabBar.backgroundColor = .systemBackground
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }
