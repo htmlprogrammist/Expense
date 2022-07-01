@@ -16,9 +16,9 @@ enum Images {
     static let analytics = Image("chart.bar.fill")
     
     // Home
-    static let settings = Image("gear")
+    static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
     static let add = Image("plus.circle.fill")
-    static let calendar = Image("calendar.circle.fill")
+    static let calendar = Image("calendar.circle.fill").withTintColor(.systemRed)
     
     // History & Analytics
     static let filter = Image("line.3.horizontal.decrease.circle")

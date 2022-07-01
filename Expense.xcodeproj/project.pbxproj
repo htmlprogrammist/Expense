@@ -19,6 +19,8 @@
 		F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */; };
 		F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */; };
 		F007E572286B80010073C74D /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E571286B80000073C74D /* CategoryInfo.swift */; };
+		F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354B286F0721001E1BBD /* HomeViewModel.swift */; };
+		F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
 		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2B62866EDAA0002208F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F042C2B82866EDAA0002208F /* Localizable.strings */; };
@@ -31,6 +33,8 @@
 		F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* WalletInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
+		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
+		F06080F7286EE25A00782D99 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F6286EE25A00782D99 /* HistoryViewModel.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
@@ -78,6 +82,8 @@
 		F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E571286B80000073C74D /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
+		F015354B286F0721001E1BBD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 		F057E9E928678B180083C003 /* WalletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
+		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F06080F6286EE25A00782D99 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F70A242864826D00656370 /* String.swift */,
+				F06080F4286EDD3900782D99 /* Date.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 		F0E89CBC285F115700036575 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F015354B286F0721001E1BBD /* HomeViewModel.swift */,
 				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -364,6 +374,7 @@
 		F0E89CBE285F117300036575 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				F06080F6286EE25A00782D99 /* HistoryViewModel.swift */,
 				F0612D56286C67A9009B641A /* Views */,
 			);
 			path = History;
@@ -372,6 +383,7 @@
 		F0E89CBF285F118400036575 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */,
 				F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */,
 			);
 			path = Analytics;
@@ -590,7 +602,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */,
+				F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
+				F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
@@ -604,6 +618,7 @@
 				F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */,
 				F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
+				F06080F7286EE25A00782D99 /* HistoryViewModel.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,
 				F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */,
@@ -616,6 +631,7 @@
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
 				F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */,
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
+				F06080F5286EDD3900782D99 /* Date.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,

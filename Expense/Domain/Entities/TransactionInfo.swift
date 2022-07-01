@@ -11,16 +11,16 @@ struct TransactionInfo {
     let wallet: Wallet
     let sum: Int
     let isExpense: Bool
+    let date: Date
     /// Transactions take place either by category or by goal, that is why the next two properties are optionals
     let category: Category?
     let goal: Goal?
-    
     let notes: String?
     var repeatEvery: Period = .none
 }
 
 extension Transaction {
     var transactionInfo: TransactionInfo {
-        TransactionInfo(wallet: wallet, sum: Int(sum), isExpense: isExpense, category: category, goal: goal, notes: notes, repeatEvery: repeatEvery)
+        TransactionInfo(wallet: wallet, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeatEvery: repeatEvery)
     }
 }

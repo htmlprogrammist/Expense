@@ -13,7 +13,8 @@ final class HistoryTableViewCell: UITableViewCell {
     
     private lazy var emoji: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        label.adjustsFontForContentSizeCategory = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -55,7 +56,9 @@ final class HistoryTableViewCell: UITableViewCell {
     private lazy var notesLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize - 1)
+//        label.font = UIFont.preferredFont(forTextStyle: .footnote)
+//        label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
         return label
     }()
@@ -71,17 +74,18 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     public func configure(isDay: Bool) {
-        emoji.text = "🍕"
-        sumLabel.text = "-540 ₽"
-        timeLabel.text = "19:30"
-        categoryLabel.text = "Кафе"
-        notesLabel.text = "Тусил с друзьями на горе многострочный текст"
+        emoji.text = "🍕" // transaction.category.emoji
+        categoryLabel.text = "Кафе" // transaction.category.name
+        sumLabel.text = "-540 ₽" // "-\(transaction.sum) ₽"
+        timeLabel.text = "19:30" // "\(transaction.date.formatTo(...))"
+        notesLabel.text = "Тусил с друзьями на горе многострочный текст" // transaction.notes
         
         // TODO: Если segmentedIndex (или как там) == 0, то 1. стрелка не появляется и 2. пишется время (чч:мм)
         // пока что получилось не очень, но, я думаю, эта проблема исчезнет, когда будет полноценная загрузка данных
         if !isDay {
             accessoryType = .disclosureIndicator
             timeLabel.isHidden = true
+            notesLabel.isHidden = true
         }
     }
     

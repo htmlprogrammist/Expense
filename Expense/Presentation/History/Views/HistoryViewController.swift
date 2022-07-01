@@ -35,6 +35,20 @@ final class HistoryViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: Date())
+        // дата первой транзакции
+        let lastDayOfTheYear = calendar.date(from: DateComponents(year: currentYear, month: 12, day: 31))
+        // дата последней транзакции
+        var currentDate = calendar.date(from: DateComponents(year: currentYear, month: 1, day: 1))
+        
+        while currentDate! < lastDayOfTheYear! {
+            let startDay = currentDate!.startOfWeek!.formatted()
+            let endDay = currentDate!.endOfWeek!.formatted()
+            print("\(startDay) - \(endDay)")
+            currentDate = calendar.date(byAdding: .weekOfYear, value: 1, to: currentDate!)
+        }
     }
 }
 
@@ -81,7 +95,9 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if segmentedControl.selectedSegmentIndex > 0 {
-            // TODO: Реализовать открытие модуля с деталями
+            // TODO: Реализовать открытие модуля с транзакциями за выбранный период
+        } else {
+            // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
         }
     }
 }

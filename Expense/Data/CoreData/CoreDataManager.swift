@@ -124,15 +124,6 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         let transactions = try? managedObjectContext.fetch(fetchRequest)
         return transactions
     }
-    // можно попробовать через goal.transactions достучаться до транзакций, и не нужно делать фетч каждый раз (слишком дорого) (и потом просто сортировать их отдельно уже)
-//    func fetchTransactions(by goal: Goal) -> [Transaction]? {
-//        let fetchRequest = Transaction.fetchRequest()
-//        fetchRequest.predicate = NSPredicate(format: "goal = %@", goal)
-//        let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: false)
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//        let transactions = try? managedObjectContext.fetch(fetchRequest)
-//        return transactions
-//    }
     
     /// Fetches all transactions that have a date later than the current one
     /// - Returns: Transactions that will take place after the current time
@@ -149,7 +140,7 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     /// - Parameter data: Model with data to create transaction
     func createTransaction(with data: TransactionInfo) {
         let transaction = Transaction(context: managedObjectContext)
-        transaction.date = Date() // now
+        transaction.date = data.date
         transaction.wallet = data.wallet
         transaction.sum = Int64(data.sum)
         transaction.isExpense = data.isExpense
@@ -205,7 +196,7 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
         goal.emoji = data.emoji
         goal.current = data.current
         goal.aim = data.aim
-        goal.dateCreated = Date()
+        goal.dateCreated = data.dateCreated
         goal.dateDeadline = data.dateDeadline
         saveContext()
     }
