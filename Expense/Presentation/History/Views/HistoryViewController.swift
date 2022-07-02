@@ -31,24 +31,12 @@ final class HistoryViewController: UIViewController {
         return tableView
     }()
     
+    private let addTransactionButton = UIButton(title: "Add", backgroundColor: UIColor(named: "AccentColor") ?? .white, shadows: true)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
-        
-        let calendar = Calendar.current
-        let currentYear = calendar.component(.year, from: Date())
-        // дата первой транзакции
-        let lastDayOfTheYear = calendar.date(from: DateComponents(year: currentYear, month: 12, day: 31))
-        // дата последней транзакции
-        var currentDate = calendar.date(from: DateComponents(year: currentYear, month: 1, day: 1))
-        
-        while currentDate! < lastDayOfTheYear! {
-            let startDay = currentDate!.startOfWeek!.formatted()
-            let endDay = currentDate!.endOfWeek!.formatted()
-            print("\(startDay) - \(endDay)")
-            currentDate = calendar.date(byAdding: .weekOfYear, value: 1, to: currentDate!)
-        }
     }
 }
 
@@ -70,7 +58,16 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // чисто по приколу сделал, по факту надо будет из вьюмодели тягать количество транзакций
-        Int.random(in: 1...6)
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            return Int.random(in: 1...2)
+        case 1:
+            return Int.random(in: 1...4)
+        case 2:
+            return Int.random(in: 1...6)
+        default:
+            return Int.random(in: 1...8)
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -107,13 +104,17 @@ private extension HistoryViewController {
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction)),
-            UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
-        ]
+//        navigationItem.rightBarButtonItems = [
+//            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction)),
+//            UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
+//        ]
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
         
         view.addSubview(segmentedControl)
         view.addSubview(tableView)
+        view.addSubview(addTransactionButton)
+        addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
@@ -123,7 +124,12 @@ private extension HistoryViewController {
             tableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -36),
+            addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            addTransactionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
     
@@ -131,8 +137,15 @@ private extension HistoryViewController {
         
     }
     
-    @objc func addTransaction() {
+    @objc func addTransaction(sender: UIButton) {
         
+        
+        /// **Button's animation**, it shrinks a bit and then becomes `identity`
+        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+            sender.transform = CGAffineTransform.identity
+        })
     }
     
     @objc func segmentedControlDidChange() {

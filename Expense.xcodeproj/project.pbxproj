@@ -45,6 +45,7 @@
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
 		F0A9D64F27D2AD4100E63CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */; };
 		F0A9D65227D2AD4200E63CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */; };
+		F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */; };
 		F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E89CC0285F11A800036575 /* HomeViewController.swift */; };
 		F0F70A222864825700656370 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A212864825700656370 /* Texts.swift */; };
 		F0F70A252864826D00656370 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A242864826D00656370 /* String.swift */; };
@@ -114,6 +115,7 @@
 		F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F0E89CC0285F11A800036575 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F0F70A212864825700656370 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		F0F70A242864826D00656370 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		F0612D51286C6469009B641A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F007E572286B80010073C74D /* CategoryInfo.swift in Sources */,
+				F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */,
 				F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */,
 				F0F70A222864825700656370 /* Texts.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,

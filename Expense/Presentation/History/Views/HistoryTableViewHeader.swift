@@ -13,7 +13,7 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

@@ -8,12 +8,6 @@
 import Foundation
 
 extension Date {
-    func formatted() -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter.string(from: self)
-    }
-    
     var startOfWeek: Date? {
         let gregorian = Calendar(identifier: .gregorian)
         guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }

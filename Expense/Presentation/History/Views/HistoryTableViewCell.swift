@@ -13,8 +13,7 @@ final class HistoryTableViewCell: UITableViewCell {
     
     private lazy var emoji: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.adjustsFontForContentSizeCategory = true
+        label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -30,7 +29,7 @@ final class HistoryTableViewCell: UITableViewCell {
     private lazy var timeLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize) // 14
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,15 +49,13 @@ final class HistoryTableViewCell: UITableViewCell {
     private lazy var categoryLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize) // 14
         return label
     }()
     private lazy var notesLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize - 1)
-//        label.font = UIFont.preferredFont(forTextStyle: .footnote)
-//        label.adjustsFontForContentSizeCategory = true
+        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize - 1) // 13
         label.numberOfLines = 0
         return label
     }()
