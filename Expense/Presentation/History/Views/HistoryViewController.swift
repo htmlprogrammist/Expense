@@ -31,7 +31,7 @@ final class HistoryViewController: UIViewController {
         return tableView
     }()
     
-    private let addTransactionButton = UIButton(title: "Add", backgroundColor: UIColor(named: "AccentColor") ?? .white, shadows: true)
+    private let addTransactionButton = UIButton(title: "Add", image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,25 +97,36 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
             // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
         }
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        if translation.y > 0 {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.64, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: { [unowned self] in
+                addTransactionButton.transform = CGAffineTransform.identity
+            })
+        } else {
+            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: { [unowned self] in
+                addTransactionButton.transform = CGAffineTransform(translationX: 1, y: 100)
+            })
+        }
+    }
 }
 
 // MARK: - Helper methods
 private extension HistoryViewController {
     func setupView() {
+        // General
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
-//        navigationItem.rightBarButtonItems = [
-//            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction)),
-//            UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
-//        ]
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
         
+        // Adding and setuping subviews
         view.addSubview(segmentedControl)
         view.addSubview(tableView)
         view.addSubview(addTransactionButton)
         addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
+        // Activating constraints
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             segmentedControl.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
@@ -143,7 +154,7 @@ private extension HistoryViewController {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
     }

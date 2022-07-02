@@ -21,5 +21,10 @@ private extension AnalyticsViewController {
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Analytics.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
+    }
+    
+    @objc func chooseFilter() {
+        
     }
 }
