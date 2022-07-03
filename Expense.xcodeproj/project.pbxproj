@@ -37,6 +37,8 @@
 		F06080F7286EE25A00782D99 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F6286EE25A00782D99 /* HistoryViewModel.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
+		F07C25162870E1800000021E /* SmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C25152870E1800000021E /* SmallCollectionViewCell.swift */; };
+		F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C25192870E3310000021E /* SettingsTableViewCell.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
@@ -103,6 +105,8 @@
 		F06080F6286EE25A00782D99 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F07C25152870E1800000021E /* SmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCollectionViewCell.swift; sourceTree = "<group>"; };
+		F07C25192870E3310000021E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259A22854F9A900C23B1B /* ExpenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +272,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F07C25142870E1500000021E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
+				F07C25152870E1800000021E /* SmallCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F07C25172870E3050000021E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F07C25182870E3170000021E /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F07C25182870E3170000021E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F07C25192870E3310000021E /* SettingsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F09259A12854F9A900C23B1B /* ExpenseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				F015354B286F0721001E1BBD /* HomeViewModel.swift */,
-				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
+				F07C25142870E1500000021E /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -370,6 +399,7 @@
 				F0E89CBC285F115700036575 /* Home */,
 				F0E89CBE285F117300036575 /* History */,
 				F0E89CBF285F118400036575 /* Analytics */,
+				F07C25172870E3050000021E /* Settings */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -612,6 +642,8 @@
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
+				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
+				F07C25162870E1800000021E /* SmallCollectionViewCell.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,

@@ -16,6 +16,12 @@ analytics = "Аналитика";
 // Onboarding
 
 // Home
+add = "Добавить";
+addTransaction = "Добавить операцию";
+scheduledOperations = "Запланированные операции";
+dailyBudget = "Бюджет на день";
+goals = "Цели";
+budgets = "Бюджеты";
 
 // History
 day = "Д";

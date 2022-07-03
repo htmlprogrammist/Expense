@@ -9,6 +9,7 @@ import UIKit
 
 enum Images {
     static let info = Image("info.circle.fill")
+    static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // потом подобрать цвет!
     
     // Tab bar items
     static let home = Image("creditcard.fill")
@@ -18,10 +19,15 @@ enum Images {
     // Home
     static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
     static let add = Image("plus.circle.fill")
-    static let calendar = Image("calendar.circle.fill").withTintColor(.systemRed)
+    static let calendar = Image("calendar").withTintColor(.systemRed)
+    static let dailyBudget = Image("sun.max").withTintColor(.systemYellow) // типо день
+//    static let dailyBudget = Image("banknote.fill").withTintColor(.systemGreen) // типо деньги
+    static let goals = Image("mappin")
+    static let budgets = Image("chart.pie")
     
     // History & Analytics
     static let filter = Image("line.3.horizontal.decrease.circle")
+    static let export = Image("square.and.arrow.up")
     static let forward = Image("chevron.forward.circle.fill")
     static let backward = Image("chevron.backward.circle.fill")
 }

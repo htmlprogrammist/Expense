@@ -16,6 +16,12 @@ analytics = "Analytics";
 // Onboarding
 
 // Home
+add = "Add";
+addTransaction = "Add operation";
+scheduledOperations = "Scheduled operations";
+dailyBudget = "Daily budget";
+goals = "Goals";
+budgets = "Budgets";
 
 // History
 day = "D";

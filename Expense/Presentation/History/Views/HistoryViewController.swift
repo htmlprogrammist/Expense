@@ -118,7 +118,10 @@ private extension HistoryViewController {
         // General
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter))
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter)),
+            UIBarButtonItem(image: Images.export, style: .plain, target: self, action: #selector(exportHistory))
+        ]
         
         // Adding and setuping subviews
         view.addSubview(segmentedControl)
@@ -148,15 +151,19 @@ private extension HistoryViewController {
         
     }
     
+    @objc func exportHistory() {
+        
+    }
+    
     @objc func addTransaction(sender: UIButton) {
-        
-        
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
+        
+        
     }
     
     @objc func segmentedControlDidChange() {

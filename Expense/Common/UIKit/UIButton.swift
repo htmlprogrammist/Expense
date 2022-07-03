@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIButton {
-    // Setup button with rounded borders
+    // Setup system button with provided parameters: title, image, background color, corner radius and shadows
     convenience init(title: String, image: UIImage, backgroundColor: UIColor, cornerRadius: CGFloat, shadows: Bool) {
         self.init(type: .system)
         self.tintColor = .white
@@ -21,7 +21,7 @@ extension UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         if shadows {
-            self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
             self.layer.shadowOffset = CGSize(width: 0, height: 3)
             self.layer.shadowOpacity = 1.0
             self.layer.shadowRadius = 10.0

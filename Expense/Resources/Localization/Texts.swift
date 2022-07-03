@@ -8,6 +8,12 @@
 enum Texts {
     enum Home {
         static let title = "home".localized
+        static let add = "add".localized
+        static let addTransaction = "addTransaction".localized
+        static let scheduledOperations = "scheduledOperations".localized
+        static let dailyBudget = "dailyBudget".localized
+        static let goals = "goals".localized
+        static let budgets = "budgets".localized
     }
     
     enum History {
