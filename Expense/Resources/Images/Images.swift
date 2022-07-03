@@ -19,9 +19,8 @@ enum Images {
     // Home
     static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
     static let add = Image("plus.circle.fill")
-    static let calendar = Image("calendar").withTintColor(.systemRed)
-    static let dailyBudget = Image("sun.max").withTintColor(.systemYellow) // типо день
-//    static let dailyBudget = Image("banknote.fill").withTintColor(.systemGreen) // типо деньги
+    static let calendar = Image("calendar")
+    static let dailyBudget = Image("banknote")
     static let goals = Image("mappin")
     static let budgets = Image("chart.pie")
     

@@ -13,9 +13,9 @@ final class HomeViewController: UIViewController {
     
     private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
         (Images.calendar, Texts.Home.scheduledOperations, .systemRed),
-        (Images.dailyBudget, Texts.Home.dailyBudget, .systemYellow),
+        (Images.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
         (Images.goals, Texts.Home.goals, .systemBlue),
-        (Images.budgets, Texts.Home.budgets, .systemPurple)
+        (Images.budgets, Texts.Home.budgets, .systemIndigo)
     ]
     
     private lazy var mainCollectionView: UICollectionView = {
@@ -32,7 +32,7 @@ final class HomeViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 56
+        tableView.rowHeight = 48
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
