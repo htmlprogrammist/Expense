@@ -18,6 +18,8 @@ analytics = "Аналитика";
 // Home
 add = "Добавить";
 addTransaction = "Добавить операцию";
+
+more = "Ещё";
 scheduledOperations = "Запланированные операции";
 dailyBudget = "Бюджет на день";
 goals = "Цели";
@@ -30,3 +32,7 @@ month = "М";
 year = "Г";
 
 // Analytics
+
+// Settings
+settings = "Настройки";
+managingWallets = "Управление кошельками";

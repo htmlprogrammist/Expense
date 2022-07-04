@@ -18,6 +18,8 @@ analytics = "Analytics";
 // Home
 add = "Add";
 addTransaction = "Add operation";
+
+more = "More";
 scheduledOperations = "Scheduled operations";
 dailyBudget = "Daily budget";
 goals = "Goals";
@@ -30,3 +32,7 @@ month = "M";
 year = "Y";
 
 // Analytics
+
+// Settings
+settings = "Settings";
+managingWallets = "Wallets management";

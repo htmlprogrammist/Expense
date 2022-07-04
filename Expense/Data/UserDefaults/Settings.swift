@@ -6,12 +6,19 @@
 //
 
 fileprivate enum SettingsKey: CodingKey {
+    // Home
     case dailyBudget
     case showGoals
     case showBudgets
+    
+    // History
+    case hideAddTransactionButtonInHistory
 }
 
-struct Settings {
+class Settings {
+    /// Singleton is being used so there will be no need to create instance of this structure and create `UserDefaultsContainer` instance
+    static let shared = Settings()
+    /// User defaults container that allows easily usage of UserDefaults
     private let storage = UserDefaultsContainer(keyedBy: SettingsKey.self)
     
     /// Defines whether to compute and display the daily budget
@@ -28,5 +35,11 @@ struct Settings {
     var showBudgets: Bool? {
         get { storage[.showBudgets] }
         set { storage[.showBudgets] = newValue }
+    }
+    
+    /// Defines whether to hide or not "+ Add transaction" button ih "History" module
+    var hideAddTransactionButtonInHistory: Bool? {
+        get { storage[.hideAddTransactionButtonInHistory] }
+        set { storage[.hideAddTransactionButtonInHistory] = newValue }
     }
 }

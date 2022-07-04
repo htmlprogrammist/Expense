@@ -22,7 +22,7 @@ enum Images {
     static let calendar = Image("calendar")
     static let dailyBudget = Image("banknote")
     static let goals = Image("mappin")
-    static let budgets = Image("chart.pie")
+    static let budgets = Image("chart.pie.fill")
     
     // History & Analytics
     static let filter = Image("line.3.horizontal.decrease.circle")

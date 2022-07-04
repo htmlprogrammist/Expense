@@ -13,7 +13,7 @@ final class SettingsTableViewCell: UITableViewCell {
     
     private lazy var iconContainer: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 14
+        view.layer.cornerRadius = 13
         view.clipsToBounds = true
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -58,14 +58,14 @@ final class SettingsTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             iconContainer.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             iconContainer.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            iconContainer.widthAnchor.constraint(equalToConstant: 28),
-            iconContainer.heightAnchor.constraint(equalToConstant: 28),
+            iconContainer.widthAnchor.constraint(equalToConstant: 27),
+            iconContainer.heightAnchor.constraint(equalToConstant: 27),
             
             iconImageView.centerYAnchor.constraint(equalTo: iconContainer.centerYAnchor),
             iconImageView.centerXAnchor.constraint(equalTo: iconContainer.centerXAnchor),
             
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: 14),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
         ])
     }

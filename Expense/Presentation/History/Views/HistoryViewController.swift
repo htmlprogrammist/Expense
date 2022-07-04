@@ -8,7 +8,7 @@
 import UIKit
 
 final class HistoryViewController: UIViewController {
-    
+    // MARK: - Views
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: [Texts.History.day, Texts.History.week, Texts.History.month, Texts.History.year])
         segmentedControl.selectedSegmentIndex = 0
@@ -31,8 +31,9 @@ final class HistoryViewController: UIViewController {
         return tableView
     }()
     
-    private let addTransactionButton = UIButton(title: "Add", image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
+    private let addTransactionButton = UIButton(title: Texts.Home.addTransaction, image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -127,6 +128,7 @@ private extension HistoryViewController {
         view.addSubview(segmentedControl)
         view.addSubview(tableView)
         view.addSubview(addTransactionButton)
+        addTransactionButton.isHidden = Settings.shared.hideAddTransactionButtonInHistory ?? false
         addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
         // Activating constraints
@@ -140,8 +142,8 @@ private extension HistoryViewController {
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -36),
+            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
             addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             addTransactionButton.heightAnchor.constraint(equalToConstant: 44)
         ])

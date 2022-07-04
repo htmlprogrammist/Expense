@@ -10,6 +10,8 @@ enum Texts {
         static let title = "home".localized
         static let add = "add".localized
         static let addTransaction = "addTransaction".localized
+        
+        static let more = "more".localized
         static let scheduledOperations = "scheduledOperations".localized
         static let dailyBudget = "dailyBudget".localized
         static let goals = "goals".localized
@@ -26,5 +28,10 @@ enum Texts {
     
     enum Analytics {
         static let title = "analytics".localized
+    }
+    
+    enum Settings {
+        static let title = "settings".localized
+        static let managingWallets = "managingWallets".localized
     }
 }

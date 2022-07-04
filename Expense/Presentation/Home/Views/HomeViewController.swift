@@ -8,8 +8,14 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    
-    let settings = Settings()
+    /*
+     Сейчас у меня 2 пути:
+     1. Либо делаю UICollectonView целиком с различными ячейками (что впринципе возможно, если я делаю первые ячейки с графиками)
+     2. Делаю UIScrollView с UICollectionView и UITableView
+     
+     Скорее всего я изберу первый путь, потому что, научившись делать первые 3 ячейки + header с Goals и Budgets,
+     сделать имплементацию UITableView будет как нефиг делать
+     */
     
     private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
         (Images.calendar, Texts.Home.scheduledOperations, .systemRed),
@@ -18,11 +24,25 @@ final class HomeViewController: UIViewController {
         (Images.budgets, Texts.Home.budgets, .systemIndigo)
     ]
     
+    // MARK: - Views
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.delegate = self
+        scrollView.backgroundColor = .red
+        scrollView.autoresizingMask = .flexibleHeight
+        scrollView.bounces = true
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
     private lazy var mainCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
         collectionView.register(SmallCollectionViewCell.self, forCellWithReuseIdentifier: SmallCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -32,14 +52,18 @@ final class HomeViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 48
+        tableView.rowHeight = 46
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+        tableView.sectionHeaderHeight = 46
+        tableView.register(TitleTableViewHeader.self, forHeaderFooterViewReuseIdentifier: TitleTableViewHeader.identifier)
+        tableView.isScrollEnabled = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
-    private let addTransactionButton = UIButton(title: "Add", image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
+    private let addTransactionButton = UIButton(title: Texts.Home.addTransaction, image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,31 +76,50 @@ private extension HomeViewController {
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.settings, style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.settings, style: .plain, target: self, action: #selector(openSettingsModule))
         
-        view.addSubview(mainCollectionView)
-        view.addSubview(moreTableView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(mainCollectionView)
+        scrollView.addSubview(moreTableView)
         view.addSubview(addTransactionButton)
         addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
+        // Setting constraints for view
         NSLayoutConstraint.activate([
-            mainCollectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            mainCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            mainCollectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
+//            mainCollectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+//            mainCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//            mainCollectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+//            mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
+//
+//            moreTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+////            mainCollectionView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
+//            moreTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+//            moreTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            moreTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-//            mainCollectionView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
-            moreTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            moreTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
-            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 36),
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -36),
+            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
             addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             addTransactionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
-    }
         
+        // Setting constraints for scroll view
+        NSLayoutConstraint.activate([
+            mainCollectionView.leadingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.leadingAnchor),
+            mainCollectionView.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
+            mainCollectionView.trailingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.trailingAnchor),
+            mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
+
+            moreTableView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor),
+            mainCollectionView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
+            moreTableView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
+            moreTableView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
+        ])
+    }
+    
     @objc func addTransaction(sender: UIButton) {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
@@ -87,10 +130,20 @@ private extension HomeViewController {
         
         
     }
+    
+    @objc func openSettingsModule() {
+        let settings = UINavigationController(rootViewController: SettingsViewController())
+        settings.modalPresentationStyle = .fullScreen
+        present(settings, animated: true)
+    }
 }
 
 // MARK: - CollectionView
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        3
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0: // general
@@ -118,9 +171,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        var numberOfRows = 1
         var numberOfRows = 4
-        numberOfRows += (settings.showGoals ?? false) ? 1 : 0
-        numberOfRows += (settings.showBudgets ?? false) ? 1 : 0
-        numberOfRows += (settings.dailyBudget ?? false) ? 1 : 0
+        numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
+        numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0
+        numberOfRows += (Settings.shared.dailyBudget ?? false) ? 1 : 0
         return numberOfRows
     }
     
@@ -133,6 +186,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let item = tableViewData[indexPath.row]
         cell.configure(image: item.image, title: item.title, color: item.color)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TitleTableViewHeader.identifier) as? TitleTableViewHeader
+        else {
+            fatalError("Could not create header for moreTableView")
+        }
+        header.configure(with: Texts.Home.more)
+        return header
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
