@@ -41,7 +41,7 @@ enum Texts {
         static let foodAndDrinks = "foodAndDrinks".localized
         static let activities = "activities".localized
         static let travellingAndPlaces = "travellingAndPlaces".localized
-        static let items = "items".localized
+        static let objects = "objects".localized
         static let symbols = "symbols".localized
         static let flags = "flags".localized
     }

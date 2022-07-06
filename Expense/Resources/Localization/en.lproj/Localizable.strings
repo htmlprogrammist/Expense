@@ -43,6 +43,6 @@ animalsAndNature = "ANIMALS & NATURE";
 foodAndDrinks = "FOOD & DRINK";
 activities = "ACTIVITY";
 travellingAndPlaces = "TRAVEL & PLACES";
-items = "OBJECTS";
+objects = "OBJECTS";
 symbols = "SYMBOLS";
 flags = "FLAGS";

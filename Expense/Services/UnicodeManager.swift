@@ -5,8 +5,7 @@
 //  Created by Иван Изюмкин on 07.06.2022.
 //
 
-import Foundation
-import UIKit.UIDevice
+import UIKit
 
 /// The protocol is necessary to hide unnecessary methods with Unicode categories in UnicodeManager
 protocol UnicodeManagerProtocol {
@@ -54,7 +53,7 @@ final class UnicodeManager: UnicodeManagerProtocol {
         case .travelAndPlaces:
             return Texts.EmojiPicker.travellingAndPlaces
         case .objects:
-            return Texts.EmojiPicker.items
+            return Texts.EmojiPicker.objects
         case .symbols:
             return Texts.EmojiPicker.symbols
         case .flags:

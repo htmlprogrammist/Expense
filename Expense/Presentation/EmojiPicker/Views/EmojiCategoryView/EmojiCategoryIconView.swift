@@ -20,34 +20,23 @@ final class EmojiCategoryIconView: UIView {
     private var type: EmojiCategoryType
     /// Current tint color for the icon
     private var currentIconTintColor: UIColor = .systemGray
-    
-    /**
-     Selected tint color for the icon.
-     */
+    /// Selected tint color for the icon
     private var selectedIconTintColor: UIColor
-    
-    /**
-     Current icon state.
-     */
+    /// Current icon state
     private var state: EmojiCategoryIconViewState = .standard
     
-    // MARK: - Initializers
-    
-    init(
-        type: EmojiCategoryType,
-        selectedIconTintColor: UIColor
-    ) {
+    init(type: EmojiCategoryType, selectedIconTintColor: UIColor) {
         self.type = type
         self.selectedIconTintColor = selectedIconTintColor
         super.init(frame: .zero)
-        setupBackground()
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .clear
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Public Methods
     
     /**
      New centered rect based on bounds width to prevent stretching of the icon.
@@ -66,13 +55,6 @@ final class EmojiCategoryIconView: UIView {
             currentIconTintColor = selectedIconTintColor
         }
         setNeedsDisplay()
-    }
-    
-    // MARK: - Private Methods
-    
-    private func setupBackground() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .clear
     }
 }
 

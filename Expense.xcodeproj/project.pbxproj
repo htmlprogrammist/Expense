@@ -262,20 +262,11 @@
 		F035F59728757E4A0041AF84 /* EmojiPicker */ = {
 			isa = PBXGroup;
 			children = (
-				F035F59828757E4A0041AF84 /* ViewModels */,
-				F035F5AA28757E4A0041AF84 /* Models */,
-				F035F5AD28757E4A0041AF84 /* Bindings */,
+				F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */,
 				F035F5AF28757E4A0041AF84 /* Views */,
+				F035F5AA28757E4A0041AF84 /* Models */,
 			);
 			path = EmojiPicker;
-			sourceTree = "<group>";
-		};
-		F035F59828757E4A0041AF84 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F035F59B28757E4A0041AF84 /* Unicode */ = {
@@ -300,48 +291,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F035F5AD28757E4A0041AF84 /* Bindings */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5AE28757E4A0041AF84 /* ObservableObj.swift */,
-			);
-			path = Bindings;
-			sourceTree = "<group>";
-		};
 		F035F5AF28757E4A0041AF84 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */,
-				F035F5B128757E4A0041AF84 /* Views */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F035F5B128757E4A0041AF84 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5B228757E4A0041AF84 /* Cells */,
-				F035F5B628757E4A0041AF84 /* EmojiCategoryView */,
 				F035F5B928757E4A0041AF84 /* EmojiPickerView.swift */,
+				F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */,
+				F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */,
+				F035F5B628757E4A0041AF84 /* EmojiCategoryView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F035F5B228757E4A0041AF84 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */,
-				F035F5B428757E4A0041AF84 /* Header */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		F035F5B428757E4A0041AF84 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */,
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 		F035F5B628757E4A0041AF84 /* EmojiCategoryView */ = {
@@ -385,6 +344,7 @@
 				F0F70A242864826D00656370 /* String.swift */,
 				F06080F4286EDD3900782D99 /* Date.swift */,
 				F035F5A528757E4A0041AF84 /* Array.swift */,
+				F035F5AE28757E4A0041AF84 /* ObservableObj.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";

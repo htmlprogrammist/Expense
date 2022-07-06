@@ -208,11 +208,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-// MARK: - EmojiPickerDelegate
-extension HomeViewController: EmojiPickerDelegate {
-    func didGetEmoji(emoji: String) {
-        print(emoji)
-//        emojiButton.setTitle(emoji, for: .normal)
-    }
-}
