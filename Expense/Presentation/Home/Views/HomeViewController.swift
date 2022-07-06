@@ -17,13 +17,25 @@ final class HomeViewController: UIViewController {
     ]
     
     // MARK: - Views
+    private let settingsIcon: UIButton = {
+        let button = UIButton()
+//        button.setImage(Images.settings, for: .normal)
+        button.setTitle("🤔", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 22)
+        button.backgroundColor = .systemGray5
+        button.layer.cornerRadius = 18
+        button.translatesAutoresizingMaskIntoConstraints = false
+        //        button.addTarget(self, action: #selector(presentUserTableViewController), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.delegate = self
         scrollView.backgroundColor = .gray
         scrollView.autoresizingMask = .flexibleHeight
         scrollView.bounces = true
-//        scrollView.showsVerticalScrollIndicator = false
+        //        scrollView.showsVerticalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
@@ -58,6 +70,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        addIconButtonOnNavigationBar()
     }
     
     func setupView() {
@@ -98,6 +111,29 @@ final class HomeViewController: UIViewController {
             moreTableView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
+    
+    func addIconButtonOnNavigationBar() {
+        guard let navController = navigationController else { return }
+        guard let classType = NSClassFromString("_UINavigationBarLargeTitleView") else { return }
+        
+        for subView in navController.navigationBar.subviews {
+            if subView.isKind(of: classType) {
+                subView.layer.zPosition = 100
+                subView.addSubview(settingsIcon)
+                
+                guard let largeTitleLabel = subView.subviews.first as? UILabel else { return }
+                
+                NSLayoutConstraint.activate([
+                    settingsIcon.trailingAnchor.constraint(equalTo: subView.trailingAnchor, constant: -25),
+//                    settingsIcon.centerYAnchor.constraint(equalTo: largeTitleLabel.centerYAnchor, constant: -5),
+//                    settingsIcon.centerYAnchor.constraint(equalTo: subView.centerYAnchor),
+                    settingsIcon.topAnchor.constraint(equalTo: subView.topAnchor, constant: 6),
+                    settingsIcon.widthAnchor.constraint(equalToConstant: 36),
+                    settingsIcon.heightAnchor.constraint(equalToConstant: 36)
+                ])
+            }
+        }
+    }
 }
 
 // MARK: - CollectionView
@@ -132,7 +168,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 // MARK: - TableView
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var numberOfRows = 1
+        //        var numberOfRows = 1
         var numberOfRows = 4
         numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
         numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0

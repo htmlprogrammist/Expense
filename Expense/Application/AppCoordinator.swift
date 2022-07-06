@@ -59,7 +59,7 @@ final class AppCoordinator: NSObject {
         addTransactionButton.layer.cornerRadius = tabBarController.tabBar.frame.size.width * (1/12)
         NSLayoutConstraint.activate([
             addTransactionButton.centerXAnchor.constraint(equalTo: tabBarController.tabBar.centerXAnchor),
-            addTransactionButton.bottomAnchor.constraint(equalTo: tabBarController.tabBar.bottomAnchor, constant: -8),
+            addTransactionButton.topAnchor.constraint(equalTo: tabBarController.tabBar.topAnchor, constant: -8),
             addTransactionButton.heightAnchor.constraint(equalTo: tabBarController.tabBar.widthAnchor, multiplier: 1/6),
             addTransactionButton.widthAnchor.constraint(equalTo: tabBarController.tabBar.widthAnchor, multiplier: 1/6),
         ])
