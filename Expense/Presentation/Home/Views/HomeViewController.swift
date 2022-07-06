@@ -53,23 +53,6 @@ final class HomeViewController: UIViewController {
         return tableView
     }()
     
-    lazy var addTransactionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.tintColor = .white
-        button.backgroundColor = UIColor(named: "AccentColor")
-        button.setImage(Images.Home.add, for: .normal)
-        button.layer.cornerRadius = 30
-        button.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
-        // Shadows
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
-        button.layer.shadowOffset = CGSize(width: 0, height: 3)
-        button.layer.shadowOpacity = 1.0
-        button.layer.shadowRadius = 10.0
-        button.layer.masksToBounds = false
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,32 +60,13 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
-    @objc func addTransaction(sender: UIButton) {
-        /// **Button's animation**, it shrinks a bit and then becomes `identity`
-        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
-            sender.transform = CGAffineTransform.identity
-        })
-        
-        
-    }
-    
-    @objc func openSettingsModule() {
-        let settings = UINavigationController(rootViewController: SettingsViewController())
-        settings.modalPresentationStyle = .fullScreen
-        present(settings, animated: true)
-    }
-    
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettingsModule))
         
         view.addSubview(scrollView)
         scrollView.addSubview(mainCollectionView)
         scrollView.addSubview(moreTableView)
-        view.addSubview(addTransactionButton)
         
         // Setting constraints for view
         NSLayoutConstraint.activate([
@@ -118,12 +82,7 @@ final class HomeViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
-            addTransactionButton.widthAnchor.constraint(equalToConstant: 60),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
         // Setting constraints for scroll view

@@ -16,10 +16,10 @@ enum Images {
         static let home = Image("creditcard.fill")
         static let history = Image("clock.fill")
         static let analytics = Image("chart.bar.fill")
+        static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
     }
     
     enum Home {
-        static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
         static let add = Image("plus").withConfiguration(UIImage.SymbolConfiguration(weight: .semibold))
         static let calendar = Image("calendar")
         static let dailyBudget = Image("banknote")
@@ -36,6 +36,10 @@ enum Images {
     }
     
     enum Analytics {
+        
+    }
+    
+    enum Settings {
         
     }
 }

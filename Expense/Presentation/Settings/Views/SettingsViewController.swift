@@ -55,7 +55,7 @@ extension SettingsViewController {
 private extension SettingsViewController {
     func setupView() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeThisModule))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeThisModule))
         navigationItem.title = Texts.Settings.title
         
         tableView = UITableView(frame: .zero, style: .insetGrouped)
