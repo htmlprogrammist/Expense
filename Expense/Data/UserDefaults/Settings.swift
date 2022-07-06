@@ -12,9 +12,6 @@ fileprivate enum SettingsKey: CodingKey {
     case showBudgets
     
     case dailyBudget
-    
-    // History
-    case hideAddTransactionButtonInHistory
 }
 
 class Settings {
@@ -28,21 +25,17 @@ class Settings {
         get { storage[.showDailyBudget] }
         set { storage[.showDailyBudget] = newValue }
     }
+    
     /// Defines whether to show or not _Goals_ section in the main screen
     var showGoals: Bool? {
         get { storage[.showGoals] }
         set { storage[.showGoals] = newValue }
     }
+    
     /// Defines whether to show or not _Budget_ section in the main screen
     var showBudgets: Bool? {
         get { storage[.showBudgets] }
         set { storage[.showBudgets] = newValue }
-    }
-    
-    /// Defines whether to hide or not "+ Add transaction" button ih "History" module
-    var hideAddTransactionButtonInHistory: Bool? {
-        get { storage[.hideAddTransactionButtonInHistory] }
-        set { storage[.hideAddTransactionButtonInHistory] = newValue }
     }
     
     /// Describes the user's daily budget

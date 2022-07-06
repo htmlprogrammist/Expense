@@ -9,6 +9,9 @@ import UIKit
 
 final class HistoryViewController: UIViewController {
     // MARK: - Views
+    private lazy var filterButtonItem = UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
+    private lazy var highlightedFilterButtonItem = UIBarButtonItem(image: Images.History.filterHighlighted, style: .plain, target: self, action: #selector(chooseFilter))
+    
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: [Texts.History.day, Texts.History.week, Texts.History.month, Texts.History.year])
         segmentedControl.selectedSegmentIndex = 0
@@ -36,6 +39,54 @@ final class HistoryViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    // MARK: - Private methods
+    @objc private func chooseFilter(sender: UIBarButtonItem) {
+        /*
+         Вызывается не сразу, только после нажатия кнопки "Применить".
+         При нажатии кнопки "Сброс" меняется на filterButtonItem
+         */
+        navigationItem.rightBarButtonItem = highlightedFilterButtonItem
+    }
+    
+    @objc private func exportHistory() {
+        
+    }
+    
+    @objc private func addTransaction() {
+        
+    }
+    
+    @objc private func segmentedControlDidChange() {
+        tableView.reloadData()
+    }
+    
+    private func setupView() {
+        // General
+        view.backgroundColor = .systemGroupedBackground
+        title = Texts.History.title
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
+        navigationItem.rightBarButtonItems = [
+            filterButtonItem,
+            UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
+        ]
+        
+        // Adding and setuping subviews
+        view.addSubview(segmentedControl)
+        view.addSubview(tableView)
+        
+        // Activating constraints
+        NSLayoutConstraint.activate([
+            segmentedControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            segmentedControl.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            segmentedControl.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 16),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        ])
     }
 }
 
@@ -95,51 +146,5 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         } else {
             // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
         }
-    }
-}
-
-// MARK: - Helper methods
-private extension HistoryViewController {
-    func setupView() {
-        // General
-        view.backgroundColor = .systemGroupedBackground
-        title = Texts.History.title
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter)),
-            UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
-        ]
-        
-        // Adding and setuping subviews
-        view.addSubview(segmentedControl)
-        view.addSubview(tableView)
-        
-        // Activating constraints
-        NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            segmentedControl.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            segmentedControl.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 16),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
-        ])
-    }
-    
-    @objc func chooseFilter(sender: UIBarButtonItem) {
-        // TODO: поменять изображение на .filterHighlighted
-    }
-    
-    @objc func exportHistory() {
-        
-    }
-    
-    @objc func addTransaction() {
-        
-    }
-    
-    @objc func segmentedControlDidChange() {
-        tableView.reloadData()
     }
 }

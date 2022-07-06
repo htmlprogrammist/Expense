@@ -17,9 +17,9 @@ final class EmojiCollectionViewCell: UICollectionViewCell {
     
     private let emojiLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 30)
         label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -35,6 +35,7 @@ final class EmojiCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.addSubview(emojiLabel)
+        
         NSLayoutConstraint.activate([
             emojiLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             emojiLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -51,5 +52,4 @@ final class EmojiCollectionViewCell: UICollectionViewCell {
         selectedView.layer.cornerCurve = .continuous
         selectedBackgroundView = selectedView
     }
-    
 }

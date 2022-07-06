@@ -1,8 +1,8 @@
 //
-//  UIColor+Extension.swift
-//  EmojiPicker
+//  UIColor.swift
+//  Expense
 //
-//  Created by Иван Изюмкин on 08.06.2022.
+//  Created by Егор Бадмаев on 06.07.2022.
 //
 
 import UIKit

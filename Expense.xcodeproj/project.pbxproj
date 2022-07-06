@@ -272,12 +272,12 @@
 		F035F59B28757E4A0041AF84 /* Unicode */ = {
 			isa = PBXGroup;
 			children = (
-				F035F59C28757E4A0041AF84 /* Unicode 5.swift */,
-				F035F59D28757E4A0041AF84 /* Unicode 13v1.swift */,
-				F035F59E28757E4A0041AF84 /* Unicode 14.swift */,
+				F035F5A128757E4A0041AF84 /* Unicode 11.swift */,
 				F035F59F28757E4A0041AF84 /* Unicode 12.swift */,
 				F035F5A028757E4A0041AF84 /* Unicode 13.swift */,
-				F035F5A128757E4A0041AF84 /* Unicode 11.swift */,
+				F035F59D28757E4A0041AF84 /* Unicode 13v1.swift */,
+				F035F59E28757E4A0041AF84 /* Unicode 14.swift */,
+				F035F59C28757E4A0041AF84 /* Unicode 5.swift */,
 			);
 			path = Unicode;
 			sourceTree = "<group>";

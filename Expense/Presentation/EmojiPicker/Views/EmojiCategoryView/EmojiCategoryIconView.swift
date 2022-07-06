@@ -30,8 +30,8 @@ final class EmojiCategoryIconView: UIView {
         self.selectedIconTintColor = selectedIconTintColor
         super.init(frame: .zero)
         
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .clear
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {

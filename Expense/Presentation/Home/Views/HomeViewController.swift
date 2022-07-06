@@ -76,10 +76,24 @@ final class HomeViewController: UIViewController {
         
         setupView()
     }
-}
-
-// MARK: - Helper methods
-private extension HomeViewController {
+    
+    @objc func addTransaction(sender: UIButton) {
+        /// **Button's animation**, it shrinks a bit and then becomes `identity`
+        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+            sender.transform = CGAffineTransform.identity
+        })
+        
+        
+    }
+    
+    @objc func openSettingsModule() {
+        let settings = UINavigationController(rootViewController: SettingsViewController())
+        settings.modalPresentationStyle = .fullScreen
+        present(settings, animated: true)
+    }
+    
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
@@ -124,23 +138,6 @@ private extension HomeViewController {
             moreTableView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
             moreTableView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
         ])
-    }
-    
-    @objc func addTransaction(sender: UIButton) {
-        /// **Button's animation**, it shrinks a bit and then becomes `identity`
-        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
-            sender.transform = CGAffineTransform.identity
-        })
-        
-        
-    }
-    
-    @objc func openSettingsModule() {
-        let settings = UINavigationController(rootViewController: SettingsViewController())
-        settings.modalPresentationStyle = .fullScreen
-        present(settings, animated: true)
     }
 }
 

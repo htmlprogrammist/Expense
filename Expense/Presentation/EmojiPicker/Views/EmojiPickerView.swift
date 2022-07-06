@@ -20,9 +20,9 @@ final class EmojiPickerView: UIView {
     
     private let categoriesStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.backgroundColor = .systemGroupedBackground
         stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
@@ -41,9 +41,9 @@ final class EmojiPickerView: UIView {
         collectionView.verticalScrollIndicatorInsets.top = 8
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         collectionView.backgroundColor = .clear
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: EmojiCollectionViewCell.identifier)
         collectionView.register(EmojiSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: EmojiSectionHeader.identifier)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
@@ -64,8 +64,8 @@ final class EmojiPickerView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        setupLayout()
-        setupCollectionViewBottomInsets()
+        
+        setupView()
         setupCategoriesControlLayout()
     }
     
@@ -115,13 +115,11 @@ extension EmojiPickerView: EmojiCategoryViewDelegate {
 
 // MARK: - Helper methods
 private extension EmojiPickerView {
-    func setupCollectionViewBottomInsets() {
+    func setupView() {
+        addSubview(collectionView)
         collectionView.contentInset.bottom = categoriesStackViewHeight
         collectionView.verticalScrollIndicatorInsets.bottom = categoriesStackViewHeight
-    }
-    
-    func setupLayout() {
-        addSubview(collectionView)
+        
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
