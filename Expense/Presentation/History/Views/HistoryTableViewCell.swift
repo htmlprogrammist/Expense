@@ -9,8 +9,6 @@ import UIKit
 
 final class HistoryTableViewCell: UITableViewCell {
     
-    static let identifier = "HistoryTableViewCell"
-    
     private lazy var emoji: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30)

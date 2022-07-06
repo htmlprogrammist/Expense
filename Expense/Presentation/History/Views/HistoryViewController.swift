@@ -31,8 +31,6 @@ final class HistoryViewController: UIViewController {
         return tableView
     }()
     
-    private let addTransactionButton = UIButton(title: Texts.Home.addTransaction, image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
-    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,19 +96,6 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
             // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
         }
     }
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
-        if translation.y > 0 {
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.64, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: { [unowned self] in
-                addTransactionButton.transform = CGAffineTransform.identity
-            })
-        } else {
-            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: { [unowned self] in
-                addTransactionButton.transform = CGAffineTransform(translationX: 1, y: 100)
-            })
-        }
-    }
 }
 
 // MARK: - Helper methods
@@ -119,17 +104,15 @@ private extension HistoryViewController {
         // General
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: Images.filter, style: .plain, target: self, action: #selector(chooseFilter)),
-            UIBarButtonItem(image: Images.export, style: .plain, target: self, action: #selector(exportHistory))
+            UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter)),
+            UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
         ]
         
         // Adding and setuping subviews
         view.addSubview(segmentedControl)
         view.addSubview(tableView)
-        view.addSubview(addTransactionButton)
-        addTransactionButton.isHidden = Settings.shared.hideAddTransactionButtonInHistory ?? false
-        addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
         // Activating constraints
         NSLayoutConstraint.activate([
@@ -140,31 +123,19 @@ private extension HistoryViewController {
             tableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 16),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
-            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
-            addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            addTransactionButton.heightAnchor.constraint(equalToConstant: 44)
+            tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
     }
     
-    @objc func chooseFilter() {
-        
+    @objc func chooseFilter(sender: UIBarButtonItem) {
+        // TODO: поменять изображение на .filterHighlighted
     }
     
     @objc func exportHistory() {
         
     }
     
-    @objc func addTransaction(sender: UIButton) {
-        /// **Button's animation**, it shrinks a bit and then becomes `identity`
-        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
-            sender.transform = CGAffineTransform.identity
-        })
-        
+    @objc func addTransaction() {
         
     }
     

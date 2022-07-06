@@ -7,9 +7,11 @@
 
 fileprivate enum SettingsKey: CodingKey {
     // Home
-    case dailyBudget
+    case showDailyBudget
     case showGoals
     case showBudgets
+    
+    case dailyBudget
     
     // History
     case hideAddTransactionButtonInHistory
@@ -22,9 +24,9 @@ class Settings {
     private let storage = UserDefaultsContainer(keyedBy: SettingsKey.self)
     
     /// Defines whether to compute and display the daily budget
-    var dailyBudget: Bool? {
-        get { storage[.dailyBudget] }
-        set { storage[.dailyBudget] = newValue }
+    var showDailyBudget: Bool? {
+        get { storage[.showDailyBudget] }
+        set { storage[.showDailyBudget] = newValue }
     }
     /// Defines whether to show or not _Goals_ section in the main screen
     var showGoals: Bool? {
@@ -41,5 +43,11 @@ class Settings {
     var hideAddTransactionButtonInHistory: Bool? {
         get { storage[.hideAddTransactionButtonInHistory] }
         set { storage[.hideAddTransactionButtonInHistory] = newValue }
+    }
+    
+    /// Describes the user's daily budget
+    var dailyBudget: Double? {
+        get { storage[.dailyBudget] }
+        set { storage[.dailyBudget] = newValue }
     }
 }

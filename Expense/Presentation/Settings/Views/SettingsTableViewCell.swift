@@ -9,8 +9,6 @@ import UIKit
 
 final class SettingsTableViewCell: UITableViewCell {
     
-    static let identifier = "SettingsTableViewCell"
-    
     private lazy var iconContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 13

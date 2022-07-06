@@ -9,8 +9,6 @@ import UIKit
 
 final class ProfileTableViewCell: UITableViewCell {
     
-    static let identifier = "ProfileTableViewCell"
-    
     // UIView with gray background
     // UILabel with emoji inside UIView
     

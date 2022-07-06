@@ -12,23 +12,32 @@ enum Images {
     static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // потом подобрать цвет!
     
     // Tab bar items
-    static let home = Image("creditcard.fill")
-    static let history = Image("clock.fill")
-    static let analytics = Image("chart.bar.fill")
+    enum TabBarItems {
+        static let home = Image("creditcard.fill")
+        static let history = Image("clock.fill")
+        static let analytics = Image("chart.bar.fill")
+    }
     
-    // Home
-    static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
-    static let add = Image("plus.circle.fill")
-    static let calendar = Image("calendar")
-    static let dailyBudget = Image("banknote")
-    static let goals = Image("mappin")
-    static let budgets = Image("chart.pie.fill")
+    enum Home {
+        static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
+        static let add = Image("plus").withConfiguration(UIImage.SymbolConfiguration(weight: .semibold))
+        static let calendar = Image("calendar")
+        static let dailyBudget = Image("banknote")
+        static let goals = Image("mappin")
+        static let budgets = Image("chart.pie.fill")
+    }
     
-    // History & Analytics
-    static let filter = Image("line.3.horizontal.decrease.circle")
-    static let export = Image("square.and.arrow.up")
-    static let forward = Image("chevron.forward.circle.fill")
-    static let backward = Image("chevron.backward.circle.fill")
+    enum History {
+        static let filter = Image("line.3.horizontal.decrease.circle")
+        static let filterHighlighted = Image("line.3.horizontal.decrease.circle.fill")
+        static let export = Image("square.and.arrow.up")
+        static let forward = Image("chevron.forward.circle.fill")
+        static let backward = Image("chevron.backward.circle.fill")
+    }
+    
+    enum Analytics {
+        
+    }
 }
 
 extension Images {

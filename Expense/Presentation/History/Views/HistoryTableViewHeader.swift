@@ -9,8 +9,6 @@ import UIKit
 
 final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
-    static let identifier = "HistoryTableViewHeader"
-    
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)

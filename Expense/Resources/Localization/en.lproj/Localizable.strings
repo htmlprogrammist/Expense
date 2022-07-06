@@ -36,3 +36,13 @@ year = "Y";
 // Settings
 settings = "Settings";
 managingWallets = "Wallets management";
+
+// EmojiPicker
+emotionsAndPeople = "SMILEYS & PEOPLE";
+animalsAndNature = "ANIMALS & NATURE";
+foodAndDrinks = "FOOD & DRINK";
+activities = "ACTIVITY";
+travellingAndPlaces = "TRAVEL & PLACES";
+items = "OBJECTS";
+symbols = "SYMBOLS";
+flags = "FLAGS";

@@ -34,4 +34,15 @@ enum Texts {
         static let title = "settings".localized
         static let managingWallets = "managingWallets".localized
     }
+    
+    enum EmojiPicker {
+        static let emotionsAndPeople = "emotionsAndPeople".localized
+        static let animalsAndNature = "animalsAndNature".localized
+        static let foodAndDrinks = "foodAndDrinks".localized
+        static let activities = "activities".localized
+        static let travellingAndPlaces = "travellingAndPlaces".localized
+        static let items = "items".localized
+        static let symbols = "symbols".localized
+        static let flags = "flags".localized
+    }
 }

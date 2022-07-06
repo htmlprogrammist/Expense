@@ -36,3 +36,13 @@ year = "Г";
 // Settings
 settings = "Настройки";
 managingWallets = "Управление кошельками";
+
+// EmojiPicker
+emotionsAndPeople = "СМАЙЛИКИ И ЛЮДИ";
+animalsAndNature = "ЖИВОТНЫЕ И ПРИРОДА";
+foodAndDrinks = "ЕДА И НАПИТКИ";
+activities = "АКТИВНОСТЬ";
+travellingAndPlaces = "ПУТЕШЕСТВИЯ И МЕСТНОСТИ";
+items = "ПРЕДМЕТЫ";
+symbols = "СИМВОЛЫ";
+flags = "ФЛАГИ";

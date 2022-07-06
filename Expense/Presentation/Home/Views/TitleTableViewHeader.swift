@@ -9,8 +9,6 @@ import UIKit
 
 final class TitleTableViewHeader: UITableViewHeaderFooterView {
     
-    static let identifier = "TitleTableViewHeader"
-    
     private let titleLabel = TitleLabel(text: "")
     
     override init(reuseIdentifier: String?) {

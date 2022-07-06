@@ -8,31 +8,22 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    /*
-     Сейчас у меня 2 пути:
-     1. Либо делаю UICollectonView целиком с различными ячейками (что впринципе возможно, если я делаю первые ячейки с графиками)
-     2. Делаю UIScrollView с UICollectionView и UITableView
-     
-     Скорее всего я изберу первый путь, потому что, научившись делать первые 3 ячейки + header с Goals и Budgets,
-     сделать имплементацию UITableView будет как нефиг делать
-     */
     
     private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
-        (Images.calendar, Texts.Home.scheduledOperations, .systemRed),
-        (Images.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
-        (Images.goals, Texts.Home.goals, .systemBlue),
-        (Images.budgets, Texts.Home.budgets, .systemIndigo)
+        (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
+        (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
+        (Images.Home.goals, Texts.Home.goals, .systemBlue),
+        (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
     ]
     
     // MARK: - Views
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.delegate = self
-        scrollView.backgroundColor = .red
+        scrollView.backgroundColor = .gray
         scrollView.autoresizingMask = .flexibleHeight
         scrollView.bounces = true
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.showsVerticalScrollIndicator = false
+//        scrollView.showsVerticalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
@@ -43,6 +34,7 @@ final class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = false
+        collectionView.backgroundColor = .clear
         collectionView.register(SmallCollectionViewCell.self, forCellWithReuseIdentifier: SmallCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -61,7 +53,22 @@ final class HomeViewController: UIViewController {
         return tableView
     }()
     
-    private let addTransactionButton = UIButton(title: Texts.Home.addTransaction, image: Images.add, backgroundColor: UIColor(named: "AccentColor") ?? .white, cornerRadius: 22, shadows: true)
+    lazy var addTransactionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = UIColor(named: "AccentColor")
+        button.setImage(Images.Home.add, for: .normal)
+        button.layer.cornerRadius = 30
+        button.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
+        // Shadows
+        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        button.layer.shadowOpacity = 1.0
+        button.layer.shadowRadius = 10.0
+        button.layer.masksToBounds = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -76,13 +83,12 @@ private extension HomeViewController {
     func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.settings, style: .plain, target: self, action: #selector(openSettingsModule))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettingsModule))
         
         view.addSubview(scrollView)
         scrollView.addSubview(mainCollectionView)
         scrollView.addSubview(moreTableView)
         view.addSubview(addTransactionButton)
-        addTransactionButton.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         
         // Setting constraints for view
         NSLayoutConstraint.activate([
@@ -100,21 +106,21 @@ private extension HomeViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            addTransactionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 24),
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -24),
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            addTransactionButton.heightAnchor.constraint(equalToConstant: 44)
+            addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
+            addTransactionButton.widthAnchor.constraint(equalToConstant: 60),
         ])
         
         // Setting constraints for scroll view
         NSLayoutConstraint.activate([
             mainCollectionView.leadingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.leadingAnchor),
-            mainCollectionView.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
+            mainCollectionView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             mainCollectionView.trailingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.trailingAnchor),
             mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
-
+            
             moreTableView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor),
-            mainCollectionView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
+//            moreTableView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
             moreTableView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
             moreTableView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
         ])
@@ -162,6 +168,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         else {
             fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
         }
+        cell.backgroundColor = .systemIndigo
         return cell
     }
 }
@@ -173,7 +180,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         var numberOfRows = 4
         numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
         numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0
-        numberOfRows += (Settings.shared.dailyBudget ?? false) ? 1 : 0
+        numberOfRows += (Settings.shared.showDailyBudget ?? false) ? 1 : 0
         return numberOfRows
     }
     
@@ -199,5 +206,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - EmojiPickerDelegate
+extension HomeViewController: EmojiPickerDelegate {
+    func didGetEmoji(emoji: String) {
+        print(emoji)
+//        emojiButton.setTitle(emoji, for: .normal)
     }
 }
