@@ -30,7 +30,7 @@ final class AppCoordinator {
         tabBarController.setViewControllers(viewControllers, animated: false)
         
         window.rootViewController = tabBarController
-        window.tintColor = UIColor(named: "AccentColor")
+        window.tintColor = .appColor
         window.makeKeyAndVisible()
         
         /// Setup tab bar appearence like in earlier versions of iOS, because in iOS 15 it does not look good

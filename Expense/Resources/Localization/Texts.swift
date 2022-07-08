@@ -15,7 +15,10 @@ enum Texts {
         static let scheduledOperations = "scheduledOperations".localized
         static let dailyBudget = "dailyBudget".localized
         static let goals = "goals".localized
+        static let goalsDescription = "goalsDescription".localized
         static let budgets = "budgets".localized
+        static let budgetsDescription = "budgetsDescription".localized
+        static let seeAll = "seeAll".localized
     }
     
     enum History {

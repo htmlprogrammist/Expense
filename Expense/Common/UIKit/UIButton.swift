@@ -12,7 +12,7 @@ extension UIButton {
     convenience init(title: String, image: UIImage, backgroundColor: UIColor, cornerRadius: CGFloat, shadows: Bool) {
         self.init(type: .system)
         self.tintColor = .white
-        self.backgroundColor = UIColor(named: "AccentColor")
+        self.backgroundColor = .appColor
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         self.setImage(image, for: .normal)

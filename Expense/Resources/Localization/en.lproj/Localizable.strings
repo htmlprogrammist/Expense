@@ -23,7 +23,10 @@ more = "More";
 scheduledOperations = "Scheduled operations";
 dailyBudget = "Daily budget";
 goals = "Goals";
+goalsDescription = "Save your funds";
 budgets = "Budgets";
+budgetsDescription = "Your budget plans";
+seeAll = "See all";
 
 // History
 day = "D";

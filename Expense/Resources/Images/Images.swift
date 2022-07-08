@@ -9,7 +9,8 @@ import UIKit
 
 enum Images {
     static let info = Image("info.circle.fill")
-    static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // потом подобрать цвет!
+    static let disclosureIndicator = Image("chevron.right").withConfiguration(UIImage.SymbolConfiguration(pointSize: 16, weight: .bold, scale: .small))
+    static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // TODO: подобрать цвет!
     
     // Tab bar items
     enum TabBarItems {
@@ -19,7 +20,7 @@ enum Images {
     }
     
     enum Home {
-        static let settings = Image("gear").withConfiguration(UIImage.SymbolConfiguration(weight: .medium))
+        static let settings = Image("gear")
         static let add = Image("plus").withConfiguration(UIImage.SymbolConfiguration(weight: .semibold))
         static let calendar = Image("calendar")
         static let dailyBudget = Image("banknote")

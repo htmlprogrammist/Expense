@@ -23,7 +23,10 @@ more = "Ещё";
 scheduledOperations = "Запланированные операции";
 dailyBudget = "Бюджет на день";
 goals = "Цели";
+goalsDescription = "Накопите или отложите средства";
 budgets = "Бюджеты";
+budgetsDescription = "Ваш план по расходам";
+seeAll = "См. все";
 
 // History
 day = "Д";

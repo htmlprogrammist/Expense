@@ -16,52 +16,29 @@ final class HomeViewController: UIViewController {
         (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
     ]
     
-    // MARK: - Views
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.delegate = self
-        scrollView.backgroundColor = .gray
-        scrollView.autoresizingMask = .flexibleHeight
-        scrollView.bounces = true
-//        scrollView.showsVerticalScrollIndicator = false
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        return scrollView
-    }()
-    
-    private lazy var mainCollectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.isScrollEnabled = false
         collectionView.backgroundColor = .clear
         collectionView.register(SmallCollectionViewCell.self, forCellWithReuseIdentifier: SmallCollectionViewCell.identifier)
+        collectionView.register(SettingsCollectionViewCell.self, forCellWithReuseIdentifier: SettingsCollectionViewCell.identifier)
+        collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
-    private lazy var moreTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 46
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
-        tableView.sectionHeaderHeight = 46
-        tableView.register(TitleTableViewHeader.self, forHeaderFooterViewReuseIdentifier: TitleTableViewHeader.identifier)
-        tableView.isScrollEnabled = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
-    lazy var addTransactionButton: UIButton = {
+    private lazy var addTransactionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
-        button.backgroundColor = UIColor(named: "AccentColor")
+        button.backgroundColor = .appColor
         button.setImage(Images.Home.add, for: .normal)
         button.layer.cornerRadius = 30
         button.addTarget(self, action: #selector(addTransaction), for: .touchUpInside)
         // Shadows
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
+        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.33).cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 3)
         button.layer.shadowOpacity = 1.0
         button.layer.shadowRadius = 10.0
@@ -77,7 +54,7 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
-    @objc func addTransaction(sender: UIButton) {
+    @objc private func addTransaction(sender: UIButton) {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
         
@@ -88,55 +65,28 @@ final class HomeViewController: UIViewController {
         
     }
     
-    @objc func openSettingsModule() {
-        let settings = UINavigationController(rootViewController: SettingsViewController())
-        settings.modalPresentationStyle = .fullScreen
-        present(settings, animated: true)
+    @objc private func openSettingsModule() {
+        
     }
     
-    func setupView() {
+    private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettingsModule))
         
-        view.addSubview(scrollView)
-        scrollView.addSubview(mainCollectionView)
-        scrollView.addSubview(moreTableView)
+        view.addSubview(collectionView)
         view.addSubview(addTransactionButton)
         
-        // Setting constraints for view
         NSLayoutConstraint.activate([
-//            mainCollectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-//            mainCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            mainCollectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-//            mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
-//
-//            moreTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-////            mainCollectionView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
-//            moreTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-//            moreTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
             addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
-            addTransactionButton.widthAnchor.constraint(equalToConstant: 60),
-        ])
-        
-        // Setting constraints for scroll view
-        NSLayoutConstraint.activate([
-            mainCollectionView.leadingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.leadingAnchor),
-            mainCollectionView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            mainCollectionView.trailingAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.trailingAnchor),
-            mainCollectionView.bottomAnchor.constraint(equalTo: moreTableView.topAnchor),
-            
-            moreTableView.leadingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.leadingAnchor),
-//            moreTableView.topAnchor.constraint(equalTo: mainCollectionView.bottomAnchor), // ?
-            moreTableView.trailingAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.trailingAnchor),
-            moreTableView.bottomAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.bottomAnchor),
+            addTransactionButton.widthAnchor.constraint(equalToConstant: 60)
         ])
     }
 }
@@ -144,64 +94,90 @@ final class HomeViewController: UIViewController {
 // MARK: - CollectionView
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0: // general
-            return 3 // (2 + 1 (charts))
-        case 1: // goals
-            return Int.random(in: 1...3)
-        case 2: // budgets
-            return Int.random(in: 1...3)
+            return (Settings.shared.showDailyBudget ?? false) ? 2 : 1 // (2 + 1 (charts))
+        case 1:
+            var numberOfRows = 4 // 1
+            numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
+            numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0
+            numberOfRows += (Settings.shared.showDailyBudget ?? false) ? 1 : 0
+            return numberOfRows
         default:
             return 1
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCollectionViewCell.identifier, for: indexPath) as? SmallCollectionViewCell
-        else {
-            fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCollectionViewCell.identifier, for: indexPath) as? SmallCollectionViewCell
+            else {
+                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
+            }
+            cell.configure(title: "10995 ₽", subtitle: "Остаток")
+            return cell
+        default:
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell
+            else {
+                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
+            }
+            
+            let item = tableViewData[indexPath.row]
+            cell.configure(image: item.image, title: item.title, color: item.color)
+            return cell
         }
-        cell.backgroundColor = .systemIndigo
-        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier, for: indexPath) as? HomeCollectionViewHeader
+            else {
+                fatalError("Could not create CollectionViewHeader at viewForSupplementaryElementOfKind method in Home")
+            }
+            
+            if indexPath == [0, 0] {
+                header.configure(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription)
+            } else {
+                header.configure(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription)
+            }
+            
+            return header
+        default:
+            fatalError("Unexpected element kind section")
+        }
     }
 }
 
-// MARK: - TableView
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var numberOfRows = 1
-        var numberOfRows = 4
-        numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
-        numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0
-        numberOfRows += (Settings.shared.showDailyBudget ?? false) ? 1 : 0
-        return numberOfRows
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        8
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell
-        else {
-            fatalError("Could not create TableViewCell at cellForRow at method in Home")
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case 0:
+            return CGSize(width: (Settings.shared.showDailyBudget ?? false) ? collectionView.frame.size.width * 0.48
+                                                                            : collectionView.frame.size.width,
+                          height: CGFloat(68))
+        default:
+            let width = collectionView.frame.size.width
+            let height = CGFloat(48)
+            return CGSize(width: width, height: height)
         }
-        // TODO: По настройкам отображать соответствующие данные
-        let item = tableViewData[indexPath.row]
-        cell.configure(image: item.image, title: item.title, color: item.color)
-        return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TitleTableViewHeader.identifier) as? TitleTableViewHeader
-        else {
-            fatalError("Could not create header for moreTableView")
-        }
-        header.configure(with: Texts.Home.more)
-        return header
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.size.width, height: 70)
     }
 }

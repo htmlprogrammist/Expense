@@ -8,6 +8,9 @@
 import UIKit
 
 extension UIColor {
+    
+    static let appColor: UIColor = UIColor(named: "AccentColor") ?? .systemBlue
+    
     /// Increases brightness or decreases saturation
     func adjust(by percentage: CGFloat = 30.0) -> UIColor {
         var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
