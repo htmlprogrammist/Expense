@@ -8,7 +8,7 @@
 import Foundation
 
 struct TransactionInfo {
-    let wallet: Wallet
+    let wallet: Account
     let sum: Int
     let isExpense: Bool
     let date: Date
@@ -16,11 +16,11 @@ struct TransactionInfo {
     let category: Category?
     let goal: Goal?
     let notes: String?
-    var repeatEvery: Period = .none
+    var repeats: Period = .none
 }
 
 extension Transaction {
     var transactionInfo: TransactionInfo {
-        TransactionInfo(wallet: wallet, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeatEvery: repeatEvery)
+        TransactionInfo(wallet: wallet, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeats: repeats)
     }
 }

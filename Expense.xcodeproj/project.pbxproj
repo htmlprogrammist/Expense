@@ -55,7 +55,7 @@
 		F044C216287706270029EA8E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C215287706270029EA8E /* CircularProgressView.swift */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
-		F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* WalletInfo.swift */; };
+		F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* AccountInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
@@ -151,7 +151,7 @@
 		F044C215287706270029EA8E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		F057E9E5286788D40083C003 /* TransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
 		F057E9E72867890E0083C003 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
-		F057E9E928678B180083C003 /* WalletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInfo.swift; sourceTree = "<group>"; };
+		F057E9E928678B180083C003 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
 		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -261,7 +261,6 @@
 		F02BC8F9286A5F4B009D2415 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				F0A452D728670FA0005B5450 /* Settings.swift */,
 				F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */,
 			);
 			path = UserDefaults;
@@ -419,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				F07C25182870E3170000021E /* Views */,
+				F0A452D728670FA0005B5450 /* Settings.swift */,
 				F01510C22872EF5E00B858BC /* Submodules */,
 			);
 			path = Settings;
@@ -456,7 +456,7 @@
 			children = (
 				F007E558286B7DAD0073C74D /* CoreData */,
 				F057E9E72867890E0083C003 /* Period.swift */,
-				F057E9E928678B180083C003 /* WalletInfo.swift */,
+				F057E9E928678B180083C003 /* AccountInfo.swift */,
 				F007E571286B80000073C74D /* CategoryInfo.swift */,
 				F057E9E5286788D40083C003 /* TransactionInfo.swift */,
 				F057E9EB28678B4E0083C003 /* GoalInfo.swift */,
@@ -803,7 +803,7 @@
 				F035F5C728757E4A0041AF84 /* EmojiModel.swift in Sources */,
 				F042C2C12866F10C0002208F /* Images.swift in Sources */,
 				F035F5C028757E4A0041AF84 /* Unicode 12.swift in Sources */,
-				F057E9EA28678B180083C003 /* WalletInfo.swift in Sources */,
+				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
 				F060E27828762542006A87A9 /* SettingsCollectionViewCell.swift in Sources */,
 				F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */,
 				F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */,

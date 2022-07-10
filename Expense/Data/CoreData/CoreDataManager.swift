@@ -7,10 +7,10 @@
 
 import CoreData
 
-protocol WalletsCoreDataManagerProtocol {
-    func fetchWallets() -> [Wallet]?
-    func createWallet(with data: WalletInfo)
-    func deleteWallet(_ wallet: Wallet)
+protocol AccountsCoreDataManagerProtocol {
+    func fetchAccounts() -> [Account]?
+    func createAccount(with data: AccountInfo)
+    func deleteAccount(_ wallet: Account)
 }
 
 protocol TransactionsCoreDataManagerProtocol {
@@ -69,33 +69,34 @@ final class CoreDataManager {
 }
 
 // MARK: - Wallets
-extension CoreDataManager: WalletsCoreDataManagerProtocol {
-    func fetchWallets() -> [Wallet]? {
-        let wallets = try? managedObjectContext.fetch(Wallet.fetchRequest())
+extension CoreDataManager: AccountsCoreDataManagerProtocol {
+    func fetchAccounts() -> [Account]? {
+        let wallets = try? managedObjectContext.fetch(Account.fetchRequest())
         return wallets
     }
     
-    func createWallet(with data: WalletInfo) {
-        let wallet = Wallet(context: managedObjectContext)
-        wallet.emoji = data.emoji
-        wallet.name = data.name
+    func createAccount(with data: AccountInfo) {
+        let account = Account(context: managedObjectContext)
+        account.emoji = data.emoji
+        account.name = data.name
+//        account.balance = 0
         saveContext()
     }
     
-    func deleteWallet(_ wallet: Wallet) {
-        if let goals = wallet.goals?.allObjects as? [Goal] {
+    func deleteAccount(_ account: Account) {
+        if let goals = account.goals?.allObjects as? [Goal] {
             goals.forEach { managedObjectContext.delete($0) }
         }
-        if let budgets = wallet.budgets?.allObjects as? [Budget] {
+        if let budgets = account.budgets?.allObjects as? [Budget] {
             budgets.forEach { managedObjectContext.delete($0) }
         }
-        if let transactions = wallet.transactions?.allObjects as? [Transaction] {
+        if let transactions = account.transactions?.allObjects as? [Transaction] {
             transactions.forEach { managedObjectContext.delete($0) }
         }
-        if let categories = wallet.categories?.allObjects as? [Category] {
+        if let categories = account.categories?.allObjects as? [Category] {
             categories.forEach { managedObjectContext.delete($0) }
         }
-        managedObjectContext.delete(wallet)
+        managedObjectContext.delete(account)
         saveContext()
     }
 }
@@ -147,7 +148,7 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         /// The next two properties are optionals, but one of them must be provided
         transaction.category = data.category
         transaction.goal = data.goal
-        transaction.repeatEvery = data.repeatEvery // `none` by default
+        transaction.repeats = data.repeats // `none` by default
         transaction.notes = data.notes // optional
         saveContext()
     }

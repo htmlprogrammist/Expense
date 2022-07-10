@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsCollectionViewCell: UICollectionViewCell {
+final class SettingsCollectionViewCell: UICollectionViewCell {
     
     private lazy var iconContainer: UIView = {
         let view = UIView()

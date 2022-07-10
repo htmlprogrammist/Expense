@@ -16,6 +16,8 @@ analytics = "Аналитика";
 // Onboarding
 
 // Home
+accounts = "Счета";
+balance = "Баланс";
 add = "Добавить";
 addTransaction = "Добавить операцию";
 

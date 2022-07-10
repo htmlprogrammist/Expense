@@ -6,7 +6,7 @@
 //
 
 struct CategoryInfo {
-    let wallet: Wallet
+    let wallet: Account
     let name: String
     let emoji: String
 }

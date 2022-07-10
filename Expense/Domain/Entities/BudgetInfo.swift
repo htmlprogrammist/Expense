@@ -8,7 +8,7 @@
 import Foundation
 
 struct BudgetInfo {
-    let wallet: Wallet
+    let wallet: Account
     let sum: Int64
     let period: Period
     let category: Category

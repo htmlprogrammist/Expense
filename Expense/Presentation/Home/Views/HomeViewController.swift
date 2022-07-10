@@ -24,8 +24,11 @@ final class HomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
         collectionView.register(SmallCollectionViewCell.self, forCellWithReuseIdentifier: SmallCollectionViewCell.identifier)
+        collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
         collectionView.register(SettingsCollectionViewCell.self, forCellWithReuseIdentifier: SettingsCollectionViewCell.identifier)
         collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -69,6 +72,14 @@ final class HomeViewController: UIViewController {
         
     }
     
+    @objc public func handleSeeAll(sender: UIButton) {
+        if sender.tag == 1 {
+            // TODO: Open all goals module
+        } else {
+            // TODO: Open all budgets module
+        }
+    }
+    
     private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
@@ -94,7 +105,7 @@ final class HomeViewController: UIViewController {
 // MARK: - CollectionView
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -102,10 +113,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 0: // general
             return (Settings.shared.showDailyBudget ?? false) ? 2 : 1 // (2 + 1 (charts))
         case 1:
+            return 1 // goals.count
+        case 2:
+            return 1 // budgets.count
+        case 3:
             var numberOfRows = 4 // 1
-            numberOfRows += (Settings.shared.showGoals ?? false) ? 1 : 0
-            numberOfRows += (Settings.shared.showBudgets ?? false) ? 1 : 0
-            numberOfRows += (Settings.shared.showDailyBudget ?? false) ? 1 : 0
+            numberOfRows += (Settings.shared.showGoals ?? true) ? 0 : 1
+            numberOfRows += (Settings.shared.showBudgets ?? true) ? 0 : 1
+            numberOfRows += (Settings.shared.showDailyBudget ?? true) ? 0 : 1
             return numberOfRows
         default:
             return 1
@@ -117,20 +132,33 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCollectionViewCell.identifier, for: indexPath) as? SmallCollectionViewCell
             else {
-                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
+                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home module")
             }
-            cell.configure(title: "10995 ₽", subtitle: "Остаток")
+            if indexPath.row == 0 {
+                cell.configure(title: "10995 ₽", subtitle: Texts.Home.balance)
+            } else {
+                cell.configure(title: "324 ₽", subtitle: Texts.Home.dailyBudget)
+            }
             return cell
-        default:
+        case 1...2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgressCollectionViewCell.identifier, for: indexPath) as? ProgressCollectionViewCell
+            else {
+                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home module")
+            }
+            cell.configure()
+            return cell
+        case 3:
 //            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell
             else {
-                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home")
+                fatalError("Could not create CollectionViewCell at cellForItemAt method in Home module")
             }
             
             let item = tableViewData[indexPath.row]
             cell.configure(image: item.image, title: item.title, color: item.color)
             return cell
+        default:
+            fatalError("Unexpected section provided in cellForItemAt method in collection view in Home module")
         }
     }
     
@@ -146,12 +174,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                 fatalError("Could not create CollectionViewHeader at viewForSupplementaryElementOfKind method in Home")
             }
             
-            if indexPath == [0, 0] {
-                header.configure(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription)
-            } else {
-                header.configure(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription)
+            switch indexPath {
+            case [1, 0]:
+                header.configure(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription, tag: indexPath.section)
+            case [2, 0]:
+                header.configure(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription, tag: indexPath.section)
+            case [3, 0]:
+                header.configure(title: Texts.Home.more)
+            default:
+                header.configure(title: "", subtitle: "")
             }
-            
             return header
         default:
             fatalError("Unexpected element kind section")
@@ -170,6 +202,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: (Settings.shared.showDailyBudget ?? false) ? collectionView.frame.size.width * 0.48
                                                                             : collectionView.frame.size.width,
                           height: CGFloat(68))
+        case 1...2:
+            return CGSize(width: collectionView.frame.size.width * 0.9, height: 90)
         default:
             let width = collectionView.frame.size.width
             let height = CGFloat(48)
@@ -178,6 +212,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.size.width, height: 70)
+        if section == 0 {
+            return .zero
+        }
+        return CGSize(width: collectionView.frame.size.width, height: 70)
     }
 }

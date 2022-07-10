@@ -16,6 +16,8 @@ analytics = "Analytics";
 // Onboarding
 
 // Home
+accounts = "Accounts";
+balance = "Balance";
 add = "Add";
 addTransaction = "Add operation";
 

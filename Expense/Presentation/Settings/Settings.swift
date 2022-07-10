@@ -14,7 +14,7 @@ fileprivate enum SettingsKey: CodingKey {
     case dailyBudget
 }
 
-class Settings {
+final class Settings {
     /// Singleton is being used so there will be no need to create instance of this structure and create `UserDefaultsContainer` instance
     static let shared = Settings()
     /// User defaults container that allows easily usage of UserDefaults

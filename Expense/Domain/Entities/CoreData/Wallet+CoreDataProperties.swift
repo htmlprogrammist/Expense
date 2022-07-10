@@ -10,14 +10,15 @@ import Foundation
 import CoreData
 
 
-extension Wallet {
+extension Account {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Wallet> {
-        return NSFetchRequest<Wallet>(entityName: "Wallet")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Account> {
+        return NSFetchRequest<Account>(entityName: "Wallet")
     }
 
     @NSManaged public var name: String
     @NSManaged public var emoji: String
+    @NSManaged public var balance: Int64
     @NSManaged public var transactions: NSSet?
     @NSManaged public var budgets: NSSet?
     @NSManaged public var goals: NSSet?
@@ -26,7 +27,7 @@ extension Wallet {
 }
 
 // MARK: Generated accessors for transactions
-extension Wallet {
+extension Account {
 
     @objc(addTransactionsObject:)
     @NSManaged public func addToTransactions(_ value: Transaction)
@@ -43,7 +44,7 @@ extension Wallet {
 }
 
 // MARK: Generated accessors for budgets
-extension Wallet {
+extension Account {
 
     @objc(addBudgetsObject:)
     @NSManaged public func addToBudgets(_ value: Budget)
@@ -60,7 +61,7 @@ extension Wallet {
 }
 
 // MARK: Generated accessors for goals
-extension Wallet {
+extension Account {
 
     @objc(addGoalsObject:)
     @NSManaged public func addToGoals(_ value: Goal)
@@ -77,7 +78,7 @@ extension Wallet {
 }
 
 // MARK: Generated accessors for categories
-extension Wallet {
+extension Account {
 
     @objc(addCategoriesObject:)
     @NSManaged public func addToCategories(_ value: Category)
@@ -93,6 +94,6 @@ extension Wallet {
 
 }
 
-extension Wallet : Identifiable {
+extension Account : Identifiable {
 
 }

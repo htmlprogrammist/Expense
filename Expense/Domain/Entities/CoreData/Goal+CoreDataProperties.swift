@@ -16,7 +16,7 @@ extension Goal {
         return NSFetchRequest<Goal>(entityName: "Goal")
     }
 
-    @NSManaged public var wallet: Wallet
+    @NSManaged public var wallet: Account
     @NSManaged public var name: String
     @NSManaged public var emoji: String
     @NSManaged public var aim: Int64

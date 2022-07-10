@@ -14,6 +14,20 @@ final class SettingsViewController: UITableViewController {
         
         setupView()
     }
+    
+    @objc private func closeThisModule() {
+        dismiss(animated: true)
+    }
+    
+    private func setupView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeThisModule))
+        navigationItem.title = Texts.Settings.title
+        
+        tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(ProfileTableViewCell.self, forCellReuseIdentifier: ProfileTableViewCell.identifier)
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+    }
 }
 
 // MARK: - TableView
@@ -23,7 +37,12 @@ extension SettingsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 5
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,21 +68,10 @@ extension SettingsViewController {
             return 46
         }
     }
-}
-
-// MARK: - Helper methods
-private extension SettingsViewController {
-    func setupView() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeThisModule))
-        navigationItem.title = Texts.Settings.title
-        
-        tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(ProfileTableViewCell.self, forCellReuseIdentifier: ProfileTableViewCell.identifier)
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
-    }
     
-    @objc func closeThisModule() {
-        dismiss(animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
     }
 }

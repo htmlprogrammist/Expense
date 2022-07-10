@@ -30,6 +30,7 @@ final class HistoryViewController: UIViewController {
         tableView.register(HistoryTableViewCell.self, forCellReuseIdentifier: HistoryTableViewCell.identifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

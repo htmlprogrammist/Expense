@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class Wallet: NSManagedObject {
+public class Account: NSManagedObject {
 
 }

@@ -20,6 +20,8 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         let button = UIButton()
         button.setTitle(Texts.Home.seeAll, for: .normal)
         button.setTitleColor(UIColor.appColor, for: .normal)
+        button.addTarget(nil, action: #selector(HomeViewController.handleSeeAll), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
     private lazy var labelsStackView: UIStackView = {
@@ -47,10 +49,14 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(title: String, subtitle: String = "") {
+    public func configure(title: String, subtitle: String = "", tag: Int = 0) {
         titleLabel.text = title
         subtitleLabel.text = subtitle
-        seeAllButton.isHidden = subtitle.isEmpty
+        
+        if !subtitle.isEmpty {
+            seeAllButton.isHidden = false
+            seeAllButton.tag = tag
+        }
     }
     
     private func setupView() {

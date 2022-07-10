@@ -8,7 +8,7 @@
 import Foundation
 
 struct GoalInfo {
-    let wallet: Wallet
+    let wallet: Account
     let name: String
     let emoji: String
     let aim: Int64

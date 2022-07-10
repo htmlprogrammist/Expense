@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ProgressCollectionViewCell: UICollectionViewCell {
+final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private let progressView: CircularProgressView = {
-        let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), lineWidth: 15, rounded: false)
+        let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 60, height: 60), lineWidth: 12, rounded: false)
         progressView.timeToFill = 1.3
         progressView.progressColor = .appColor
         progressView.trackColor = .systemGroupedBackground
@@ -33,11 +33,14 @@ class ProgressCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
+        contentView.layer.cornerRadius = 10
         contentView.backgroundColor = .systemBackground
         contentView.addSubview(progressView)
         
         NSLayoutConstraint.activate([
-            
+            progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            progressView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+            progressView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
 }
