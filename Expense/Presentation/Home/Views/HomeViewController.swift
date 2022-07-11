@@ -59,13 +59,19 @@ final class HomeViewController: UIViewController {
     
     @objc private func addTransaction(sender: UIButton) {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
-        sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
+        sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.01, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
         
-        
+        let addTransactionViewController = UINavigationController(rootViewController: AddTransactionViewController())
+        if let sheet = addTransactionViewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+//            sheet.prefersGrabberVisible = true
+//            sheet.preferredCornerRadius = 12
+        }
+        present(addTransactionViewController, animated: true)
     }
     
     @objc private func openSettingsModule() {
@@ -145,7 +151,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             else {
                 fatalError("Could not create CollectionViewCell at cellForItemAt method in Home module")
             }
-            cell.configure()
+            struct ProgressCellModel: ProgressCellModelProtocol {
+                let emoji: String
+                let title: String
+                let firstSubtitle: String
+                let secondSubtitle: String
+                let progress: Double
+            }
+            cell.configure(data: ProgressCellModel(emoji: "🎡", title: "Развлечения", firstSubtitle: "Бюджет: \(Int.random(in: 1000...10000)) ₽", secondSubtitle: "Потрачено: \(Int.random(in: 1000...10000)) ₽", progress: Double.random(in: 0...1)))
             return cell
         case 3:
 //            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell

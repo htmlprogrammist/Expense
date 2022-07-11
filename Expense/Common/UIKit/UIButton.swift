@@ -16,6 +16,7 @@ extension UIButton {
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         self.setImage(image, for: .normal)
+        // TODO: Refactor with UIButtonConfiguration
         self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
         self.layer.cornerRadius = cornerRadius
         self.translatesAutoresizingMaskIntoConstraints = false

@@ -42,6 +42,16 @@ year = "Г";
 settings = "Настройки";
 managingWallets = "Управление кошельками";
 
+// Transactions
+income = "Доход";
+expense = "Расход";
+sum = "Сумма";
+category = "Категория";
+date = "Дата";
+note = "Заметка";
+repeats = "Повторять платёж";
+repeatsDescription = "Операции с повтором выполняются автоматически и отображаются в разделе \"Запланированные операции\"";
+
 // EmojiPicker
 emotionsAndPeople = "СМАЙЛИКИ И ЛЮДИ";
 animalsAndNature = "ЖИВОТНЫЕ И ПРИРОДА";

@@ -40,6 +40,18 @@ enum Texts {
         static let managingWallets = "managingWallets".localized
     }
     
+    /// Everything connected with transactions (adding, updating, etc.)
+    enum Transactions {
+        static let income = "income".localized
+        static let expense = "expense".localized
+        static let sum = "sum".localized
+        static let category = "category".localized
+        static let date = "date".localized
+        static let note = "note".localized
+        static let repeats = "repeats".localized
+        static let repeatsDescription = "repeatsDescription".localized
+    }
+    
     enum EmojiPicker {
         static let emotionsAndPeople = "emotionsAndPeople".localized
         static let animalsAndNature = "animalsAndNature".localized

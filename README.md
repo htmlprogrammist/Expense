@@ -7,6 +7,7 @@ In this project I demonstrated the knowledge of:
 - UIKit
 - MVVM + RxSwift
 - Core Data & CloudKit
+- CoreAnimation
 - Push-notifications
 - Working with `.csv` format
 - Testing (Unit/UI) with RxTest
@@ -14,7 +15,6 @@ In this project I demonstrated the knowledge of:
 # Requirements
 - The interface is drawn in UIKit
 - The app looks correct for iPhone SE (1st gen.) and above
-- Minimum version: iOS 13
 - The application must be written using an architectural pattern MVVM with RxSwift
 - To cover the code with tests, you must use RxTest. Tests should cover at least half of the written code
 - For permanent data storage, you need to use Core Data
@@ -31,6 +31,7 @@ In this project I demonstrated the knowledge of:
 - UIKit
 - MVVM + RxSwift
 - Core Data & CloudKit
+- CoreAnimation
 - Push-уведомления
 - Работа с форматом `.csv`
 - Тестирование (Unit/UI) с помощью RxTest
@@ -38,7 +39,6 @@ In this project I demonstrated the knowledge of:
 # Требования
 - Для отрисовки интерфейса используется UIKit
 - Приложение корректно отображается на iPhone SE (1-го поколения) и выше
-- Минимальная версия: iOS 13
 - Приложение должно быть написано с использованием архитектурного шаблона MVVM с RxSwift
 - Для постоянного хранения данных необходимо использовать Core Data
 - Использование Storyboard/Xib запрещено

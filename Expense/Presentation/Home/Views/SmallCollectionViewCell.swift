@@ -44,7 +44,7 @@ final class SmallCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.addSubview(stackView)
-        contentView.backgroundColor = .systemBackground
+        contentView.backgroundColor = .cellBackground
         contentView.layer.cornerRadius = 8
         
         NSLayoutConstraint.activate([

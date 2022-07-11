@@ -20,6 +20,8 @@ final class UnicodeManager: UnicodeManagerProtocol {
         return (UIDevice.current.systemVersion as NSString).floatValue
     }
     
+    /// Gets version of iOS for current device
+    /// - Returns: Array of emoji categories (and array of emojis inside them)
     public func getEmojisForCurrentIOSVersion() -> [EmojiCategory] {
         switch currentVersion {
         case 12.1...13.1:
@@ -39,7 +41,7 @@ final class UnicodeManager: UnicodeManagerProtocol {
     
     /// Returns a localized name for the emoji category.
     /// - Parameter type: Emoji category type
-    /// - Returns: Emoji (string)
+    /// - Returns: Name of the category
     public func getEmojiCategoryTitle(for type: EmojiCategoryType) -> String {
         switch type {
         case .people:

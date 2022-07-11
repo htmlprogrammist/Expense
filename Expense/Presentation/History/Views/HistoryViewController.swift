@@ -142,10 +142,10 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if segmentedControl.selectedSegmentIndex > 0 {
-            // TODO: Реализовать открытие модуля с транзакциями за выбранный период
-        } else {
+        if segmentedControl.selectedSegmentIndex == 0 {
             // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
+        } else {
+            // TODO: Реализовать открытие модуля с транзакциями за выбранный период
         }
     }
 }

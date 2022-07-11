@@ -15,7 +15,7 @@ protocol AccountsCoreDataManagerProtocol {
 
 protocol TransactionsCoreDataManagerProtocol {
     func fetchTransactions() -> [Transaction]?
-    func fetchTransactions(by category: Category) -> [Transaction]?
+//    func fetchTransactions(by category: Category) -> [Transaction]? // remove its' implementation
 //    func fetchTransactions(by goal: Goal) -> [Transaction]?
     func fetchPlannedTransactions() -> [Transaction]?
     
@@ -79,7 +79,7 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
         let account = Account(context: managedObjectContext)
         account.emoji = data.emoji
         account.name = data.name
-//        account.balance = 0
+//        account.balance = 0 // ? в модели вроде как проставлено default значение 0
         saveContext()
     }
     

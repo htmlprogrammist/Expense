@@ -24,6 +24,8 @@
 		F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */; };
 		F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354B286F0721001E1BBD /* HomeViewModel.swift */; };
 		F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */; };
+		F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */; };
+		F0205C5C287C2A5200104E2F /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */; };
 		F035F59628757D660041AF84 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59528757D660041AF84 /* UIView.swift */; };
 		F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */; };
 		F035F5BD28757E4A0041AF84 /* Unicode 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59C28757E4A0041AF84 /* Unicode 5.swift */; };
@@ -70,6 +72,8 @@
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
+		F0A12C09287C7CF400FC5CFD /* DailyBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */; };
+		F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */; };
 		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
 		F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */; };
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
@@ -118,6 +122,8 @@
 		F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F015354B286F0721001E1BBD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
 		F035F59528757D660041AF84 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewModel.swift; sourceTree = "<group>"; };
 		F035F59C28757E4A0041AF84 /* Unicode 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 5.swift"; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewModel.swift; sourceTree = "<group>"; };
+		F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewController.swift; sourceTree = "<group>"; };
 		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +246,15 @@
 			children = (
 			);
 			path = Submodules;
+			sourceTree = "<group>";
+		};
+		F0205C58287C2A3100104E2F /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */,
+				F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */,
+			);
+			path = AddTransaction;
 			sourceTree = "<group>";
 		};
 		F02BC8F7286A5F15009D2415 /* Data */ = {
@@ -451,6 +468,15 @@
 			path = ExpenseUITests;
 			sourceTree = "<group>";
 		};
+		F0A12C07287C7CDA00FC5CFD /* DailyBudget */ = {
+			isa = PBXGroup;
+			children = (
+				F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */,
+				F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */,
+			);
+			path = DailyBudget;
+			sourceTree = "<group>";
+		};
 		F0A452D528670F81005B5450 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +562,8 @@
 			isa = PBXGroup;
 			children = (
 				F0E89CBC285F115700036575 /* Home */,
+				F0205C58287C2A3100104E2F /* AddTransaction */,
+				F0A12C07287C7CDA00FC5CFD /* DailyBudget */,
 				F0E89CBE285F117300036575 /* History */,
 				F0E89CBF285F118400036575 /* Analytics */,
 				F07C25172870E3050000021E /* Settings */,
@@ -777,9 +805,11 @@
 				F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */,
 				F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
+				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */,
+				F0A12C09287C7CF400FC5CFD /* DailyBudgetViewModel.swift in Sources */,
 				F035F5BE28757E4A0041AF84 /* Unicode 13v1.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
@@ -789,8 +819,10 @@
 				F035F5C928757E4A0041AF84 /* ObservableObj.swift in Sources */,
 				F035F5C528757E4A0041AF84 /* Array.swift in Sources */,
 				F07C25162870E1800000021E /* SmallCollectionViewCell.swift in Sources */,
+				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
+				F0205C5C287C2A5200104E2F /* AddTransactionViewModel.swift in Sources */,
 				F035F5CF28757E4A0041AF84 /* EmojiPickerView.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */,
@@ -1005,7 +1037,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1061,7 +1093,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1086,7 +1118,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1115,7 +1147,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
