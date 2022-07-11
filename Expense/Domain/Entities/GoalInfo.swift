@@ -8,7 +8,7 @@
 import Foundation
 
 struct GoalInfo {
-    let wallet: Account
+    let account: Account
     let name: String
     let emoji: String
     let aim: Int64
@@ -19,6 +19,6 @@ struct GoalInfo {
 
 extension Goal {
     var goalInfo: GoalInfo {
-        GoalInfo(wallet: wallet, name: name, emoji: emoji, aim: aim, dateCreated: dateCreated, dateDeadline: dateDeadline, current: aim)
+        GoalInfo(account: account, name: name, emoji: emoji, aim: aim, dateCreated: dateCreated, dateDeadline: dateDeadline, current: aim)
     }
 }

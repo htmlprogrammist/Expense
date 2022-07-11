@@ -12,6 +12,7 @@ final class CircularProgressView: UIView {
     private var lineWidth: CGFloat
     private var progressLayer = CAShapeLayer()
     private var trackLayer = CAShapeLayer()
+    private var gradientLayer = CAGradientLayer()
     
     public var progress: Double = 0 {
         didSet {
@@ -55,6 +56,11 @@ final class CircularProgressView: UIView {
         progressLayer.strokeEnd = 0
         progressLayer.lineCap = .round
         layer.addSublayer(progressLayer)
+        gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.systemCyan.cgColor]
+        gradientLayer.locations = [0.0, 1.0]
+//        progressLayer.addSublayer(gradientLayer)
+        gradientLayer.mask = progressLayer
+//        layer.addSublayer(gradientLayer)
     }
     
     private func setProgress(duration: TimeInterval = 3, to newProgress: Double) -> Void {

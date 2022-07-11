@@ -8,7 +8,7 @@
 import Foundation
 
 struct BudgetInfo {
-    let wallet: Account
+    let account: Account
     let sum: Int64
     let period: Period
     let category: Category
@@ -17,6 +17,6 @@ struct BudgetInfo {
 
 extension Budget {
     var budgetInfo: BudgetInfo {
-        BudgetInfo(wallet: wallet, sum: sum, period: period, category: category, date: date)
+        BudgetInfo(account: account, sum: sum, period: period, category: category, date: date)
     }
 }

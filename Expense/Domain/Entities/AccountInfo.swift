@@ -9,7 +9,7 @@ import Foundation
 
 struct AccountInfo {
     let name: String
-    let emoji: String
+    let emoji: Emoji
     let balance: Int64
     
     var transactions: NSSet?
@@ -20,6 +20,6 @@ struct AccountInfo {
 
 extension Account {
     var walletInfo: AccountInfo {
-        AccountInfo(name: name, emoji: emoji, balance: balance, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
+        AccountInfo(name: name, emoji: Tagged(rawValue: emoji), balance: balance, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
     }
 }

@@ -77,7 +77,7 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
     
     func createAccount(with data: AccountInfo) {
         let account = Account(context: managedObjectContext)
-        account.emoji = data.emoji
+        account.emoji = data.emoji.rawValue
         account.name = data.name
 //        account.balance = 0 // ? в модели вроде как проставлено default значение 0
         saveContext()
@@ -142,7 +142,7 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     func createTransaction(with data: TransactionInfo) {
         let transaction = Transaction(context: managedObjectContext)
         transaction.date = data.date
-        transaction.wallet = data.wallet
+        transaction.account = data.account
         transaction.sum = Int64(data.sum)
         transaction.isExpense = data.isExpense
         /// The next two properties are optionals, but one of them must be provided
@@ -168,8 +168,8 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
     
     func createCategory(with data: CategoryInfo) {
         let category = Category(context: managedObjectContext)
-        category.wallet = data.wallet
-        category.emoji = data.emoji
+        category.account = data.account
+        category.emoji = data.emoji.rawValue
         category.name = data.name
         saveContext()
     }
@@ -192,7 +192,7 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
     
     func createGoal(with data: GoalInfo) {
         let goal = Goal(context: managedObjectContext)
-        goal.wallet = data.wallet
+        goal.account = data.account
         goal.name = data.name
         goal.emoji = data.emoji
         goal.current = data.current
@@ -220,7 +220,7 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
     
     func createBudget(with data: BudgetInfo) {
         let budget = Budget(context: managedObjectContext)
-        budget.wallet = data.wallet
+        budget.account = data.account
         budget.date = Date()
         budget.sum = data.sum
         budget.category = data.category
