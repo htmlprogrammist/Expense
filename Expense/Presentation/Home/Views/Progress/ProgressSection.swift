@@ -8,11 +8,8 @@
 import UIKit
 
 struct ProgressSection: Section {
-    public var numberOfItems: Int
-    
-    init(numberOfItems: Int) {
-        self.numberOfItems = numberOfItems
-    }
+    public let numberOfItems: Int
+    public var isGoals: Bool = false
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(90))
@@ -25,6 +22,9 @@ struct ProgressSection: Section {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
         
+        if isGoals {
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
+        }
         return section
     }
     

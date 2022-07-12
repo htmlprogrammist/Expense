@@ -9,18 +9,11 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
-        (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
-        (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
-        (Images.Home.goals, Texts.Home.goals, .systemBlue),
-        (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
-    ]
-    
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: 3),
-        PageControlSection(),
+        PageControlSection(numberOfPages: 3),
         HeaderSection(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription, tag: 1),
-        ProgressSection(numberOfItems: 3),
+        ProgressSection(numberOfItems: 3, isGoals: true),
         HeaderSection(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription, tag: 2),
         ProgressSection(numberOfItems: 3),
         HeaderSection(title: Texts.Home.more),

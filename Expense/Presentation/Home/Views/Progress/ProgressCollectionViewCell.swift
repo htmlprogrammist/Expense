@@ -27,7 +27,7 @@ protocol ProgressCellModelProtocol {
 final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private let progressView: CircularProgressView = {
-        let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 56, height: 56), lineWidth: 8)
+        let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 56, height: 56), lineWidth: 7.5)
         progressView.timeToFill = 1.3 // TODO: настроить время анимации
         progressView.translatesAutoresizingMaskIntoConstraints = false
         return progressView

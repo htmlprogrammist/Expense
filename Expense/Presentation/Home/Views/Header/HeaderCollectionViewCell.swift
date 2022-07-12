@@ -65,7 +65,7 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 8),
             mainStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -8),
-            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
         ])
     }
 }

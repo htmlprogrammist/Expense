@@ -26,7 +26,12 @@ final class MoreCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private let textLabel = UILabel()
+    private let textLabel: UILabel = {
+        let label = UILabel()
+        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     private let indicatorImageView: UIImageView = {
         let imageView = UIImageView(image: Images.disclosureIndicator)
@@ -54,7 +59,6 @@ final class MoreCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.addSubview(textLabel)
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(iconImageView)
         contentView.addSubview(indicatorImageView)

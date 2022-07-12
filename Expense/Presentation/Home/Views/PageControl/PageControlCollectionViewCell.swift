@@ -9,7 +9,13 @@ import UIKit
 
 final class PageControlCollectionViewCell: UICollectionViewCell {
     
-    let pageControl = UIPageControl()
+    private let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPageIndicatorTintColor = .appColor
+        pageControl.pageIndicatorTintColor = .systemGray4
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        return pageControl
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,19 +27,16 @@ final class PageControlCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure() {
-        
+    public func configure(numberOfPages: Int) {
+        pageControl.numberOfPages = numberOfPages
     }
     
     private func setupView() {
         contentView.addSubview(pageControl)
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             pageControl.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             pageControl.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-//            pageControl.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-//            pageControl.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
         ])
     }
 }

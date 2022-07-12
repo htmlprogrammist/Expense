@@ -28,7 +28,7 @@ struct HeaderSection: Section {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(68))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(56))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
@@ -39,7 +39,7 @@ struct HeaderSection: Section {
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionViewCell.identifier, for: indexPath) as? HeaderCollectionViewCell
         else {
-            fatalError("Could not create header-cell in HeaderSection for indexPath: \(indexPath) with title: \(title)")
+            fatalError("Could not create HeaderCollectionViewCell at indexPath \(indexPath)")
         }
         cell.configure(title: title, subtitle: subtitle, tag: tag)
         return cell

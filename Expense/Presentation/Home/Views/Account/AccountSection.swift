@@ -8,11 +8,7 @@
 import UIKit
 
 struct AccountSection: Section {
-    public var numberOfItems: Int
-    
-    init(numberOfItems: Int) {
-        self.numberOfItems = numberOfItems
-    }
+    public let numberOfItems: Int
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(112))
