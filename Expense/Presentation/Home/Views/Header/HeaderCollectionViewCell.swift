@@ -20,7 +20,7 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
         let button = UIButton()
         button.setTitle(Texts.Home.seeAll, for: .normal)
         button.setTitleColor(UIColor.appColor, for: .normal)
-//        button.addTarget(nil, action: #selector(HomeViewController.handleSeeAll), for: .touchUpInside)
+        button.addTarget(nil, action: #selector(HomeViewController.handleSeeAll), for: .touchUpInside)
         button.isHidden = true
         return button
     }()

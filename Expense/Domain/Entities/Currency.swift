@@ -9,8 +9,8 @@
     case eur
     case usd
     case rub // Russian Ruble
-    case frf // French Franc
     case gbp // Pound Sterling
+    case jpy // Japanese Yen
     case uah // Ukrainian Hryvnia
     case kzt // Kazakhstani Tenge
     case byn // Belarusian Ruble
@@ -25,10 +25,10 @@
             return "$"
         case .rub:
             return "₽"
-        case .frf:
-            return "₣"
         case .gbp:
             return "£"
+        case .jpy:
+            return "¥"
         case .uah:
             return "₴"
         case .kzt:
@@ -51,10 +51,10 @@
             return "USD"
         case .rub:
             return "RUB"
-        case .frf:
-            return "FRF"
         case .gbp:
             return "GBP"
+        case .jpy:
+            return "JPY"
         case .uah:
             return "UAH"
         case .kzt:
