@@ -24,6 +24,12 @@ extension Budget {
 
 }
 
+extension Budget {
+    var budgetInfo: BudgetInfo {
+        BudgetInfo(account: account, sum: sum, period: period, category: category, date: date)
+    }
+}
+
 extension Budget : Identifiable {
 
 }

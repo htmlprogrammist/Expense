@@ -40,11 +40,10 @@ final class CircularProgressView: UIView {
         backgroundColor = .clear
         layer.cornerRadius = frame.size.width / 2
         let circularPath = UIBezierPath(arcCenter: center, radius: frame.width / 2, startAngle: CGFloat(-0.5 * .pi), endAngle: CGFloat(1.5 * .pi), clockwise: true)
-        trackLayer.fillColor = UIColor.blue.cgColor
         
         trackLayer.path = circularPath.cgPath
         trackLayer.fillColor = .none
-        trackLayer.strokeColor = UIColor.systemGroupedBackground.cgColor
+        trackLayer.strokeColor = UIColor.background.cgColor
         trackLayer.lineWidth = lineWidth
         trackLayer.strokeEnd = 1
         layer.addSublayer(trackLayer)
@@ -56,10 +55,11 @@ final class CircularProgressView: UIView {
         progressLayer.strokeEnd = 0
         progressLayer.lineCap = .round
         layer.addSublayer(progressLayer)
+        
         gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.systemCyan.cgColor]
         gradientLayer.locations = [0.0, 1.0]
+//        gradientLayer.mask = progressLayer
 //        progressLayer.addSublayer(gradientLayer)
-        gradientLayer.mask = progressLayer
 //        layer.addSublayer(gradientLayer)
     }
     

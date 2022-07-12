@@ -18,9 +18,3 @@ struct TransactionInfo {
     let notes: String?
     var repeats: Period = .none
 }
-
-extension Transaction {
-    var transactionInfo: TransactionInfo {
-        TransactionInfo(account: account, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeats: repeats)
-    }
-}

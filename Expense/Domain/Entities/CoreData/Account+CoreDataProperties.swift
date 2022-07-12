@@ -1,5 +1,5 @@
 //
-//  Wallet+CoreDataProperties.swift
+//  Account+CoreDataProperties.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 25.06.2022.
@@ -24,6 +24,12 @@ extension Account {
     @NSManaged public var goals: NSSet?
     @NSManaged public var categories: NSSet?
 
+}
+
+extension Account {
+    var walletInfo: AccountInfo {
+        AccountInfo(name: name, emoji: Tagged(emoji), balance: balance, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
+    }
 }
 
 // MARK: Generated accessors for transactions

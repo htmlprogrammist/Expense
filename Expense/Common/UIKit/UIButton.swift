@@ -9,16 +9,26 @@ import UIKit
 
 extension UIButton {
     // Setup system button with provided parameters: title, image, background color, corner radius and shadows
-    convenience init(title: String, image: UIImage, backgroundColor: UIColor, cornerRadius: CGFloat, shadows: Bool) {
-        self.init(type: .system)
-        self.tintColor = .white
-        self.backgroundColor = .appColor
-        self.setTitle(title, for: .normal)
-        self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        self.setImage(image, for: .normal)
-        // TODO: Refactor with UIButtonConfiguration
-        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
-        self.layer.cornerRadius = cornerRadius
+    convenience init(title: String, image: UIImage, backgroundColor: UIColor, cornerStyle: UIButton.Configuration.CornerStyle, shadows: Bool) {
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = title
+        var container = AttributeContainer()
+        container.font = UIFont.boldSystemFont(ofSize: 18)
+        configuration.attributedTitle = AttributedString("Title", attributes: container)
+        configuration.image = image
+        configuration.imagePadding = 10
+//        configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        configuration.cornerStyle = cornerStyle
+        configuration.baseBackgroundColor = backgroundColor
+        configuration.baseForegroundColor = .white
+        
+//        self.setTitle(title, for: .normal)
+//        self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+//        self.setImage(image, for: .normal)
+//        self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
+        self.init(configuration: configuration)
+//        self.tintColor = .white
+//        self.backgroundColor = backgroundColor
         self.translatesAutoresizingMaskIntoConstraints = false
         
         if shadows {

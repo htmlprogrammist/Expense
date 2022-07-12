@@ -14,9 +14,3 @@ struct BudgetInfo {
     let category: Category
     let date: Date
 }
-
-extension Budget {
-    var budgetInfo: BudgetInfo {
-        BudgetInfo(account: account, sum: sum, period: period, category: category, date: date)
-    }
-}

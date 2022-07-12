@@ -10,9 +10,9 @@ import Foundation
 /// Protocol for the ViewModel which using in EmojiPickerViewController
 protocol EmojiPickerViewModelProtocol {
     /// The observed variable that is responsible for the choice of emoji
-    var selectedEmoji: ObservableObj<String> { get set }
+    var selectedEmoji: Observ<String> { get set }
     /// The observed variable that is responsible for the choice of emoji category
-    var selectedEmojiCategoryIndex: ObservableObj<Int> { get set }
+    var selectedEmojiCategoryIndex: Observ<Int> { get set }
     /// The method returns the number of categories with emojis
     func numberOfSections() -> Int
     /// The method returns the number of emojis in the target section
@@ -26,8 +26,8 @@ protocol EmojiPickerViewModelProtocol {
 /// ViewModel which using in EmojiPickerViewController
 final class EmojiPickerViewModel: EmojiPickerViewModelProtocol {
     
-    public var selectedEmoji = ObservableObj<String>(value: "")
-    public var selectedEmojiCategoryIndex = ObservableObj<Int>(value: 0)
+    public var selectedEmoji = Observ<String>(value: "")
+    public var selectedEmojiCategoryIndex = Observ<Int>(value: 0)
     
     /// All emoji categories
     private var emojiCategories = [EmojiCategory]()

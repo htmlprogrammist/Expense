@@ -16,8 +16,8 @@
 		F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */; };
 		F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */; };
 		F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */; };
-		F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */; };
-		F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */; };
+		F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */; };
+		F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */; };
 		F007E572286B80010073C74D /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E571286B80000073C74D /* CategoryInfo.swift */; };
 		F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010E9C22871972000AFD1D0 /* TitleLabel.swift */; };
 		F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510BE2872E7AC00B858BC /* SettingsViewController.swift */; };
@@ -38,7 +38,7 @@
 		F035F5C528757E4A0041AF84 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5A528757E4A0041AF84 /* Array.swift */; };
 		F035F5C728757E4A0041AF84 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AB28757E4A0041AF84 /* EmojiModel.swift */; };
 		F035F5C828757E4A0041AF84 /* PickerArrowDirectionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AC28757E4A0041AF84 /* PickerArrowDirectionMode.swift */; };
-		F035F5C928757E4A0041AF84 /* ObservableObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AE28757E4A0041AF84 /* ObservableObj.swift */; };
+		F035F5C928757E4A0041AF84 /* Observ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AE28757E4A0041AF84 /* Observ.swift */; };
 		F035F5CA28757E4A0041AF84 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */; };
 		F035F5CB28757E4A0041AF84 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */; };
 		F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */; };
@@ -55,6 +55,7 @@
 		F042C2C12866F10C0002208F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2C02866F10C0002208F /* Images.swift */; };
 		F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */; };
 		F044C216287706270029EA8E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C215287706270029EA8E /* CircularProgressView.swift */; };
+		F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
 		F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* AccountInfo.swift */; };
@@ -115,8 +116,8 @@
 		F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E571286B80000073C74D /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
 		F010E9C22871972000AFD1D0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		F01510BE2872E7AC00B858BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +138,7 @@
 		F035F5A528757E4A0041AF84 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		F035F5AB28757E4A0041AF84 /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		F035F5AC28757E4A0041AF84 /* PickerArrowDirectionMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerArrowDirectionMode.swift; sourceTree = "<group>"; };
-		F035F5AE28757E4A0041AF84 /* ObservableObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableObj.swift; sourceTree = "<group>"; };
+		F035F5AE28757E4A0041AF84 /* Observ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observ.swift; sourceTree = "<group>"; };
 		F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
 		F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSectionHeader.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		F042C2C02866F10C0002208F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 		F044C215287706270029EA8E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F057E9E5286788D40083C003 /* TransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
 		F057E9E72867890E0083C003 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		F057E9E928678B180083C003 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
@@ -229,8 +231,8 @@
 		F007E558286B7DAD0073C74D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F007E56D286B7DFE0073C74D /* Wallet+CoreDataClass.swift */,
-				F007E56E286B7DFE0073C74D /* Wallet+CoreDataProperties.swift */,
+				F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */,
+				F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */,
 				F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */,
 				F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */,
 				F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */,
@@ -364,6 +366,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		F0479DB4287CC95A00011374 /* TransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransactionDetails;
+			sourceTree = "<group>";
+		};
 		F0612D50286C6463009B641A /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +380,7 @@
 				F06080F4286EDD3900782D99 /* Date.swift */,
 				F035F5A528757E4A0041AF84 /* Array.swift */,
 				F073DADF287C930D00907507 /* Tagged.swift */,
-				F035F5AE28757E4A0041AF84 /* ObservableObj.swift */,
+				F035F5AE28757E4A0041AF84 /* Observ.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -430,6 +439,7 @@
 				F060E27728762542006A87A9 /* SettingsCollectionViewCell.swift */,
 				F07286502876C6F700B93224 /* HomeCollectionViewHeader.swift */,
 				F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */,
+				F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -568,6 +578,7 @@
 				F0205C58287C2A3100104E2F /* AddTransaction */,
 				F0A12C07287C7CDA00FC5CFD /* DailyBudget */,
 				F0E89CBE285F117300036575 /* History */,
+				F0479DB4287CC95A00011374 /* TransactionDetails */,
 				F0E89CBF285F118400036575 /* Analytics */,
 				F07C25172870E3050000021E /* Settings */,
 				F035F59728757E4A0041AF84 /* EmojiPicker */,
@@ -805,7 +816,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F007E56F286B7DFE0073C74D /* Wallet+CoreDataClass.swift in Sources */,
+				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
+				F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */,
 				F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
@@ -819,7 +831,7 @@
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
-				F035F5C928757E4A0041AF84 /* ObservableObj.swift in Sources */,
+				F035F5C928757E4A0041AF84 /* Observ.swift in Sources */,
 				F035F5C528757E4A0041AF84 /* Array.swift in Sources */,
 				F07C25162870E1800000021E /* SmallCollectionViewCell.swift in Sources */,
 				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
@@ -841,7 +853,7 @@
 				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
 				F060E27828762542006A87A9 /* SettingsCollectionViewCell.swift in Sources */,
 				F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */,
-				F007E570286B7DFE0073C74D /* Wallet+CoreDataProperties.swift in Sources */,
+				F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F035F5CD28757E4A0041AF84 /* EmojiCategoryIconView.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,

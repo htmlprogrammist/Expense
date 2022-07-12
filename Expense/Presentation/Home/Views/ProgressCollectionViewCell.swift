@@ -17,7 +17,7 @@ import UIKit
  Или нет... так будет проще... намного проще... но тогда статус Entity потеряется, это уже будет Model. Но мне нужно передать во ViewController со списком целей или бюджетов кордатовские модели, иначе никак, ведь на удаление или изменнеие придётся использовать именно их
  */
 protocol ProgressCellModelProtocol {
-    var emoji: String { get }
+    var emoji: Emoji { get }
     var title: String { get }
     var firstSubtitle: String { get }
     var secondSubtitle: String { get }
@@ -35,7 +35,6 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private let emojiLabel: UILabel = {
         let label = UILabel()
-        label.text = "📚"
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -51,7 +50,6 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     }()
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Books"
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         return label
     }()
@@ -80,7 +78,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     
     public func configure(data: ProgressCellModelProtocol) {
         progressView.progress = data.progress
-        emojiLabel.text = data.emoji
+        emojiLabel.text = data.emoji.rawValue
         titleLabel.text = data.title
         firstSubtitleLabel.text = data.firstSubtitle
         secondSubtitleLabel.text = data.secondSubtitle
@@ -97,7 +95,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
             progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 6),
             progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 36),
+            emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 35),
             
             labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 32),
             labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),

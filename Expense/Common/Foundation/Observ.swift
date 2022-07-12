@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ObservableObj<T> {
+final class Observ<T> {
     typealias Listener = (T) -> Void
     
     public var value: T {

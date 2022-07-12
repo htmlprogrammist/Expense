@@ -27,6 +27,12 @@ extension Transaction {
 
 }
 
+extension Transaction {
+    var transactionInfo: TransactionInfo {
+        TransactionInfo(account: account, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeats: repeats)
+    }
+}
+
 extension Transaction : Identifiable {
 
 }

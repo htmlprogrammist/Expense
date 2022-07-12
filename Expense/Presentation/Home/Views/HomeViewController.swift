@@ -152,13 +152,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                 fatalError("Could not create CollectionViewCell at cellForItemAt method in Home module")
             }
             struct ProgressCellModel: ProgressCellModelProtocol {
-                let emoji: String
+                let emoji: Emoji
                 let title: String
                 let firstSubtitle: String
                 let secondSubtitle: String
                 let progress: Double
             }
-            cell.configure(data: ProgressCellModel(emoji: "🎡", title: "Развлечения", firstSubtitle: "Бюджет: \(Int.random(in: 1000...10000)) ₽", secondSubtitle: "Потрачено: \(Int.random(in: 1000...10000)) ₽", progress: Double.random(in: 0...1)))
+            cell.configure(data: ProgressCellModel(emoji: Tagged("🎡"), title: "Развлечения", firstSubtitle: "Бюджет: \(Int.random(in: 1000...10000)) ₽", secondSubtitle: "Потрачено: \(Int.random(in: 1000...10000)) ₽", progress: Double.random(in: 0...1)))
             return cell
         case 3:
 //            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.identifier, for: indexPath) as? SettingsCollectionViewCell
@@ -176,7 +176,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        // case [0, 0]: Alert with UITextField that changes user's balance
+        // case [0, 1]: Open Daily budget module
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

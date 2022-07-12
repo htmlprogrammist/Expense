@@ -27,6 +27,12 @@ extension Goal {
 
 }
 
+extension Goal {
+    var goalInfo: GoalInfo {
+        GoalInfo(account: account, name: name, emoji: emoji, aim: aim, dateCreated: dateCreated, dateDeadline: dateDeadline, current: aim)
+    }
+}
+
 // MARK: Generated accessors for transactions
 extension Goal {
 

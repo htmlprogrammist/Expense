@@ -16,9 +16,3 @@ struct GoalInfo {
     let dateDeadline: Date?
     var current: Int64 = 0
 }
-
-extension Goal {
-    var goalInfo: GoalInfo {
-        GoalInfo(account: account, name: name, emoji: emoji, aim: aim, dateCreated: dateCreated, dateDeadline: dateDeadline, current: aim)
-    }
-}

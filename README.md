@@ -3,7 +3,6 @@ Application that allows you to track your finances, daily budget etc.
 
 # Description
 In this project I demonstrated the knowledge of:
-
 - UIKit
 - MVVM + RxSwift
 - Core Data & CloudKit
@@ -27,7 +26,6 @@ In this project I demonstrated the knowledge of:
 
 # Описание
 В данном проекте я продемонстрировал знания:
-
 - UIKit
 - MVVM + RxSwift
 - Core Data & CloudKit

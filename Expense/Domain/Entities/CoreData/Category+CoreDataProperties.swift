@@ -24,6 +24,12 @@ extension Category {
 
 }
 
+extension Category {
+    var categoryInfo: CategoryInfo {
+        CategoryInfo(account: account, name: name, emoji: Tagged(emoji))
+    }
+}
+
 extension Category : Identifiable {
 
 }

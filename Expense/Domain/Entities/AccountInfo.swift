@@ -17,9 +17,3 @@ struct AccountInfo {
     var goals: NSSet?
     var budgets: NSSet?
 }
-
-extension Account {
-    var walletInfo: AccountInfo {
-        AccountInfo(name: name, emoji: Tagged(rawValue: emoji), balance: balance, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
-    }
-}
