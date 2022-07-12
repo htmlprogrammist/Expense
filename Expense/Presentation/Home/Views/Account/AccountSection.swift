@@ -1,5 +1,5 @@
 //
-//  AccountsSection.swift
+//  AccountSection.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 12.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct AccountsSection: Section {
+struct AccountSection: Section {
     public var numberOfItems: Int
     
     init(numberOfItems: Int) {

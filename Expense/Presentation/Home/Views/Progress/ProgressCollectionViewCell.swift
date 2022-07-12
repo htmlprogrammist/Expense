@@ -43,7 +43,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, firstSubtitleLabel, secondSubtitleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 4
+        stackView.spacing = 3
         stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView

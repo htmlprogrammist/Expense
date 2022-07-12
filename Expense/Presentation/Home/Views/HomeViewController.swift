@@ -17,13 +17,13 @@ final class HomeViewController: UIViewController {
     ]
     
     private lazy var sections: [Section] = [
-        AccountsSection(numberOfItems: 3),
+        AccountSection(numberOfItems: 3),
         PageControlSection(),
-        HeaderSection(title: "Goals"),
+        HeaderSection(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription, tag: 1),
         ProgressSection(numberOfItems: 3),
-        HeaderSection(title: "Budgets"),
+        HeaderSection(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription, tag: 2),
         ProgressSection(numberOfItems: 3),
-        HeaderSection(title: "More"),
+        HeaderSection(title: Texts.Home.more),
         MoreSection(numberOfItems: 4)
     ]
     

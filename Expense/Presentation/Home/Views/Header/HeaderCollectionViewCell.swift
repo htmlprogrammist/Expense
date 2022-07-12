@@ -9,9 +9,6 @@ import UIKit
 
 final class HeaderCollectionViewCell: UICollectionViewCell {
     
-    private let titles = ["", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
-    private let subtitles = ["", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
-    
     private let titleLabel = TitleLabel()
     private let subtitleLabel: UILabel = {
         let label = UILabel()
@@ -52,13 +49,13 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(indexPath: IndexPath) {
-        titleLabel.text = titles[indexPath.section]
-        subtitleLabel.text = subtitles[indexPath.section]
+    public func configure(title: String, subtitle: String, tag: Int) {
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
         
-        if !subtitles[indexPath.section].isEmpty {
+        if !subtitle.isEmpty {
             seeAllButton.isHidden = false
-            seeAllButton.tag = indexPath.section
+            seeAllButton.tag = tag
         }
     }
     
@@ -66,9 +63,9 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
         addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mainStackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 8),
+            mainStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -8),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
         ])
     }
 }

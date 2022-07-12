@@ -11,29 +11,37 @@ struct HeaderSection: Section {
     let numberOfItems = 1
     
     private let title: String
+    private var subtitle: String = ""
+    private var tag: Int = 0
     
     init(title: String) {
         self.title = title
+    }
+    
+    init(title: String, subtitle: String, tag: Int) {
+        self.title = title
+        self.subtitle = subtitle
+        self.tag = tag
     }
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(68))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
         return section
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionViewCell.identifier, for: indexPath) as? HeaderCollectionViewCell
         else {
-            fatalError("Could not create header-cell in HeaderSection for indexPath: \(indexPath)")
+            fatalError("Could not create header-cell in HeaderSection for indexPath: \(indexPath) with title: \(title)")
         }
-//        cell.configure(title: <#T##String#>, subtitle: <#T##String#>, tag: <#T##Int#>)
-        cell.configure(indexPath: indexPath)
+        cell.configure(title: title, subtitle: subtitle, tag: tag)
         return cell
     }
 }
