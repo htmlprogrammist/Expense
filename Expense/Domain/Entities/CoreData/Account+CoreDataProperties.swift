@@ -19,6 +19,7 @@ extension Account {
     @NSManaged public var name: String
     @NSManaged public var emoji: String
     @NSManaged public var balance: Int64
+    @NSManaged public var currency: Currency
     @NSManaged public var transactions: NSSet?
     @NSManaged public var budgets: NSSet?
     @NSManaged public var goals: NSSet?
@@ -27,8 +28,8 @@ extension Account {
 }
 
 extension Account {
-    var walletInfo: AccountInfo {
-        AccountInfo(name: name, emoji: Tagged(emoji), balance: balance, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
+    var accountInfo: AccountInfo {
+        AccountInfo(name: name, emoji: Tagged(emoji), balance: balance, currency: currency, transactions: transactions, categories: categories, goals: goals, budgets: budgets)
     }
 }
 

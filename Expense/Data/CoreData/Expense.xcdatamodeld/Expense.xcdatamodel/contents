@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Account" representedClassName=".Wallet" syncable="YES">
         <attribute name="balance" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="currency" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="emoji" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="budgets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Budget" inverseName="account" inverseEntity="Budget"/>
@@ -44,7 +45,7 @@
         <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="transactions" inverseEntity="Goal"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="149"/>
         <element name="Budget" positionX="0" positionY="45" width="128" height="104"/>
         <element name="Category" positionX="-36" positionY="9" width="128" height="104"/>
         <element name="Goal" positionX="-18" positionY="27" width="128" height="149"/>

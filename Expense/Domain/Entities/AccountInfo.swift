@@ -11,6 +11,7 @@ struct AccountInfo {
     let name: String
     let emoji: Emoji
     let balance: Int64
+    let currency: Currency
     
     var transactions: NSSet?
     var categories: NSSet?
