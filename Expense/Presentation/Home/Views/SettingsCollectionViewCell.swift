@@ -59,6 +59,10 @@ final class SettingsCollectionViewCell: UICollectionViewCell {
         iconContainer.addSubview(iconImageView)
         contentView.addSubview(indicatorImageView)
         
+        iconImageView.image = Images.Home.calendar.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
+        iconContainer.backgroundColor = .systemRed
+        textLabel.text = Texts.Home.scheduledOperations
+        
         contentView.layer.cornerRadius = 8
         contentView.clipsToBounds = true
         contentView.backgroundColor = .cellBackground

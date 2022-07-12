@@ -81,7 +81,7 @@ final class HistoryTableViewCell: UITableViewCell {
             emojiLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4),
             emojiLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             
-            mainStackView.leadingAnchor.constraint(equalTo: emoji.trailingAnchor, constant: 16),
+            mainStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 16),
             mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4),
             mainStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -4),

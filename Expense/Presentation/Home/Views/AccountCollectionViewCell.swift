@@ -24,8 +24,8 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     }()
     private let emojiLabel: UILabel = {
         let label = UILabel()
-        label.text = "🤓"
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.text = "🥑"
+        label.font = UIFont.systemFont(ofSize: 26)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -36,16 +36,16 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [accountNameLabel, accountCurrencyLabel])
         stackView.axis = .vertical
-        stackView.spacing = 3
+        stackView.spacing = 2
         return stackView
     }()
     
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [emojiContainer, labelsStackView])
         stackView.axis = .horizontal
-        stackView.alignment = .leading
+        stackView.alignment = .center
         stackView.distribution = .fillProportionally
-        stackView.spacing = 16
+        stackView.spacing = 14
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -76,14 +76,16 @@ final class AccountCollectionViewCell: UICollectionViewCell {
             emojiContainer.heightAnchor.constraint(equalToConstant: 40),
             emojiLabel.centerXAnchor.constraint(equalTo: emojiContainer.centerXAnchor),
             emojiLabel.centerYAnchor.constraint(equalTo: emojiContainer.centerYAnchor),
+//            emojiLabel.leadingAnchor.constraint(equalTo: emojiContainer.leadingAnchor, constant: 6),
+//            emojiLabel.topAnchor.constraint(equalTo: emojiContainer.topAnchor, constant: 4),
             
-            mainStackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 10),
+            mainStackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
             mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 6),
             mainStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
             
             balanceLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
             balanceLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -4),
-            balanceLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -6)
+            balanceLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -4)
         ])
     }
 }
