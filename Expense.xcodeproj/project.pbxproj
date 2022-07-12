@@ -81,6 +81,8 @@
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
 		F0A9D64F27D2AD4100E63CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */; };
 		F0A9D65227D2AD4200E63CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */; };
+		F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */; };
+		F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */; };
 		F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */; };
 		F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E89CC0285F11A800036575 /* HomeViewController.swift */; };
 		F0F70A222864825700656370 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A212864825700656370 /* Texts.swift */; };
@@ -187,6 +189,8 @@
 		F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F0E89CC0285F11A800036575 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F0F70A212864825700656370 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
@@ -392,6 +396,7 @@
 				F035F5A328757E4A0041AF84 /* UIColor.swift */,
 				F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */,
 				F010E9C22871972000AFD1D0 /* TitleLabel.swift */,
+				F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */,
 				F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */,
 				F044C215287706270029EA8E /* CircularProgressView.swift */,
 			);
@@ -435,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
+				F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */,
 				F07C25152870E1800000021E /* SmallCollectionViewCell.swift */,
 				F060E27728762542006A87A9 /* SettingsCollectionViewCell.swift */,
 				F07286502876C6F700B93224 /* HomeCollectionViewHeader.swift */,
@@ -853,7 +859,9 @@
 				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
 				F060E27828762542006A87A9 /* SettingsCollectionViewCell.swift in Sources */,
 				F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */,
+				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */,
+				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F035F5CD28757E4A0041AF84 /* EmojiCategoryIconView.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
@@ -1132,6 +1140,7 @@
 				INFOPLIST_FILE = Expense/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1161,6 +1170,7 @@
 				INFOPLIST_FILE = Expense/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

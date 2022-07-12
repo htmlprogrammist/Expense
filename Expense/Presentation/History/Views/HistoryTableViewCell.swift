@@ -9,12 +9,13 @@ import UIKit
 
 final class HistoryTableViewCell: UITableViewCell {
     
-    private lazy var emoji: UILabel = {
+    private lazy var emojiLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [labelsStackView, timeLabel])
         stackView.axis = .horizontal
@@ -23,15 +24,6 @@ final class HistoryTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    
-    private lazy var timeLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize) // 14
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [sumLabel, categoryLabel, notesLabel])
         stackView.axis = .vertical
@@ -39,24 +31,21 @@ final class HistoryTableViewCell: UITableViewCell {
         stackView.alignment = .leading
         return stackView
     }()
-    private lazy var sumLabel: UILabel = {
+    
+    private let sumLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         return label
     }()
-    private lazy var categoryLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize) // 14
-        return label
-    }()
-    private lazy var notesLabel: UILabel = {
+    private let notesLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: UIFont.systemFontSize - 1) // 13
         label.numberOfLines = 0
         return label
     }()
+    private let timeLabel = SubtitleLabel()
+    private let categoryLabel = SubtitleLabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -69,7 +58,7 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     public func configure(isDay: Bool) {
-        emoji.text = "🍕" // transaction.category.emoji
+        emojiLabel.text = "🍕" // transaction.category.emoji
         categoryLabel.text = "Кафе" // transaction.category.name
         sumLabel.text = "-540 ₽" // "-\(transaction.sum) ₽"
         timeLabel.text = "19:30" // "\(transaction.date.formatTo(...))"
@@ -85,12 +74,12 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     private func commonInit() {
-        contentView.addSubview(emoji)
+        contentView.addSubview(emojiLabel)
         contentView.addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
-            emoji.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4),
-            emoji.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            emojiLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4),
+            emojiLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             
             mainStackView.leadingAnchor.constraint(equalTo: emoji.trailingAnchor, constant: 16),
             mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4),

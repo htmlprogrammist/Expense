@@ -19,13 +19,7 @@ final class SmallCollectionViewCell: UICollectionViewCell {
     }()
     
     private let titleLabel = TitleLabel()
-    
-    private lazy var subtitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .secondaryLabel
-        return label
-    }()
+    private let subtitleLabel = SubtitleLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

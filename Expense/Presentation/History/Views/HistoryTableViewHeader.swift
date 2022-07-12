@@ -15,18 +15,8 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private lazy var incomeLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 14)
-        return label
-    }()
-    private lazy var expenseLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 14)
-        return label
-    }()
+    private lazy var incomeLabel = SubtitleLabel()
+    private lazy var expenseLabel = SubtitleLabel()
     
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [incomeLabel, expenseLabel])
