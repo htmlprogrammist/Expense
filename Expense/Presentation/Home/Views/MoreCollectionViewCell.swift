@@ -1,5 +1,5 @@
 //
-//  SettingsCollectionViewCell.swift
+//  MoreCollectionViewCell.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 06.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SettingsCollectionViewCell: UICollectionViewCell {
+final class MoreCollectionViewCell: UICollectionViewCell {
     
     private lazy var iconContainer: UIView = {
         let view = UIView()

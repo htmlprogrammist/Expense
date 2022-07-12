@@ -91,6 +91,20 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(emojiLabel)
         contentView.addSubview(labelsStackView)
         
+        struct ProgressCellModel: ProgressCellModelProtocol {
+            let emoji: Emoji
+            let title: String
+            let firstSubtitle: String
+            let secondSubtitle: String
+            let progress: Double
+        }
+        let data = ProgressCellModel(emoji: Tagged("🎡"), title: "Развлечения", firstSubtitle: "Бюджет: \(Int.random(in: 1000...10000)) ₽", secondSubtitle: "Потрачено: \(Int.random(in: 1000...10000)) ₽", progress: Double.random(in: 0...1))
+        progressView.progress = data.progress
+        emojiLabel.text = data.emoji.rawValue
+        titleLabel.text = data.title
+        firstSubtitleLabel.text = data.firstSubtitle
+        secondSubtitleLabel.text = data.secondSubtitle
+        
         NSLayoutConstraint.activate([
             progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 6),
             progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
