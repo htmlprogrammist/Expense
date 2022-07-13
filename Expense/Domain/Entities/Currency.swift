@@ -6,18 +6,7 @@
 //
 
 @objc public enum Currency: Int32 {
-    case eur
-    case usd
-    case rub /// Russian Ruble
-    case gbp /// Pound Sterling
-    case jpy /// Japanese Yen
-    case uah /// Ukrainian Hryvnia
-    case kzt /// Kazakhstani Tenge
-    case byn /// Belarusian Ruble
-    case `try` /// Turkish Lira
-    case cny /// Chinese Yuan
-    case czk /// Czech Koruna
-    case zly /// Poland Zloty
+    case eur, usd, rub, gbp, jpy, uah, kzt, byn, `try`, cny, czk, zly
     
     var symbol: String {
         switch self {
@@ -75,6 +64,35 @@
             return "CZK"
         case .zly:
             return "PLN"
+        }
+    }
+    
+    var name: String {
+        switch self {
+        case .eur:
+            return "Euro"
+        case .usd:
+            return "Dollar"
+        case .rub:
+            return "Russian Ruble"
+        case .gbp:
+            return "Pound Sterling"
+        case .jpy:
+            return "Japanese Yen"
+        case .uah:
+            return "Ukrainian Hryvnia"
+        case .kzt:
+            return "Kazakhstani Tenge"
+        case .byn:
+            return "Belarusian Ruble"
+        case .try:
+            return "Turkish Lira"
+        case .cny:
+            return "Chinese Yuan"
+        case .czk:
+            return "Czech Koruna"
+        case .zly:
+            return "Poland Zloty"
         }
     }
 }
