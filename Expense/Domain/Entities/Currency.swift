@@ -16,6 +16,8 @@
     case byn // Belarusian Ruble
     case `try` // Turkish Lira
     case cny // Chinese Yuan
+    case czk // Czech Koruna
+    case zly // Poland Zloty
     
     var symbol: String {
         switch self {
@@ -39,6 +41,10 @@
             return "₤"
         case .cny:
             return "¥"
+        case .czk:
+            return "Kč"
+        case .zly:
+            return "zł"
         }
     }
     
@@ -65,6 +71,10 @@
             return "TRY"
         case .cny:
             return "CNY"
+        case .czk:
+            return "CZK"
+        case .zly:
+            return "PLN"
         }
     }
 }

@@ -19,10 +19,10 @@ extension String {
     ///   - ofSize: size of the font
     ///   - weight: font weight
     /// - Returns: Attributed string with second half (after `character`) changed
-    func getAttributedString(after character: Character, ofSize: CGFloat, with weight: UIFont.Weight) -> NSAttributedString {
+    func toAttributedString(after character: Character, ofSize: CGFloat, with weight: UIFont.Weight) -> NSAttributedString {
         let attributedText = NSMutableAttributedString(string: self)
         let index = self.lastIndex(of: character) ?? self.startIndex
-        let length = 8 // TODO: fix length counting
+        let length = self.distance(from: index, to: self.endIndex)
         attributedText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: ofSize, weight: weight), range: NSRange(location: (self.distance(from: self.startIndex, to: index)), length: length))
         return attributedText
     }

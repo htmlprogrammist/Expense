@@ -39,8 +39,8 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     public func configure() {
         // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
         dateLabel.text = "6-12 июня 2022 г."
-        incomeLabel.attributedText = "Доход: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 14, with: .semibold)
-        expenseLabel.attributedText = "Расход: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 14, with: .semibold)
+        incomeLabel.attributedText = "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold)
+        expenseLabel.attributedText = "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold)
     }
     
     private func setupView() {

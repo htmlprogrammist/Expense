@@ -9,14 +9,14 @@ import UIKit
 
 struct MoreSection: Section {
     
+    public let numberOfItems: Int
+    
     private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
         (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
         (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
         (Images.Home.goals, Texts.Home.goals, .systemBlue),
         (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
     ]
-    
-    public let numberOfItems: Int
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))

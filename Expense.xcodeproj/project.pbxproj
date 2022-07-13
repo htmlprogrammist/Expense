@@ -10,6 +10,7 @@
 		4A1E6CB75742E45325C515E3 /* Pods_Expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */; };
 		F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */; };
 		F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */; };
+		F004E930287F224800ACADEE /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92F287F224800ACADEE /* NotificationName.swift */; };
 		F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */; };
 		F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */; };
 		F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */; };
@@ -117,6 +118,7 @@
 		C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.debug.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.debug.xcconfig"; sourceTree = "<group>"; };
 		F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeader.swift; sourceTree = "<group>"; };
 		F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFooter.swift; sourceTree = "<group>"; };
+		F004E92F287F224800ACADEE /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 				F035F5A528757E4A0041AF84 /* Array.swift */,
 				F073DADF287C930D00907507 /* Tagged.swift */,
 				F035F5AE28757E4A0041AF84 /* Observ.swift */,
+				F004E92F287F224800ACADEE /* NotificationName.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0E35A01287E02070070B3EF /* Section.swift in Sources */,
 				F035F5CD28757E4A0041AF84 /* EmojiCategoryIconView.swift in Sources */,
+				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
 				F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */,

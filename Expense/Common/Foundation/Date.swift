@@ -20,7 +20,7 @@ extension Date {
         return gregorian.date(byAdding: .day, value: 7, to: sunday)
     }
     
-    var yesterday: Date? {
-        return Calendar.current.date(byAdding: .day, value: -1, to: self)
+    var yesterday: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: self) ?? Date()
     }
 }

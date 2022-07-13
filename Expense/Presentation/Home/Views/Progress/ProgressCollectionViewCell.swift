@@ -43,28 +43,32 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, firstSubtitleLabel, secondSubtitleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 3
+//        stackView.spacing = 2
+        stackView.distribution = .fillProportionally
         stackView.alignment = .leading
+//        stackView.backgroundColor = .red
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         return label
     }()
     private let firstSubtitleLabel: UILabel = {
         let label = UILabel()
-//        label.attributedText = "Бюджет: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 15, with: .semibold)
+        label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
     private let secondSubtitleLabel: UILabel = {
         let label = UILabel()
-//        label.attributedText = "Потрачено: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 15, with: .semibold)
+        label.textColor = .secondaryLabel
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
+//    private let firstSubtitleLabel = SubtitleLabel()
+//    private let secondSubtitleLabel = SubtitleLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -80,8 +84,8 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         progressView.progress = data.progress
         emojiLabel.text = data.emoji.rawValue
         titleLabel.text = data.title
-        firstSubtitleLabel.attributedText = data.firstSubtitle.getAttributedString(after: ":", ofSize: 14, with: .semibold)
-        secondSubtitleLabel.attributedText = data.secondSubtitle.getAttributedString(after: ":", ofSize: 14, with: .semibold)
+        firstSubtitleLabel.attributedText = data.firstSubtitle.toAttributedString(after: ":", ofSize: 15, with: .semibold)
+        secondSubtitleLabel.attributedText = data.secondSubtitle.toAttributedString(after: ":", ofSize: 15, with: .semibold)
     }
     
     private func setupView() {
@@ -92,15 +96,15 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(labelsStackView)
         
         NSLayoutConstraint.activate([
-            progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 6),
-            progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 12),
+            progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 21),
             emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 35),
+            emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 41),
             
-            labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 32),
-            labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 30),
+            labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 8),
             labelsStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -4),
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -8),
         ])
     }
 }

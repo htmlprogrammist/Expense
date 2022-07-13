@@ -30,10 +30,10 @@ final class AccountSection: Section {
         section.boundarySupplementaryItems = [footer]
         section.visibleItemsInvalidationHandler = { [weak self] (items, offset, environment) -> Void in
             guard let strongSelf = self else { return }
-            let page = Int(abs(round(offset.x / (items.first?.frame.width ?? 0))))
+            let page = Int(abs(round(offset.x / environment.container.contentSize.width)))
             if page != strongSelf.lastItem { // on value changed
                 strongSelf.lastItem = page
-                // TODO: 1. update your paging indicator with the `page` value; 2. load data by chosen account
+                // TODO: 1. update your paging indicator `pageControl.currentPage = page`; 2. load data by chosen account
             }
         }
         section.orthogonalScrollingBehavior = .groupPagingCentered
