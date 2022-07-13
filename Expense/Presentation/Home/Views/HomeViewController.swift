@@ -12,11 +12,8 @@ final class HomeViewController: UIViewController {
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: 3),
         PageControlSection(numberOfPages: 3),
-        HeaderSection(title: Texts.Home.goals, subtitle: Texts.Home.goalsDescription, tag: 1),
         ProgressSection(numberOfItems: 3, isGoals: true),
-        HeaderSection(title: Texts.Home.budgets, subtitle: Texts.Home.budgetsDescription, tag: 2),
         ProgressSection(numberOfItems: 3),
-        HeaderSection(title: Texts.Home.more),
         MoreSection(numberOfItems: 4)
     ]
     
@@ -29,7 +26,7 @@ final class HomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
         collectionView.backgroundColor = .clear
-        collectionView.register(HeaderCollectionViewCell.self, forCellWithReuseIdentifier: HeaderCollectionViewCell.identifier)
+        collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
         collectionView.register(PageControlCollectionViewCell.self, forCellWithReuseIdentifier: PageControlCollectionViewCell.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
         collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
@@ -78,8 +75,8 @@ final class HomeViewController: UIViewController {
         let addTransactionViewController = UINavigationController(rootViewController: AddTransactionViewController())
         if let sheet = addTransactionViewController.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
-//            sheet.prefersGrabberVisible = true
-//            sheet.preferredCornerRadius = 12
+            //            sheet.prefersGrabberVisible = true
+            //            sheet.preferredCornerRadius = 12
         }
         present(addTransactionViewController, animated: true)
     }
@@ -115,7 +112,7 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - CollectionView
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         sections.count
     }
@@ -126,5 +123,19 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCollectionViewHeader.identifier, for: indexPath) as? HomeCollectionViewHeader
+            else {
+                fatalError("Could not create header at indexPath \(indexPath)")
+            }
+            headerView.configure(indexPath: indexPath)
+            return headerView
+        default:
+            assert(false, "Unexpected element kind")
+        }
     }
 }

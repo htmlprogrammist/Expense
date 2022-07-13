@@ -30,7 +30,8 @@ enum Images {
     
     enum History {
         static let filter = Image("line.3.horizontal.decrease.circle")
-        static let filterHighlighted = Image("line.3.horizontal.decrease.circle.fill")
+//        static let filterHighlighted = Image("line.3.horizontal.decrease.circle.fill")
+        static let timeline = Image("calendar.day.timeline.left")
         static let export = Image("square.and.arrow.up")
         static let forward = Image("chevron.forward.circle.fill")
         static let backward = Image("chevron.backward.circle.fill")

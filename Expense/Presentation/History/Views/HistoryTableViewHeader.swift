@@ -9,6 +9,7 @@ import UIKit
 
 final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
+    private let spacing: CGFloat = 2
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -38,8 +39,8 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     public func configure() {
         // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
         dateLabel.text = "6-12 июня 2022 г."
-        incomeLabel.attributedText = getAttributedStringWithBold("Доход: \(Int.random(in: 1000...10000)) ₽", after: ":")
-        expenseLabel.attributedText = getAttributedStringWithBold("Расход: \(Int.random(in: 1000...10000)) ₽", after: ":")
+        incomeLabel.attributedText = "Доход: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 14, with: .semibold)
+        expenseLabel.attributedText = "Расход: \(Int.random(in: 1000...10000)) ₽".getAttributedString(after: ":", ofSize: 14, with: .semibold)
     }
     
     private func setupView() {
@@ -47,22 +48,14 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
         contentView.addSubview(labelsStackView)
         
         NSLayoutConstraint.activate([
-            dateLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            dateLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-            dateLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            
-            labelsStackView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 4),
-            labelsStackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-            labelsStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
+            dateLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
+            dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
+
+            labelsStackView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 3),
+            labelsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
+            labelsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -spacing * 2)
         ])
-    }
-    
-    private func getAttributedStringWithBold(_ text: String, after character: Character) -> NSAttributedString {
-        let labelAttributedText = NSMutableAttributedString(string: text)
-        let index = text.lastIndex(of: character) ?? text.startIndex
-        let length = 8
-        labelAttributedText.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 14, weight: .semibold), range: NSRange(location: (text.distance(from: text.startIndex, to: index)), length: length))
-        return labelAttributedText
     }
 }

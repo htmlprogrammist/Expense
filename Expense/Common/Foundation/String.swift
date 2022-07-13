@@ -13,11 +13,11 @@ extension String {
         NSLocalizedString(self, comment: "")
     }
     
-    /// <#Description#>
+    /// Returns attributed string splitted by `character` with provided size and weight
     /// - Parameters:
-    ///   - character: <#character description#>
-    ///   - ofSize: <#ofSize description#>
-    ///   - weight: <#weight description#>
+    ///   - character: the character by which the string will be split
+    ///   - ofSize: size of the font
+    ///   - weight: font weight
     /// - Returns: Attributed string with second half (after `character`) changed
     func getAttributedString(after character: Character, ofSize: CGFloat, with weight: UIFont.Weight) -> NSAttributedString {
         let attributedText = NSMutableAttributedString(string: self)

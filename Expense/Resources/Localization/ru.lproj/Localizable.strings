@@ -31,10 +31,11 @@ budgetsDescription = "Ваш план по расходам";
 seeAll = "См. все";
 
 // History
-day = "Д";
-week = "Н";
-month = "М";
-year = "Г";
+operationsBy = "Операции по";
+day = "День";
+week = "Неделя";
+month = "Месяц";
+year = "Год";
 
 // Analytics
 

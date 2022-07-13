@@ -31,10 +31,11 @@ budgetsDescription = "Your budget plans";
 seeAll = "See all";
 
 // History
-day = "D";
-week = "W";
-month = "M";
-year = "Y";
+operationsBy = "Operations by";
+day = "Day";
+week = "Week";
+month = "Month";
+year = "Year";
 
 // Analytics
 

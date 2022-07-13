@@ -1,13 +1,16 @@
 //
-//  HeaderCollectionViewCell.swift
+//  HomeCollectionViewHeader.swift
 //  Expense
 //
-//  Created by Егор Бадмаев on 12.07.2022.
+//  Created by Егор Бадмаев on 07.07.2022.
 //
 
 import UIKit
 
-final class HeaderCollectionViewCell: UICollectionViewCell {
+final class HomeCollectionViewHeader: UICollectionReusableView {
+    
+    private let titles = ["", "", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
+    private let subtitles = ["", "", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
     
     private let titleLabel = TitleLabel()
     private let subtitleLabel: UILabel = {
@@ -27,7 +30,7 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 3
+        stackView.spacing = 1
         return stackView
     }()
     private lazy var mainStackView: UIStackView = {
@@ -49,13 +52,13 @@ final class HeaderCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(title: String, subtitle: String, tag: Int) {
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
+    public func configure(indexPath: IndexPath) {
+        titleLabel.text = titles[indexPath.section]
+        subtitleLabel.text = subtitles[indexPath.section]
         
-        if !subtitle.isEmpty {
+        if !subtitles[indexPath.section].isEmpty {
             seeAllButton.isHidden = false
-            seeAllButton.tag = tag
+            seeAllButton.tag = indexPath.row
         }
     }
     
