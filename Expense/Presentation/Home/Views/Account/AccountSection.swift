@@ -45,7 +45,6 @@ final class AccountSection: Section {
         else {
             fatalError("Could not create AccountCollectionViewCell at indexPath \(indexPath)")
         }
-//        cell.configure
         return cell
     }
 }

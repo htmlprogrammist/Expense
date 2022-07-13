@@ -21,6 +21,8 @@ enum Texts {
         static let budgets = "budgets".localized
         static let budgetsDescription = "budgetsDescription".localized
         static let seeAll = "seeAll".localized
+        static let empty = "empty".localized
+        static let tapToAdd = "tapToAdd".localized
     }
     
     enum History {

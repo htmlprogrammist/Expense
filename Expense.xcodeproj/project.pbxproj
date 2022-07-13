@@ -11,6 +11,7 @@
 		F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */; };
 		F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */; };
 		F004E930287F224800ACADEE /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92F287F224800ACADEE /* NotificationName.swift */; };
+		F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E932287F3FB700ACADEE /* EmptySection.swift */; };
 		F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */; };
 		F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */; };
 		F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */; };
@@ -119,6 +120,7 @@
 		F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeader.swift; sourceTree = "<group>"; };
 		F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFooter.swift; sourceTree = "<group>"; };
 		F004E92F287F224800ACADEE /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		F004E932287F3FB700ACADEE /* EmptySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySection.swift; sourceTree = "<group>"; };
 		F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -242,6 +244,15 @@
 				35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F004E931287F364C00ACADEE /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				F004E932287F3FB700ACADEE /* EmptySection.swift */,
+				F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */,
+			);
+			path = Empty;
 			sourceTree = "<group>";
 		};
 		F007E558286B7DAD0073C74D /* CoreData */ = {
@@ -456,6 +467,7 @@
 				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
 				F0E35A11287E18ED0070B3EF /* Account */,
 				F0E35A13287E19160070B3EF /* Progress */,
+				F004E931287F364C00ACADEE /* Empty */,
 				F0E35A14287E191C0070B3EF /* More */,
 				F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */,
 				F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */,
@@ -596,7 +608,6 @@
 			children = (
 				F0E35A04287E03380070B3EF /* ProgressSection.swift */,
 				F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */,
-				F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -881,6 +892,7 @@
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
 				F035F5C928757E4A0041AF84 /* Observ.swift in Sources */,
 				F035F5C528757E4A0041AF84 /* Array.swift in Sources */,
+				F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */,
 				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,

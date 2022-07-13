@@ -9,10 +9,13 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
+    var numberOfGoals = 3 // from ViewModel
+    var numberOfBudgets = 3 // from ViewModel
+    
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: 3),
-        ProgressSection(numberOfItems: 3, isGoals: true),
-        ProgressSection(numberOfItems: 3),
+        numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true),
+        numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(),
         MoreSection(numberOfItems: 4)
     ]
     
@@ -29,6 +32,7 @@ final class HomeViewController: UIViewController {
         collectionView.register(HomeCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeCollectionViewFooter.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
         collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
+        collectionView.register(EmptyCollectionViewCell.self, forCellWithReuseIdentifier: EmptyCollectionViewCell.identifier)
         collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +122,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        sections[section].numberOfItems
+        sections[section].numberOfItems > 0 ? sections[section].numberOfItems : 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

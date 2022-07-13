@@ -8,16 +8,16 @@
 @objc public enum Currency: Int32 {
     case eur
     case usd
-    case rub // Russian Ruble
-    case gbp // Pound Sterling
-    case jpy // Japanese Yen
-    case uah // Ukrainian Hryvnia
-    case kzt // Kazakhstani Tenge
-    case byn // Belarusian Ruble
-    case `try` // Turkish Lira
-    case cny // Chinese Yuan
-    case czk // Czech Koruna
-    case zly // Poland Zloty
+    case rub /// Russian Ruble
+    case gbp /// Pound Sterling
+    case jpy /// Japanese Yen
+    case uah /// Ukrainian Hryvnia
+    case kzt /// Kazakhstani Tenge
+    case byn /// Belarusian Ruble
+    case `try` /// Turkish Lira
+    case cny /// Chinese Yuan
+    case czk /// Czech Koruna
+    case zly /// Poland Zloty
     
     var symbol: String {
         switch self {
@@ -48,7 +48,7 @@
         }
     }
     
-    // Letters by ISO 4217
+    /// Letters by ISO 4217
     var letters: String {
         switch self {
         case .eur:

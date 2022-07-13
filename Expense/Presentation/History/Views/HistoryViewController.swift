@@ -84,13 +84,11 @@ final class HistoryViewController: UIViewController {
 // MARK: - UITableView
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        // чисто по приколу сделал, по факту надо будет из вьюмодели тягать количество секций
-        return 3
+        Int.random(in: 2...5)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // чисто по приколу сделал, по факту надо будет из вьюмодели тягать количество транзакций
-        return Int.random(in: 1...10)
+        Int.random(in: 1...10)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

@@ -77,7 +77,6 @@ final class MoreCollectionViewCell: UICollectionViewCell {
             iconContainer.widthAnchor.constraint(equalToConstant: 27),
             iconContainer.heightAnchor.constraint(equalToConstant: 27),
             
-//            iconImageView.centerYAnchor.constraint(equalTo: iconContainer.centerYAnchor),
             iconImageView.topAnchor.constraint(equalTo: iconContainer.topAnchor, constant: 3),
             iconImageView.centerXAnchor.constraint(equalTo: iconContainer.centerXAnchor),
             

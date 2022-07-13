@@ -76,8 +76,6 @@ final class AccountCollectionViewCell: UICollectionViewCell {
             emojiContainer.heightAnchor.constraint(equalToConstant: 40),
             emojiLabel.centerXAnchor.constraint(equalTo: emojiContainer.centerXAnchor),
             emojiLabel.centerYAnchor.constraint(equalTo: emojiContainer.centerYAnchor),
-//            emojiLabel.leadingAnchor.constraint(equalTo: emojiContainer.leadingAnchor, constant: 6),
-//            emojiLabel.topAnchor.constraint(equalTo: emojiContainer.topAnchor, constant: 4),
             
             mainStackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 8),
             mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 6),

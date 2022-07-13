@@ -29,6 +29,8 @@ goalsDescription = "Save your funds";
 budgets = "Budgets";
 budgetsDescription = "Your budget plans";
 seeAll = "See all";
+empty = "Empty";
+tapToAdd = "Tap to add";
 
 // History
 operationsBy = "Operations by";

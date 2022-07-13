@@ -43,10 +43,8 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, firstSubtitleLabel, secondSubtitleLabel])
         stackView.axis = .vertical
-//        stackView.spacing = 2
         stackView.distribution = .fillProportionally
         stackView.alignment = .leading
-//        stackView.backgroundColor = .red
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -67,8 +65,6 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
-//    private let firstSubtitleLabel = SubtitleLabel()
-//    private let secondSubtitleLabel = SubtitleLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -97,14 +93,14 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 12),
-            progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 21),
+            progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 18),
             emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 41),
             
             labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 30),
-            labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 8),
+            labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 5),
             labelsStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -8),
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -5),
         ])
     }
 }

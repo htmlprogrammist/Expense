@@ -29,6 +29,8 @@ goalsDescription = "Накопите или отложите средства";
 budgets = "Бюджеты";
 budgetsDescription = "Ваш план по расходам";
 seeAll = "См. все";
+empty = "Пусто";
+tapToAdd = "Нажмите, чтобы добавить";
 
 // History
 operationsBy = "Операции по";
