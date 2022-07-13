@@ -7,8 +7,14 @@
 
 import UIKit
 
-struct AccountSection: Section {
+final class AccountSection: Section {
     public let numberOfItems: Int
+    
+    private var lastItem = 0
+    
+    init(numberOfItems: Int) {
+        self.numberOfItems = numberOfItems
+    }
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(112))
@@ -19,13 +25,27 @@ struct AccountSection: Section {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(28))
+        let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+        section.boundarySupplementaryItems = [footer]
+        section.visibleItemsInvalidationHandler = { [weak self] (items, offset, environment) -> Void in
+            guard let strongSelf = self else { return }
+            let page = Int(abs(round(offset.x / (items.first?.frame.width ?? 0))))
+            if page != strongSelf.lastItem { // on value changed
+                strongSelf.lastItem = page
+                // TODO: 1. update your paging indicator with the `page` value; 2. load data by chosen account
+            }
+        }
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        
         return section
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccountCollectionViewCell.identifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AccountCollectionViewCell.identifier, for: indexPath) as? AccountCollectionViewCell
+        else {
+            fatalError("Could not create AccountCollectionViewCell at indexPath \(indexPath)")
+        }
+//        cell.configure
         return cell
     }
 }

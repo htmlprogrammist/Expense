@@ -9,8 +9,8 @@ import UIKit
 
 final class HomeCollectionViewHeader: UICollectionReusableView {
     
-    private let titles = ["", "", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
-    private let subtitles = ["", "", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
+    private let titles = ["", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
+    private let subtitles = ["", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
     
     private let titleLabel = TitleLabel()
     private let subtitleLabel: UILabel = {

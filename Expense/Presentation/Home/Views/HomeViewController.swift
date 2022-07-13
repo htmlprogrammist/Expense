@@ -11,7 +11,6 @@ final class HomeViewController: UIViewController {
     
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: 3),
-        PageControlSection(numberOfPages: 3),
         ProgressSection(numberOfItems: 3, isGoals: true),
         ProgressSection(numberOfItems: 3),
         MoreSection(numberOfItems: 4)
@@ -27,7 +26,7 @@ final class HomeViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
         collectionView.backgroundColor = .clear
         collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
-        collectionView.register(PageControlCollectionViewCell.self, forCellWithReuseIdentifier: PageControlCollectionViewCell.identifier)
+        collectionView.register(HomeCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeCollectionViewFooter.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
         collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
         collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
@@ -60,6 +59,15 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
+    @objc public func handleSeeAll(sender: UIButton) {
+        if sender.tag == 1 {
+            // TODO: Open all goals module
+        } else {
+            // TODO: Open all budgets module
+        }
+    }
+    
+    // MARK: - Private methods
     @objc private func openSettingsModule() {
         
     }
@@ -75,18 +83,10 @@ final class HomeViewController: UIViewController {
         let addTransactionViewController = UINavigationController(rootViewController: AddTransactionViewController())
         if let sheet = addTransactionViewController.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
-            //            sheet.prefersGrabberVisible = true
-            //            sheet.preferredCornerRadius = 12
+//            sheet.prefersGrabberVisible = true
+//            sheet.preferredCornerRadius = 12
         }
         present(addTransactionViewController, animated: true)
-    }
-    
-    @objc public func handleSeeAll(sender: UIButton) {
-        if sender.tag == 1 {
-            // TODO: Open all goals module
-        } else {
-            // TODO: Open all budgets module
-        }
     }
     
     private func setupView() {
@@ -125,15 +125,26 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCollectionViewHeader.identifier, for: indexPath) as? HomeCollectionViewHeader
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCollectionViewHeader.identifier, for: indexPath) as? HomeCollectionViewHeader
             else {
                 fatalError("Could not create header at indexPath \(indexPath)")
             }
-            headerView.configure(indexPath: indexPath)
-            return headerView
+            header.configure(indexPath: indexPath)
+            return header
+        case UICollectionView.elementKindSectionFooter:
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeCollectionViewFooter.identifier, for: indexPath) as? HomeCollectionViewFooter
+            else {
+                fatalError("Could not create header at indexPath \(indexPath)")
+            }
+            footer.configure(numberOfPages: 3)
+            return footer
         default:
             assert(false, "Unexpected element kind")
         }

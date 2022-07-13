@@ -1,13 +1,13 @@
 //
-//  PageControlCollectionViewCell.swift
+//  HomeCollectionViewFooter.swift
 //  Expense
 //
-//  Created by Егор Бадмаев on 12.07.2022.
+//  Created by Егор Бадмаев on 13.07.2022.
 //
 
 import UIKit
 
-final class PageControlCollectionViewCell: UICollectionViewCell {
+final class HomeCollectionViewFooter: UICollectionReusableView {
     
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
@@ -32,11 +32,11 @@ final class PageControlCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        contentView.addSubview(pageControl)
+        addSubview(pageControl)
         
         NSLayoutConstraint.activate([
-            pageControl.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            pageControl.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
+            pageControl.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }

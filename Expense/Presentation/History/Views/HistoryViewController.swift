@@ -12,22 +12,22 @@ final class HistoryViewController: UIViewController {
     private var isDay = true
     private var datePickerMenu: UIMenu {
         return UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
-            UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] action in
+            UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
                 isDay = true
                 tableView.reloadData()
             }),
-            UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] action in
+            UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] _ in
                 isDay = false
                 tableView.reloadData()
             }),
-            UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] action in
+            UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] _ in
                 isDay = false
                 tableView.reloadData()
             }),
-            UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] action in
+            UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] _ in
                 isDay = false
                 tableView.reloadData()
-            }),
+            })
         ])
     }
     
