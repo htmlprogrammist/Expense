@@ -10,9 +10,6 @@ import UIKit
 final class AccountCollectionViewCell: UICollectionViewCell {
     
     private let balanceLabel = TitleLabel(text: "$5 981.22", ofSize: 28)
-//    private let subtitleLabel = SubtitleLabel(text: Texts.Home.balance)
-//    private let dailyBudgetLabel = TitleLabel(text: "$5 981.22", ofSize: 28)
-//    private let dailyBudgetSubtitleLabel = SubtitleLabel(text: Texts.Home.dailyBudget)
     private let emojiContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
