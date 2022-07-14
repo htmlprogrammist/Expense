@@ -9,13 +9,7 @@ import UIKit
 
 final class AddTransactionViewController: UIViewController {
     
-    private lazy var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: [Texts.Transactions.income, Texts.Transactions.expense])
-        segmentedControl.selectedSegmentIndex = 1
-        segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControl
-    }()
+    private let segmentedControl = UISegmentedControl(action: #selector(segmentedControlDidChange))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +23,13 @@ final class AddTransactionViewController: UIViewController {
         title = Texts.Home.addTransaction
     }
     
-    @objc private func closeThisModule() {
+    @objc
+    private func closeThisModule() {
         dismiss(animated: true)
     }
     
-    @objc private func segmentedControlDidChange() {
+    @objc
+    private func segmentedControlDidChange() {
         
     }
 }

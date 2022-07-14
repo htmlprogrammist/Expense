@@ -64,7 +64,8 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
-    @objc public func handleSeeAll(sender: UIButton) {
+    @objc
+    public func handleSeeAll(sender: UIButton) {
         if sender.tag == 1 {
             // TODO: Open all goals module
         } else {
@@ -73,11 +74,13 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc private func openSettingsModule() {
+    @objc
+    private func openSettingsModule() {
         
     }
     
-    @objc private func addTransaction(sender: UIButton) {
+    @objc
+    private func addTransaction(sender: UIButton) {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         

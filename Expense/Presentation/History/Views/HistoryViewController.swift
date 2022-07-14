@@ -9,6 +9,8 @@ import UIKit
 
 final class HistoryViewController: UIViewController {
     
+    public var viewModel: HistoryViewModelProtocol!
+    
     private var isDay = true
     
     private var datePickerMenu: UIMenu {
@@ -27,7 +29,6 @@ final class HistoryViewController: UIViewController {
             })
         ])
     }
-    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
@@ -51,17 +52,19 @@ final class HistoryViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc private func chooseFilter() {
+    @objc
+    private func chooseFilter() {
         
     }
     
-    @objc private func exportHistory() {
+    @objc
+    private func exportHistory() {
         
     }
     
     private func handleAction(by period: Period) {
         isDay = period == .day
-        // запрос во ViewModel с переданным period
+        viewModel.provideData(by: period)
         tableView.reloadData()
     }
     
@@ -118,7 +121,10 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             fatalError("Could not create header for the table view in History in section \(section)")
         }
-        header.configure()
+        // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
+        header.configure(date: Tagged("6-12 июня 2022 г."),
+                         income: "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold),
+                         expense: "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold))
         return header
     }
 }

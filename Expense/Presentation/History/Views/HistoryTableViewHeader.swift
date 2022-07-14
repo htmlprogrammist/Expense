@@ -36,11 +36,10 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure() {
-        // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
-        dateLabel.text = "6-12 июня 2022 г."
-        incomeLabel.attributedText = "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold)
-        expenseLabel.attributedText = "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold)
+    public func configure(date: StringDate, income: NSAttributedString, expense: NSAttributedString) {
+        dateLabel.text = date.rawValue
+        incomeLabel.attributedText = income
+        expenseLabel.attributedText = expense
     }
     
     private func setupView() {

@@ -46,8 +46,8 @@ settings = "Настройки";
 managingWallets = "Управление кошельками";
 
 // Transactions
-income = "Доход";
-expense = "Расход";
+incomes = "Доходы";
+expenses = "Расходы";
 sum = "Сумма";
 category = "Категория";
 date = "Дата";

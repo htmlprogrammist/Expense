@@ -45,8 +45,8 @@ enum Texts {
     
     /// Everything connected with transactions (adding, updating, etc.)
     enum Transactions {
-        static let income = "income".localized
-        static let expense = "expense".localized
+        static let incomes = "incomes".localized
+        static let expenses = "expenses".localized
         static let sum = "sum".localized
         static let category = "category".localized
         static let date = "date".localized

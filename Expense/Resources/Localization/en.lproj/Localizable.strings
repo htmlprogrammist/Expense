@@ -46,8 +46,8 @@ settings = "Settings";
 managingWallets = "Wallets management";
 
 // Transactions
-income = "Income";
-expense = "Expense";
+incomes = "Incomes";
+expenses = "Expenses";
 sum = "Sum";
 category = "Category";
 date = "Date";

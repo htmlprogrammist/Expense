@@ -30,6 +30,7 @@
 		F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */; };
 		F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */; };
 		F0205C5C287C2A5200104E2F /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */; };
+		F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02114182880733B00ACE1D7 /* UISegmentedControl.swift */; };
 		F035F59628757D660041AF84 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59528757D660041AF84 /* UIView.swift */; };
 		F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */; };
 		F035F5BD28757E4A0041AF84 /* Unicode 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59C28757E4A0041AF84 /* Unicode 5.swift */; };
@@ -139,6 +140,7 @@
 		F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
 		F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
+		F02114182880733B00ACE1D7 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		F035F59528757D660041AF84 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewModel.swift; sourceTree = "<group>"; };
 		F035F59C28757E4A0041AF84 /* Unicode 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 5.swift"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */,
 				F044C215287706270029EA8E /* CircularProgressView.swift */,
 				F0E35A00287E02070070B3EF /* Section.swift */,
+				F02114182880733B00ACE1D7 /* UISegmentedControl.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -883,6 +886,7 @@
 				F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */,
+				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
 				F0A12C09287C7CF400FC5CFD /* DailyBudgetViewModel.swift in Sources */,
 				F035F5BE28757E4A0041AF84 /* Unicode 13v1.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
