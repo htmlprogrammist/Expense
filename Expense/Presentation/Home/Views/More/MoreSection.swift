@@ -7,16 +7,21 @@
 
 import UIKit
 
-struct MoreSection: Section {
+final class MoreSection: Section {
     
-    public let numberOfItems: Int
+    public var numberOfItems: Int {
+        dataItems.count
+    }
     
-    private let tableViewData: [(image: UIImage, title: String, color: UIColor)] = [
-        (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
-        (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
-        (Images.Home.goals, Texts.Home.goals, .systemBlue),
-        (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
-    ]
+    private let dataItems: [(image: UIImage, title: String, color: UIColor)?] = {
+        let optionalDataItems: [(UIImage, String, UIColor)?] = [
+            (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
+            (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
+            (Settings.shared.showGoals ?? false) ? (Images.Home.goals, Texts.Home.goals, .systemBlue) : nil,
+            (Settings.shared.showBudgets ?? false) ? (Images.Home.budgets, Texts.Home.budgets, .systemIndigo) : nil
+        ]
+        return optionalDataItems.filter { $0 != nil }
+    }()
     
     func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(54))
@@ -39,8 +44,8 @@ struct MoreSection: Section {
         else {
             fatalError("Could not create MoreCollectionViewCell at indexPath \(indexPath)")
         }
-        let item = tableViewData[indexPath.row]
-        cell.configure(image: item.image, title: item.title, color: item.color)
+        let item = dataItems[indexPath.row]
+        cell.configure(image: item?.image, title: item?.title, color: item?.color)
         return cell
     }
 }

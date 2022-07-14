@@ -13,6 +13,7 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = .appColor
         pageControl.pageIndicatorTintColor = .systemGray4
+        pageControl.isEnabled = false
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()

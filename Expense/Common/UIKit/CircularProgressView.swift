@@ -39,17 +39,18 @@ final class CircularProgressView: UIView {
     private func setupView() {
         backgroundColor = .clear
         layer.cornerRadius = frame.size.width / 2
+//        layer.masksToBounds = true
         let circularPath = UIBezierPath(arcCenter: center, radius: frame.width / 2, startAngle: CGFloat(-0.5 * .pi), endAngle: CGFloat(1.5 * .pi), clockwise: true)
         
         trackLayer.path = circularPath.cgPath
-        trackLayer.fillColor = .none
+        trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.strokeColor = UIColor.background.cgColor
         trackLayer.lineWidth = lineWidth
         trackLayer.strokeEnd = 1
         layer.addSublayer(trackLayer)
         
         progressLayer.path = circularPath.cgPath
-        progressLayer.fillColor = .none
+        progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = UIColor.appColor.cgColor
         progressLayer.lineWidth = lineWidth
         progressLayer.strokeEnd = 0

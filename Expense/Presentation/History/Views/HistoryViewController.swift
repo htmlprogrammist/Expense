@@ -10,23 +10,20 @@ import UIKit
 final class HistoryViewController: UIViewController {
     
     private var isDay = true
+    
     private var datePickerMenu: UIMenu {
         return UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
             UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
-                isDay = true
-                tableView.reloadData()
+                handleAction(by: .day)
             }),
             UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] _ in
-                isDay = false
-                tableView.reloadData()
+                handleAction(by: .week)
             }),
             UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] _ in
-                isDay = false
-                tableView.reloadData()
+                handleAction(by: .month)
             }),
             UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] _ in
-                isDay = false
-                tableView.reloadData()
+                handleAction(by: .year)
             })
         ])
     }
@@ -62,6 +59,12 @@ final class HistoryViewController: UIViewController {
         
     }
     
+    private func handleAction(by period: Period) {
+        isDay = period == .day
+        // запрос во ViewModel с переданным period
+        tableView.reloadData()
+    }
+    
     private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
@@ -91,15 +94,6 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         Int.random(in: 1...10)
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HistoryTableViewHeader.identifier) as? HistoryTableViewHeader
-        else {
-            fatalError("Could not create header for the table view in History in section \(section)")
-        }
-        header.configure()
-        return header
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as? HistoryTableViewCell
         else {
@@ -107,5 +101,24 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         }
         cell.configure(isDay: isDay)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if isDay {
+            
+        } else {
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HistoryTableViewHeader.identifier) as? HistoryTableViewHeader
+        else {
+            fatalError("Could not create header for the table view in History in section \(section)")
+        }
+        header.configure()
+        return header
     }
 }

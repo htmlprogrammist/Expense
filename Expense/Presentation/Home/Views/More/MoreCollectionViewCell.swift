@@ -51,8 +51,8 @@ final class MoreCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(image: UIImage, title: String, color: UIColor) {
-        iconImageView.image = image.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
+    public func configure(image: UIImage?, title: String?, color: UIColor?) {
+        iconImageView.image = image?.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
         iconContainer.backgroundColor = color
         textLabel.text = title
     }

@@ -9,14 +9,15 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
-    var numberOfGoals = 3 // from ViewModel
-    var numberOfBudgets = 3 // from ViewModel
+    var numberOfAccounts = 3
+    var numberOfGoals = 3
+    var numberOfBudgets = 3
     
     private lazy var sections: [Section] = [
-        AccountSection(numberOfItems: 3),
+        AccountSection(numberOfItems: numberOfAccounts),
         numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true),
         numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(),
-        MoreSection(numberOfItems: 4)
+        MoreSection()
     ]
     
     private lazy var collectionView: UICollectionView = {
@@ -147,7 +148,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             else {
                 fatalError("Could not create header at indexPath \(indexPath)")
             }
-            footer.configure(numberOfPages: 3)
+            footer.configure(numberOfPages: numberOfAccounts)
             return footer
         default:
             assert(false, "Unexpected element kind")

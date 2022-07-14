@@ -5,6 +5,7 @@
 //  Created by Егор Бадмаев on 13.07.2022.
 //
 
+/// Describes currencies of the `Account`. Defined with `@objc` to allow it to be used with `@NSManaged`.
 @objc public enum Currency: Int32 {
     case eur, usd, rub, gbp, jpy, uah, kzt, byn, `try`, cny, czk, zly
     
