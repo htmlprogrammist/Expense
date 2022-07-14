@@ -1,18 +1,19 @@
 //
-//  TitleLabel.swift
+//  SubtitleLabel.swift
 //  Expense
 //
-//  Created by Егор Бадмаев on 03.07.2022.
+//  Created by Егор Бадмаев on 12.07.2022.
 //
 
 import UIKit
 
-final class TitleLabel: UILabel {
+final class SubtitleLabel: UILabel {
     
-    init(text: String = "", ofSize: CGFloat = 24) {
+    init(text: String = "") {
         super.init(frame: .zero)
         self.text = text
-        font = UIFont.systemFont(ofSize: ofSize, weight: .bold)
+        textColor = .secondaryLabel
+        font = UIFont.systemFont(ofSize: 14)
         translatesAutoresizingMaskIntoConstraints = false
     }
     

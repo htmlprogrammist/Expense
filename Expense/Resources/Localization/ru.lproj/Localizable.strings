@@ -29,12 +29,15 @@ goalsDescription = "Накопите или отложите средства";
 budgets = "Бюджеты";
 budgetsDescription = "Ваш план по расходам";
 seeAll = "См. все";
+empty = "Пусто";
+tapToAdd = "Нажмите, чтобы добавить";
 
 // History
-day = "Д";
-week = "Н";
-month = "М";
-year = "Г";
+operationsBy = "Операции по";
+day = "День";
+week = "Неделя";
+month = "Месяц";
+year = "Год";
 
 // Analytics
 
@@ -43,8 +46,8 @@ settings = "Настройки";
 managingWallets = "Управление кошельками";
 
 // Transactions
-income = "Доход";
-expense = "Расход";
+incomes = "Доходы";
+expenses = "Расходы";
 sum = "Сумма";
 category = "Категория";
 date = "Дата";

@@ -71,7 +71,10 @@ final class CoreDataManager {
 // MARK: - Wallets
 extension CoreDataManager: AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]? {
-        let wallets = try? managedObjectContext.fetch(Account.fetchRequest())
+        let fetchRequest = Account.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Account.date), ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        let wallets = try? managedObjectContext.fetch(fetchRequest)
         return wallets
     }
     
@@ -80,6 +83,7 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
         account.emoji = data.emoji.rawValue
         account.name = data.name
 //        account.balance = 0 // ? в модели вроде как проставлено default значение 0
+        account.date = Date()
         saveContext()
     }
     

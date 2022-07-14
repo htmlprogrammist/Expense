@@ -9,6 +9,8 @@ import UIKit
 
 final class AnalyticsViewController: UIViewController {
     
+    private let segmentedControl = UISegmentedControl(action: #selector(segmentedControlDidChange))
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -28,7 +30,13 @@ final class AnalyticsViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc private func chooseFilter() {
+    @objc
+    private func chooseFilter() {
+        
+    }
+    
+    @objc
+    private func segmentedControlDidChange() {
         
     }
     
@@ -36,6 +44,8 @@ final class AnalyticsViewController: UIViewController {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Analytics.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
+        
+        navigationItem.titleView = segmentedControl
         view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([

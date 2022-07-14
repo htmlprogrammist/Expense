@@ -8,18 +8,27 @@
 import UIKit
 
 final class HistoryViewController: UIViewController {
-    // MARK: - Views
-    private lazy var filterButtonItem = UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
-    private lazy var highlightedFilterButtonItem = UIBarButtonItem(image: Images.History.filterHighlighted, style: .plain, target: self, action: #selector(chooseFilter))
     
-    private lazy var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: [Texts.History.day, Texts.History.week, Texts.History.month, Texts.History.year])
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControl
-    }()
+    public var viewModel: HistoryViewModelProtocol!
     
+    private var isDay = true
+    
+    private var datePickerMenu: UIMenu {
+        return UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
+            UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
+                handleAction(by: .day)
+            }),
+            UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] _ in
+                handleAction(by: .week)
+            }),
+            UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] _ in
+                handleAction(by: .month)
+            }),
+            UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] _ in
+                handleAction(by: .year)
+            })
+        ])
+    }
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
@@ -43,47 +52,34 @@ final class HistoryViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc private func chooseFilter(sender: UIBarButtonItem) {
-        /*
-         Вызывается не сразу, только после нажатия кнопки "Применить".
-         При нажатии кнопки "Сброс" меняется на filterButtonItem
-         */
-        navigationItem.rightBarButtonItem = highlightedFilterButtonItem
-    }
-    
-    @objc private func exportHistory() {
+    @objc
+    private func chooseFilter() {
         
     }
     
-    @objc private func addTransaction() {
+    @objc
+    private func exportHistory() {
         
     }
     
-    @objc private func segmentedControlDidChange() {
+    private func handleAction(by period: Period) {
+        isDay = period == .day
+        viewModel.provideData(by: period)
         tableView.reloadData()
     }
     
     private func setupView() {
-        // General
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTransaction))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
         navigationItem.rightBarButtonItems = [
-            filterButtonItem,
-            UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
+            UIBarButtonItem(title: nil, image: Images.History.timeline, primaryAction: nil, menu: datePickerMenu),
+            UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
         ]
-        
-        // Adding and setuping subviews
-        view.addSubview(segmentedControl)
         view.addSubview(tableView)
         
-        // Activating constraints
         NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            segmentedControl.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            segmentedControl.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            
-            tableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 16),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
@@ -94,30 +90,29 @@ final class HistoryViewController: UIViewController {
 // MARK: - UITableView
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        // чисто по приколу сделал, по факту надо будет из вьюмодели тягать количество секций
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            return 7
-        case 1:
-            return 5
-        case 2:
-            return 3
-        default:
-            return 1
-        }
+        Int.random(in: 2...5)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // чисто по приколу сделал, по факту надо будет из вьюмодели тягать количество транзакций
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            return Int.random(in: 1...2)
-        case 1:
-            return Int.random(in: 1...4)
-        case 2:
-            return Int.random(in: 1...6)
-        default:
-            return Int.random(in: 1...8)
+        Int.random(in: 1...10)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as? HistoryTableViewCell
+        else {
+            fatalError("Could not create cell for the table view in History at indexPath \(indexPath)")
+        }
+        cell.configure(isDay: isDay)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if isDay {
+            
+        } else {
+            
         }
     }
     
@@ -126,26 +121,10 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             fatalError("Could not create header for the table view in History in section \(section)")
         }
-        header.configure()
+        // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
+        header.configure(date: Tagged("6-12 июня 2022 г."),
+                         income: "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold),
+                         expense: "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold))
         return header
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as? HistoryTableViewCell
-        else {
-            fatalError("Could not create cell for the table view in History at indexPath \(indexPath)")
-        }
-        cell.configure(isDay: segmentedControl.selectedSegmentIndex == 0)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        if segmentedControl.selectedSegmentIndex == 0 {
-            // TODO: Реализовать открытие модуля с деталями по транзакциями ("Изменить")
-        } else {
-            // TODO: Реализовать открытие модуля с транзакциями за выбранный период
-        }
     }
 }

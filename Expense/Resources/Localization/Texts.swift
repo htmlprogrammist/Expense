@@ -21,10 +21,13 @@ enum Texts {
         static let budgets = "budgets".localized
         static let budgetsDescription = "budgetsDescription".localized
         static let seeAll = "seeAll".localized
+        static let empty = "empty".localized
+        static let tapToAdd = "tapToAdd".localized
     }
     
     enum History {
         static let title = "history".localized
+        static let operationsBy = "operationsBy".localized
         static let day = "day".localized
         static let week = "week".localized
         static let month = "month".localized
@@ -42,8 +45,8 @@ enum Texts {
     
     /// Everything connected with transactions (adding, updating, etc.)
     enum Transactions {
-        static let income = "income".localized
-        static let expense = "expense".localized
+        static let incomes = "incomes".localized
+        static let expenses = "expenses".localized
         static let sum = "sum".localized
         static let category = "category".localized
         static let date = "date".localized

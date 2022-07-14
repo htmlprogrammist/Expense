@@ -9,6 +9,9 @@ import UIKit
 
 final class HomeCollectionViewHeader: UICollectionReusableView {
     
+    private let titles = ["", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
+    private let subtitles = ["", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
+    
     private let titleLabel = TitleLabel()
     private let subtitleLabel: UILabel = {
         let label = UILabel()
@@ -27,7 +30,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 3
+        stackView.spacing = 1
         return stackView
     }()
     private lazy var mainStackView: UIStackView = {
@@ -49,13 +52,13 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(title: String, subtitle: String = "", tag: Int = 0) {
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
+    public func configure(indexPath: IndexPath) {
+        titleLabel.text = titles[indexPath.section]
+        subtitleLabel.text = subtitles[indexPath.section]
         
-        if !subtitle.isEmpty {
+        if !subtitles[indexPath.section].isEmpty {
             seeAllButton.isHidden = false
-            seeAllButton.tag = tag
+            seeAllButton.tag = indexPath.row
         }
     }
     
@@ -63,9 +66,9 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            mainStackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 8),
+            mainStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -8),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
         ])
     }
 }

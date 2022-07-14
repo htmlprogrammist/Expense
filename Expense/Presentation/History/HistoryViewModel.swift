@@ -7,12 +7,24 @@
 
 import Foundation
 
-final class HistoryViewModel {
+enum DateTag {}
+typealias StringDate = Tagged<DateTag, String>
+
+protocol HistoryViewModelProtocol {
+    func provideData(by period: Period)
+}
+
+final class HistoryViewModel: HistoryViewModelProtocol {
     
+    
+    func provideData(by period: Period) {
+        
+    }
 }
 
 private extension HistoryViewModel {
     // закинул сюда просто чтобы не потерять
+    // Можно, кстати, сделать так, чтобы она выдавала в массив уже `Tagged (StringDate)`, потому что используется всё равно только в хедере, которому нужно скормить `StringDate`
     func getWeeks() {
         let calendar = Calendar.current
         let currentYear = calendar.component(.year, from: Date())

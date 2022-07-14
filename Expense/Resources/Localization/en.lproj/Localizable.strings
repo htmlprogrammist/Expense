@@ -29,12 +29,15 @@ goalsDescription = "Save your funds";
 budgets = "Budgets";
 budgetsDescription = "Your budget plans";
 seeAll = "See all";
+empty = "Empty";
+tapToAdd = "Tap to add";
 
 // History
-day = "D";
-week = "W";
-month = "M";
-year = "Y";
+operationsBy = "Operations by";
+day = "Day";
+week = "Week";
+month = "Month";
+year = "Year";
 
 // Analytics
 
@@ -43,8 +46,8 @@ settings = "Settings";
 managingWallets = "Wallets management";
 
 // Transactions
-income = "Income";
-expense = "Expense";
+incomes = "Incomes";
+expenses = "Expenses";
 sum = "Sum";
 category = "Category";
 date = "Date";

@@ -1,5 +1,5 @@
 //
-//  SettingsCollectionViewCell.swift
+//  MoreCollectionViewCell.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 06.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SettingsCollectionViewCell: UICollectionViewCell {
+final class MoreCollectionViewCell: UICollectionViewCell {
     
     private lazy var iconContainer: UIView = {
         let view = UIView()
@@ -26,7 +26,12 @@ final class SettingsCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private let textLabel = UILabel()
+    private let textLabel: UILabel = {
+        let label = UILabel()
+        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     private let indicatorImageView: UIImageView = {
         let imageView = UIImageView(image: Images.disclosureIndicator)
@@ -46,18 +51,21 @@ final class SettingsCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(image: UIImage, title: String, color: UIColor) {
-        iconImageView.image = image.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
+    public func configure(image: UIImage?, title: String?, color: UIColor?) {
+        iconImageView.image = image?.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
         iconContainer.backgroundColor = color
         textLabel.text = title
     }
     
     private func setupView() {
         contentView.addSubview(textLabel)
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(iconImageView)
         contentView.addSubview(indicatorImageView)
+        
+        iconImageView.image = Images.Home.calendar.withConfiguration(UIImage.SymbolConfiguration(scale: .medium))
+        iconContainer.backgroundColor = .systemRed
+        textLabel.text = Texts.Home.scheduledOperations
         
         contentView.layer.cornerRadius = 8
         contentView.clipsToBounds = true
@@ -69,7 +77,6 @@ final class SettingsCollectionViewCell: UICollectionViewCell {
             iconContainer.widthAnchor.constraint(equalToConstant: 27),
             iconContainer.heightAnchor.constraint(equalToConstant: 27),
             
-//            iconImageView.centerYAnchor.constraint(equalTo: iconContainer.centerYAnchor),
             iconImageView.topAnchor.constraint(equalTo: iconContainer.topAnchor, constant: 3),
             iconImageView.centerXAnchor.constraint(equalTo: iconContainer.centerXAnchor),
             
