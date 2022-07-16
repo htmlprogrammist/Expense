@@ -11,7 +11,7 @@ final class EmptyCollectionViewCell: UICollectionViewCell {
     
     private lazy var dashBorderLine: CAShapeLayer = {
         let layer = CAShapeLayer()
-        layer.strokeColor = UIColor.systemGray4.cgColor
+        layer.strokeColor = UIColor.tertiarySystemFill.cgColor
         layer.fillColor = nil
         layer.lineWidth = 4
         layer.lineDashPattern = [12, 12]
@@ -55,7 +55,7 @@ final class EmptyCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        contentView.backgroundColor = .emptyCellBackground
+        contentView.backgroundColor = .quaternarySystemFill
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
         

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A1E6CB75742E45325C515E3 /* Pods_Expense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */; };
 		F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */; };
 		F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */; };
 		F004E930287F224800ACADEE /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92F287F224800ACADEE /* NotificationName.swift */; };
@@ -26,10 +25,7 @@
 		F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010E9C22871972000AFD1D0 /* TitleLabel.swift */; };
 		F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510BE2872E7AC00B858BC /* SettingsViewController.swift */; };
 		F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */; };
-		F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354B286F0721001E1BBD /* HomeViewModel.swift */; };
-		F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */; };
 		F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */; };
-		F0205C5C287C2A5200104E2F /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */; };
 		F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02114182880733B00ACE1D7 /* UISegmentedControl.swift */; };
 		F035F59628757D660041AF84 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59528757D660041AF84 /* UIView.swift */; };
 		F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */; };
@@ -67,7 +63,6 @@
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
-		F06080F7286EE25A00782D99 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F6286EE25A00782D99 /* HistoryViewModel.swift */; };
 		F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MoreCollectionViewCell.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
@@ -77,7 +72,6 @@
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
-		F0A12C09287C7CF400FC5CFD /* DailyBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */; };
 		F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */; };
 		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
 		F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */; };
@@ -115,9 +109,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3383092DE6613391D227F52E /* Pods-Expense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.release.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.release.xcconfig"; sourceTree = "<group>"; };
-		35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense.debug.xcconfig"; path = "Target Support Files/Pods-Expense/Pods-Expense.debug.xcconfig"; sourceTree = "<group>"; };
 		F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeader.swift; sourceTree = "<group>"; };
 		F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFooter.swift; sourceTree = "<group>"; };
 		F004E92F287F224800ACADEE /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
@@ -136,10 +127,7 @@
 		F010E9C22871972000AFD1D0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		F01510BE2872E7AC00B858BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		F015354B286F0721001E1BBD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
 		F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
-		F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
 		F02114182880733B00ACE1D7 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		F035F59528757D660041AF84 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewModel.swift; sourceTree = "<group>"; };
@@ -179,7 +167,6 @@
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
 		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		F06080F6286EE25A00782D99 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		F060E27728762542006A87A9 /* MoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,7 +178,6 @@
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewModel.swift; sourceTree = "<group>"; };
 		F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewController.swift; sourceTree = "<group>"; };
 		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +186,9 @@
 		F0A9D64E27D2AD4100E63CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AF60CE2882A6F20019AF26 /* EmojiPicker */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EmojiPicker; sourceTree = "<group>"; };
+		F0AF60D02882A7570019AF26 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Assets; sourceTree = "<group>"; };
+		F0AF60D12882A7A40019AF26 /* AppImport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppImport; sourceTree = "<group>"; };
 		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -233,21 +222,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1E6CB75742E45325C515E3 /* Pods_Expense.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34DDDC2FD5A8FFFF8941537E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35723E1809BBAFF0700B9B48 /* Pods_Expense.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F004E931287F364C00ACADEE /* Empty */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +264,6 @@
 		F0205C58287C2A3100104E2F /* AddTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				F0205C5B287C2A5200104E2F /* AddTransactionViewModel.swift */,
 				F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */,
 			);
 			path = AddTransaction;
@@ -518,7 +497,6 @@
 		F0A12C07287C7CDA00FC5CFD /* DailyBudget */ = {
 			isa = PBXGroup;
 			children = (
-				F0A12C08287C7CF400FC5CFD /* DailyBudgetViewModel.swift */,
 				F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */,
 			);
 			path = DailyBudget;
@@ -546,9 +524,10 @@
 				F0A9D64127D2AD3E00E63CD2 /* Expense */,
 				F09259A12854F9A900C23B1B /* ExpenseTests */,
 				F09259AE2854F9B400C23B1B /* ExpenseUITests */,
+				F0AF60D12882A7A40019AF26 /* AppImport */,
+				F0AF60D02882A7570019AF26 /* Assets */,
+				F0AF60CE2882A6F20019AF26 /* EmojiPicker */,
 				F0A9D64027D2AD3E00E63CD2 /* Products */,
-				F6A39DB9D24881DA8336DDC5 /* Pods */,
-				34DDDC2FD5A8FFFF8941537E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -627,7 +606,6 @@
 		F0E89CBC285F115700036575 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F015354B286F0721001E1BBD /* HomeViewModel.swift */,
 				F07C25142870E1500000021E /* Views */,
 			);
 			path = Home;
@@ -651,7 +629,6 @@
 		F0E89CBE285F117300036575 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				F06080F6286EE25A00782D99 /* HistoryViewModel.swift */,
 				F0612D56286C67A9009B641A /* Views */,
 			);
 			path = History;
@@ -660,7 +637,6 @@
 		F0E89CBF285F118400036575 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				F015354D286F0742001E1BBD /* AnalyticsViewModel.swift */,
 				F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */,
 			);
 			path = Analytics;
@@ -674,15 +650,6 @@
 				F0612D52286C646F009B641A /* Rx */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		F6A39DB9D24881DA8336DDC5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */,
-				3383092DE6613391D227F52E /* Pods-Expense.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -728,11 +695,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0A9D65627D2AD4200E63CD2 /* Build configuration list for PBXNativeTarget "Expense" */;
 			buildPhases = (
-				678C0CB9B2C81A33521358D8 /* [CP] Check Pods Manifest.lock */,
 				F0A9D63B27D2AD3E00E63CD2 /* Sources */,
 				F0A9D63C27D2AD3E00E63CD2 /* Frameworks */,
 				F0A9D63D27D2AD3E00E63CD2 /* Resources */,
-				4AADD4E278259182B03373DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -814,48 +779,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4AADD4E278259182B03373DE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Expense/Pods-Expense-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Expense/Pods-Expense-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Expense/Pods-Expense-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		678C0CB9B2C81A33521358D8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Expense-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F092599C2854F9A900C23B1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -880,14 +803,11 @@
 			files = (
 				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
 				F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */,
-				F015354C286F0721001E1BBD /* HomeViewModel.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
-				F015354E286F0742001E1BBD /* AnalyticsViewModel.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
-				F0A12C09287C7CF400FC5CFD /* DailyBudgetViewModel.swift in Sources */,
 				F035F5BE28757E4A0041AF84 /* Unicode 13v1.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
@@ -900,7 +820,6 @@
 				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
-				F0205C5C287C2A5200104E2F /* AddTransactionViewModel.swift in Sources */,
 				F035F5CF28757E4A0041AF84 /* EmojiPickerView.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */,
@@ -928,7 +847,6 @@
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
 				F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */,
-				F06080F7286EE25A00782D99 /* HistoryViewModel.swift in Sources */,
 				F035F5C828757E4A0041AF84 /* PickerArrowDirectionMode.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,
@@ -1193,7 +1111,6 @@
 		};
 		F0A9D65727D2AD4200E63CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C431E4C5CE2D124CE97E150C /* Pods-Expense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1223,7 +1140,6 @@
 		};
 		F0A9D65827D2AD4200E63CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3383092DE6613391D227F52E /* Pods-Expense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

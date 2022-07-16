@@ -18,7 +18,7 @@ extension Account {
 
     @NSManaged public var name: String
     @NSManaged public var emoji: String
-    @NSManaged public var balance: Int64
+    @NSManaged public var balance: Double
     @NSManaged public var currency: Currency
     @NSManaged public var date: Date
     @NSManaged public var transactions: NSSet?

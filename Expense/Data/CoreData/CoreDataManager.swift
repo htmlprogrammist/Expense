@@ -147,7 +147,7 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         let transaction = Transaction(context: managedObjectContext)
         transaction.date = data.date
         transaction.account = data.account
-        transaction.sum = Int64(data.sum)
+        transaction.sum = data.sum
         transaction.isExpense = data.isExpense
         /// The next two properties are optionals, but one of them must be provided
         transaction.category = data.category

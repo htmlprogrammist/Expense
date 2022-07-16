@@ -9,7 +9,7 @@ import Foundation
 
 struct TransactionInfo {
     let account: Account
-    let sum: Int
+    let sum: Double
     let isExpense: Bool
     let date: Date
     /// Transactions take place either by category or by goal, that is why the next two properties are optionals

@@ -13,7 +13,7 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     private let emojiContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
-        view.backgroundColor = .systemGray5
+        view.backgroundColor = .secondarySystemFill
         view.clipsToBounds = true
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false

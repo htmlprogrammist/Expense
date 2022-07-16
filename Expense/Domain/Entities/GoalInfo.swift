@@ -11,8 +11,8 @@ struct GoalInfo {
     let account: Account
     let name: String
     let emoji: String
-    let aim: Int64
+    let aim: Double
     let dateCreated: Date
     let dateDeadline: Date?
-    var current: Int64 = 0
+    var current: Double = 0
 }

@@ -10,7 +10,7 @@ import Foundation
 struct AccountInfo {
     let name: String
     let emoji: Emoji
-    let balance: Int64
+    let balance: Double
     let currency: Currency
     
     var transactions: NSSet?

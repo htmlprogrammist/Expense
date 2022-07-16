@@ -19,8 +19,8 @@ extension Goal {
     @NSManaged public var account: Account
     @NSManaged public var name: String
     @NSManaged public var emoji: String
-    @NSManaged public var aim: Int64
-    @NSManaged public var current: Int64
+    @NSManaged public var aim: Double
+    @NSManaged public var current: Double
     @NSManaged public var dateCreated: Date
     @NSManaged public var dateDeadline: Date?
     @NSManaged public var transactions: NSSet?

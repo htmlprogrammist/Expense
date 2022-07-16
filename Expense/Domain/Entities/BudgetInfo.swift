@@ -9,7 +9,7 @@ import Foundation
 
 struct BudgetInfo {
     let account: Account
-    let sum: Int64
+    let sum: Double
     let period: Period
     let category: Category
     let date: Date

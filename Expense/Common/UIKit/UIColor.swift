@@ -12,7 +12,6 @@ extension UIColor {
     static let appColor: UIColor = UIColor(named: "AccentColor") ?? .systemBlue
     static let background = UIColor(named: "BackgroundColor") ?? .systemGroupedBackground
     static let cellBackground = UIColor(named: "CellBackgroundColor") ?? .systemBackground
-    static let emptyCellBackground = UIColor(named: "EmptyCellBackgroundColor") ?? .systemGray5
     
     /// Increases brightness or decreases saturation
     func adjust(by percentage: CGFloat = 30.0) -> UIColor {

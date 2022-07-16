@@ -17,7 +17,7 @@ extension Transaction {
     }
 
     @NSManaged public var account: Account
-    @NSManaged public var sum: Int64
+    @NSManaged public var sum: Double
     @NSManaged public var date: Date
     @NSManaged public var isExpense: Bool
     @NSManaged public var repeats: Period
@@ -29,7 +29,7 @@ extension Transaction {
 
 extension Transaction {
     var transactionInfo: TransactionInfo {
-        TransactionInfo(account: account, sum: Int(sum), isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeats: repeats)
+        TransactionInfo(account: account, sum: sum, isExpense: isExpense, date: date, category: category, goal: goal, notes: notes, repeats: repeats)
     }
 }
 

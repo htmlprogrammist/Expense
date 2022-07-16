@@ -17,7 +17,7 @@ extension Budget {
     }
 
     @NSManaged public var account: Account
-    @NSManaged public var sum: Int64
+    @NSManaged public var sum: Double
     @NSManaged public var date: Date
     @NSManaged public var period: Period
     @NSManaged public var category: Category
