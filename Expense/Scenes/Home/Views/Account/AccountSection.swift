@@ -17,11 +17,11 @@ final class AccountSection: Section {
     }
     
     func layoutSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(112))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(108))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .absolute(112))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .absolute(110))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
@@ -33,7 +33,7 @@ final class AccountSection: Section {
             let page = Int(abs(round(offset.x / environment.container.contentSize.width)))
             if page != strongSelf.lastItem { // on value changed
                 strongSelf.lastItem = page
-                // TODO: 1. update your paging indicator `pageControl.currentPage = page`; 2. load data by chosen account
+                NotificationCenter.default.post(name: .willChangeAccount, object: self, userInfo: ["accountIndex": page])
             }
         }
         section.orthogonalScrollingBehavior = .groupPagingCentered

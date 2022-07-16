@@ -8,10 +8,6 @@
 import UIKit
 
 enum Images {
-    static let info = Image("info.circle.fill")
-    static let disclosureIndicator = Image("chevron.right").withConfiguration(UIImage.SymbolConfiguration(pointSize: 16, weight: .bold, scale: .small))
-    static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // TODO: подобрать цвет!
-    
     // Tab bar items
     enum TabBarItems {
         static let home = Image("creditcard.fill")
@@ -26,6 +22,8 @@ enum Images {
         static let dailyBudget = Image("banknote")
         static let goals = Image("mappin")
         static let budgets = Image("chart.pie.fill")
+        static let disclosureIndicator = Image("chevron.right").withConfiguration(UIImage.SymbolConfiguration(pointSize: 16, weight: .bold, scale: .small))
+        static let categoryMock = Image("bag.fill").withTintColor(.systemGray3) // TODO: подобрать цвет!
     }
     
     enum History {
@@ -38,7 +36,7 @@ enum Images {
     }
     
     enum Analytics {
-        
+        static let info = Image("info.circle.fill")
     }
 }
 

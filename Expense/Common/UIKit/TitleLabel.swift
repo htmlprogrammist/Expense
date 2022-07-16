@@ -9,7 +9,7 @@ import UIKit
 
 final class TitleLabel: UILabel {
     
-    init(text: String = "", ofSize: CGFloat = 24) {
+    init(text: String = "", ofSize: CGFloat = 22) {
         super.init(frame: .zero)
         self.text = text
         font = UIFont.systemFont(ofSize: ofSize, weight: .bold)

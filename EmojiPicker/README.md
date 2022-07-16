@@ -1,3 +1,2 @@
-# EmojiPicker
+# Emoji Picker
 
-A description of this package.

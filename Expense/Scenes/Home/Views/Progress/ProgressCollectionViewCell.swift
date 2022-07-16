@@ -35,7 +35,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private let emojiLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 28)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,21 +50,11 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     }()
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
     }()
-    private let firstSubtitleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 15)
-        return label
-    }()
-    private let secondSubtitleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .secondaryLabel
-        label.font = UIFont.systemFont(ofSize: 15)
-        return label
-    }()
+    private let firstSubtitleLabel = SubtitleLabel()
+    private let secondSubtitleLabel = SubtitleLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -80,8 +70,8 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         progressView.progress = data.progress
         emojiLabel.text = data.emoji.rawValue
         titleLabel.text = data.title
-        firstSubtitleLabel.attributedText = data.firstSubtitle.toAttributedString(after: ":", ofSize: 15, with: .semibold)
-        secondSubtitleLabel.attributedText = data.secondSubtitle.toAttributedString(after: ":", ofSize: 15, with: .semibold)
+        firstSubtitleLabel.attributedText = data.firstSubtitle.toAttributedString(after: ":", ofSize: SubtitleLabel.fontSize, with: .semibold)
+        secondSubtitleLabel.attributedText = data.secondSubtitle.toAttributedString(after: ":", ofSize: SubtitleLabel.fontSize, with: .semibold)
     }
     
     private func setupView() {
@@ -97,10 +87,10 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
             emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 41),
             
-            labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 30),
+            labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 32),
             labelsStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 5),
             labelsStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -5),
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -7),
         ])
     }
 }

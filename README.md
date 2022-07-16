@@ -4,18 +4,18 @@ Application that allows you to track your finances, daily budget etc.
 # Description
 In this project I demonstrated the knowledge of:
 - UIKit
-- MVVM + RxSwift
+- MVP + Coordinator
 - Core Data & CloudKit
 - CoreAnimation
 - Push-notifications
 - Working with `.csv` format
-- Testing (Unit/UI) with RxTest
+- Testing (Unit/UI) with XCTest framework
 
 # Requirements
 - The interface is drawn in UIKit
 - The app looks correct for iPhone SE (1st gen.) and above
-- The application must be written using an architectural pattern MVVM with RxSwift
-- To cover the code with tests, you must use RxTest. Tests should cover at least half of the written code
+- The application must be written using an architectural pattern MVP
+- To cover the code with tests, you must use XCTest. Tests should cover at least half of the written code
 - For permanent data storage, you need to use Core Data
 - No storyboard or Xib is allowed
 - The project should use the [SwiftLint](https://github.com/realm/SwiftLint) linter
@@ -27,18 +27,18 @@ In this project I demonstrated the knowledge of:
 # Описание
 В данном проекте я продемонстрировал знания:
 - UIKit
-- MVVM + RxSwift
+- MVP + Coordinator
 - Core Data & CloudKit
 - CoreAnimation
 - Push-уведомления
 - Работа с форматом `.csv`
-- Тестирование (Unit/UI) с помощью RxTest
+- Тестирование (Unit/UI) с помощью фреймворка XCTest
 
 # Требования
 - Для отрисовки интерфейса используется UIKit
 - Приложение корректно отображается на iPhone SE (1-го поколения) и выше
-- Приложение должно быть написано с использованием архитектурного шаблона MVVM с RxSwift
+- Приложение должно быть написано с использованием архитектурного шаблона MVP
 - Для постоянного хранения данных необходимо использовать Core Data
 - Использование Storyboard/Xib запрещено
-- Для покрытия кода тестами необходимо использовать RxTest. Тесты должны покрывать не менее половины написанного кода
+- Для покрытия кода тестами необходимо использовать XCTest. Тесты должны покрывать не менее половины написанного кода
 - В проекте должен быть использован линтер [SwiftLint](https://github.com/realm/SwiftLint)

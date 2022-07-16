@@ -22,6 +22,7 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
         super.init(frame: frame)
         
         setupView()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCurrentPageIndicator), name: .willChangeAccount, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -39,5 +40,16 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             pageControl.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+    }
+    
+    @objc
+    private func updateCurrentPageIndicator(notification: NSNotification) {
+        if let index = notification.userInfo?["accountIndex"] as? Int {
+            pageControl.currentPage = index
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .willChangeAccount, object: nil)
     }
 }

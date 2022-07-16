@@ -7,6 +7,9 @@
 
 import UIKit
 
+enum DateTag {}
+typealias StringDate = Tagged<DateTag, String>
+
 final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
     private let spacing: CGFloat = 2

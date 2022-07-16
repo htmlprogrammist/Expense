@@ -30,7 +30,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     private lazy var labelsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
         stackView.axis = .vertical
-        stackView.spacing = 1
+        stackView.spacing = 3
         return stackView
     }()
     private lazy var mainStackView: UIStackView = {

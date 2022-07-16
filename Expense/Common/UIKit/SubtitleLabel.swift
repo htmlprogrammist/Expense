@@ -13,11 +13,17 @@ final class SubtitleLabel: UILabel {
         super.init(frame: .zero)
         self.text = text
         textColor = .secondaryLabel
-        font = UIFont.systemFont(ofSize: 14)
+        font = UIFont.systemFont(ofSize: SubtitleLabel.fontSize)
         translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension SubtitleLabel {
+    static var fontSize: CGFloat {
+        14
     }
 }

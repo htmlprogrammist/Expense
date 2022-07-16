@@ -1,3 +1,5 @@
 # AppImport
+Package describing the list of dependencies of the application
 
-A description of this package.
+## List of the packages
+* [SPAlert](https://github.com/ivanvorobei/SPAlert)

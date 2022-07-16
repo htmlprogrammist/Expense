@@ -9,8 +9,6 @@ import UIKit
 
 final class HistoryViewController: UIViewController {
     
-    public var viewModel: HistoryViewModelProtocol!
-    
     private var isDay = true
     
     private var datePickerMenu: UIMenu {
@@ -64,7 +62,7 @@ final class HistoryViewController: UIViewController {
     
     private func handleAction(by period: Period) {
         isDay = period == .day
-        viewModel.provideData(by: period)
+//        presenter.provideData(by: period)
         tableView.reloadData()
     }
     

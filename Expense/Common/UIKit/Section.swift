@@ -9,6 +9,7 @@ import UIKit
 
 protocol Section {
     var numberOfItems: Int { get }
+//    var data: [NSManagedObject] { get }
     func layoutSection() -> NSCollectionLayoutSection
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
 }

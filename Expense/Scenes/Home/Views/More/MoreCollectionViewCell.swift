@@ -34,7 +34,7 @@ final class MoreCollectionViewCell: UICollectionViewCell {
     }()
     
     private let indicatorImageView: UIImageView = {
-        let imageView = UIImageView(image: Images.disclosureIndicator)
+        let imageView = UIImageView(image: Images.Home.disclosureIndicator)
         imageView.tintColor = .systemGray4
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false

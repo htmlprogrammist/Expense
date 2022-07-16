@@ -8,6 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let didDeleteAccount = Notification.Name("didDeleteAccount")
+    static let willChangeAccount = Notification.Name("willChangeAccount")
 }
-/// example of usage: `NotificationCenter.default.post(name: .didDeleteAccount, object: self)`

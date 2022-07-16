@@ -44,6 +44,7 @@ struct ProgressSection: Section {
             let progress: Double
         }
         let data = ProgressCellModel(emoji: Tagged("🎡"), title: "Развлечения", firstSubtitle: "Бюджет: \(Int.random(in: 1000...10000)) ₽", secondSubtitle: "Потрачено: \(Int.random(in: 1000...10000)) ₽", progress: Double.random(in: 0...1))
+//        let data = ProgressCellModel(emoji: Tagged("🎡"), title: "Развлечения", firstSubtitle: "Бюджет: \(2600) ₽", secondSubtitle: "Потрачено: \(2300) ₽", progress: 0.65)
         cell.configure(data: data)
         return cell
     }

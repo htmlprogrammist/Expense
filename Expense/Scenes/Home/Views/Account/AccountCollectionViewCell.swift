@@ -9,11 +9,12 @@ import UIKit
 
 final class AccountCollectionViewCell: UICollectionViewCell {
     
-    private let balanceLabel = TitleLabel(text: "$5 981.22", ofSize: 28)
+    private let balanceLabel = TitleLabel(text: "$5 981.22", ofSize: 26)
     private let emojiContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
-        view.backgroundColor = .secondarySystemFill
+//        view.backgroundColor = .secondarySystemFill
+        view.backgroundColor = .systemGray5
         view.clipsToBounds = true
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
