@@ -89,7 +89,5 @@ extension SettingsViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        presenter.provideIndexPath(indexPath)
     }
 }

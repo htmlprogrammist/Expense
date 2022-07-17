@@ -110,7 +110,11 @@ final class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.01, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
-        presenter.addTransaction()
+//        presenter.addTransaction()
+        let viewController = EmojiPickerViewController()
+        viewController.delegate = self
+        viewController.sourceView = sender
+        present(viewController, animated: true)
     }
     
     private func setupView() {
@@ -128,10 +132,16 @@ final class HomeViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
             addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            addTransactionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            addTransactionButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -16),
             addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
             addTransactionButton.widthAnchor.constraint(equalToConstant: 60)
         ])
+    }
+}
+
+extension HomeViewController: EmojiPickerDelegate {
+    func didGetEmoji(emoji: String) {
+        print(emoji)
     }
 }
 

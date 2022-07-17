@@ -8,14 +8,14 @@
 import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
-    func openSettingsModule(moduleOutput: SettingsModuleOutputProtocol)
-    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol)
+    func openSettingsModule(moduleOutput: SettingsModuleOutputProtocol?)
+    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol?)
 }
 
 final class HomeRouter: HomeRouterProtocol {
     weak var viewController: UIViewController?
     
-    func openSettingsModule(moduleOutput: SettingsModuleOutputProtocol) {
+    func openSettingsModule(moduleOutput: SettingsModuleOutputProtocol?) {
         let assembly = SettingsAssembly.assemble(moduleOutput: moduleOutput)
         let navController = UINavigationController(rootViewController: assembly.viewController)
         navController.modalPresentationStyle = .fullScreen
@@ -23,7 +23,7 @@ final class HomeRouter: HomeRouterProtocol {
 //        viewController?.navigationController?.pushViewController(assembly.viewController, animated: true)
     }
     
-    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol) {
+    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol?) {
         let assembly = AddTransactionAssembly.assemble(moduleOutput: moduleOutput)
         let navController = UINavigationController(rootViewController: assembly.viewController)
         if #available(iOS 15.0, *), let sheet = navController.sheetPresentationController {

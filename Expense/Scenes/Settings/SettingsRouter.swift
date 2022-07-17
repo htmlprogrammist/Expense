@@ -11,5 +11,5 @@ protocol SettingsRouterProtocol: AnyObject {
 }
 
 final class SettingsRouter: SettingsRouterProtocol {
-    weak var navigationController: UINavigationController?
+    weak var viewController: UIViewController?
 }

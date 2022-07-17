@@ -16,7 +16,7 @@ final class SettingsAssembly {
         let router = SettingsRouter()
         let presenter = SettingsPresenter(router: router)
         let viewController = SettingsViewController(presenter: presenter)
-        router.navigationController = viewController.navigationController
+        router.viewController = viewController
         
         presenter.view = viewController
         presenter.moduleOutput = moduleOutput

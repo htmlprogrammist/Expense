@@ -8,11 +8,9 @@
 import Foundation
 
 protocol SettingsPresenterProtocol: AnyObject {
-    func provideIndexPath(_ indexPath: IndexPath)
 }
 
 protocol SettingsModuleOutputProtocol: AnyObject {
-    func recieveIndexPath(_ indexPath: IndexPath)
 }
 
 final class SettingsPresenter {
@@ -27,7 +25,4 @@ final class SettingsPresenter {
 }
 
 extension SettingsPresenter: SettingsPresenterProtocol {
-    func provideIndexPath(_ indexPath: IndexPath) {
-        moduleOutput?.recieveIndexPath(indexPath)
-    }
 }

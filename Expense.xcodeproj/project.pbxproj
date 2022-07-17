@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F0004F912883246900AA02A9 /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F0004F902883246900AA02A9 /* EmojiPicker */; };
-		F0004F992883252800AA02A9 /* Unicode 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F932883252800AA02A9 /* Unicode 5.swift */; };
-		F0004F9A2883252800AA02A9 /* Unicode 13v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F942883252800AA02A9 /* Unicode 13v1.swift */; };
-		F0004F9B2883252800AA02A9 /* Unicode 14.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F952883252800AA02A9 /* Unicode 14.swift */; };
-		F0004F9C2883252800AA02A9 /* Unicode 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F962883252800AA02A9 /* Unicode 12.swift */; };
-		F0004F9D2883252800AA02A9 /* Unicode 13.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F972883252800AA02A9 /* Unicode 13.swift */; };
-		F0004F9E2883252800AA02A9 /* Unicode 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004F982883252800AA02A9 /* Unicode 11.swift */; };
 		F0004FA42883252F00AA02A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0004FA02883252F00AA02A9 /* Localizable.strings */; };
 		F0004FA52883252F00AA02A9 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FA32883252F00AA02A9 /* Texts.swift */; };
 		F0004FA92883253300AA02A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0004FA72883253300AA02A9 /* Assets.xcassets */; };
@@ -55,19 +49,9 @@
 		F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */; };
 		F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02114182880733B00ACE1D7 /* UISegmentedControl.swift */; };
 		F035F59628757D660041AF84 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59528757D660041AF84 /* UIView.swift */; };
-		F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */; };
 		F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5A328757E4A0041AF84 /* UIColor.swift */; };
 		F035F5C528757E4A0041AF84 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5A528757E4A0041AF84 /* Array.swift */; };
-		F035F5C728757E4A0041AF84 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AB28757E4A0041AF84 /* EmojiModel.swift */; };
-		F035F5C828757E4A0041AF84 /* PickerArrowDirectionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AC28757E4A0041AF84 /* PickerArrowDirectionMode.swift */; };
 		F035F5C928757E4A0041AF84 /* Observ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5AE28757E4A0041AF84 /* Observ.swift */; };
-		F035F5CA28757E4A0041AF84 /* EmojiPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */; };
-		F035F5CB28757E4A0041AF84 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */; };
-		F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */; };
-		F035F5CD28757E4A0041AF84 /* EmojiCategoryIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B728757E4A0041AF84 /* EmojiCategoryIconView.swift */; };
-		F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B828757E4A0041AF84 /* TouchableEmojiCategoryView.swift */; };
-		F035F5CF28757E4A0041AF84 /* EmojiPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5B928757E4A0041AF84 /* EmojiPickerView.swift */; };
-		F035F5D028757E4A0041AF84 /* UnicodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5BB28757E4A0041AF84 /* UnicodeManager.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
 		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BA2866EFAD0002208F /* AppCoordinator.swift */; };
@@ -126,12 +110,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F0004F932883252800AA02A9 /* Unicode 5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 5.swift"; sourceTree = "<group>"; };
-		F0004F942883252800AA02A9 /* Unicode 13v1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 13v1.swift"; sourceTree = "<group>"; };
-		F0004F952883252800AA02A9 /* Unicode 14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 14.swift"; sourceTree = "<group>"; };
-		F0004F962883252800AA02A9 /* Unicode 12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 12.swift"; sourceTree = "<group>"; };
-		F0004F972883252800AA02A9 /* Unicode 13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 13.swift"; sourceTree = "<group>"; };
-		F0004F982883252800AA02A9 /* Unicode 11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unicode 11.swift"; sourceTree = "<group>"; };
 		F0004FA12883252F00AA02A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0004FA22883252F00AA02A9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0004FA32883252F00AA02A9 /* Texts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
@@ -174,19 +152,9 @@
 		F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		F02114182880733B00ACE1D7 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		F035F59528757D660041AF84 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewModel.swift; sourceTree = "<group>"; };
 		F035F5A328757E4A0041AF84 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F035F5A528757E4A0041AF84 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		F035F5AB28757E4A0041AF84 /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
-		F035F5AC28757E4A0041AF84 /* PickerArrowDirectionMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerArrowDirectionMode.swift; sourceTree = "<group>"; };
 		F035F5AE28757E4A0041AF84 /* Observ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observ.swift; sourceTree = "<group>"; };
-		F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerViewController.swift; sourceTree = "<group>"; };
-		F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
-		F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSectionHeader.swift; sourceTree = "<group>"; };
-		F035F5B728757E4A0041AF84 /* EmojiCategoryIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCategoryIconView.swift; sourceTree = "<group>"; };
-		F035F5B828757E4A0041AF84 /* TouchableEmojiCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchableEmojiCategoryView.swift; sourceTree = "<group>"; };
-		F035F5B928757E4A0041AF84 /* EmojiPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiPickerView.swift; sourceTree = "<group>"; };
-		F035F5BB28757E4A0041AF84 /* UnicodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeManager.swift; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -266,19 +234,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F0004F922883252800AA02A9 /* Unicode */ = {
-			isa = PBXGroup;
-			children = (
-				F0004F932883252800AA02A9 /* Unicode 5.swift */,
-				F0004F942883252800AA02A9 /* Unicode 13v1.swift */,
-				F0004F952883252800AA02A9 /* Unicode 14.swift */,
-				F0004F962883252800AA02A9 /* Unicode 12.swift */,
-				F0004F972883252800AA02A9 /* Unicode 13.swift */,
-				F0004F982883252800AA02A9 /* Unicode 11.swift */,
-			);
-			path = Unicode;
 			sourceTree = "<group>";
 		};
 		F0004F9F2883252F00AA02A9 /* Localization */ = {
@@ -367,54 +322,6 @@
 				F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */,
 			);
 			path = UserDefaults;
-			sourceTree = "<group>";
-		};
-		F035F59728757E4A0041AF84 /* EmojiPicker */ = {
-			isa = PBXGroup;
-			children = (
-				F035F59928757E4A0041AF84 /* EmojiPickerViewModel.swift */,
-				F035F5AF28757E4A0041AF84 /* Views */,
-				F035F5AA28757E4A0041AF84 /* Models */,
-			);
-			path = EmojiPicker;
-			sourceTree = "<group>";
-		};
-		F035F5AA28757E4A0041AF84 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5AB28757E4A0041AF84 /* EmojiModel.swift */,
-				F035F5AC28757E4A0041AF84 /* PickerArrowDirectionMode.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F035F5AF28757E4A0041AF84 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5B028757E4A0041AF84 /* EmojiPickerViewController.swift */,
-				F035F5B928757E4A0041AF84 /* EmojiPickerView.swift */,
-				F035F5B328757E4A0041AF84 /* EmojiCollectionViewCell.swift */,
-				F035F5B528757E4A0041AF84 /* EmojiSectionHeader.swift */,
-				F035F5B628757E4A0041AF84 /* EmojiCategoryView */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F035F5B628757E4A0041AF84 /* EmojiCategoryView */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5B728757E4A0041AF84 /* EmojiCategoryIconView.swift */,
-				F035F5B828757E4A0041AF84 /* TouchableEmojiCategoryView.swift */,
-			);
-			path = EmojiCategoryView;
-			sourceTree = "<group>";
-		};
-		F035F5BA28757E4A0041AF84 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				F035F5BB28757E4A0041AF84 /* UnicodeManager.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		F0479DB4287CC95A00011374 /* TransactionDetails */ = {
@@ -589,7 +496,6 @@
 				F02BC8F7286A5F15009D2415 /* Data */,
 				F0612D54286C649A009B641A /* Domain */,
 				F0E89CBD285F116700036575 /* Scenes */,
-				F035F5BA28757E4A0041AF84 /* Services */,
 				F0A9D65927D2AD7D00E63CD2 /* Resources */,
 			);
 			path = Expense;
@@ -600,7 +506,6 @@
 			children = (
 				F0004FA62883253300AA02A9 /* Images */,
 				F0004F9F2883252F00AA02A9 /* Localization */,
-				F0004F922883252800AA02A9 /* Unicode */,
 				F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */,
 				F0A9D65327D2AD4200E63CD2 /* Info.plist */,
 			);
@@ -646,9 +551,9 @@
 		F0E89CBC285F115700036575 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F0004FAB2883535000AA02A9 /* HomeAssembly.swift */,
 				F0004FAD2883538000AA02A9 /* HomePresenter.swift */,
 				F0004FAF288353C200AA02A9 /* HomeRouter.swift */,
+				F0004FAB2883535000AA02A9 /* HomeAssembly.swift */,
 				F07C25142870E1500000021E /* Views */,
 			);
 			path = Home;
@@ -664,7 +569,6 @@
 				F0479DB4287CC95A00011374 /* TransactionDetails */,
 				F0E89CBF285F118400036575 /* Analytics */,
 				F07C25172870E3050000021E /* Settings */,
-				F035F59728757E4A0041AF84 /* EmojiPicker */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -858,60 +762,47 @@
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
-				F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
-				F0004F9D2883252800AA02A9 /* Unicode 13.swift in Sources */,
 				F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
-				F0004F9A2883252800AA02A9 /* Unicode 13v1.swift in Sources */,
 				F035F5C928757E4A0041AF84 /* Observ.swift in Sources */,
 				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
-				F0004F9B2883252800AA02A9 /* Unicode 14.swift in Sources */,
 				F035F5C528757E4A0041AF84 /* Array.swift in Sources */,
 				F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */,
 				F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */,
 				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
-				F035F5CF28757E4A0041AF84 /* EmojiPickerView.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
-				F035F5BC28757E4A0041AF84 /* EmojiPickerViewModel.swift in Sources */,
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
-				F035F5CA28757E4A0041AF84 /* EmojiPickerViewController.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
 				F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */,
-				F035F5C728757E4A0041AF84 /* EmojiModel.swift in Sources */,
-				F0004F992883252800AA02A9 /* Unicode 5.swift in Sources */,
 				F004A2942884014100D03CB8 /* AnalyticsPresenter.swift in Sources */,
 				F004A29C2884062500D03CB8 /* AddTransactionAssembly.swift in Sources */,
 				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
 				F0004FAC2883535000AA02A9 /* HomeAssembly.swift in Sources */,
 				F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */,
 				F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */,
-				F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0E35A01287E02070070B3EF /* Section.swift in Sources */,
-				F035F5CD28757E4A0041AF84 /* EmojiCategoryIconView.swift in Sources */,
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
 				F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */,
 				F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */,
-				F035F5C828757E4A0041AF84 /* PickerArrowDirectionMode.swift in Sources */,
 				F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,
-				F0004F9E2883252800AA02A9 /* Unicode 11.swift in Sources */,
 				F004A2952884014100D03CB8 /* AnalyticsRouter.swift in Sources */,
 				F0004FB2288354C600AA02A9 /* SettingsPresenter.swift in Sources */,
 				F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */,
@@ -922,7 +813,6 @@
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
 				F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */,
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
-				F035F5D028757E4A0041AF84 /* UnicodeManager.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */,
 				F0004FB0288353C200AA02A9 /* HomeRouter.swift in Sources */,
@@ -939,9 +829,7 @@
 				F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */,
-				F035F5CB28757E4A0041AF84 /* EmojiCollectionViewCell.swift in Sources */,
 				F044C216287706270029EA8E /* CircularProgressView.swift in Sources */,
-				F0004F9C2883252800AA02A9 /* Unicode 12.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
 				F0004FAE2883538000AA02A9 /* HomePresenter.swift in Sources */,
 			);

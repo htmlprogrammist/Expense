@@ -32,15 +32,9 @@ extension HomePresenter: HomePresenterProtocol {
     }
     
     func addTransaction() {
-        router.openAddTransactionModule(moduleOutput: self)
+        router.openAddTransactionModule(moduleOutput: nil)
     }
 }
 
 extension HomePresenter: SettingsModuleOutputProtocol {
-    func recieveIndexPath(_ indexPath: IndexPath) {
-        view?.setTitle("\(indexPath)")
-    }
-}
-
-extension HomePresenter: AddTransactionModuleOutputProtocol {
 }
