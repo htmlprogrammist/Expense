@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Simple wrapper around UserDefaults with subscripts
 final class UserDefaultsContainer<K: CodingKey> {
     private let userDefaults: UserDefaults
     

@@ -14,7 +14,7 @@ protocol HistoryPresenterProtocol: AnyObject {
 protocol HistoryModuleOutputProtocol: AnyObject {
 }
 
-final class HistoryPresenter {
+final class HistoryPresenter: HistoryPresenterProtocol {
 	weak var view: HistoryViewProtocol?
     weak var moduleOutput: HistoryModuleOutputProtocol?
     
@@ -23,7 +23,4 @@ final class HistoryPresenter {
     init(router: HistoryRouterProtocol) {
         self.router = router
     }
-}
-
-extension HistoryPresenter: HistoryPresenterProtocol {
 }

@@ -14,7 +14,7 @@ struct AccountInfo {
     let currency: Currency
     
     var transactions: NSSet?
-    var categories: NSSet?
-    var goals: NSSet?
-    var budgets: NSSet?
+    var categories: NSOrderedSet?
+    var goals: NSOrderedSet?
+    var budgets: NSOrderedSet?
 }

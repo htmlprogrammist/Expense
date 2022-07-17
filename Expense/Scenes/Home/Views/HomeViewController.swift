@@ -9,7 +9,6 @@ import UIKit
 import EmojiPicker
 
 protocol HomeViewProtocol: AnyObject {
-    func setTitle(_ string: String)
 }
 
 final class HomeViewController: UIViewController {
@@ -81,15 +80,7 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        /// There is some bug with iOS 13.0: when user first opens the app, there are insets in every section. Then only way of get rid of this is reloading data
-        collectionView.reloadData()
-    }
-    
-    @objc
-    public func handleSeeAll(sender: UIButton) {
+    @objc public func handleSeeAll(sender: UIButton) {
         if sender.tag == 1 {
             // TODO: Open all goals module
         } else {
@@ -98,21 +89,18 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc
-    private func openSettings() {
+    @objc private func openSettings() {
         presenter.openSettings()
     }
     
-    @objc
-    private func addTransaction(sender: UIButton) {
+    @objc private func addTransaction(sender: UIButton) {
         /// **Button's animation**, it shrinks a bit and then becomes `identity`
         sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         
         UIView.animate(withDuration: 0.5, delay: 0.01, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
-//        presenter.addTransaction()
-        EmojiPicker.present(sourceViewController: self, sender: sender)
+        presenter.addTransaction()
     }
     
     private func setupView() {
@@ -129,24 +117,15 @@ final class HomeViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            addTransactionButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -16),
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -4),
+            addTransactionButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -8),
             addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
             addTransactionButton.widthAnchor.constraint(equalToConstant: 60)
         ])
     }
 }
 
-extension HomeViewController: EmojiPickerDelegate {
-    func didGetEmoji(emoji: String) {
-        print(emoji)
-    }
-}
-
 extension HomeViewController: HomeViewProtocol {
-    func setTitle(_ string: String) {
-        navigationItem.title = string
-    }
 }
 
 // MARK: - CollectionView

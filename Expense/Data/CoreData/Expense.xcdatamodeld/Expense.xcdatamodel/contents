@@ -6,9 +6,9 @@
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="emoji" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="budgets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Budget" inverseName="account" inverseEntity="Budget"/>
-        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="account" inverseEntity="Category"/>
-        <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Goal" inverseName="account" inverseEntity="Goal"/>
+        <relationship name="budgets" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Budget" inverseName="account" inverseEntity="Budget"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="account" inverseEntity="Category"/>
+        <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Goal" inverseName="account" inverseEntity="Goal"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction"/>
     </entity>
     <entity name="Budget" representedClassName=".Budget" syncable="YES">

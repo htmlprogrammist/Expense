@@ -14,7 +14,7 @@ protocol AnalyticsPresenterProtocol: AnyObject {
 protocol AnalyticsModuleOutputProtocol: AnyObject {
 }
 
-final class AnalyticsPresenter {
+final class AnalyticsPresenter: AnalyticsPresenterProtocol {
 	weak var view: AnalyticsViewProtocol?
     weak var moduleOutput: AnalyticsModuleOutputProtocol?
     
@@ -23,7 +23,4 @@ final class AnalyticsPresenter {
     init(router: AnalyticsRouterProtocol) {
         self.router = router
     }
-}
-
-extension AnalyticsPresenter: AnalyticsPresenterProtocol {
 }

@@ -179,6 +179,7 @@
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewController.swift; sourceTree = "<group>"; };
 		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F0A4963628846F7900B8D465 /* Expense.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Expense.docc; sourceTree = "<group>"; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A9D64C27D2AD3E00E63CD2 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
@@ -464,6 +465,7 @@
 				F0AF60D12882A7A40019AF26 /* AppImport */,
 				F0AF60CE2882A6F20019AF26 /* EmojiPicker */,
 				F0FA87172854FA05005964EA /* README.md */,
+				F0A4963628846F7900B8D465 /* Expense.docc */,
 				F0A9D64127D2AD3E00E63CD2 /* Expense */,
 				F09259A12854F9A900C23B1B /* ExpenseTests */,
 				F09259AE2854F9B400C23B1B /* ExpenseUITests */,

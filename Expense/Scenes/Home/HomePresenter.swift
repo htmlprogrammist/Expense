@@ -15,7 +15,7 @@ protocol HomePresenterProtocol: AnyObject {
 protocol HomeModuleOutputProtocol: AnyObject {
 }
 
-final class HomePresenter {
+final class HomePresenter: HomePresenterProtocol {
     weak var view: HomeViewProtocol?
     weak var moduleOutput: HomeModuleOutputProtocol?
     
@@ -24,9 +24,7 @@ final class HomePresenter {
     init(router: HomeRouterProtocol) {
         self.router = router
     }
-}
-
-extension HomePresenter: HomePresenterProtocol {
+    
     func openSettings() {
         router.openSettingsModule(moduleOutput: self)
     }

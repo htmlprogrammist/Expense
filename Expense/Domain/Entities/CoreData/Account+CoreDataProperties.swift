@@ -22,9 +22,9 @@ extension Account {
     @NSManaged public var currency: Currency
     @NSManaged public var date: Date
     @NSManaged public var transactions: NSSet?
-    @NSManaged public var budgets: NSSet?
-    @NSManaged public var goals: NSSet?
-    @NSManaged public var categories: NSSet?
+    @NSManaged public var budgets: NSOrderedSet?
+    @NSManaged public var goals: NSOrderedSet?
+    @NSManaged public var categories: NSOrderedSet?
 
 }
 

@@ -88,16 +88,16 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
     }
     
     func deleteAccount(_ account: Account) {
-        if let goals = account.goals?.allObjects as? [Goal] {
+        if let goals = account.goals?.array as? [Goal] {
             goals.forEach { managedObjectContext.delete($0) }
         }
-        if let budgets = account.budgets?.allObjects as? [Budget] {
+        if let budgets = account.budgets?.array as? [Budget] {
             budgets.forEach { managedObjectContext.delete($0) }
         }
         if let transactions = account.transactions?.allObjects as? [Transaction] {
             transactions.forEach { managedObjectContext.delete($0) }
         }
-        if let categories = account.categories?.allObjects as? [Category] {
+        if let categories = account.categories?.array as? [Category] {
             categories.forEach { managedObjectContext.delete($0) }
         }
         managedObjectContext.delete(account)

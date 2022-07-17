@@ -7,11 +7,8 @@
 
 fileprivate enum SettingsKey: CodingKey {
     // Home
-    case showDailyBudget
     case showGoals
     case showBudgets
-    
-    case dailyBudget
 }
 
 final class Settings {
@@ -19,12 +16,6 @@ final class Settings {
     static let shared = Settings()
     /// User defaults container that allows easily usage of UserDefaults
     private let storage = UserDefaultsContainer(keyedBy: SettingsKey.self)
-    
-    /// Defines whether to compute and display the daily budget
-    var showDailyBudget: Bool? {
-        get { storage[.showDailyBudget] }
-        set { storage[.showDailyBudget] = newValue }
-    }
     
     /// Defines whether to show or not _Goals_ section in the main screen
     var showGoals: Bool? {
@@ -36,11 +27,5 @@ final class Settings {
     var showBudgets: Bool? {
         get { storage[.showBudgets] }
         set { storage[.showBudgets] = newValue }
-    }
-    
-    /// Describes the user's daily budget
-    var dailyBudget: Double? {
-        get { storage[.dailyBudget] }
-        set { storage[.dailyBudget] = newValue }
     }
 }

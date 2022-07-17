@@ -27,17 +27,17 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         button.isHidden = true
         return button
     }()
-    private lazy var labelsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
-        stackView.axis = .vertical
-        stackView.spacing = 3
+    private lazy var subStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, seeAllButton])
+        stackView.axis = .horizontal
+        stackView.alignment = .lastBaseline
+        stackView.distribution = .equalCentering
         return stackView
     }()
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [labelsStackView, seeAllButton])
-        stackView.axis = .horizontal
-        stackView.alignment = .leading
-        stackView.distribution = .equalCentering
+        let stackView = UIStackView(arrangedSubviews: [subStackView, subtitleLabel])
+        stackView.axis = .vertical
+        stackView.spacing = 3
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()

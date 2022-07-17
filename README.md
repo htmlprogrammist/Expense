@@ -13,6 +13,7 @@ In this project I demonstrated the knowledge of:
 
 # Requirements
 - The interface is drawn in UIKit
+- Minimum version: iOS 13
 - The app looks correct for iPhone SE (1st gen.) and above
 - The application must be written using an architectural pattern MVP
 - To cover the code with tests, you must use XCTest. Tests should cover at least half of the written code
@@ -36,6 +37,7 @@ In this project I demonstrated the knowledge of:
 
 # Требования
 - Для отрисовки интерфейса используется UIKit
+- Минимальная версия: iOS 13
 - Приложение корректно отображается на iPhone SE (1-го поколения) и выше
 - Приложение должно быть написано с использованием архитектурного шаблона MVP
 - Для постоянного хранения данных необходимо использовать Core Data

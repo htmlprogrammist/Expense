@@ -42,7 +42,7 @@ final class CircularProgressView: UIView {
         
         trackLayer.path = circularPath.cgPath
         trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.strokeColor = UIColor.background.cgColor
+        trackLayer.strokeColor = UIColor.tertiarySystemFill.cgColor
         trackLayer.lineWidth = lineWidth
         trackLayer.strokeEnd = 1
         layer.addSublayer(trackLayer)
