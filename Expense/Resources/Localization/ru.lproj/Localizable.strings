@@ -56,13 +56,3 @@ date = "Дата";
 note = "Заметка";
 repeats = "Повторять платёж";
 repeatsDescription = "Операции с повтором выполняются автоматически и отображаются в разделе \"Запланированные операции\"";
-
-// EmojiPicker
-emotionsAndPeople = "СМАЙЛИКИ И ЛЮДИ";
-animalsAndNature = "ЖИВОТНЫЕ И ПРИРОДА";
-foodAndDrinks = "ЕДА И НАПИТКИ";
-activities = "АКТИВНОСТЬ";
-travellingAndPlaces = "ПУТЕШЕСТВИЯ И МЕСТНОСТИ";
-objects = "ПРЕДМЕТЫ";
-symbols = "СИМВОЛЫ";
-flags = "ФЛАГИ";

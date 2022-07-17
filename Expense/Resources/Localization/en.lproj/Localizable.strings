@@ -56,13 +56,3 @@ date = "Date";
 note = "Note";
 repeats = "Repeat payment";
 repeatsDescription = "Repeatable operations are performed automatically and are displayed in the \"Scheduled operations\" section";
-
-// EmojiPicker
-emotionsAndPeople = "SMILEYS & PEOPLE";
-animalsAndNature = "ANIMALS & NATURE";
-foodAndDrinks = "FOOD & DRINK";
-activities = "ACTIVITY";
-travellingAndPlaces = "TRAVEL & PLACES";
-objects = "OBJECTS";
-symbols = "SYMBOLS";
-flags = "FLAGS";

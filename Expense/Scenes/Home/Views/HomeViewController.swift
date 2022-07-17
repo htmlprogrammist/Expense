@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EmojiPicker
 
 protocol HomeViewProtocol: AnyObject {
     func setTitle(_ string: String)
@@ -111,10 +112,7 @@ final class HomeViewController: UIViewController {
             sender.transform = CGAffineTransform.identity
         })
 //        presenter.addTransaction()
-        let viewController = EmojiPickerViewController()
-        viewController.delegate = self
-        viewController.sourceView = sender
-        present(viewController, animated: true)
+        EmojiPicker.present(sourceViewController: self, sender: sender)
     }
     
     private func setupView() {
