@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol HistoryViewProtocol: AnyObject {
+}
+
 final class HistoryViewController: UIViewController {
     
+    private let presenter: HistoryPresenterProtocol
     private var isDay = true
     
     private var datePickerMenu: UIMenu {
@@ -42,6 +46,16 @@ final class HistoryViewController: UIViewController {
         return tableView
     }()
     
+    init(presenter: HistoryPresenterProtocol) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +64,11 @@ final class HistoryViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc
-    private func chooseFilter() {
+    @objc private func chooseFilter() {
         
     }
     
-    @objc
-    private func exportHistory() {
+    @objc private func exportHistory() {
         
     }
     
@@ -66,14 +78,47 @@ final class HistoryViewController: UIViewController {
         tableView.reloadData()
     }
     
+    /// Opens action sheet of `UIAlertController` with choosing period like in the `datePickerMenu: UIMenu`
+    @objc private func choosePeriod() {
+        let alertController = UIAlertController(title: Texts.History.operationsBy, message: Texts.History.operationsByDescription, preferredStyle: .actionSheet)
+        let day = UIAlertAction(title: Texts.History.day, style: .default, handler: { [unowned self] _ in
+            handleAction(by: .day)
+        })
+        let week = UIAlertAction(title: Texts.History.week, style: .default, handler: { [unowned self] _ in
+            handleAction(by: .week)
+        })
+        let month = UIAlertAction(title: Texts.History.month, style: .default, handler: { [unowned self] _ in
+            handleAction(by: .month)
+        })
+        let year = UIAlertAction(title: Texts.History.year, style: .default, handler: { [unowned self] _ in
+            handleAction(by: .year)
+        })
+        let cancel = UIAlertAction(title: Texts.History.cancel, style: .cancel)
+        
+        [day, week, month, year, cancel].forEach {
+            alertController.addAction($0)
+        }
+        /// for definition try to open declaration of this functions in Extensions/UIKit/UIAlertController.swift
+        alertController.negativeWidthConstraint()
+        present(alertController, animated: true)
+    }
+    
     private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.History.title
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: Images.History.export, style: .plain, target: self, action: #selector(exportHistory))
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(title: nil, image: Images.History.timeline, primaryAction: nil, menu: datePickerMenu),
             UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
         ]
+        
+        if #available(iOS 14.0, *) {
+            navigationItem.rightBarButtonItems?.insert(
+                UIBarButtonItem(title: nil, image: Images.History.timeline, primaryAction: nil, menu: datePickerMenu), at: 0)
+        } else {
+            navigationItem.rightBarButtonItems?.insert(
+                UIBarButtonItem(image: Images.History.timeline, style: .plain, target: self, action: #selector(choosePeriod)), at: 0)
+        }
+        
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -85,7 +130,10 @@ final class HistoryViewController: UIViewController {
     }
 }
 
-// MARK: - UITableView
+extension HistoryViewController: HistoryViewProtocol {
+}
+
+// MARK: - TableView
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         Int.random(in: 2...5)

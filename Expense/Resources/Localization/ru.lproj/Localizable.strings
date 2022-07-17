@@ -34,10 +34,12 @@ tapToAdd = "Нажмите, чтобы добавить";
 
 // History
 operationsBy = "Операции по";
+operationsByDescription = "Сгруппируйте операции по определённому периоду";
 day = "День";
 week = "Неделя";
 month = "Месяц";
 year = "Год";
+cancel = "Отменить";
 
 // Analytics
 

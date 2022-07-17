@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol AnalyticsViewProtocol: AnyObject {
+}
+
 final class AnalyticsViewController: UIViewController {
+    
+    private let presenter: AnalyticsPresenterProtocol
     
     private let segmentedControl = UISegmentedControl(action: #selector(segmentedControlDidChange))
     
@@ -23,6 +28,16 @@ final class AnalyticsViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
+    
+    init(presenter: AnalyticsPresenterProtocol) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -59,6 +74,10 @@ final class AnalyticsViewController: UIViewController {
     }
 }
 
+extension AnalyticsViewController: AnalyticsViewProtocol {
+}
+
+// MARK: - CollectionView
 extension AnalyticsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         0

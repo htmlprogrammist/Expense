@@ -58,7 +58,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         
         if !subtitles[indexPath.section].isEmpty {
             seeAllButton.isHidden = false
-            seeAllButton.tag = indexPath.row
+            seeAllButton.tag = indexPath.section
         }
     }
     

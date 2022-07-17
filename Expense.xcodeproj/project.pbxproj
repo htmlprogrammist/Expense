@@ -18,6 +18,22 @@
 		F0004FA52883252F00AA02A9 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FA32883252F00AA02A9 /* Texts.swift */; };
 		F0004FA92883253300AA02A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0004FA72883253300AA02A9 /* Assets.xcassets */; };
 		F0004FAA2883253300AA02A9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FA82883253300AA02A9 /* Images.swift */; };
+		F0004FAC2883535000AA02A9 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FAB2883535000AA02A9 /* HomeAssembly.swift */; };
+		F0004FAE2883538000AA02A9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FAD2883538000AA02A9 /* HomePresenter.swift */; };
+		F0004FB0288353C200AA02A9 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FAF288353C200AA02A9 /* HomeRouter.swift */; };
+		F0004FB2288354C600AA02A9 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FB1288354C600AA02A9 /* SettingsPresenter.swift */; };
+		F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FB32883556200AA02A9 /* SettingsAssembly.swift */; };
+		F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FB52883556B00AA02A9 /* SettingsRouter.swift */; };
+		F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A26E2883FB1200D03CB8 /* UIAlertController.swift */; };
+		F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2892884010800D03CB8 /* HistoryPresenter.swift */; };
+		F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A28A2884010800D03CB8 /* HistoryRouter.swift */; };
+		F004A2902884010800D03CB8 /* HistoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A28C2884010800D03CB8 /* HistoryAssembly.swift */; };
+		F004A2942884014100D03CB8 /* AnalyticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2912884014100D03CB8 /* AnalyticsPresenter.swift */; };
+		F004A2952884014100D03CB8 /* AnalyticsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2922884014100D03CB8 /* AnalyticsRouter.swift */; };
+		F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2932884014100D03CB8 /* AnalyticsAssembly.swift */; };
+		F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2972884062500D03CB8 /* AddTransactionPresenter.swift */; };
+		F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2982884062500D03CB8 /* AddTransactionRouter.swift */; };
+		F004A29C2884062500D03CB8 /* AddTransactionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004A2992884062500D03CB8 /* AddTransactionAssembly.swift */; };
 		F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */; };
 		F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */; };
 		F004E930287F224800ACADEE /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92F287F224800ACADEE /* NotificationName.swift */; };
@@ -72,16 +88,6 @@
 		F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */; };
 		F073DAE0287C930D00907507 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = F073DADF287C930D00907507 /* Tagged.swift */; };
 		F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C25192870E3310000021E /* SettingsTableViewCell.swift */; };
-		F08733D72882F76000D84708 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733D12882F76000D84708 /* TestPresenter.swift */; };
-		F08733D82882F76000D84708 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733D22882F76000D84708 /* TestRouter.swift */; };
-		F08733D92882F76000D84708 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733D32882F76000D84708 /* TestViewController.swift */; };
-		F08733DC2882F76000D84708 /* TestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733D62882F76000D84708 /* TestAssembly.swift */; };
-		F08733E42882FA1A00D84708 /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733DE2882FA1900D84708 /* ViperPresenter.swift */; };
-		F08733E52882FA1A00D84708 /* ViperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733DF2882FA1A00D84708 /* ViperRouter.swift */; };
-		F08733E62882FA1A00D84708 /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733E02882FA1A00D84708 /* ViperViewController.swift */; };
-		F08733E72882FA1A00D84708 /* ViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733E12882FA1A00D84708 /* ViperProtocols.swift */; };
-		F08733E82882FA1A00D84708 /* ViperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733E22882FA1A00D84708 /* ViperInteractor.swift */; };
-		F08733E92882FA1A00D84708 /* ViperContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08733E32882FA1A00D84708 /* ViperContainer.swift */; };
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
@@ -131,6 +137,22 @@
 		F0004FA32883252F00AA02A9 /* Texts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		F0004FA72883253300AA02A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0004FA82883253300AA02A9 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F0004FAB2883535000AA02A9 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		F0004FAD2883538000AA02A9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F0004FAF288353C200AA02A9 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		F0004FB1288354C600AA02A9 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		F0004FB32883556200AA02A9 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		F0004FB52883556B00AA02A9 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		F004A26E2883FB1200D03CB8 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		F004A2892884010800D03CB8 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		F004A28A2884010800D03CB8 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		F004A28C2884010800D03CB8 /* HistoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAssembly.swift; sourceTree = "<group>"; };
+		F004A2912884014100D03CB8 /* AnalyticsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsPresenter.swift; sourceTree = "<group>"; };
+		F004A2922884014100D03CB8 /* AnalyticsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsRouter.swift; sourceTree = "<group>"; };
+		F004A2932884014100D03CB8 /* AnalyticsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsAssembly.swift; sourceTree = "<group>"; };
+		F004A2972884062500D03CB8 /* AddTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionPresenter.swift; sourceTree = "<group>"; };
+		F004A2982884062500D03CB8 /* AddTransactionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionRouter.swift; sourceTree = "<group>"; };
+		F004A2992884062500D03CB8 /* AddTransactionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionAssembly.swift; sourceTree = "<group>"; };
 		F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeader.swift; sourceTree = "<group>"; };
 		F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFooter.swift; sourceTree = "<group>"; };
 		F004E92F287F224800ACADEE /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
@@ -186,16 +208,6 @@
 		F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F073DADF287C930D00907507 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
 		F07C25192870E3310000021E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		F08733D12882F76000D84708 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
-		F08733D22882F76000D84708 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
-		F08733D32882F76000D84708 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		F08733D62882F76000D84708 /* TestAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAssembly.swift; sourceTree = "<group>"; };
-		F08733DE2882FA1900D84708 /* ViperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
-		F08733DF2882FA1A00D84708 /* ViperRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperRouter.swift; sourceTree = "<group>"; };
-		F08733E02882FA1A00D84708 /* ViperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
-		F08733E12882FA1A00D84708 /* ViperProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperProtocols.swift; sourceTree = "<group>"; };
-		F08733E22882FA1A00D84708 /* ViperInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperInteractor.swift; sourceTree = "<group>"; };
-		F08733E32882FA1A00D84708 /* ViperContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperContainer.swift; sourceTree = "<group>"; };
 		F09259A02854F9A900C23B1B /* ExpenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259A22854F9A900C23B1B /* ExpenseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTests.swift; sourceTree = "<group>"; };
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,7 +335,10 @@
 		F0205C58287C2A3100104E2F /* AddTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				F004A2972884062500D03CB8 /* AddTransactionPresenter.swift */,
+				F004A2982884062500D03CB8 /* AddTransactionRouter.swift */,
 				F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */,
+				F004A2992884062500D03CB8 /* AddTransactionAssembly.swift */,
 			);
 			path = AddTransaction;
 			sourceTree = "<group>";
@@ -434,6 +449,7 @@
 				F044C215287706270029EA8E /* CircularProgressView.swift */,
 				F0E35A00287E02070070B3EF /* Section.swift */,
 				F02114182880733B00ACE1D7 /* UISegmentedControl.swift */,
+				F004A26E2883FB1200D03CB8 /* UIAlertController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -481,8 +497,11 @@
 		F07C25172870E3050000021E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F07C25182870E3170000021E /* Views */,
 				F0A452D728670FA0005B5450 /* Settings.swift */,
+				F0004FB32883556200AA02A9 /* SettingsAssembly.swift */,
+				F0004FB52883556B00AA02A9 /* SettingsRouter.swift */,
+				F0004FB1288354C600AA02A9 /* SettingsPresenter.swift */,
+				F07C25182870E3170000021E /* Views */,
 				F01510C22872EF5E00B858BC /* Submodules */,
 			);
 			path = Settings;
@@ -496,30 +515,6 @@
 				F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F08733D02882F75500D84708 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				F08733D12882F76000D84708 /* TestPresenter.swift */,
-				F08733D22882F76000D84708 /* TestRouter.swift */,
-				F08733D32882F76000D84708 /* TestViewController.swift */,
-				F08733D62882F76000D84708 /* TestAssembly.swift */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
-		F08733DD2882FA0D00D84708 /* VIPER */ = {
-			isa = PBXGroup;
-			children = (
-				F08733DE2882FA1900D84708 /* ViperPresenter.swift */,
-				F08733DF2882FA1A00D84708 /* ViperRouter.swift */,
-				F08733E02882FA1A00D84708 /* ViperViewController.swift */,
-				F08733E12882FA1A00D84708 /* ViperProtocols.swift */,
-				F08733E22882FA1A00D84708 /* ViperInteractor.swift */,
-				F08733E32882FA1A00D84708 /* ViperContainer.swift */,
-			);
-			path = VIPER;
 			sourceTree = "<group>";
 		};
 		F09259A12854F9A900C23B1B /* ExpenseTests */ = {
@@ -651,6 +646,9 @@
 		F0E89CBC285F115700036575 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F0004FAB2883535000AA02A9 /* HomeAssembly.swift */,
+				F0004FAD2883538000AA02A9 /* HomePresenter.swift */,
+				F0004FAF288353C200AA02A9 /* HomeRouter.swift */,
 				F07C25142870E1500000021E /* Views */,
 			);
 			path = Home;
@@ -659,8 +657,6 @@
 		F0E89CBD285F116700036575 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F08733D02882F75500D84708 /* Test */,
-				F08733DD2882FA0D00D84708 /* VIPER */,
 				F0E89CBC285F115700036575 /* Home */,
 				F0205C58287C2A3100104E2F /* AddTransaction */,
 				F0A12C07287C7CDA00FC5CFD /* DailyBudget */,
@@ -676,6 +672,9 @@
 		F0E89CBE285F117300036575 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				F004A2892884010800D03CB8 /* HistoryPresenter.swift */,
+				F004A28A2884010800D03CB8 /* HistoryRouter.swift */,
+				F004A28C2884010800D03CB8 /* HistoryAssembly.swift */,
 				F0612D56286C67A9009B641A /* Views */,
 			);
 			path = History;
@@ -684,7 +683,10 @@
 		F0E89CBF285F118400036575 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				F004A2912884014100D03CB8 /* AnalyticsPresenter.swift */,
+				F004A2922884014100D03CB8 /* AnalyticsRouter.swift */,
 				F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */,
+				F004A2932884014100D03CB8 /* AnalyticsAssembly.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -852,25 +854,26 @@
 			files = (
 				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
 				F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */,
+				F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
-				F08733DC2882F76000D84708 /* TestAssembly.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F035F5CC28757E4A0041AF84 /* EmojiSectionHeader.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
-				F08733E92882FA1A00D84708 /* ViperContainer.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
+				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
 				F0004F9D2883252800AA02A9 /* Unicode 13.swift in Sources */,
 				F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
-				F08733E72882FA1A00D84708 /* ViperProtocols.swift in Sources */,
 				F0004F9A2883252800AA02A9 /* Unicode 13v1.swift in Sources */,
 				F035F5C928757E4A0041AF84 /* Observ.swift in Sources */,
+				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
 				F0004F9B2883252800AA02A9 /* Unicode 14.swift in Sources */,
 				F035F5C528757E4A0041AF84 /* Array.swift in Sources */,
 				F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */,
+				F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */,
 				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
@@ -880,16 +883,16 @@
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
-				F08733D92882F76000D84708 /* TestViewController.swift in Sources */,
 				F035F5CA28757E4A0041AF84 /* EmojiPickerViewController.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
 				F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */,
 				F035F5C728757E4A0041AF84 /* EmojiModel.swift in Sources */,
 				F0004F992883252800AA02A9 /* Unicode 5.swift in Sources */,
+				F004A2942884014100D03CB8 /* AnalyticsPresenter.swift in Sources */,
+				F004A29C2884062500D03CB8 /* AddTransactionAssembly.swift in Sources */,
 				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
-				F08733E62882FA1A00D84708 /* ViperViewController.swift in Sources */,
-				F08733E42882FA1A00D84708 /* ViperPresenter.swift in Sources */,
+				F0004FAC2883535000AA02A9 /* HomeAssembly.swift in Sources */,
 				F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */,
 				F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */,
 				F035F5CE28757E4A0041AF84 /* TouchableEmojiCategoryView.swift in Sources */,
@@ -902,40 +905,45 @@
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
-				F08733D72882F76000D84708 /* TestPresenter.swift in Sources */,
 				F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */,
+				F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */,
 				F035F5C828757E4A0041AF84 /* PickerArrowDirectionMode.swift in Sources */,
+				F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,
 				F0004F9E2883252800AA02A9 /* Unicode 11.swift in Sources */,
+				F004A2952884014100D03CB8 /* AnalyticsRouter.swift in Sources */,
+				F0004FB2288354C600AA02A9 /* SettingsPresenter.swift in Sources */,
 				F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */,
 				F073DAE0287C930D00907507 /* Tagged.swift in Sources */,
 				F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */,
 				F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */,
+				F004A2902884010800D03CB8 /* HistoryAssembly.swift in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
+				F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */,
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
 				F035F5D028757E4A0041AF84 /* UnicodeManager.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */,
+				F0004FB0288353C200AA02A9 /* HomeRouter.swift in Sources */,
 				F007E572286B80010073C74D /* CategoryInfo.swift in Sources */,
 				F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */,
 				F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
 				F0004FAA2883253300AA02A9 /* Images.swift in Sources */,
-				F08733E52882FA1A00D84708 /* ViperRouter.swift in Sources */,
 				F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */,
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
 				F06080F5286EDD3900782D99 /* Date.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
+				F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */,
 				F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */,
-				F08733D82882F76000D84708 /* TestRouter.swift in Sources */,
 				F035F5CB28757E4A0041AF84 /* EmojiCollectionViewCell.swift in Sources */,
 				F044C216287706270029EA8E /* CircularProgressView.swift in Sources */,
 				F0004F9C2883252800AA02A9 /* Unicode 12.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
-				F08733E82882FA1A00D84708 /* ViperInteractor.swift in Sources */,
+				F0004FAE2883538000AA02A9 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,7 +1110,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1158,7 +1166,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1183,7 +1191,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1212,7 +1220,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

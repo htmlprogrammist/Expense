@@ -34,10 +34,12 @@ tapToAdd = "Tap to add";
 
 // History
 operationsBy = "Operations by";
+operationsByDescription = "Group operations by a specific period";
 day = "Day";
 week = "Week";
 month = "Month";
 year = "Year";
+cancel = "Cancel";
 
 // Analytics
 

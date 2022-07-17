@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+    func setTitle(_ string: String)
+}
+
 final class HomeViewController: UIViewController {
+    
+    private let presenter: HomePresenterProtocol
     
     var numberOfAccounts = 3
     var numberOfGoals = 3
@@ -57,11 +63,28 @@ final class HomeViewController: UIViewController {
         return button
     }()
     
+    init(presenter: HomePresenterProtocol) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        /// There is some bug with iOS 13.0: when user first opens the app, there are insets in every section. Then only way of get rid of this is reloading data
+        collectionView.reloadData()
     }
     
     @objc
@@ -75,8 +98,8 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Private methods
     @objc
-    private func openSettingsModule() {
-        
+    private func openSettings() {
+        presenter.openSettings()
     }
     
     @objc
@@ -87,20 +110,13 @@ final class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.01, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
             sender.transform = CGAffineTransform.identity
         })
-        
-        let addTransactionViewController = UINavigationController(rootViewController: AddTransactionViewController())
-        if let sheet = addTransactionViewController.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
-//            sheet.prefersGrabberVisible = true
-//            sheet.preferredCornerRadius = 12
-        }
-        present(addTransactionViewController, animated: true)
+        presenter.addTransaction()
     }
     
     private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettingsModule))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettings))
         
         view.addSubview(collectionView)
         view.addSubview(addTransactionButton)
@@ -119,6 +135,12 @@ final class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: HomeViewProtocol {
+    func setTitle(_ string: String) {
+        navigationItem.title = string
+    }
+}
+
 // MARK: - CollectionView
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -126,7 +148,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        sections[section].numberOfItems > 0 ? sections[section].numberOfItems : 1
+        (sections[section].numberOfItems > 0) ? sections[section].numberOfItems : 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

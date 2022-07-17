@@ -4,7 +4,7 @@ Application that allows you to track your finances, daily budget etc.
 # Description
 In this project I demonstrated the knowledge of:
 - UIKit
-- MVP + Coordinator
+- MVP-R + Coordinator
 - Core Data & CloudKit
 - CoreAnimation
 - Push-notifications
@@ -27,7 +27,7 @@ In this project I demonstrated the knowledge of:
 # Описание
 В данном проекте я продемонстрировал знания:
 - UIKit
-- MVP + Coordinator
+- MVP-R + Координатор
 - Core Data & CloudKit
 - CoreAnimation
 - Push-уведомления

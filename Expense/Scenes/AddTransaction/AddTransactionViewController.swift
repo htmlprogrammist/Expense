@@ -7,9 +7,24 @@
 
 import UIKit
 
+protocol AddTransactionViewProtocol: AnyObject {
+}
+
 final class AddTransactionViewController: UIViewController {
     
+    private let presenter: AddTransactionPresenterProtocol
+    
     private let segmentedControl = UISegmentedControl(action: #selector(segmentedControlDidChange))
+    
+    init(presenter: AddTransactionPresenterProtocol) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +43,10 @@ final class AddTransactionViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @objc
-    private func segmentedControlDidChange() {
+    @objc private func segmentedControlDidChange() {
         
     }
+}
+
+extension AddTransactionViewController: AddTransactionViewProtocol {
 }
