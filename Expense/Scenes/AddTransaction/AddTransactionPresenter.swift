@@ -4,9 +4,6 @@
 //
 //  Created by Егор Бадмаев on 17.07.2022.
 //  
-//
-
-import Foundation
 
 protocol AddTransactionPresenterProtocol: AnyObject {
 }

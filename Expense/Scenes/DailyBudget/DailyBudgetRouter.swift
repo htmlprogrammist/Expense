@@ -1,5 +1,5 @@
 //
-//  HistoryRouter.swift
+//  DailyBudgetRouter.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 17.07.2022.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol HistoryRouterProtocol: AnyObject {
+protocol DailyBudgetRouterProtocol: AnyObject {
 }
 
-final class HistoryRouter: HistoryRouterProtocol {
+final class DailyBudgetRouter: DailyBudgetRouterProtocol {
     weak var viewController: UIViewController?
 }

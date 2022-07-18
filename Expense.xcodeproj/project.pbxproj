@@ -73,8 +73,19 @@
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
-		F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */; };
 		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
+		F0A4964F288499AF00B8D465 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964B288499AE00B8D465 /* CreateAccountPresenter.swift */; };
+		F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964C288499AE00B8D465 /* CreateAccountRouter.swift */; };
+		F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964D288499AE00B8D465 /* CreateAccountViewController.swift */; };
+		F0A49652288499AF00B8D465 /* CreateAccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964E288499AE00B8D465 /* CreateAccountAssembly.swift */; };
+		F0A49657288499DE00B8D465 /* DailyBudgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A49653288499DE00B8D465 /* DailyBudgetPresenter.swift */; };
+		F0A49658288499DE00B8D465 /* DailyBudgetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A49654288499DE00B8D465 /* DailyBudgetRouter.swift */; };
+		F0A49659288499DE00B8D465 /* DailyBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A49655288499DE00B8D465 /* DailyBudgetViewController.swift */; };
+		F0A4965A288499DE00B8D465 /* DailyBudgetAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A49656288499DE00B8D465 /* DailyBudgetAssembly.swift */; };
+		F0A4965F288499EA00B8D465 /* TransactionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4965B288499EA00B8D465 /* TransactionDetailsPresenter.swift */; };
+		F0A49660288499EA00B8D465 /* TransactionDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4965C288499EA00B8D465 /* TransactionDetailsRouter.swift */; };
+		F0A49661288499EA00B8D465 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4965D288499EA00B8D465 /* TransactionDetailsViewController.swift */; };
+		F0A49662288499EA00B8D465 /* TransactionDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4965E288499EA00B8D465 /* TransactionDetailsAssembly.swift */; };
 		F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */; };
 		F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A9D64B27D2AD3E00E63CD2 /* Expense.xcdatamodeld */; };
 		F0A9D65227D2AD4200E63CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */; };
@@ -177,9 +188,20 @@
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewController.swift; sourceTree = "<group>"; };
 		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F0A4963628846F7900B8D465 /* Expense.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Expense.docc; sourceTree = "<group>"; };
+		F0A4964B288499AE00B8D465 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
+		F0A4964C288499AE00B8D465 /* CreateAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRouter.swift; sourceTree = "<group>"; };
+		F0A4964D288499AE00B8D465 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		F0A4964E288499AE00B8D465 /* CreateAccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountAssembly.swift; sourceTree = "<group>"; };
+		F0A49653288499DE00B8D465 /* DailyBudgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetPresenter.swift; sourceTree = "<group>"; };
+		F0A49654288499DE00B8D465 /* DailyBudgetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetRouter.swift; sourceTree = "<group>"; };
+		F0A49655288499DE00B8D465 /* DailyBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetViewController.swift; sourceTree = "<group>"; };
+		F0A49656288499DE00B8D465 /* DailyBudgetAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetAssembly.swift; sourceTree = "<group>"; };
+		F0A4965B288499EA00B8D465 /* TransactionDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenter.swift; sourceTree = "<group>"; };
+		F0A4965C288499EA00B8D465 /* TransactionDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsRouter.swift; sourceTree = "<group>"; };
+		F0A4965D288499EA00B8D465 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		F0A4965E288499EA00B8D465 /* TransactionDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsAssembly.swift; sourceTree = "<group>"; };
 		F0A9D63F27D2AD3E00E63CD2 /* Expense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A9D64C27D2AD3E00E63CD2 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
@@ -324,6 +346,10 @@
 		F0479DB4287CC95A00011374 /* TransactionDetails */ = {
 			isa = PBXGroup;
 			children = (
+				F0A4965B288499EA00B8D465 /* TransactionDetailsPresenter.swift */,
+				F0A4965C288499EA00B8D465 /* TransactionDetailsRouter.swift */,
+				F0A4965D288499EA00B8D465 /* TransactionDetailsViewController.swift */,
+				F0A4965E288499EA00B8D465 /* TransactionDetailsAssembly.swift */,
 			);
 			path = TransactionDetails;
 			sourceTree = "<group>";
@@ -439,7 +465,10 @@
 		F0A12C07287C7CDA00FC5CFD /* DailyBudget */ = {
 			isa = PBXGroup;
 			children = (
-				F0A12C0A287C7D0400FC5CFD /* DailyBudgetViewController.swift */,
+				F0A49653288499DE00B8D465 /* DailyBudgetPresenter.swift */,
+				F0A49654288499DE00B8D465 /* DailyBudgetRouter.swift */,
+				F0A49655288499DE00B8D465 /* DailyBudgetViewController.swift */,
+				F0A49656288499DE00B8D465 /* DailyBudgetAssembly.swift */,
 			);
 			path = DailyBudget;
 			sourceTree = "<group>";
@@ -457,6 +486,17 @@
 				F057E9ED28678B680083C003 /* BudgetInfo.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		F0A4964A2884999A00B8D465 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				F0A4964B288499AE00B8D465 /* CreateAccountPresenter.swift */,
+				F0A4964C288499AE00B8D465 /* CreateAccountRouter.swift */,
+				F0A4964D288499AE00B8D465 /* CreateAccountViewController.swift */,
+				F0A4964E288499AE00B8D465 /* CreateAccountAssembly.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		F0A9D63627D2AD3E00E63CD2 = {
@@ -559,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E89CBC285F115700036575 /* Home */,
+				F0A4964A2884999A00B8D465 /* CreateAccount */,
 				F0205C58287C2A3100104E2F /* AddTransaction */,
 				F0A12C07287C7CDA00FC5CFD /* DailyBudget */,
 				F0E89CBE285F117300036575 /* History */,
@@ -754,7 +795,9 @@
 			files = (
 				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
 				F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */,
+				F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */,
 				F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */,
+				F0A4965A288499DE00B8D465 /* DailyBudgetAssembly.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
@@ -764,11 +807,12 @@
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
 				F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */,
+				F0A49657288499DE00B8D465 /* DailyBudgetPresenter.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
+				F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */,
 				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
 				F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */,
 				F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */,
-				F0A12C0B287C7D0400FC5CFD /* DailyBudgetViewController.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
@@ -783,12 +827,14 @@
 				F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */,
 				F0004FAC2883535000AA02A9 /* HomeAssembly.swift in Sources */,
 				F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */,
+				F0A49662288499EA00B8D465 /* TransactionDetailsAssembly.swift in Sources */,
 				F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0E35A01287E02070070B3EF /* Section.swift in Sources */,
+				F0A49659288499DE00B8D465 /* DailyBudgetViewController.swift in Sources */,
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
@@ -815,15 +861,21 @@
 				F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */,
 				F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */,
 				F0004FAA2883253300AA02A9 /* Images.swift in Sources */,
+				F0A4964F288499AF00B8D465 /* CreateAccountPresenter.swift in Sources */,
 				F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */,
+				F0A49652288499AF00B8D465 /* CreateAccountAssembly.swift in Sources */,
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
 				F06080F5286EDD3900782D99 /* Date.swift in Sources */,
+				F0A4965F288499EA00B8D465 /* TransactionDetailsPresenter.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
 				F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */,
 				F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */,
+				F0A49661288499EA00B8D465 /* TransactionDetailsViewController.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
+				F0A49658288499DE00B8D465 /* DailyBudgetRouter.swift in Sources */,
 				F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */,
 				F044C216287706270029EA8E /* CircularProgressView.swift in Sources */,
+				F0A49660288499EA00B8D465 /* TransactionDetailsRouter.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
 				F0004FAE2883538000AA02A9 /* HomePresenter.swift in Sources */,
 			);
