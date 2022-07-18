@@ -23,7 +23,6 @@ protocol EmojiCategoryViewDelegate: AnyObject {
 final class TouchableEmojiCategoryView: UIView {
     
     // MARK: - Private Properties
-    
     private var categoryIconView: EmojiCategoryIconView
     /**
      Insets for categoryIconView.
@@ -40,12 +39,10 @@ final class TouchableEmojiCategoryView: UIView {
     
     private weak var delegate: EmojiCategoryViewDelegate?
     
-    // MARK: - Initializers
-    
-    init(
-        delegate: EmojiCategoryViewDelegate,
-        categoryIndex: Int,
-        selectedEmojiCategoryTintColor: UIColor
+    // MARK: - Init
+    init(delegate: EmojiCategoryViewDelegate,
+         categoryIndex: Int,
+         selectedEmojiCategoryTintColor: UIColor
     ) {
         self.delegate = delegate
         self.categoryIndex = categoryIndex
@@ -61,14 +58,13 @@ final class TouchableEmojiCategoryView: UIView {
     }
     
     // MARK: - Life Cycle
-    
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         setupLayout()
     }
     
     // MARK: - Events Handling
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         categoryIconView.updateIconTintColor(for: .highlighted)
@@ -81,7 +77,6 @@ final class TouchableEmojiCategoryView: UIView {
     }
     
     // MARK: - Public Methods
-    
     /**
      Updates the icon state to the selected one if the indexes match and the standard one if not.
      
@@ -94,10 +89,10 @@ final class TouchableEmojiCategoryView: UIView {
     }
     
     // MARK: - Private Methods
-    
     private func setupLayout() {
         guard !categoryIconView.isDescendant(of: self) else { return }
         addSubview(categoryIconView)
+        
         NSLayoutConstraint.activate([
             categoryIconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: categoryIconViewInsets.left),
             categoryIconView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -categoryIconViewInsets.right),

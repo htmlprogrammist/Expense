@@ -17,7 +17,7 @@ protocol EmojiPickerViewDelegate: AnyObject {
 }
 
 final class EmojiPickerView: UIView {
-    
+    // MARK: - Private properties
     private let categoriesStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +34,7 @@ final class EmojiPickerView: UIView {
         return bounds.width * 0.13
     }
     
+    // MARK: - Public properties
     public let collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionHeadersPinToVisibleBounds = true
@@ -51,6 +52,7 @@ final class EmojiPickerView: UIView {
     
     public var selectedEmojiCategoryTintColor: UIColor = .systemBlue
     
+    // MARK: - Init
     init() {
         super.init(frame: .zero)
         

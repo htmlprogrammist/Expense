@@ -12,6 +12,7 @@ public protocol EmojiPickerDelegate: AnyObject {
 }
 
 final class EmojiPickerViewController: UIViewController {
+    // MARK: - Public properties
     /// Delegate for selecting an emoji object
     public weak var delegate: EmojiPickerDelegate?
     
@@ -86,6 +87,7 @@ final class EmojiPickerViewController: UIViewController {
     private var generator: UIImpactFeedbackGenerator? = UIImpactFeedbackGenerator(style: .light)
     private var viewModel: EmojiPickerViewModelProtocol
     
+    // MARK: - Init
     init(viewModel: EmojiPickerViewModelProtocol = EmojiPickerViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -210,7 +212,6 @@ extension EmojiPickerViewController: UIScrollViewDelegate {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-
 extension EmojiPickerViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 40)

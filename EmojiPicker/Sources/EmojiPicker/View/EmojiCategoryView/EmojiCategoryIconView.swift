@@ -31,11 +31,9 @@ final class EmojiCategoryIconView: UIView {
      */
     private var state: EmojiCategoryIconViewState = .standard
     
-    // MARK: - Initializers
-    
-    init(
-        type: EmojiCategoryType,
-        selectedIconTintColor: UIColor
+    // MARK: - Init
+    init(type: EmojiCategoryType,
+         selectedIconTintColor: UIColor
     ) {
         self.type = type
         self.selectedIconTintColor = selectedIconTintColor
@@ -48,7 +46,6 @@ final class EmojiCategoryIconView: UIView {
     }
     
     // MARK: - Public Methods
-    
     /**
      New centered rect based on bounds width to prevent stretching of the icon.
      
@@ -69,7 +66,6 @@ final class EmojiCategoryIconView: UIView {
     }
     
     // MARK: - Private Methods
-    
     private func setupBackground() {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .clear
@@ -77,7 +73,6 @@ final class EmojiCategoryIconView: UIView {
 }
 
 // MARK: - Drawing
-
 extension EmojiCategoryIconView {
     public override func draw(_ rect: CGRect) {
         super.draw(rect)

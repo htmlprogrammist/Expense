@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// UIPopoverArrowDirection requeres `UInt` in its' initializer
 public enum PickerArrowDirectionMode: UInt {
     case up = 1
     case down = 2

@@ -25,20 +25,18 @@ final class EmojiSectionHeader: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupBackground()
-        setupLayout()
+        
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupBackground() {
+    private func setupView() {
         backgroundColor = .systemGroupedBackground
-    }
-    
-    private func setupLayout() {
         addSubview(headerLabel)
+        
         NSLayoutConstraint.activate([
             headerLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 7),
             headerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),

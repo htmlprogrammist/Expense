@@ -23,6 +23,7 @@ final class EmojiCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSelectedBackgroundView()
@@ -33,6 +34,7 @@ final class EmojiCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private Methods
     private func setupLayout() {
         contentView.addSubview(emojiLabel)
         NSLayoutConstraint.activate([
