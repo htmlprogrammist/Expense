@@ -40,8 +40,6 @@
 		F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */; };
 		F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */; };
 		F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */; };
-		F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */; };
-		F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */; };
 		F007E572286B80010073C74D /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E571286B80000073C74D /* CategoryInfo.swift */; };
 		F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010E9C22871972000AFD1D0 /* TitleLabel.swift */; };
 		F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510BE2872E7AC00B858BC /* SettingsViewController.swift */; };
@@ -58,6 +56,7 @@
 		F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */; };
 		F044C216287706270029EA8E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C215287706270029EA8E /* CircularProgressView.swift */; };
 		F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */; };
+		F0578A9F2886AAD40024FBCC /* AppImport in Frameworks */ = {isa = PBXBuildFile; productRef = F0578A9E2886AAD40024FBCC /* AppImport */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
 		F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* AccountInfo.swift */; };
@@ -92,6 +91,9 @@
 		F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */; };
 		F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */; };
 		F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */; };
+		F0C819352885E32100434900 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819342885E32000434900 /* Double.swift */; };
+		F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */; };
+		F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */; };
 		F0E35A01287E02070070B3EF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A00287E02070070B3EF /* Section.swift */; };
 		F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A02287E02350070B3EF /* AccountSection.swift */; };
 		F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A04287E03380070B3EF /* ProgressSection.swift */; };
@@ -152,8 +154,6 @@
 		F007E55E286B7DC50073C74D /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E571286B80000073C74D /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
 		F010E9C22871972000AFD1D0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		F01510BE2872E7AC00B858BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +212,9 @@
 		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		F0C819342885E32000434900 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0E35A00287E02070070B3EF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F0E35A02287E02350070B3EF /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		F0E35A04287E03380070B3EF /* ProgressSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSection.swift; sourceTree = "<group>"; };
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0004F912883246900AA02A9 /* EmojiPicker in Frameworks */,
+				F0578A9F2886AAD40024FBCC /* AppImport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +289,8 @@
 		F007E558286B7DAD0073C74D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F007E56D286B7DFE0073C74D /* Account+CoreDataClass.swift */,
-				F007E56E286B7DFE0073C74D /* Account+CoreDataProperties.swift */,
+				F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */,
+				F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */,
 				F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */,
 				F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */,
 				F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */,
@@ -357,8 +361,9 @@
 		F0612D50286C6463009B641A /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				F0F70A242864826D00656370 /* String.swift */,
 				F06080F4286EDD3900782D99 /* Date.swift */,
+				F0F70A242864826D00656370 /* String.swift */,
+				F0C819342885E32000434900 /* Double.swift */,
 				F073DADF287C930D00907507 /* Tagged.swift */,
 				F004E92F287F224800ACADEE /* NotificationName.swift */,
 			);
@@ -695,6 +700,7 @@
 			name = Expense;
 			packageProductDependencies = (
 				F0004F902883246900AA02A9 /* EmojiPicker */,
+				F0578A9E2886AAD40024FBCC /* AppImport */,
 			);
 			productName = Expense;
 			productReference = F0A9D63F27D2AD3E00E63CD2 /* Expense.app */;
@@ -794,7 +800,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
-				F007E56F286B7DFE0073C74D /* Account+CoreDataClass.swift in Sources */,
 				F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */,
 				F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */,
 				F0A4965A288499DE00B8D465 /* DailyBudgetAssembly.swift in Sources */,
@@ -818,6 +823,7 @@
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
+				F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
@@ -830,7 +836,6 @@
 				F0A49662288499EA00B8D465 /* TransactionDetailsAssembly.swift in Sources */,
 				F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
-				F007E570286B7DFE0073C74D /* Account+CoreDataProperties.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0E35A01287E02070070B3EF /* Section.swift in Sources */,
@@ -867,9 +872,11 @@
 				F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */,
 				F06080F5286EDD3900782D99 /* Date.swift in Sources */,
 				F0A4965F288499EA00B8D465 /* TransactionDetailsPresenter.swift in Sources */,
+				F0C819352885E32100434900 /* Double.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
 				F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */,
 				F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */,
+				F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */,
 				F0A49661288499EA00B8D465 /* TransactionDetailsViewController.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F0A49658288499DE00B8D465 /* DailyBudgetRouter.swift in Sources */,
@@ -1213,6 +1220,10 @@
 		F0004F902883246900AA02A9 /* EmojiPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EmojiPicker;
+		};
+		F0578A9E2886AAD40024FBCC /* AppImport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppImport;
 		};
 /* End XCSwiftPackageProductDependency section */
 

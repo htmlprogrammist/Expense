@@ -16,23 +16,28 @@ protocol HomeModuleOutputProtocol: AnyObject {
 }
 
 final class HomePresenter: HomePresenterProtocol {
+    
+    // MARK: - Public properties
     weak var view: HomeViewProtocol?
     weak var moduleOutput: HomeModuleOutputProtocol?
     
+    // MARK: - Private properties
     private let router: HomeRouterProtocol
+    private var account: Account! {
+        didSet {
+            // TODO: Обновить цели и бюджеты для этого аккаунта
+        }
+    }
     
     init(router: HomeRouterProtocol) {
         self.router = router
     }
     
     func openSettings() {
-        router.openSettingsModule(moduleOutput: self)
+        router.openSettingsModule(moduleOutput: nil)
     }
     
     func addTransaction() {
-        router.openAddTransactionModule(moduleOutput: nil)
+        router.openAddTransactionModule(account: account)
     }
-}
-
-extension HomePresenter: SettingsModuleOutputProtocol {
 }

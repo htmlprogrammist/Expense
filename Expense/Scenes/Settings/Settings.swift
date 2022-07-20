@@ -5,10 +5,15 @@
 //  Created by Егор Бадмаев on 25.06.2022.
 //
 
+import Foundation
+
 fileprivate enum SettingsKey: CodingKey {
     // Home
     case showGoals
     case showBudgets
+    
+    case accounts
+    case roundingNumbers
 }
 
 final class Settings {
@@ -27,5 +32,17 @@ final class Settings {
     var showBudgets: Bool? {
         get { storage[.showBudgets] }
         set { storage[.showBudgets] = newValue }
+    }
+    
+    /// All numbers in the app will be rounded to an integer
+    var roundingNumbers: Bool? {
+        get { storage[.roundingNumbers] }
+        set { storage[.roundingNumbers] = newValue }
+    }
+    
+    /// The order of the accounts
+    var accounts: [String]? {
+        get { storage[.accounts] }
+        set { storage[.accounts] = newValue }
     }
 }

@@ -76,7 +76,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.layer.cornerRadius = 8
-        contentView.backgroundColor = .cellBackground
+        contentView.backgroundColor = .secondarySystemGroupedBackground
         contentView.addSubview(progressView)
         contentView.addSubview(emojiLabel)
         contentView.addSubview(labelsStackView)
@@ -84,7 +84,7 @@ final class ProgressCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             progressView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 12),
             progressView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 18),
-            emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            emojiLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -1),
             emojiLabel.centerXAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 41),
             
             labelsStackView.leadingAnchor.constraint(equalTo: emojiLabel.trailingAnchor, constant: 32),

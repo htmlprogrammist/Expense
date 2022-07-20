@@ -9,12 +9,11 @@ import UIKit
 
 final class AccountCollectionViewCell: UICollectionViewCell {
     
-    private let balanceLabel = TitleLabel(text: "$5 981.22", ofSize: 26)
+    private let balanceLabel = TitleLabel(ofSize: 26)
     private let emojiContainer: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 20
-//        view.backgroundColor = .secondarySystemFill
-        view.backgroundColor = .systemGray5
+        view.backgroundColor = .tertiarySystemFill
         view.clipsToBounds = true
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +21,6 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     }()
     private let emojiLabel: UILabel = {
         let label = UILabel()
-        label.text = "🥑"
         label.font = UIFont.systemFont(ofSize: 26)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -58,16 +56,27 @@ final class AccountCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func configure() {
+        emojiLabel.text = "🥑"
+        balanceLabel.text = "$5 981.22"
+        accountNameLabel.text = "Бухгалтер"
+        accountCurrencyLabel.text = "USD"
+    }
+    
+    public func configure(account: Account) {
+        emojiLabel.text = account.emoji
+        balanceLabel.text = account.balance.convertToString()
+        accountNameLabel.text = account.name
+        accountCurrencyLabel.text = account.currency.letters
+    }
+    
     private func setupView() {
-        contentView.backgroundColor = .cellBackground
+        contentView.backgroundColor = .secondarySystemGroupedBackground
         contentView.layer.cornerRadius = 10
         
         contentView.addSubview(mainStackView)
         emojiContainer.addSubview(emojiLabel)
         contentView.addSubview(balanceLabel)
-        
-        accountNameLabel.text = "Бухгалтер"
-        accountCurrencyLabel.text = "USD"
         
         NSLayoutConstraint.activate([
             emojiContainer.widthAnchor.constraint(equalToConstant: 40),

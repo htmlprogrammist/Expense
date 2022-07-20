@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "AppImport",
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "AppImport",
@@ -15,6 +16,8 @@ let package = Package(
     targets: [
         .target(
             name: "AppImport",
-            dependencies: [])
+            dependencies: [
+                .product(name: "SPAlert", package: "SPAlert")
+            ])
     ]
 )

@@ -9,8 +9,8 @@ import UIKit
 
 final class HomeCollectionViewHeader: UICollectionReusableView {
     
-    private let titles = ["", Texts.Home.goals, Texts.Home.budgets, Texts.Home.more]
-    private let subtitles = ["", Texts.Home.goalsDescription, Texts.Home.budgetsDescription, ""]
+    private var titles = ["", Texts.Home.more]
+    private var subtitles = ["", ""]
     
     private let titleLabel = TitleLabel()
     private let subtitleLabel: UILabel = {
@@ -45,6 +45,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        configureTitles()
         setupView()
     }
     
@@ -59,6 +60,17 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
         if !subtitles[indexPath.section].isEmpty {
             seeAllButton.isHidden = false
             seeAllButton.tag = indexPath.section
+        }
+    }
+    
+    private func configureTitles() {
+        if (Settings.shared.showBudgets ?? true) {
+            titles.insert(Texts.Home.budgets, at: 1)
+            subtitles.insert(Texts.Home.budgetsDescription, at: 1)
+        }
+        if (Settings.shared.showGoals ?? true) {
+            titles.insert(Texts.Home.goals, at: 1)
+            subtitles.insert(Texts.Home.goalsDescription, at: 1)
         }
     }
     

@@ -8,6 +8,7 @@
 import Foundation
 
 struct AccountInfo {
+    let id: UUID
     let name: String
     let emoji: Emoji
     let balance: Double

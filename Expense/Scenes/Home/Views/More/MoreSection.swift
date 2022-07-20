@@ -17,8 +17,8 @@ final class MoreSection: Section {
         let optionalDataItems: [(UIImage, String, UIColor)?] = [
             (Images.Home.calendar, Texts.Home.scheduledOperations, .systemRed),
             (Images.Home.dailyBudget, Texts.Home.dailyBudget, .systemGreen),
-            (Settings.shared.showGoals ?? false) ? (Images.Home.goals, Texts.Home.goals, .systemBlue) : nil,
-            (Settings.shared.showBudgets ?? false) ? (Images.Home.budgets, Texts.Home.budgets, .systemIndigo) : nil
+            (Settings.shared.showGoals ?? true) ? nil : (Images.Home.goals, Texts.Home.goals, .systemBlue),
+            (Settings.shared.showBudgets ?? true) ? nil : (Images.Home.budgets, Texts.Home.budgets, .systemIndigo)
         ]
         return optionalDataItems.filter { $0 != nil }
     }()

@@ -9,6 +9,4 @@ import UIKit
 
 extension UIColor {
     static let appColor: UIColor = UIColor(named: "AccentColor") ?? .systemBlue
-    static let background = UIColor(named: "BackgroundColor") ?? .systemGroupedBackground
-    static let cellBackground = UIColor(named: "CellBackgroundColor") ?? .systemBackground
 }

@@ -12,14 +12,14 @@ final class AddTransactionAssembly {
     let viewController: UIViewController
     private(set) weak var router: AddTransactionRouterProtocol!
     
-    static func assemble(moduleOutput: AddTransactionModuleOutputProtocol?) -> AddTransactionAssembly {
+    static func assemble(account: Account) -> AddTransactionAssembly {
         let router = AddTransactionRouter()
         let presenter = AddTransactionPresenter(router: router)
         let viewController = AddTransactionViewController(presenter: presenter)
         router.viewController = viewController
         
         presenter.view = viewController
-        presenter.moduleOutput = moduleOutput
+        presenter.account = account
         
         return AddTransactionAssembly(view: viewController, presenter: presenter, router: router)
     }

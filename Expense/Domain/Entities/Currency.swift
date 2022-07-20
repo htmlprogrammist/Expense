@@ -7,8 +7,9 @@
 
 /// Describes currencies of the `Account`. Defined with `@objc` to allow it to be used with `@NSManaged`.
 @objc public enum Currency: Int32 {
-    case eur, usd, rub, gbp, jpy, uah, kzt, byn, `try`, cny, czk, zly
+    case eur, usd, rub, gbp, jpy, uah, kzt, byn, `try`, cny, czk, zly, inr
     
+    /// Defines Unicode symbol of the currency
     var symbol: String {
         switch self {
         case .eur:
@@ -35,10 +36,12 @@
             return "Kč"
         case .zly:
             return "zł"
+        case .inr:
+            return "₹"
         }
     }
     
-    /// Letters by ISO 4217
+    /// Defines letters by ISO 4217
     var letters: String {
         switch self {
         case .eur:
@@ -65,9 +68,12 @@
             return "CZK"
         case .zly:
             return "PLN"
+        case .inr:
+            return "INR"
         }
     }
     
+    /// Defines full name of the currency
     var name: String {
         switch self {
         case .eur:
@@ -94,6 +100,41 @@
             return "Czech Koruna"
         case .zly:
             return "Poland Zloty"
+        case .inr:
+            return "Indian Rupee"
+        }
+    }
+    
+    /// Defines whether to put currency symbol in front or on the back of the number
+    var isInFront: Bool {
+        switch self {
+        case .rub:
+            return true
+        case .byn:
+            return true
+        case .czk:
+            return true
+        case .zly:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    var placeholderSum: String {
+        switch self {
+        case .rub:
+            return "100"
+        case .byn:
+            return "100"
+        case .inr:
+            return "100"
+        case .jpy:
+            return "200"
+        case .kzt:
+            return "500"
+        default:
+            return "10"
         }
     }
 }

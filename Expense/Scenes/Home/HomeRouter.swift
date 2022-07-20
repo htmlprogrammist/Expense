@@ -9,7 +9,7 @@ import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
     func openSettingsModule(moduleOutput: SettingsModuleOutputProtocol?)
-    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol?)
+    func openAddTransactionModule(account: Account)
 }
 
 final class HomeRouter: HomeRouterProtocol {
@@ -23,8 +23,8 @@ final class HomeRouter: HomeRouterProtocol {
 //        viewController?.navigationController?.pushViewController(assembly.viewController, animated: true)
     }
     
-    func openAddTransactionModule(moduleOutput: AddTransactionModuleOutputProtocol?) {
-        let assembly = AddTransactionAssembly.assemble(moduleOutput: moduleOutput)
+    func openAddTransactionModule(account: Account) {
+        let assembly = AddTransactionAssembly.assemble(account: account)
         let navController = UINavigationController(rootViewController: assembly.viewController)
         if #available(iOS 15.0, *), let sheet = navController.sheetPresentationController {
             sheet.detents = [.medium(), .large()]

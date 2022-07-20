@@ -21,8 +21,6 @@ final class HomeViewController: UIViewController {
     
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: numberOfAccounts),
-        numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true),
-        numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(),
         MoreSection()
     ]
     
@@ -107,6 +105,13 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettings))
+        
+        if (Settings.shared.showBudgets ?? true) {
+            sections.insert(numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(), at: 1)
+        }
+        if (Settings.shared.showGoals ?? true) {
+            sections.insert(numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true), at: 1)
+        }
         
         view.addSubview(collectionView)
         view.addSubview(addTransactionButton)

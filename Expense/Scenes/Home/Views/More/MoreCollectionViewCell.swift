@@ -69,7 +69,7 @@ final class MoreCollectionViewCell: UICollectionViewCell {
         
         contentView.layer.cornerRadius = 8
         contentView.clipsToBounds = true
-        contentView.backgroundColor = .cellBackground
+        contentView.backgroundColor = .secondarySystemGroupedBackground
         
         NSLayoutConstraint.activate([
             iconContainer.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 6),

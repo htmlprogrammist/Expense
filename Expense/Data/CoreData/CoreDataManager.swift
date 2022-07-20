@@ -19,7 +19,7 @@ protocol TransactionsCoreDataManagerProtocol {
 //    func fetchTransactions(by goal: Goal) -> [Transaction]?
     func fetchPlannedTransactions() -> [Transaction]?
     
-    func createTransaction(with data: TransactionInfo)
+    func createTransaction(with data: TransactionInfo, in account: Account)
     func deleteTransaction(_ transaction: Transaction)
 }
 
@@ -71,18 +71,15 @@ final class CoreDataManager {
 // MARK: - Wallets
 extension CoreDataManager: AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]? {
-        let fetchRequest = Account.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: #keyPath(Account.date), ascending: false)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        let wallets = try? managedObjectContext.fetch(fetchRequest)
-        return wallets
+        try? managedObjectContext.fetch(Account.fetchRequest())
     }
     
     func createAccount(with data: AccountInfo) {
         let account = Account(context: managedObjectContext)
+        account.id = UUID()
         account.emoji = data.emoji.rawValue
         account.name = data.name
-//        account.balance = 0 // ? в модели вроде как проставлено default значение 0
+        account.balance = data.balance
         account.date = Date()
         saveContext()
     }
@@ -143,17 +140,17 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     
     /// Creates transaction with provided data
     /// - Parameter data: Model with data to create transaction
-    func createTransaction(with data: TransactionInfo) {
+    func createTransaction(with data: TransactionInfo, in account: Account) {
         let transaction = Transaction(context: managedObjectContext)
         transaction.date = data.date
-        transaction.account = data.account
         transaction.sum = data.sum
-        transaction.isExpense = data.isExpense
+        transaction.isIncome = data.isIncome
+        transaction.repeats = data.repeats // `none` by default
+        transaction.notes = data.notes // optional
         /// The next two properties are optionals, but one of them must be provided
         transaction.category = data.category
         transaction.goal = data.goal
-        transaction.repeats = data.repeats // `none` by default
-        transaction.notes = data.notes // optional
+        account.addToTransactions(transaction)
         saveContext()
     }
     

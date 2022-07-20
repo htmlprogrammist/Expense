@@ -74,7 +74,7 @@ final class HistoryViewController: UIViewController {
     
     private func handleAction(by period: Period) {
         isDay = period == .day
-//        presenter.provideData(by: period)
+        presenter.provideData(by: period)
         tableView.reloadData()
     }
     
