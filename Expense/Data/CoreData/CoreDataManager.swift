@@ -17,7 +17,7 @@ protocol TransactionsCoreDataManagerProtocol {
     func fetchTransactions() -> [Transaction]?
 //    func fetchTransactions(by category: Category) -> [Transaction]? // remove its' implementation
 //    func fetchTransactions(by goal: Goal) -> [Transaction]?
-    func fetchPlannedTransactions() -> [Transaction]?
+    func fetchPlannedTransactions(limit: Bool) -> [Transaction]?
     
     func createTransaction(with data: TransactionInfo, in account: Account)
     func deleteTransaction(_ transaction: Transaction)
@@ -30,13 +30,13 @@ protocol CategoriesCoreDataManagerProtocol {
 }
 
 protocol GoalsCoreDataManagerProtocol {
-    func fetchGoals() -> [Goal]?
+    func fetchGoals(limit: Bool) -> [Goal]?
     func createGoal(with data: GoalInfo)
     func deleteGoal(_ goal: Goal)
 }
 
 protocol BudgetsCoreDataManagerProtocol {
-    func fetchBudgets() -> [Budget]?
+    func fetchBudgets(limit: Bool) -> [Budget]?
     func createBudget(with data: BudgetInfo)
     func deleteBudget(_ budget: Budget)
 }
@@ -45,6 +45,11 @@ final class CoreDataManager {
     
     private let managedObjectContext: NSManagedObjectContext
     private let persistentContainer: NSPersistentContainer
+    
+    private enum Constants {
+        /// This fetch limit is needed onto the main (Home) screen, where the maximum of shown objects equals  `3`
+        static let fetchLimit = 3
+    }
     
     public init(containerName: String) {
         persistentContainer = NSPersistentContainer(name: containerName)
@@ -129,11 +134,14 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     
     /// Fetches all transactions that have a date later than the current one
     /// - Returns: Transactions that will take place after the current time
-    func fetchPlannedTransactions() -> [Transaction]? {
+    func fetchPlannedTransactions(limit: Bool) -> [Transaction]? {
         let fetchRequest = Transaction.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "date > %@", Date() as CVarArg)
         let sortDescriptor = NSSortDescriptor(key: #keyPath(Transaction.date), ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
+        if limit {
+            fetchRequest.fetchLimit = Constants.fetchLimit
+        }
         let transactions = try? managedObjectContext.fetch(fetchRequest)
         return transactions
     }
@@ -186,8 +194,14 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
 
 // MARK: - Goals
 extension CoreDataManager: GoalsCoreDataManagerProtocol {
-    func fetchGoals() -> [Goal]? {
-        let goals = try? managedObjectContext.fetch(Goal.fetchRequest())
+    func fetchGoals(limit: Bool) -> [Goal]? {
+        let fetchRequest = Goal.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Goal.dateDeadline), ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if limit {
+            fetchRequest.fetchLimit = Constants.fetchLimit
+        }
+        let goals = try? managedObjectContext.fetch(fetchRequest)
         return goals
     }
     
@@ -214,8 +228,14 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
 
 // MARK: - Budgets
 extension CoreDataManager: BudgetsCoreDataManagerProtocol {
-    func fetchBudgets() -> [Budget]? {
-        let budgets = try? managedObjectContext.fetch(Budget.fetchRequest())
+    func fetchBudgets(limit: Bool) -> [Budget]? {
+        let fetchRequest = Budget.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: #keyPath(Budget.date), ascending: false) // TODO: мб сортировать по соотношению тек.сумма/итоговая?
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if limit {
+            fetchRequest.fetchLimit = Constants.fetchLimit
+        }
+        let budgets = try? managedObjectContext.fetch(fetchRequest)
         return budgets
     }
     

@@ -17,6 +17,7 @@ extension Budget {
     }
 
     @NSManaged public var account: Account
+    @NSManaged public var current: Double
     @NSManaged public var sum: Double
     @NSManaged public var date: Date
     @NSManaged public var period: Period
@@ -26,7 +27,7 @@ extension Budget {
 
 extension Budget {
     var budgetInfo: BudgetInfo {
-        BudgetInfo(account: account, sum: sum, period: period, category: category, date: date)
+        BudgetInfo(account: account, current: current, sum: sum, period: period, category: category, date: date)
     }
 }
 
