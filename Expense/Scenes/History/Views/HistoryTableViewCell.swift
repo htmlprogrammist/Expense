@@ -74,6 +74,7 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     private func commonInit() {
+        contentView.backgroundColor = .mainBackgroundColor
         contentView.addSubview(emojiLabel)
         contentView.addSubview(mainStackView)
         

@@ -11,7 +11,8 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let progressView: CircularProgressView = {
         let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 18, height: 18), lineWidth: nil, rounded: false)
-        progressView.trackColor = .tertiarySystemFill
+//        progressView.trackColor = .tertiarySystemFill
+        progressView.trackColor = .clear
         progressView.progressColor = .progressColor
         progressView.timeToFill = 1.3 // TODO: настроить время анимации
         progressView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +59,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
         progressView.progress = Double.random(in: 0...1)
         titleLabel.text = "MacBook Pro 14' M1 Max"
         subtitleLabel.text = "\(102500) ₽ → \(250000) ₽"
-        contentView.backgroundColor = .cellBackground
+        contentView.backgroundColor = .mainBackgroundColor
         contentView.addSubview(progressView)
         contentView.addSubview(emojiLabel)
         contentView.addSubview(labelsStackView)

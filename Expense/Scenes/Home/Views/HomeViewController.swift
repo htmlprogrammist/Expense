@@ -28,8 +28,8 @@ final class HomeViewController: UIViewController {
     ]
     
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-            return self.sections[sectionIndex].layoutSection()
+        let layout = UICollectionViewCompositionalLayout { [unowned self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            return sections[sectionIndex].layoutSection()
         }
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -39,8 +39,7 @@ final class HomeViewController: UIViewController {
         collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
         collectionView.register(HomeCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeCollectionViewFooter.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
-        collectionView.register(MonthInfoCollectionViewCell.self, forCellWithReuseIdentifier: MonthInfoCollectionViewCell.identifier)
-        collectionView.register(DailyBudgetCollectionViewCell.self, forCellWithReuseIdentifier: DailyBudgetCollectionViewCell.identifier)
+        collectionView.register(InfoCollectionViewCell.self, forCellWithReuseIdentifier: InfoCollectionViewCell.identifier)
         collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
         collectionView.register(TransactionCollectionViewCell.self, forCellWithReuseIdentifier: TransactionCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
@@ -83,6 +82,7 @@ final class HomeViewController: UIViewController {
         setupView()
     }
     
+    // MARK: - Public methods
     @objc public func handleSeeAll(sender: UIButton) {
         if sender.tag == 2 {
             // TODO: Open all goals module
@@ -94,11 +94,11 @@ final class HomeViewController: UIViewController {
     }
     
     @objc public func handleAdding(sender: UIButton) {
-        if sender.tag == 1 {
+        if sender.tag == 2 {
             // TODO: Add goal
-        } else if sender.tag == 2 {
+        } else if sender.tag == 3 {
             // TODO: Add budget
-        } else {
+        } else if sender.tag == 4 {
             // TODO: Add planned operation
         }
     }

@@ -59,7 +59,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     }
     
     private func setupView() {
-        backgroundColor = .cellBackground
+        backgroundColor = .mainBackgroundColor
         addSubview(mainStackView)
         
         NSLayoutConstraint.activate([

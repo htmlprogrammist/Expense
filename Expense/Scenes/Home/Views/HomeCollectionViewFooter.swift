@@ -35,7 +35,7 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
     }
     
     private func setupView() {
-        backgroundColor = .cellBackground
+        backgroundColor = .mainBackgroundColor
         addSubview(pageControl)
         
         NSLayoutConstraint.activate([

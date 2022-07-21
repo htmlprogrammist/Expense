@@ -1,5 +1,5 @@
 //
-//  MonthInfoCollectionViewCell.swift
+//  InfoCollectionViewCell.swift
 //  Expense
 //
 //  Created by Егор Бадмаев on 20.07.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MonthInfoCollectionViewCell: UICollectionViewCell {
+final class InfoCollectionViewCell: UICollectionViewCell {
     
     // horizontal stack view with two centered labels with incomes and expenses by current month
     private let incomeTitle = TitleLabel(ofSize: 22)
@@ -70,7 +70,7 @@ final class MonthInfoCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         incomeTitle.text = "$105600"
         expenseTitle.text = "$40512"
-        contentView.backgroundColor = .cellBackground
+        contentView.backgroundColor = .mainBackgroundColor
         
         mainStackView.addArrangedSubview(income)
         mainStackView.addArrangedSubview(expense)

@@ -71,7 +71,7 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        contentView.backgroundColor = .secondarySystemGroupedBackground
+        contentView.backgroundColor = .mainBackgroundColor
         contentView.layer.cornerRadius = 10
         
         contentView.addSubview(mainStackView)
