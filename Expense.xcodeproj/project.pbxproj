@@ -31,7 +31,6 @@
 		F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */; };
 		F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */; };
 		F004E930287F224800ACADEE /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E92F287F224800ACADEE /* NotificationName.swift */; };
-		F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004E932287F3FB700ACADEE /* EmptySection.swift */; };
 		F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */; };
 		F007E564286B7DC50073C74D /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */; };
 		F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */; };
@@ -41,6 +40,7 @@
 		F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */; };
 		F007E56A286B7DC50073C74D /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */; };
 		F007E572286B80010073C74D /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007E571286B80000073C74D /* CategoryInfo.swift */; };
+		F00FD41828893EEC00889819 /* TransactionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00FD41728893EEC00889819 /* TransactionSection.swift */; };
 		F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010E9C22871972000AFD1D0 /* TitleLabel.swift */; };
 		F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510BE2872E7AC00B858BC /* SettingsViewController.swift */; };
 		F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */; };
@@ -53,9 +53,6 @@
 		F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BA2866EFAD0002208F /* AppCoordinator.swift */; };
 		F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BC2866F0AA0002208F /* HistoryViewController.swift */; };
 		F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */; };
-		F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */; };
-		F044C216287706270029EA8E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044C215287706270029EA8E /* CircularProgressView.swift */; };
-		F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */; };
 		F0578A9F2886AAD40024FBCC /* AppImport in Frameworks */ = {isa = PBXBuildFile; productRef = F0578A9E2886AAD40024FBCC /* AppImport */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
@@ -63,9 +60,13 @@
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
-		F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MoreCollectionViewCell.swift */; };
+		F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MainCollectionViewCell.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
+		F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */; };
+		F066A7A9288831AF00C2F1F4 /* MonthInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7A8288831AF00C2F1F4 /* MonthInfoCollectionViewCell.swift */; };
+		F066A7AB288854C100C2F1F4 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */; };
+		F066A7AD28886AE000C2F1F4 /* BulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7AC28886AE000C2F1F4 /* BulletView.swift */; };
 		F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */; };
 		F073DAE0287C930D00907507 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = F073DADF287C930D00907507 /* Tagged.swift */; };
 		F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C25192870E3310000021E /* SettingsTableViewCell.swift */; };
@@ -90,16 +91,18 @@
 		F0A9D65227D2AD4200E63CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */; };
 		F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */; };
 		F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */; };
+		F0B525C72887F5CF008BA460 /* DailyBudgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B525C62887F5CF008BA460 /* DailyBudgetCollectionViewCell.swift */; };
 		F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */; };
 		F0C819352885E32100434900 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819342885E32000434900 /* Double.swift */; };
 		F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */; };
 		F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */; };
 		F0E35A01287E02070070B3EF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A00287E02070070B3EF /* Section.swift */; };
 		F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A02287E02350070B3EF /* AccountSection.swift */; };
-		F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A04287E03380070B3EF /* ProgressSection.swift */; };
-		F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A06287E04290070B3EF /* MoreSection.swift */; };
+		F0E35A05287E03380070B3EF /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A04287E03380070B3EF /* InfoSection.swift */; };
+		F0E35A07287E04290070B3EF /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A06287E04290070B3EF /* MainSection.swift */; };
 		F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A15287E29EC0070B3EF /* Currency.swift */; };
 		F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E89CC0285F11A800036575 /* HomeViewController.swift */; };
+		F0F16EBC2889AB4400D530DA /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */; };
 		F0F70A252864826D00656370 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F70A242864826D00656370 /* String.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,7 +148,6 @@
 		F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeader.swift; sourceTree = "<group>"; };
 		F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFooter.swift; sourceTree = "<group>"; };
 		F004E92F287F224800ACADEE /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
-		F004E932287F3FB700ACADEE /* EmptySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySection.swift; sourceTree = "<group>"; };
 		F007E559286B7DC40073C74D /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E55A286B7DC40073C74D /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E55B286B7DC40073C74D /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		F007E55F286B7DC50073C74D /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F007E571286B80000073C74D /* CategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
+		F00FD41728893EEC00889819 /* TransactionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSection.swift; sourceTree = "<group>"; };
 		F010E9C22871972000AFD1D0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		F01510BE2872E7AC00B858BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,18 +171,19 @@
 		F042C2BA2866EFAD0002208F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F042C2BC2866F0AA0002208F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
-		F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
-		F044C215287706270029EA8E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F057E9E5286788D40083C003 /* TransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
 		F057E9E72867890E0083C003 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		F057E9E928678B180083C003 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
 		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		F060E27728762542006A87A9 /* MoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		F060E27728762542006A87A9 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
+		F066A7A8288831AF00C2F1F4 /* MonthInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F066A7AC28886AE000C2F1F4 /* BulletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletView.swift; sourceTree = "<group>"; };
 		F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F073DADF287C930D00907507 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
 		F07C25192870E3310000021E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,16 +215,18 @@
 		F0AF60D12882A7A40019AF26 /* AppImport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppImport; sourceTree = "<group>"; };
 		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		F0B525C62887F5CF008BA460 /* DailyBudgetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBudgetCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F0C819342885E32000434900 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F0E35A00287E02070070B3EF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F0E35A02287E02350070B3EF /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
-		F0E35A04287E03380070B3EF /* ProgressSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSection.swift; sourceTree = "<group>"; };
-		F0E35A06287E04290070B3EF /* MoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSection.swift; sourceTree = "<group>"; };
+		F0E35A04287E03380070B3EF /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
+		F0E35A06287E04290070B3EF /* MainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
 		F0E35A15287E29EC0070B3EF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		F0E89CC0285F11A800036575 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		F0F70A242864826D00656370 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F0FA87172854FA05005964EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,15 +283,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		F004E931287F364C00ACADEE /* Empty */ = {
-			isa = PBXGroup;
-			children = (
-				F004E932287F3FB700ACADEE /* EmptySection.swift */,
-				F0479DB2287CC86D00011374 /* EmptyCollectionViewCell.swift */,
-			);
-			path = Empty;
-			sourceTree = "<group>";
-		};
 		F007E558286B7DAD0073C74D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +298,15 @@
 				F007E560286B7DC50073C74D /* Category+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F00FD41628893ED300889819 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				F00FD41728893EEC00889819 /* TransactionSection.swift */,
+				F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		F01510C22872EF5E00B858BC /* Submodules */ = {
@@ -366,6 +372,7 @@
 				F0C819342885E32000434900 /* Double.swift */,
 				F073DADF287C930D00907507 /* Tagged.swift */,
 				F004E92F287F224800ACADEE /* NotificationName.swift */,
+				F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -379,10 +386,11 @@
 				F010E9C22871972000AFD1D0 /* TitleLabel.swift */,
 				F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */,
 				F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */,
-				F044C215287706270029EA8E /* CircularProgressView.swift */,
+				F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */,
 				F0E35A00287E02070070B3EF /* Section.swift */,
 				F02114182880733B00ACE1D7 /* UISegmentedControl.swift */,
 				F004A26E2883FB1200D03CB8 /* UIAlertController.swift */,
+				F066A7AC28886AE000C2F1F4 /* BulletView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -418,9 +426,9 @@
 			children = (
 				F0E89CC0285F11A800036575 /* HomeViewController.swift */,
 				F0E35A11287E18ED0070B3EF /* Account */,
-				F0E35A13287E19160070B3EF /* Progress */,
-				F004E931287F364C00ACADEE /* Empty */,
-				F0E35A14287E191C0070B3EF /* More */,
+				F0E35A13287E19160070B3EF /* Info */,
+				F0E35A14287E191C0070B3EF /* Main */,
+				F00FD41628893ED300889819 /* Transaction */,
 				F004E92B287EDA8900ACADEE /* HomeCollectionViewHeader.swift */,
 				F004E92D287EF22000ACADEE /* HomeCollectionViewFooter.swift */,
 			);
@@ -571,22 +579,23 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
-		F0E35A13287E19160070B3EF /* Progress */ = {
+		F0E35A13287E19160070B3EF /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				F0E35A04287E03380070B3EF /* ProgressSection.swift */,
-				F044C213287705D30029EA8E /* ProgressCollectionViewCell.swift */,
+				F0E35A04287E03380070B3EF /* InfoSection.swift */,
+				F066A7A8288831AF00C2F1F4 /* MonthInfoCollectionViewCell.swift */,
+				F0B525C62887F5CF008BA460 /* DailyBudgetCollectionViewCell.swift */,
 			);
-			path = Progress;
+			path = Info;
 			sourceTree = "<group>";
 		};
-		F0E35A14287E191C0070B3EF /* More */ = {
+		F0E35A14287E191C0070B3EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F0E35A06287E04290070B3EF /* MoreSection.swift */,
-				F060E27728762542006A87A9 /* MoreCollectionViewCell.swift */,
+				F0E35A06287E04290070B3EF /* MainSection.swift */,
+				F060E27728762542006A87A9 /* MainCollectionViewCell.swift */,
 			);
-			path = More;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F0E89CBC285F115700036575 /* Home */ = {
@@ -799,15 +808,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0479DB3287CC86D00011374 /* EmptyCollectionViewCell.swift in Sources */,
 				F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */,
 				F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */,
+				F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */,
 				F0A4965A288499DE00B8D465 /* DailyBudgetAssembly.swift in Sources */,
 				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
+				F066A7AB288854C100C2F1F4 /* CircularProgressView.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
@@ -816,17 +826,18 @@
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
 				F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */,
 				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
-				F004E933287F3FB700ACADEE /* EmptySection.swift in Sources */,
 				F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */,
 				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
+				F066A7AD28886AE000C2F1F4 /* BulletView.swift in Sources */,
 				F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
+				F066A7A9288831AF00C2F1F4 /* MonthInfoCollectionViewCell.swift in Sources */,
 				F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */,
 				F004A2942884014100D03CB8 /* AnalyticsPresenter.swift in Sources */,
 				F004A29C2884062500D03CB8 /* AddTransactionAssembly.swift in Sources */,
@@ -834,7 +845,7 @@
 				F0004FAC2883535000AA02A9 /* HomeAssembly.swift in Sources */,
 				F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */,
 				F0A49662288499EA00B8D465 /* TransactionDetailsAssembly.swift in Sources */,
-				F060E27828762542006A87A9 /* MoreCollectionViewCell.swift in Sources */,
+				F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
@@ -843,7 +854,9 @@
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
-				F0E35A07287E04290070B3EF /* MoreSection.swift in Sources */,
+				F0F16EBC2889AB4400D530DA /* NSAttributedString.swift in Sources */,
+				F0B525C72887F5CF008BA460 /* DailyBudgetCollectionViewCell.swift in Sources */,
+				F0E35A07287E04290070B3EF /* MainSection.swift in Sources */,
 				F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */,
 				F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
@@ -859,7 +872,6 @@
 				F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */,
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
-				F044C214287705D30029EA8E /* ProgressCollectionViewCell.swift in Sources */,
 				F0004FB0288353C200AA02A9 /* HomeRouter.swift in Sources */,
 				F007E572286B80010073C74D /* CategoryInfo.swift in Sources */,
 				F0B6ABF2286FB07E00CB88C1 /* UIButton.swift in Sources */,
@@ -875,15 +887,15 @@
 				F0C819352885E32100434900 /* Double.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
 				F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */,
-				F0E35A05287E03380070B3EF /* ProgressSection.swift in Sources */,
+				F0E35A05287E03380070B3EF /* InfoSection.swift in Sources */,
 				F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */,
 				F0A49661288499EA00B8D465 /* TransactionDetailsViewController.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F0A49658288499DE00B8D465 /* DailyBudgetRouter.swift in Sources */,
 				F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */,
-				F044C216287706270029EA8E /* CircularProgressView.swift in Sources */,
 				F0A49660288499EA00B8D465 /* TransactionDetailsRouter.swift in Sources */,
 				F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */,
+				F00FD41828893EEC00889819 /* TransactionSection.swift in Sources */,
 				F0004FAE2883538000AA02A9 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,8 +21,10 @@ balance = "Balance";
 add = "Add";
 addTransaction = "Add operation";
 
+monthlyIncome = "Monthly income";
+monthlyExpense = "Monthly expense";
 more = "More";
-scheduledOperations = "Scheduled operations";
+planned = "Planned";
 dailyBudget = "Daily budget";
 goals = "Goals";
 goalsDescription = "Save your funds";

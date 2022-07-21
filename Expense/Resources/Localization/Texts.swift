@@ -13,8 +13,10 @@ enum Texts {
         static let add = "add".localized
         static let addTransaction = "addTransaction".localized
         
+        static let monthlyIncome = "monthlyIncome".localized
+        static let monthlyExpense = "monthlyExpense".localized
         static let more = "more".localized
-        static let scheduledOperations = "scheduledOperations".localized
+        static let planned = "planned".localized
         static let dailyBudget = "dailyBudget".localized
         static let goals = "goals".localized
         static let goalsDescription = "goalsDescription".localized
@@ -55,16 +57,5 @@ enum Texts {
         static let note = "note".localized
         static let repeats = "repeats".localized
         static let repeatsDescription = "repeatsDescription".localized
-    }
-    
-    enum EmojiPicker {
-        static let emotionsAndPeople = "emotionsAndPeople".localized
-        static let animalsAndNature = "animalsAndNature".localized
-        static let foodAndDrinks = "foodAndDrinks".localized
-        static let activities = "activities".localized
-        static let travellingAndPlaces = "travellingAndPlaces".localized
-        static let objects = "objects".localized
-        static let symbols = "symbols".localized
-        static let flags = "flags".localized
     }
 }

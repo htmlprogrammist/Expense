@@ -19,7 +19,7 @@ enum Images {
         static let settings = Image("gear")
         static let add = Image("plus").withConfiguration(UIImage.SymbolConfiguration(weight: .semibold))
         static let calendar = Image("calendar")
-        static let dailyBudget = Image("banknote")
+        static let dailyBudget = Image("banknote.fill")
         static let goals = Image("mappin")
         static let budgets = Image("chart.pie.fill")
         static let disclosureIndicator = Image("chevron.right").withConfiguration(UIImage.SymbolConfiguration(pointSize: 16, weight: .bold, scale: .small))

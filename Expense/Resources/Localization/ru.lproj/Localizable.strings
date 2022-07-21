@@ -21,8 +21,10 @@ balance = "Баланс";
 add = "Добавить";
 addTransaction = "Добавить операцию";
 
+monthlyIncome = "Доход за месяц";
+monthlyExpense = "Расход за месяц";
 more = "Ещё";
-scheduledOperations = "Запланированные операции";
+planned = "Запланированные";
 dailyBudget = "Бюджет на день";
 goals = "Цели";
 goalsDescription = "Накопите или отложите средства";

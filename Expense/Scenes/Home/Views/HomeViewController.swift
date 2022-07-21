@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import EmojiPicker
 
 protocol HomeViewProtocol: AnyObject {
 }
@@ -17,11 +16,15 @@ final class HomeViewController: UIViewController {
     
     var numberOfAccounts = 3
     var numberOfGoals = 3
-    var numberOfBudgets = 3
+    var numberOfBudgets = 0
+    var plannedTransactions = 3
     
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: numberOfAccounts),
-        MoreSection()
+        InfoSection(),
+        MainSection(numberOfItems: numberOfGoals),
+        MainSection(numberOfItems: numberOfBudgets),
+        TransactionSection(numberOfItems: plannedTransactions)
     ]
     
     private lazy var collectionView: UICollectionView = {
@@ -36,9 +39,10 @@ final class HomeViewController: UIViewController {
         collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
         collectionView.register(HomeCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeCollectionViewFooter.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
-        collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
-        collectionView.register(EmptyCollectionViewCell.self, forCellWithReuseIdentifier: EmptyCollectionViewCell.identifier)
-        collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
+        collectionView.register(MonthInfoCollectionViewCell.self, forCellWithReuseIdentifier: MonthInfoCollectionViewCell.identifier)
+        collectionView.register(DailyBudgetCollectionViewCell.self, forCellWithReuseIdentifier: DailyBudgetCollectionViewCell.identifier)
+        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
+        collectionView.register(TransactionCollectionViewCell.self, forCellWithReuseIdentifier: TransactionCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -75,14 +79,27 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSections()
         setupView()
     }
     
     @objc public func handleSeeAll(sender: UIButton) {
-        if sender.tag == 1 {
+        if sender.tag == 2 {
             // TODO: Open all goals module
-        } else {
+        } else if sender.tag == 3 {
             // TODO: Open all budgets module
+        } else if sender.tag == 4 {
+            // TODO: Open all planned operations
+        }
+    }
+    
+    @objc public func handleAdding(sender: UIButton) {
+        if sender.tag == 1 {
+            // TODO: Add goal
+        } else if sender.tag == 2 {
+            // TODO: Add budget
+        } else {
+            // TODO: Add planned operation
         }
     }
     
@@ -101,17 +118,16 @@ final class HomeViewController: UIViewController {
         presenter.addTransaction()
     }
     
+    private func setupSections() {
+        if (Settings.shared.showDailyBudget ?? true) {
+//            sections.insert(InfoSection(dailyBudget: 204), at: 2)
+        }
+    }
+    
     private func setupView() {
         view.backgroundColor = .systemGroupedBackground
         title = Texts.Home.title
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettings))
-        
-        if (Settings.shared.showBudgets ?? true) {
-            sections.insert(numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(), at: 1)
-        }
-        if (Settings.shared.showGoals ?? true) {
-            sections.insert(numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true), at: 1)
-        }
         
         view.addSubview(collectionView)
         view.addSubview(addTransactionButton)
@@ -140,7 +156,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        (sections[section].numberOfItems > 0) ? sections[section].numberOfItems : 1
+        sections[section].numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -169,6 +185,18 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return footer
         default:
             assert(false, "Unexpected element kind")
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        switch elementKind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = view as? HomeCollectionViewHeader else {
+                fatalError("Could not identify header at indexPath \(indexPath)")
+            }
+            header.setupButton(sectionHasCell: sections[indexPath.section].numberOfItems > 0)
+        default:
+            return
         }
     }
 }

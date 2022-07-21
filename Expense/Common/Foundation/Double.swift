@@ -7,6 +7,6 @@
 
 extension Double {
     func convertToString() -> String {
-        (Settings.shared.roundingNumbers ?? false) ? "\(Int(self.rounded()))" : "\(self)"
+        (Settings.shared.roundingNumbers ?? true) ? "\(Int(self.rounded()))" : "\(self)"
     }
 }

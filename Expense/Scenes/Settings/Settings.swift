@@ -8,10 +8,7 @@
 import Foundation
 
 fileprivate enum SettingsKey: CodingKey {
-    // Home
-    case showGoals
-    case showBudgets
-    
+    case showDailyBudget
     case accounts
     case roundingNumbers
 }
@@ -22,16 +19,10 @@ final class Settings {
     /// User defaults container that allows easily usage of UserDefaults
     private let storage = UserDefaultsContainer(keyedBy: SettingsKey.self)
     
-    /// Defines whether to show or not _Goals_ section in the main screen
-    var showGoals: Bool? {
-        get { storage[.showGoals] }
-        set { storage[.showGoals] = newValue }
-    }
-    
-    /// Defines whether to show or not _Budget_ section in the main screen
-    var showBudgets: Bool? {
-        get { storage[.showBudgets] }
-        set { storage[.showBudgets] = newValue }
+    /// Defines whether to show or not daily budget
+    var showDailyBudget: Bool? {
+        get { storage[.showDailyBudget] }
+        set { storage[.showDailyBudget] = newValue }
     }
     
     /// All numbers in the app will be rounded to an integer
