@@ -11,8 +11,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let progressView: CircularProgressView = {
         let progressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: 18, height: 18), lineWidth: nil, rounded: false)
-//        progressView.trackColor = .tertiarySystemFill
-        progressView.trackColor = .clear
+        progressView.trackColor = .clear // .tertiarySystemFill
         progressView.progressColor = .progressColor
         progressView.timeToFill = 1.3 // TODO: настроить время анимации
         progressView.translatesAutoresizingMaskIntoConstraints = false

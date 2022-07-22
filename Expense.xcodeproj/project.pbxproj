@@ -63,6 +63,7 @@
 		F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MainCollectionViewCell.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
+		F065E2402889E25300D34D10 /* NSExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065E23F2889E25200D34D10 /* NSExpression.swift */; };
 		F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */; };
 		F066A7A9288831AF00C2F1F4 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7A8288831AF00C2F1F4 /* InfoCollectionViewCell.swift */; };
 		F066A7AB288854C100C2F1F4 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */; };
@@ -183,6 +184,7 @@
 		F060E27728762542006A87A9 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		F065E23F2889E25200D34D10 /* NSExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExpression.swift; sourceTree = "<group>"; };
 		F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F066A7A8288831AF00C2F1F4 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				F073DADF287C930D00907507 /* Tagged.swift */,
 				F004E92F287F224800ACADEE /* NotificationName.swift */,
 				F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */,
+				F065E23F2889E25200D34D10 /* NSExpression.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
 				F0F16EBC2889AB4400D530DA /* NSAttributedString.swift in Sources */,
+				F065E2402889E25300D34D10 /* NSExpression.swift in Sources */,
 				F0E35A07287E04290070B3EF /* MainSection.swift in Sources */,
 				F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */,
 				F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */,
