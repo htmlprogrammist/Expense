@@ -17,9 +17,6 @@ let package = Package(
         .target(
             name: "EmojiPicker",
             dependencies: [],
-            resources: [.process("Resources")]),
-        .testTarget(
-            name: "EmojiPickerTests",
-            dependencies: ["EmojiPicker"]),
+            resources: [.process("Resources")])
     ]
 )
