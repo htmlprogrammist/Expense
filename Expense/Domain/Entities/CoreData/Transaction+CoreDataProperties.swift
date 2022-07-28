@@ -29,7 +29,7 @@ extension Transaction {
 
 extension Transaction {
     var transactionInfo: TransactionInfo {
-        TransactionInfo(sum: sum, isIncome: isIncome, date: date, notes: notes, repeats: repeats, category: category, goal: goal)
+        TransactionInfo(sum: sum, isIncome: isIncome, date: date, account: account, notes: notes, repeats: repeats, category: category, goal: goal)
     }
 }
 

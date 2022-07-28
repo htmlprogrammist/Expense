@@ -10,6 +10,7 @@ import CoreData
 protocol AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]?
     func createAccount(with data: AccountInfo)
+    func updateAccount(with data: AccountInfo)
     func deleteAccount(_ wallet: Account)
 }
 
@@ -20,24 +21,28 @@ protocol TransactionsCoreDataManagerProtocol {
     func fetchPlannedTransactions(limit: Bool) -> [Transaction]?
     
     func createTransaction(with data: TransactionInfo, in account: Account)
+    func updateTransaction(with data: TransactionInfo)
     func deleteTransaction(_ transaction: Transaction)
 }
 
 protocol CategoriesCoreDataManagerProtocol {
     func fetchCategories() -> [Category]?
     func createCategory(with data: CategoryInfo)
+    func updateCategory(with data: CategoryInfo)
     func deleteCategory(_ category: Category)
 }
 
 protocol GoalsCoreDataManagerProtocol {
     func fetchGoals(limit: Bool) -> [Goal]?
     func createGoal(with data: GoalInfo)
+    func updateGoal(with data: GoalInfo)
     func deleteGoal(_ goal: Goal)
 }
 
 protocol BudgetsCoreDataManagerProtocol {
     func fetchBudgets(limit: Bool) -> [Budget]?
     func createBudget(with data: BudgetInfo)
+    func updateBudget(with data: BudgetInfo)
     func deleteBudget(_ budget: Budget)
 }
 
@@ -87,6 +92,10 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
         account.balance = data.balance
         account.date = Date()
         saveContext()
+    }
+    
+    func updateAccount(with data: AccountInfo) {
+        
     }
     
     func deleteAccount(_ account: Account) {
@@ -162,6 +171,10 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         saveContext()
     }
     
+    func updateTransaction(with data: TransactionInfo) {
+        
+    }
+    
     func deleteTransaction(_ transaction: Transaction) {
         managedObjectContext.delete(transaction)
         saveContext()
@@ -181,6 +194,10 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
         category.emoji = data.emoji.rawValue
         category.name = data.name
         saveContext()
+    }
+    
+    func updateCategory(with data: CategoryInfo) {
+        
     }
     
     func deleteCategory(_ category: Category) {
@@ -217,6 +234,10 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
         saveContext()
     }
     
+    func updateGoal(with data: GoalInfo) {
+        
+    }
+    
     func deleteGoal(_ goal: Goal) {
         if let transactions = goal.transactions?.allObjects as? [Transaction] {
             transactions.forEach { managedObjectContext.delete($0) }
@@ -247,6 +268,10 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
         budget.category = data.category
         budget.period = data.period
         saveContext()
+    }
+    
+    func updateBudget(with data: BudgetInfo) {
+        
     }
     
     func deleteBudget(_ budget: Budget) {
