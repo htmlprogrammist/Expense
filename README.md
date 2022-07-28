@@ -8,7 +8,7 @@ In this project I demonstrated the knowledge of:
 - UIKit
     - CompositionalLayout
     - DiffableDataSource
-- Clean Swift
+- MVP-R + Coordinator
 - Core Data & CloudKit
 - Notification Center, Timer
 - Core Animation
@@ -21,7 +21,7 @@ In this project I demonstrated the knowledge of:
 - The interface is drawn in UIKit
 - The app looks correct for iPhone SE (2016) and above
 - Minimum version: iOS 13
-- The application must be written using Clean Swift
+- The application must be written using architectural pattern MVP
 - To cover the code with tests, you must use XCTest. Tests should cover at least half of the written code
 - For permanent data storage, you need to use only Core Data
 - Synchronization with iCloud must be implemented
@@ -40,7 +40,7 @@ In this project I demonstrated the knowledge of:
 - UIKit
     - CompositionalLayout
     - DiffableDataSource
-- Clean Swift
+- MVP-R + Координатор
 - Core Data & CloudKit
 - Notification Center, Timer
 - Core Animation
@@ -53,7 +53,7 @@ In this project I demonstrated the knowledge of:
 - Для отрисовки интерфейса используется UIKit
 - Приложение корректно отображается на iPhone SE (2016) и выше
 - Минимальная версия: iOS 13
-- Приложение должно быть написано с использованием Clean Swift
+- Приложение должно быть написано с использованием архитектурного паттерна MVP
 - Для постоянного хранения данных необходимо использовать Core Data
 - Должна быть реализована синхронизация с iCloud
 - Использование Storyboard/Xib запрещено
