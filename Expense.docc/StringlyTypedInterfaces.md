@@ -1,4 +1,4 @@
-# Stringly typed interfaces
+# Stringly Typed Interfaces
 
 <!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
 
