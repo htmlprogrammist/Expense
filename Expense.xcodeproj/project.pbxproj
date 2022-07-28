@@ -60,6 +60,7 @@
 		F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* AccountInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
+		F05CAD71289304D2002AABD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05CAD70289304D2002AABD5 /* SceneDelegate.swift */; };
 		F060110F28928308008774AB /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F060110E28928308008774AB /* EmojiPicker */; };
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
 		F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MainCollectionViewCell.swift */; };
@@ -182,6 +183,8 @@
 		F057E9E928678B180083C003 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		F057E9EB28678B4E0083C003 /* GoalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalInfo.swift; sourceTree = "<group>"; };
 		F057E9ED28678B680083C003 /* BudgetInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetInfo.swift; sourceTree = "<group>"; };
+		F05CAD70289304D2002AABD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F05CAD7628930619002AABD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F060E27728762542006A87A9 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
@@ -215,7 +218,6 @@
 		F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A9D64C27D2AD3E00E63CD2 /* Expense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expense.xcdatamodel; sourceTree = "<group>"; };
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AF60CE2882A6F20019AF26 /* EmojiPicker */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EmojiPicker; sourceTree = "<group>"; };
 		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
@@ -561,7 +563,7 @@
 				F0004FA62883253300AA02A9 /* Images */,
 				F0004F9F2883252F00AA02A9 /* Localization */,
 				F0A9D65027D2AD4100E63CD2 /* LaunchScreen.storyboard */,
-				F0A9D65327D2AD4200E63CD2 /* Info.plist */,
+				F05CAD7628930619002AABD5 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -570,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A9D64227D2AD3E00E63CD2 /* AppDelegate.swift */,
+				F05CAD70289304D2002AABD5 /* SceneDelegate.swift */,
 				F042C2BA2866EFAD0002208F /* AppCoordinator.swift */,
 			);
 			path = Application;
@@ -862,6 +865,7 @@
 				F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */,
 				F0F16EC32889B67F00D530DA /* OnboardingViewController.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
+				F05CAD71289304D2002AABD5 /* SceneDelegate.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F0A49659288499DE00B8D465 /* DailyBudgetViewController.swift in Sources */,

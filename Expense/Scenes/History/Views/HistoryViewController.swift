@@ -15,22 +15,20 @@ final class HistoryViewController: UIViewController {
     private let presenter: HistoryPresenterProtocol
     private var isDay = true
     
-    private var datePickerMenu: UIMenu {
-        UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
-            UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
-                handleAction(by: .day)
-            }),
-            UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] _ in
-                handleAction(by: .week)
-            }),
-            UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] _ in
-                handleAction(by: .month)
-            }),
-            UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] _ in
-                handleAction(by: .year)
-            })
-        ])
-    }
+    private lazy var periodPickerMenu = UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
+        UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
+            handleAction(by: .day)
+        }),
+        UIAction(title: Texts.History.week, image: nil, handler: { [unowned self] _ in
+            handleAction(by: .week)
+        }),
+        UIAction(title: Texts.History.month, image: nil, handler: { [unowned self] _ in
+            handleAction(by: .month)
+        }),
+        UIAction(title: Texts.History.year, image: nil, handler: { [unowned self] _ in
+            handleAction(by: .year)
+        })
+    ])
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
@@ -113,7 +111,7 @@ final class HistoryViewController: UIViewController {
         
         if #available(iOS 14.0, *) {
             navigationItem.rightBarButtonItems?.insert(
-                UIBarButtonItem(title: nil, image: Images.History.timeline, primaryAction: nil, menu: datePickerMenu), at: 0)
+                UIBarButtonItem(title: nil, image: Images.History.timeline, primaryAction: nil, menu: periodPickerMenu), at: 0)
         } else {
             navigationItem.rightBarButtonItems?.insert(
                 UIBarButtonItem(image: Images.History.timeline, style: .plain, target: self, action: #selector(choosePeriod)), at: 0)
@@ -169,8 +167,8 @@ extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
         }
         // TODO: ViewModel должна возвращать attributed string для чисел и рубля - они должны быть чуть жирнее, чем текст
         header.configure(date: Tagged("6-12 июня 2022 г."),
-                         income: "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold),
-                         expense: "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: 14, with: .semibold))
+                         income: "Доход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: SubtitleLabel.fontSize, with: .semibold),
+                         expense: "Расход: \(Int.random(in: 1000...10000)) ₽".toAttributedString(after: ":", ofSize: SubtitleLabel.fontSize, with: .semibold))
         return header
     }
 }
