@@ -8,6 +8,8 @@
 import Foundation
 
 protocol HistoryPresenterProtocol: AnyObject {
+    var moduleOutput: HistoryModuleOutputProtocol? { get set }
+    
     func provideData(by period: Period)
 }
 

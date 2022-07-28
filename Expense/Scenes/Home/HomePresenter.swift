@@ -8,6 +8,8 @@
 import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
+    var moduleOutput: HomeModuleOutputProtocol? { get set }
+    
     func openSettings()
     func addTransaction()
 }

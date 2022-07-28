@@ -11,9 +11,10 @@ protocol CreateAccountViewProtocol: AnyObject {
 }
 
 final class CreateAccountViewController: UIViewController {
-    
+    // MARK: - Private properties
     private let presenter: CreateAccountPresenterProtocol
     
+    // MARK: - Init
     init(presenter: CreateAccountPresenterProtocol) {
         self.presenter = presenter
         
@@ -24,6 +25,7 @@ final class CreateAccountViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

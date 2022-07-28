@@ -8,6 +8,7 @@
 import Foundation
 
 protocol SettingsPresenterProtocol: AnyObject {
+    var moduleOutput: SettingsModuleOutputProtocol? { get set }
 }
 
 protocol SettingsModuleOutputProtocol: AnyObject {

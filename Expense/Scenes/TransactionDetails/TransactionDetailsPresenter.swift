@@ -6,6 +6,7 @@
 //
 
 protocol TransactionDetailsPresenterProtocol: AnyObject {
+    var moduleOutput: TransactionDetailsModuleOutputProtocol? { get set }
 }
 
 protocol TransactionDetailsModuleOutputProtocol: AnyObject {

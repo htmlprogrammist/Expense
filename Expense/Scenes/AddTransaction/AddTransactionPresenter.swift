@@ -8,6 +8,8 @@
 import Foundation
 
 protocol AddTransactionPresenterProtocol: AnyObject {
+    var moduleOutput: AddTransactionModuleOutputProtocol? { get set }
+    
     func viewDidLoad()
     func saveTransaction(with transaction: TransactionInfo)
 }

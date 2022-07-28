@@ -8,6 +8,7 @@
 import Foundation
 
 protocol AnalyticsPresenterProtocol: AnyObject {
+    var moduleOutput: AnalyticsModuleOutputProtocol? { get set }
 }
 
 protocol AnalyticsModuleOutputProtocol: AnyObject {
