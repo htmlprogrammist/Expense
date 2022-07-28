@@ -16,7 +16,7 @@ final class HistoryViewController: UIViewController {
     private var isDay = true
     
     private var datePickerMenu: UIMenu {
-        return UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
+        UIMenu(title: Texts.History.operationsBy, image: nil, identifier: nil, options: [], children: [
             UIAction(title: Texts.History.day, image: nil, handler: { [unowned self] _ in
                 handleAction(by: .day)
             }),

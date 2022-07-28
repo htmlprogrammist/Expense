@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0004F912883246900AA02A9 /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F0004F902883246900AA02A9 /* EmojiPicker */; };
 		F0004FA42883252F00AA02A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0004FA02883252F00AA02A9 /* Localizable.strings */; };
 		F0004FA52883252F00AA02A9 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0004FA32883252F00AA02A9 /* Texts.swift */; };
 		F0004FA92883253300AA02A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0004FA72883253300AA02A9 /* Assets.xcassets */; };
@@ -46,19 +45,22 @@
 		F01510C12872E87E00B858BC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */; };
 		F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */; };
 		F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02114182880733B00ACE1D7 /* UISegmentedControl.swift */; };
-		F035F59628757D660041AF84 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F59528757D660041AF84 /* UIView.swift */; };
-		F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F035F5A328757E4A0041AF84 /* UIColor.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
 		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BA2866EFAD0002208F /* AppCoordinator.swift */; };
 		F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BC2866F0AA0002208F /* HistoryViewController.swift */; };
 		F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */; };
-		F0578A9F2886AAD40024FBCC /* AppImport in Frameworks */ = {isa = PBXBuildFile; productRef = F0578A9E2886AAD40024FBCC /* AppImport */; };
+		F0477390288FEF1A00CD9A12 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047738B288FEF1A00CD9A12 /* UIColor.swift */; };
+		F0477391288FEF1B00CD9A12 /* BulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047738C288FEF1A00CD9A12 /* BulletView.swift */; };
+		F0477392288FEF1B00CD9A12 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047738D288FEF1A00CD9A12 /* Section.swift */; };
+		F0477393288FEF1B00CD9A12 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047738E288FEF1A00CD9A12 /* CircularProgressView.swift */; };
+		F0477394288FEF1B00CD9A12 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047738F288FEF1A00CD9A12 /* UIView.swift */; };
 		F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E5286788D40083C003 /* TransactionInfo.swift */; };
 		F057E9E82867890E0083C003 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E72867890E0083C003 /* Period.swift */; };
 		F057E9EA28678B180083C003 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9E928678B180083C003 /* AccountInfo.swift */; };
 		F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9EB28678B4E0083C003 /* GoalInfo.swift */; };
 		F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057E9ED28678B680083C003 /* BudgetInfo.swift */; };
+		F060110F28928308008774AB /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F060110E28928308008774AB /* EmojiPicker */; };
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
 		F060E27828762542006A87A9 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060E27728762542006A87A9 /* MainCollectionViewCell.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
@@ -66,8 +68,6 @@
 		F065E2402889E25300D34D10 /* NSExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065E23F2889E25200D34D10 /* NSExpression.swift */; };
 		F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */; };
 		F066A7A9288831AF00C2F1F4 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7A8288831AF00C2F1F4 /* InfoCollectionViewCell.swift */; };
-		F066A7AB288854C100C2F1F4 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */; };
-		F066A7AD28886AE000C2F1F4 /* BulletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A7AC28886AE000C2F1F4 /* BulletView.swift */; };
 		F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */; };
 		F073DAE0287C930D00907507 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = F073DADF287C930D00907507 /* Tagged.swift */; };
 		F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C25192870E3310000021E /* SettingsTableViewCell.swift */; };
@@ -96,7 +96,6 @@
 		F0C819352885E32100434900 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819342885E32000434900 /* Double.swift */; };
 		F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */; };
 		F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */; };
-		F0E35A01287E02070070B3EF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A00287E02070070B3EF /* Section.swift */; };
 		F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A02287E02350070B3EF /* AccountSection.swift */; };
 		F0E35A05287E03380070B3EF /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A04287E03380070B3EF /* InfoSection.swift */; };
 		F0E35A07287E04290070B3EF /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A06287E04290070B3EF /* MainSection.swift */; };
@@ -167,14 +166,17 @@
 		F01510C02872E87E00B858BC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F0205C59287C2A4300104E2F /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		F02114182880733B00ACE1D7 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
-		F035F59528757D660041AF84 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		F035F5A328757E4A0041AF84 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F042C2BA2866EFAD0002208F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F042C2BC2866F0AA0002208F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		F047738B288FEF1A00CD9A12 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F047738C288FEF1A00CD9A12 /* BulletView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletView.swift; sourceTree = "<group>"; };
+		F047738D288FEF1A00CD9A12 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		F047738E288FEF1A00CD9A12 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F047738F288FEF1A00CD9A12 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F057E9E5286788D40083C003 /* TransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
 		F057E9E72867890E0083C003 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		F057E9E928678B180083C003 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
@@ -187,8 +189,6 @@
 		F065E23F2889E25200D34D10 /* NSExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExpression.swift; sourceTree = "<group>"; };
 		F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F066A7A8288831AF00C2F1F4 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
-		F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		F066A7AC28886AE000C2F1F4 /* BulletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletView.swift; sourceTree = "<group>"; };
 		F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F073DADF287C930D00907507 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
 		F07C25192870E3310000021E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -217,14 +217,12 @@
 		F0A9D65127D2AD4100E63CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0A9D65327D2AD4200E63CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AF60CE2882A6F20019AF26 /* EmojiPicker */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EmojiPicker; sourceTree = "<group>"; };
-		F0AF60D12882A7A40019AF26 /* AppImport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AppImport; sourceTree = "<group>"; };
 		F0B270ED287D72BB00AC6DAE /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
 		F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		F0C819342885E32000434900 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		F0C819362885F2FB00434900 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0C819372885F2FB00434900 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F0E35A00287E02070070B3EF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F0E35A02287E02350070B3EF /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		F0E35A04287E03380070B3EF /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
 		F0E35A06287E04290070B3EF /* MainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
@@ -258,8 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0004F912883246900AA02A9 /* EmojiPicker in Frameworks */,
-				F0578A9F2886AAD40024FBCC /* AppImport in Frameworks */,
+				F060110F28928308008774AB /* EmojiPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,17 +386,17 @@
 		F0612D51286C6469009B641A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				F035F59528757D660041AF84 /* UIView.swift */,
-				F035F5A328757E4A0041AF84 /* UIColor.swift */,
+				F047738C288FEF1A00CD9A12 /* BulletView.swift */,
+				F047738E288FEF1A00CD9A12 /* CircularProgressView.swift */,
+				F047738D288FEF1A00CD9A12 /* Section.swift */,
+				F047738B288FEF1A00CD9A12 /* UIColor.swift */,
+				F047738F288FEF1A00CD9A12 /* UIView.swift */,
 				F0B6ABF1286FB07E00CB88C1 /* UIButton.swift */,
 				F010E9C22871972000AFD1D0 /* TitleLabel.swift */,
 				F0B270EF287D780300AC6DAE /* SubtitleLabel.swift */,
 				F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */,
-				F066A7AA288854C100C2F1F4 /* CircularProgressView.swift */,
-				F0E35A00287E02070070B3EF /* Section.swift */,
 				F02114182880733B00ACE1D7 /* UISegmentedControl.swift */,
 				F004A26E2883FB1200D03CB8 /* UIAlertController.swift */,
-				F066A7AC28886AE000C2F1F4 /* BulletView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 		F0A9D63627D2AD3E00E63CD2 = {
 			isa = PBXGroup;
 			children = (
-				F0AF60D12882A7A40019AF26 /* AppImport */,
 				F0AF60CE2882A6F20019AF26 /* EmojiPicker */,
 				F0FA87172854FA05005964EA /* README.md */,
 				F0A4963628846F7900B8D465 /* Expense.docc */,
@@ -728,8 +724,7 @@
 			);
 			name = Expense;
 			packageProductDependencies = (
-				F0004F902883246900AA02A9 /* EmojiPicker */,
-				F0578A9E2886AAD40024FBCC /* AppImport */,
+				F060110E28928308008774AB /* EmojiPicker */,
 			);
 			productName = Expense;
 			productReference = F0A9D63F27D2AD3E00E63CD2 /* Expense.app */;
@@ -837,23 +832,21 @@
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
 				F057E9E6286788D40083C003 /* TransactionInfo.swift in Sources */,
-				F066A7AB288854C100C2F1F4 /* CircularProgressView.swift in Sources */,
 				F007E567286B7DC50073C74D /* Transaction+CoreDataClass.swift in Sources */,
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
-				F035F5C328757E4A0041AF84 /* UIColor.swift in Sources */,
 				F0A49657288499DE00B8D465 /* DailyBudgetPresenter.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
 				F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */,
 				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
 				F0004FB62883556B00AA02A9 /* SettingsRouter.swift in Sources */,
-				F035F59628757D660041AF84 /* UIView.swift in Sources */,
 				F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */,
+				F0477391288FEF1B00CD9A12 /* BulletView.swift in Sources */,
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0F16EC12889B67F00D530DA /* OnboardingPresenter.swift in Sources */,
+				F0477390288FEF1A00CD9A12 /* UIColor.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
-				F066A7AD28886AE000C2F1F4 /* BulletView.swift in Sources */,
 				F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */,
 				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
@@ -871,7 +864,6 @@
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
-				F0E35A01287E02070070B3EF /* Section.swift in Sources */,
 				F0A49659288499DE00B8D465 /* DailyBudgetViewController.swift in Sources */,
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
 				F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */,
@@ -890,6 +882,7 @@
 				F073DAE0287C930D00907507 /* Tagged.swift in Sources */,
 				F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */,
 				F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */,
+				F0477392288FEF1B00CD9A12 /* Section.swift in Sources */,
 				F004A2902884010800D03CB8 /* HistoryAssembly.swift in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
 				F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */,
@@ -909,9 +902,11 @@
 				F0A4965F288499EA00B8D465 /* TransactionDetailsPresenter.swift in Sources */,
 				F0C819352885E32100434900 /* Double.swift in Sources */,
 				F007E568286B7DC50073C74D /* Transaction+CoreDataProperties.swift in Sources */,
+				F0477394288FEF1B00CD9A12 /* UIView.swift in Sources */,
 				F0004FB42883556200AA02A9 /* SettingsAssembly.swift in Sources */,
 				F0E35A05287E03380070B3EF /* InfoSection.swift in Sources */,
 				F0C819382885F2FB00434900 /* Account+CoreDataClass.swift in Sources */,
+				F0477393288FEF1B00CD9A12 /* CircularProgressView.swift in Sources */,
 				F0A49661288499EA00B8D465 /* TransactionDetailsViewController.swift in Sources */,
 				F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */,
 				F0A49658288499DE00B8D465 /* DailyBudgetRouter.swift in Sources */,
@@ -1253,13 +1248,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F0004F902883246900AA02A9 /* EmojiPicker */ = {
+		F060110E28928308008774AB /* EmojiPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EmojiPicker;
-		};
-		F0578A9E2886AAD40024FBCC /* AppImport */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppImport;
 		};
 /* End XCSwiftPackageProductDependency section */
 

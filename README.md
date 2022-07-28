@@ -48,12 +48,6 @@ In this project I demonstrated the knowledge of:
 - Работа с форматом `.csv`
 - Testing (Unit/Integration/UI)
 
-<тут надо уже серьёзно расписать фичи, наверное>
-
-<сейчас я думаю детально расписать про это всё, но выложить это не в README, а в `Docs .md` или типо того>
-
-<`Expense.docc` и там всё это расписываю в отдельных файлах, с ссылками из `Documentation.md`, и сделать ссылку из `README.md` на `Documentation.md`>
-
 # Требования
 
 - Для отрисовки интерфейса используется UIKit

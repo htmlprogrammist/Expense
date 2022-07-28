@@ -12,7 +12,6 @@ typealias StringDate = Tagged<DateTag, String>
 
 final class HistoryTableViewHeader: UITableViewHeaderFooterView {
     
-    private let spacing: CGFloat = 2
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -51,13 +50,13 @@ final class HistoryTableViewHeader: UITableViewHeaderFooterView {
         
         NSLayoutConstraint.activate([
             dateLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
-            dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
+            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: layoutMargins.left),
+            dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -layoutMargins.right),
 
-            labelsStackView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 3),
-            labelsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: spacing),
-            labelsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -spacing),
-            labelsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -spacing * 2)
+            labelsStackView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: layoutMargins.bottom / 2),
+            labelsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: layoutMargins.left),
+            labelsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -layoutMargins.right),
+            labelsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -layoutMargins.bottom)
         ])
     }
 }
