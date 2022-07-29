@@ -9,27 +9,35 @@ import UIKit
 
 final class HomeCollectionViewHeader: UICollectionReusableView {
     
-    private var titles = ["", "", Texts.Home.goals, Texts.Home.budgets, Texts.Home.planned]
+    private var titles = ["", Texts.Home.more]
+    private var subtitles = ["", ""]
     
     private let titleLabel = TitleLabel()
+    private let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .secondaryLabel
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
     private let seeAllButton: UIButton = {
         let button = UIButton()
         button.setTitle(Texts.Home.seeAll, for: .normal)
         button.setTitleColor(UIColor.appColor, for: .normal)
         button.addTarget(nil, action: #selector(HomeViewController.handleSeeAll), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
-    private let addSomethingButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.addTarget(nil, action: #selector(HomeViewController.handleAdding), for: .touchUpInside)
-        button.setImage(Images.Home.add.withConfiguration(UIImage.SymbolConfiguration(weight: UIImage.SymbolWeight.regular)), for: .normal)
-        return button
+    private lazy var subStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, seeAllButton])
+        stackView.axis = .horizontal
+        stackView.alignment = .lastBaseline
+        stackView.distribution = .equalCentering
+        return stackView
     }()
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel])
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.distribution = .equalCentering
+        let stackView = UIStackView(arrangedSubviews: [subStackView, subtitleLabel])
+        stackView.axis = .vertical
+        stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -37,6 +45,7 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        configureTitles()
         setupView()
     }
     
@@ -46,26 +55,32 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     
     public func configure(indexPath: IndexPath) {
         titleLabel.text = titles[indexPath.section]
-        seeAllButton.tag = indexPath.section
-        addSomethingButton.tag = indexPath.section
+        subtitleLabel.text = subtitles[indexPath.section]
+        
+        if !subtitles[indexPath.section].isEmpty {
+            seeAllButton.isHidden = false
+            seeAllButton.tag = indexPath.section
+        }
     }
     
-    public func setupButton(sectionHasCell: Bool) {
-        if sectionHasCell {
-            mainStackView.addArrangedSubview(seeAllButton)
-        } else {
-            mainStackView.addArrangedSubview(addSomethingButton)
+    private func configureTitles() {
+        if (Settings.shared.showBudgets ?? true) {
+            titles.insert(Texts.Home.budgets, at: 1)
+            subtitles.insert(Texts.Home.budgetsDescription, at: 1)
+        }
+        if (Settings.shared.showGoals ?? true) {
+            titles.insert(Texts.Home.goals, at: 1)
+            subtitles.insert(Texts.Home.goalsDescription, at: 1)
         }
     }
     
     private func setupView() {
-        backgroundColor = .mainBackgroundColor
         addSubview(mainStackView)
         
         NSLayoutConstraint.activate([
             mainStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: layoutMargins.left),
             mainStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -layoutMargins.right),
-            mainStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -layoutMargins.bottom),
         ])
     }
 }

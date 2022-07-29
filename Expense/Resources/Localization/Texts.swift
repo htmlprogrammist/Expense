@@ -16,15 +16,15 @@ enum Texts {
         static let monthlyIncome = "monthlyIncome".localized
         static let monthlyExpense = "monthlyExpense".localized
         static let more = "more".localized
-        static let planned = "planned".localized
-//        static let dailyBudget = "dailyBudget".localized
+        static let plannedOperations = "plannedOperations".localized
+        static let dailyBudget = "dailyBudget".localized
         static let goals = "goals".localized
-//        static let goalsDescription = "goalsDescription".localized
+        static let goalsDescription = "goalsDescription".localized
         static let budgets = "budgets".localized
-//        static let budgetsDescription = "budgetsDescription".localized
+        static let budgetsDescription = "budgetsDescription".localized
         static let seeAll = "seeAll".localized
-//        static let empty = "empty".localized
-//        static let tapToAdd = "tapToAdd".localized
+        static let empty = "empty".localized
+        static let tapToAdd = "tapToAdd".localized
     }
     
     enum History {

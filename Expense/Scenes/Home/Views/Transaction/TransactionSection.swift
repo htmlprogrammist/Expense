@@ -30,7 +30,7 @@ struct TransactionSection: Section {
         else {
             fatalError("Could not create MainCollectionViewCell at indexPath \(indexPath)")
         }
-        
+        cell.configure()
         return cell
     }
 }

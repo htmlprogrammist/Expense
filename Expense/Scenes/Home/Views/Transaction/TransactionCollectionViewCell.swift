@@ -67,7 +67,7 @@ final class TransactionCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(emojiBackgroundView)
         emojiBackgroundView.addSubview(emojiLabel)
         contentView.addSubview(mainStackView)
-        contentView.backgroundColor = .mainBackgroundColor
+        contentView.backgroundColor = .secondarySystemGroupedBackground
         
         NSLayoutConstraint.activate([
             emojiBackgroundView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),

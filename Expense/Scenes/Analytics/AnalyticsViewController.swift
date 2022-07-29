@@ -47,13 +47,11 @@ final class AnalyticsViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    @objc
-    private func chooseFilter() {
+    @objc private func chooseFilter() {
         
     }
     
-    @objc
-    private func segmentedControlDidChange() {
+    @objc private func segmentedControlDidChange() {
         
     }
     
@@ -63,8 +61,10 @@ final class AnalyticsViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.History.filter, style: .plain, target: self, action: #selector(chooseFilter))
         
         navigationItem.titleView = segmentedControl
-        view.addSubview(collectionView)
+        segmentedControl.setWidth(view.frame.size.width * 0.35, forSegmentAt: 0)
+        segmentedControl.setWidth(view.frame.size.width * 0.35, forSegmentAt: 1)
         
+        view.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
