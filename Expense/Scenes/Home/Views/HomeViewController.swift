@@ -151,13 +151,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 // MARK: - Helper methods
 private extension HomeViewController {
     func setupSections() {
-        if (Settings.shared.showDailyBudget ?? true) {
+        if (UserDefaults.showDailyBudget) {
 //            sections.insert(InfoSection(dailyBudget: 204), at: 2)
         }
-        if (Settings.shared.showBudgets ?? true) {
+        if (UserDefaults.showBudgets) {
             sections.insert(numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(), at: 1)
         }
-        if (Settings.shared.showGoals ?? true) {
+        if (UserDefaults.showGoals) {
             sections.insert(numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true), at: 1)
         }
     }

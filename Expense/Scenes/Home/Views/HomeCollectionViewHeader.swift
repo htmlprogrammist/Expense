@@ -64,11 +64,11 @@ final class HomeCollectionViewHeader: UICollectionReusableView {
     }
     
     private func configureTitles() {
-        if (Settings.shared.showBudgets ?? true) {
+        if (UserDefaults.showBudgets) {
             titles.insert(Texts.Home.budgets, at: 1)
             subtitles.insert(Texts.Home.budgetsDescription, at: 1)
         }
-        if (Settings.shared.showGoals ?? true) {
+        if (UserDefaults.showGoals) {
             titles.insert(Texts.Home.goals, at: 1)
             subtitles.insert(Texts.Home.goalsDescription, at: 1)
         }
