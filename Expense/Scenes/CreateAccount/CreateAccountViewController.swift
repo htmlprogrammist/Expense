@@ -11,10 +11,13 @@ protocol CreateAccountViewProtocol: AnyObject {
 }
 
 final class CreateAccountViewController: UIViewController {
+    
     // MARK: - Private properties
+    
     private let presenter: CreateAccountPresenterProtocol
     
     // MARK: - Init
+    
     init(presenter: CreateAccountPresenterProtocol) {
         self.presenter = presenter
         
@@ -26,6 +29,7 @@ final class CreateAccountViewController: UIViewController {
     }
     
     // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -14,7 +14,8 @@ final class CreateAccountAssembly {
     
     static func assemble(moduleOutput: CreateAccountModuleOutputProtocol?) -> CreateAccountAssembly {
         let router = CreateAccountRouter()
-        let presenter = CreateAccountPresenter(router: router)
+        let useCase = AccountUseCase(coreDataManager: <#T##AccountsCoreDataManagerProtocol#>)
+        let presenter = CreateAccountPresenter(router: router, useCase: useCase)
         let viewController = CreateAccountViewController(presenter: presenter)
         router.viewController = viewController
         

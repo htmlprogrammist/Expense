@@ -27,4 +27,8 @@ extension UserDefaults {
     /// The order of the accounts
     @UserDefault(key: "accounts", defaultValue: [String]())
     static var accounts: [String]
+    
+    /// Defines whether the user has onboarded or not
+    @UserDefault(key: "isOnboarded", defaultValue: false)
+    static var isOnboarded: Bool
 }

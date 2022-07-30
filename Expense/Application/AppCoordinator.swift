@@ -8,8 +8,13 @@
 import UIKit
 
 final class AppCoordinator {
+    
+    // MARK: - Public Properties
+    
     /// Service is used for using Core Data in the project. It is `public` because it is being used in AppDelegate - when app enters background, Core Data manager will _save context_
     public let coreDataManager = CoreDataManager(containerName: "Expense")
+    
+    // MARK: - Private Properties
     
     /// `UIWindow` of the application, provided from the SceneDelegate
     private let window: UIWindow
@@ -17,6 +22,8 @@ final class AppCoordinator {
     private let tabBarController = UITabBarController()
     /// View controllers to set in the tab bar controller
     private var viewControllers = [UIViewController]()
+    
+    // MARK: - Init
     
     init(window: UIWindow) {
         self.window = window
@@ -34,6 +41,8 @@ final class AppCoordinator {
         window.makeKeyAndVisible()
     }
 }
+
+// MARK: - Helper methods
 
 private extension AppCoordinator {
     func setupHome() {
