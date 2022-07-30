@@ -52,7 +52,6 @@
 		F02C1A512894312E00BA359A /* MoreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C1A502894312E00BA359A /* MoreSection.swift */; };
 		F02C1A532894314100BA359A /* MoreCollectionViewCell.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C1A522894314100BA359A /* MoreCollectionViewCell.swift.swift */; };
 		F042C2AE2866EC330002208F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AD2866EC330002208F /* CoreDataManager.swift */; };
-		F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */; };
 		F042C2BB2866EFAD0002208F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BA2866EFAD0002208F /* AppCoordinator.swift */; };
 		F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BC2866F0AA0002208F /* HistoryViewController.swift */; };
 		F042C2BF2866F0CC0002208F /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042C2BE2866F0CC0002208F /* AnalyticsViewController.swift */; };
@@ -79,7 +78,9 @@
 		F09259A32854F9A900C23B1B /* ExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259A22854F9A900C23B1B /* ExpenseTests.swift */; };
 		F09259B02854F9B400C23B1B /* ExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */; };
 		F09259B22854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */; };
-		F0A452D828670FA0005B5450 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A452D728670FA0005B5450 /* Settings.swift */; };
+		F09586DB28954956003474DD /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09586DA28954956003474DD /* UserDefaults.swift */; };
+		F09586DD289549F8003474DD /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09586DC289549F8003474DD /* UserDefault.swift */; };
+		F09586DF28954B79003474DD /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09586DE28954B79003474DD /* Optional.swift */; };
 		F0A4964F288499AF00B8D465 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964B288499AE00B8D465 /* CreateAccountPresenter.swift */; };
 		F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964C288499AE00B8D465 /* CreateAccountRouter.swift */; };
 		F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4964D288499AE00B8D465 /* CreateAccountViewController.swift */; };
@@ -172,7 +173,6 @@
 		F02C1A502894312E00BA359A /* MoreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSection.swift; sourceTree = "<group>"; };
 		F02C1A522894314100BA359A /* MoreCollectionViewCell.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionViewCell.swift.swift; sourceTree = "<group>"; };
 		F042C2AD2866EC330002208F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsContainer.swift; sourceTree = "<group>"; };
 		F042C2B12866ED390002208F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F042C2BA2866EFAD0002208F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F042C2BC2866F0AA0002208F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +202,9 @@
 		F09259AD2854F9B400C23B1B /* ExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09259AF2854F9B400C23B1B /* ExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITests.swift; sourceTree = "<group>"; };
 		F09259B12854F9B400C23B1B /* ExpenseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F0A452D728670FA0005B5450 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F09586DA28954956003474DD /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		F09586DC289549F8003474DD /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		F09586DE28954B79003474DD /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		F0A4963628846F7900B8D465 /* Expense.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Expense.docc; sourceTree = "<group>"; };
 		F0A4964B288499AE00B8D465 /* CreateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenter.swift; sourceTree = "<group>"; };
 		F0A4964C288499AE00B8D465 /* CreateAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRouter.swift; sourceTree = "<group>"; };
@@ -351,7 +353,8 @@
 		F02BC8F9286A5F4B009D2415 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				F042C2AF2866EC800002208F /* UserDefaultsContainer.swift */,
+				F09586DA28954956003474DD /* UserDefaults.swift */,
+				F09586DC289549F8003474DD /* UserDefault.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				F004E92F287F224800ACADEE /* NotificationName.swift */,
 				F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */,
 				F065E23F2889E25200D34D10 /* NSExpression.swift */,
+				F09586DE28954B79003474DD /* Optional.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -470,7 +474,6 @@
 		F07C25172870E3050000021E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F0A452D728670FA0005B5450 /* Settings.swift */,
 				F0004FB32883556200AA02A9 /* SettingsAssembly.swift */,
 				F0004FB52883556B00AA02A9 /* SettingsRouter.swift */,
 				F0004FB1288354C600AA02A9 /* SettingsPresenter.swift */,
@@ -823,7 +826,6 @@
 				F0A49650288499AF00B8D465 /* CreateAccountRouter.swift in Sources */,
 				F004A28E2884010800D03CB8 /* HistoryRouter.swift in Sources */,
 				F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */,
-				F042C2B02866EC800002208F /* UserDefaultsContainer.swift in Sources */,
 				F0205C5A287C2A4300104E2F /* AddTransactionViewController.swift in Sources */,
 				F007E569286B7DC50073C74D /* Category+CoreDataClass.swift in Sources */,
 				F02114192880733B00ACE1D7 /* UISegmentedControl.swift in Sources */,
@@ -832,6 +834,7 @@
 				F0F70A252864826D00656370 /* String.swift in Sources */,
 				F004A28D2884010800D03CB8 /* HistoryPresenter.swift in Sources */,
 				F07C251A2870E3310000021E /* SettingsTableViewCell.swift in Sources */,
+				F09586DD289549F8003474DD /* UserDefault.swift in Sources */,
 				F02C1A4C2894309000BA359A /* ProgressSection.swift in Sources */,
 				F0A49651288499AF00B8D465 /* CreateAccountViewController.swift in Sources */,
 				F004A26F2883FB1200D03CB8 /* UIAlertController.swift in Sources */,
@@ -845,7 +848,6 @@
 				F0477390288FEF1A00CD9A12 /* UIColor.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
 				F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */,
-				F0A452D828670FA0005B5450 /* Settings.swift in Sources */,
 				F007E563286B7DC50073C74D /* Budget+CoreDataClass.swift in Sources */,
 				F007E566286B7DC50073C74D /* Goal+CoreDataProperties.swift in Sources */,
 				F010E9C32871972000AFD1D0 /* TitleLabel.swift in Sources */,
@@ -874,6 +876,7 @@
 				F0004FB2288354C600AA02A9 /* SettingsPresenter.swift in Sources */,
 				F0F16EC22889B67F00D530DA /* OnboardingRouter.swift in Sources */,
 				F004E92C287EDA8900ACADEE /* HomeCollectionViewHeader.swift in Sources */,
+				F09586DF28954B79003474DD /* Optional.swift in Sources */,
 				F073DAE0287C930D00907507 /* Tagged.swift in Sources */,
 				F01510BF2872E7AC00B858BC /* SettingsViewController.swift in Sources */,
 				F007E565286B7DC50073C74D /* Goal+CoreDataClass.swift in Sources */,
@@ -881,6 +884,7 @@
 				F004A2902884010800D03CB8 /* HistoryAssembly.swift in Sources */,
 				F042C2BD2866F0AA0002208F /* HistoryViewController.swift in Sources */,
 				F004A2962884014100D03CB8 /* AnalyticsAssembly.swift in Sources */,
+				F09586DB28954956003474DD /* UserDefaults.swift in Sources */,
 				F057E9EE28678B680083C003 /* BudgetInfo.swift in Sources */,
 				F0A9D64327D2AD3E00E63CD2 /* AppDelegate.swift in Sources */,
 				F0004FB0288353C200AA02A9 /* HomeRouter.swift in Sources */,
