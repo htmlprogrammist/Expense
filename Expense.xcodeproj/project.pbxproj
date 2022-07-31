@@ -70,7 +70,7 @@
 		F06080F5286EDD3900782D99 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06080F4286EDD3900782D99 /* Date.swift */; };
 		F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */; };
 		F0612D5A286C691C009B641A /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0612D59286C691C009B641A /* HistoryTableViewCell.swift */; };
-		F064D7F82895D330007BC102 /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D7F72895D330007BC102 /* AccountUseCase.swift */; };
+		F064D7F82895D330007BC102 /* CreateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D7F72895D330007BC102 /* CreateAccountUseCase.swift */; };
 		F065E2402889E25300D34D10 /* NSExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F065E23F2889E25200D34D10 /* NSExpression.swift */; };
 		F066A77E2888069B00C2F1F4 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */; };
 		F07286532876C8B200B93224 /* ChartsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */; };
@@ -102,6 +102,9 @@
 		F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A02287E02350070B3EF /* AccountSection.swift */; };
 		F0E35A16287E29EC0070B3EF /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E35A15287E29EC0070B3EF /* Currency.swift */; };
 		F0E89CC1285F11A800036575 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E89CC0285F11A800036575 /* HomeViewController.swift */; };
+		F0EA594E289694A10008DD20 /* AccountGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EA594D289694A10008DD20 /* AccountGateway.swift */; };
+		F0EA595028969AD70008DD20 /* UpdateAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EA594F28969AD70008DD20 /* UpdateAccountUseCase.swift */; };
+		F0EA595228969B040008DD20 /* AccountsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EA595128969B040008DD20 /* AccountsUseCase.swift */; };
 		F0F16EBC2889AB4400D530DA /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */; };
 		F0F16EC12889B67F00D530DA /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F16EBD2889B67F00D530DA /* OnboardingPresenter.swift */; };
 		F0F16EC22889B67F00D530DA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F16EBE2889B67F00D530DA /* OnboardingRouter.swift */; };
@@ -193,7 +196,7 @@
 		F06080F4286EDD3900782D99 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F0612D57286C67F2009B641A /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		F0612D59286C691C009B641A /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		F064D7F72895D330007BC102 /* AccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUseCase.swift; sourceTree = "<group>"; };
+		F064D7F72895D330007BC102 /* CreateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUseCase.swift; sourceTree = "<group>"; };
 		F065E23F2889E25200D34D10 /* NSExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSExpression.swift; sourceTree = "<group>"; };
 		F066A77D2888069B00C2F1F4 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
 		F07286522876C8B200B93224 /* ChartsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -230,6 +233,9 @@
 		F0E35A02287E02350070B3EF /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		F0E35A15287E29EC0070B3EF /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		F0E89CC0285F11A800036575 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F0EA594D289694A10008DD20 /* AccountGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountGateway.swift; sourceTree = "<group>"; };
+		F0EA594F28969AD70008DD20 /* UpdateAccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountUseCase.swift; sourceTree = "<group>"; };
+		F0EA595128969B040008DD20 /* AccountsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsUseCase.swift; sourceTree = "<group>"; };
 		F0F16EBB2889AB4400D530DA /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		F0F16EBD2889B67F00D530DA /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		F0F16EBE2889B67F00D530DA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
@@ -435,7 +441,7 @@
 		F0612D53286C648A009B641A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				F064D7F72895D330007BC102 /* AccountUseCase.swift */,
+				F0EA595328969B6E0008DD20 /* Accounts */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 			children = (
 				F0A452D528670F81005B5450 /* Entities */,
 				F0612D53286C648A009B641A /* UseCases */,
+				F0EA594C2896948F0008DD20 /* Gateways */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -654,6 +661,24 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		F0EA594C2896948F0008DD20 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				F0EA594D289694A10008DD20 /* AccountGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		F0EA595328969B6E0008DD20 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				F0EA595128969B040008DD20 /* AccountsUseCase.swift */,
+				F064D7F72895D330007BC102 /* CreateAccountUseCase.swift */,
+				F0EA594F28969AD70008DD20 /* UpdateAccountUseCase.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 		F0F16EC52889B68400D530DA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +873,7 @@
 				F0612D58286C67F2009B641A /* HistoryTableViewHeader.swift in Sources */,
 				F004E92E287EF22000ACADEE /* HomeCollectionViewFooter.swift in Sources */,
 				F0F16EC12889B67F00D530DA /* OnboardingPresenter.swift in Sources */,
+				F0EA594E289694A10008DD20 /* AccountGateway.swift in Sources */,
 				F0477390288FEF1A00CD9A12 /* UIColor.swift in Sources */,
 				F0004FA52883252F00AA02A9 /* Texts.swift in Sources */,
 				F0C819392885F2FB00434900 /* Account+CoreDataProperties.swift in Sources */,
@@ -863,7 +889,7 @@
 				F0F16EC32889B67F00D530DA /* OnboardingViewController.swift in Sources */,
 				F0B270F0287D780300AC6DAE /* SubtitleLabel.swift in Sources */,
 				F05CAD71289304D2002AABD5 /* SceneDelegate.swift in Sources */,
-				F064D7F82895D330007BC102 /* AccountUseCase.swift in Sources */,
+				F064D7F82895D330007BC102 /* CreateAccountUseCase.swift in Sources */,
 				F0B270EE287D72BB00AC6DAE /* AccountCollectionViewCell.swift in Sources */,
 				F057E9EC28678B4E0083C003 /* GoalInfo.swift in Sources */,
 				F004E930287F224800ACADEE /* NotificationName.swift in Sources */,
@@ -871,8 +897,10 @@
 				F0E35A03287E02350070B3EF /* AccountSection.swift in Sources */,
 				F0F16EBC2889AB4400D530DA /* NSAttributedString.swift in Sources */,
 				F065E2402889E25300D34D10 /* NSExpression.swift in Sources */,
+				F0EA595028969AD70008DD20 /* UpdateAccountUseCase.swift in Sources */,
 				F004A29A2884062500D03CB8 /* AddTransactionPresenter.swift in Sources */,
 				F02C1A482894305700BA359A /* EmptySection.swift in Sources */,
+				F0EA595228969B040008DD20 /* AccountsUseCase.swift in Sources */,
 				F004A29B2884062500D03CB8 /* AddTransactionRouter.swift in Sources */,
 				F0A9D64D27D2AD3E00E63CD2 /* Expense.xcdatamodeld in Sources */,
 				F057E9E82867890E0083C003 /* Period.swift in Sources */,

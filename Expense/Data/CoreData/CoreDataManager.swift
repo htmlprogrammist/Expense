@@ -10,8 +10,8 @@ import CoreData
 protocol AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]?
     func createAccount(with data: AccountInfo)
-    func updateAccount(with data: AccountInfo)
-    func deleteAccount(_ wallet: Account)
+    func update(_ account: Account, with data: AccountInfo)
+    func delete(_ account: Account)
 }
 
 protocol TransactionsCoreDataManagerProtocol {
@@ -21,32 +21,36 @@ protocol TransactionsCoreDataManagerProtocol {
     func fetchPlannedTransactions(limit: Bool) -> [Transaction]?
     
     func createTransaction(with data: TransactionInfo, in account: Account)
-    func updateTransaction(with data: TransactionInfo)
-    func deleteTransaction(_ transaction: Transaction)
+    func update(_ transaction: Transaction, with data: TransactionInfo)
+    func delete(_ transaction: Transaction)
 }
 
 protocol CategoriesCoreDataManagerProtocol {
     func fetchCategories() -> [Category]?
     func createCategory(with data: CategoryInfo)
-    func updateCategory(with data: CategoryInfo)
-    func deleteCategory(_ category: Category)
+    func update(_ category: Category, with data: CategoryInfo)
+    func delete(_ category: Category)
 }
 
 protocol GoalsCoreDataManagerProtocol {
     func fetchGoals(limit: Bool) -> [Goal]?
     func createGoal(with data: GoalInfo)
-    func updateGoal(with data: GoalInfo)
-    func deleteGoal(_ goal: Goal)
+    func update(_ goal: Goal, with data: GoalInfo)
+    func delete(_ goal: Goal)
 }
 
 protocol BudgetsCoreDataManagerProtocol {
     func fetchBudgets(limit: Bool) -> [Budget]?
     func createBudget(with data: BudgetInfo)
-    func updateBudget(with data: BudgetInfo)
-    func deleteBudget(_ budget: Budget)
+    func update(_ budget: Budget, with data: BudgetInfo)
+    func delete(_ budget: Budget)
 }
 
 final class CoreDataManager {
+    
+    static let shared = CoreDataManager(containerName: "Expense")
+    
+    // MARK: - Private Properties
     
     private let managedObjectContext: NSManagedObjectContext
     private let persistentContainer: NSPersistentContainer
@@ -56,8 +60,25 @@ final class CoreDataManager {
         static let fetchLimit = 3
     }
     
-    public init(containerName: String) {
+    // MARK: - Init
+    
+    /// Common init
+    private init(containerName: String) {
         persistentContainer = NSPersistentContainer(name: containerName)
+        persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.localizedDescription)")
+            }
+        })
+        managedObjectContext = persistentContainer.newBackgroundContext()
+    }
+    
+    /// Creates the instance of CoreDataManager with in-memory store type for testing
+    public init() {
+        persistentContainer = NSPersistentContainer(name: "Expense")
+        let persistentStoreDescription = NSPersistentStoreDescription()
+        persistentStoreDescription.type = NSInMemoryStoreType
+        persistentContainer.persistentStoreDescriptions = [persistentStoreDescription]
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.localizedDescription)")
@@ -78,7 +99,8 @@ final class CoreDataManager {
     }
 }
 
-// MARK: - Wallets
+// MARK: - Accounts
+
 extension CoreDataManager: AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]? {
         try? managedObjectContext.fetch(Account.fetchRequest())
@@ -94,11 +116,11 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
         saveContext()
     }
     
-    func updateAccount(with data: AccountInfo) {
+    func update(_ account: Account, with data: AccountInfo) {
         
     }
     
-    func deleteAccount(_ account: Account) {
+    func delete(_ account: Account) {
         if let goals = account.goals?.array as? [Goal] {
             goals.forEach { managedObjectContext.delete($0) }
         }
@@ -117,6 +139,7 @@ extension CoreDataManager: AccountsCoreDataManagerProtocol {
 }
 
 // MARK: - Transactions
+
 extension CoreDataManager: TransactionsCoreDataManagerProtocol {
     /// Fetches all past transactions
     /// - Returns: Transactions that took place before the current time
@@ -171,17 +194,18 @@ extension CoreDataManager: TransactionsCoreDataManagerProtocol {
         saveContext()
     }
     
-    func updateTransaction(with data: TransactionInfo) {
+    func update(_ transaction: Transaction, with data: TransactionInfo) {
         
     }
     
-    func deleteTransaction(_ transaction: Transaction) {
+    func delete(_ transaction: Transaction) {
         managedObjectContext.delete(transaction)
         saveContext()
     }
 }
 
 // MARK: - Categories
+
 extension CoreDataManager: CategoriesCoreDataManagerProtocol {
     func fetchCategories() -> [Category]? {
         let categories = try? managedObjectContext.fetch(Category.fetchRequest())
@@ -196,11 +220,11 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
         saveContext()
     }
     
-    func updateCategory(with data: CategoryInfo) {
+    func update(_ category: Category, with data: CategoryInfo) {
         
     }
     
-    func deleteCategory(_ category: Category) {
+    func delete(_ category: Category) {
         if let budget = category.budget {
             managedObjectContext.delete(budget)
         }
@@ -210,6 +234,7 @@ extension CoreDataManager: CategoriesCoreDataManagerProtocol {
 }
 
 // MARK: - Goals
+
 extension CoreDataManager: GoalsCoreDataManagerProtocol {
     func fetchGoals(limit: Bool) -> [Goal]? {
         let fetchRequest = Goal.fetchRequest()
@@ -234,11 +259,11 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
         saveContext()
     }
     
-    func updateGoal(with data: GoalInfo) {
+    func update(_ goal: Goal, with data: GoalInfo) {
         
     }
     
-    func deleteGoal(_ goal: Goal) {
+    func delete(_ goal: Goal) {
         if let transactions = goal.transactions?.allObjects as? [Transaction] {
             transactions.forEach { managedObjectContext.delete($0) }
         }
@@ -248,6 +273,7 @@ extension CoreDataManager: GoalsCoreDataManagerProtocol {
 }
 
 // MARK: - Budgets
+
 extension CoreDataManager: BudgetsCoreDataManagerProtocol {
     func fetchBudgets(limit: Bool) -> [Budget]? {
         let fetchRequest = Budget.fetchRequest()
@@ -270,11 +296,11 @@ extension CoreDataManager: BudgetsCoreDataManagerProtocol {
         saveContext()
     }
     
-    func updateBudget(with data: BudgetInfo) {
+    func update(_ budget: Budget, with data: BudgetInfo) {
         
     }
     
-    func deleteBudget(_ budget: Budget) {
+    func delete(_ budget: Budget) {
         managedObjectContext.delete(budget)
         saveContext()
     }

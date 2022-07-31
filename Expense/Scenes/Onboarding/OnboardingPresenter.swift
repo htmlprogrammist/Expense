@@ -15,10 +15,10 @@ protocol OnboardingModuleOutputProtocol: AnyObject {
 }
 
 final class OnboardingPresenter: OnboardingPresenterProtocol {
-	weak var view: OnboardingViewProtocol?
+    weak var view: OnboardingViewProtocol?
     weak var moduleOutput: OnboardingModuleOutputProtocol?
     
-	private let router: OnboardingRouterProtocol
+    private let router: OnboardingRouterProtocol
     
     init(router: OnboardingRouterProtocol) {
         self.router = router

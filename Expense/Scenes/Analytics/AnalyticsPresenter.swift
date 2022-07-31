@@ -15,10 +15,10 @@ protocol AnalyticsModuleOutputProtocol: AnyObject {
 }
 
 final class AnalyticsPresenter: AnalyticsPresenterProtocol {
-	weak var view: AnalyticsViewProtocol?
+    weak var view: AnalyticsViewProtocol?
     weak var moduleOutput: AnalyticsModuleOutputProtocol?
     
-	private let router: AnalyticsRouterProtocol
+    private let router: AnalyticsRouterProtocol
     
     init(router: AnalyticsRouterProtocol) {
         self.router = router

@@ -13,17 +13,17 @@ protocol CreateAccountModuleOutputProtocol: AnyObject {
 }
 
 final class CreateAccountPresenter: CreateAccountPresenterProtocol {
-	weak var view: CreateAccountViewProtocol?
+    weak var view: CreateAccountViewProtocol?
     weak var moduleOutput: CreateAccountModuleOutputProtocol?
     
     // MARK: - Private properties
-	
+    
     private let router: CreateAccountRouterProtocol
-    private let useCase: AccountUseCase
+    private let useCase: CreateAccountUseCase
     
     // MARK: - Init
     
-    init(router: CreateAccountRouterProtocol, useCase: AccountUseCase) {
+    init(router: CreateAccountRouterProtocol, useCase: CreateAccountUseCase) {
         self.router = router
         self.useCase = useCase
     }
