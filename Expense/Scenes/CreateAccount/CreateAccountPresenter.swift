@@ -7,6 +7,8 @@
 
 protocol CreateAccountPresenterProtocol: AnyObject {
     var moduleOutput: CreateAccountModuleOutputProtocol? { get set }
+    
+    func createAccount(with data: AccountInfo)
 }
 
 protocol CreateAccountModuleOutputProtocol: AnyObject {
@@ -26,5 +28,9 @@ final class CreateAccountPresenter: CreateAccountPresenterProtocol {
     init(router: CreateAccountRouterProtocol, useCase: CreateAccountUseCase) {
         self.router = router
         self.useCase = useCase
+    }
+    
+    func createAccount(with data: AccountInfo) {
+        useCase.createAccount(with: data)
     }
 }

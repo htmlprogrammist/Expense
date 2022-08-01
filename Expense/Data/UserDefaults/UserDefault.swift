@@ -30,6 +30,7 @@ struct UserDefault<Value> {
 
 extension UserDefault where Value: ExpressibleByNilLiteral {
     /// Creates a new User Defaults property wrapper for the given key.
+    ///
     /// - Parameters:
     ///   - key: The key to use with the user defaults store.
     init(key: String, _ container: UserDefaults = .standard) {

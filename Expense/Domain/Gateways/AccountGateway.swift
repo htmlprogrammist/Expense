@@ -8,7 +8,7 @@
 protocol AccountsGatewayProtocol: AccountsCoreDataManagerProtocol {
 }
 
-final class AccountsGateway: AccountsGatewayProtocol {
+final class AccountsGateway {
     
     let coreDataManager: AccountsCoreDataManagerProtocol
     
@@ -17,6 +17,9 @@ final class AccountsGateway: AccountsGatewayProtocol {
     init(coreDataManager: AccountsCoreDataManagerProtocol) {
         self.coreDataManager = coreDataManager
     }
+}
+
+extension AccountsGateway: AccountsGatewayProtocol {
     
     func fetchAccounts() -> [Account]? {
         coreDataManager.fetchAccounts()
