@@ -11,7 +11,9 @@ protocol HomeViewProtocol: AnyObject {
 }
 
 final class HomeViewController: UIViewController {
+    
     // MARK: - Private properties
+    
     private let presenter: HomePresenterProtocol
     
     var numberOfAccounts = 3
@@ -21,7 +23,10 @@ final class HomeViewController: UIViewController {
     
     private lazy var sections: [Section] = [
         AccountSection(numberOfItems: numberOfAccounts),
-        MoreSection()
+        InfoSection(),
+        MainSection(numberOfItems: numberOfGoals),
+        MainSection(numberOfItems: numberOfBudgets),
+        TransactionSection(numberOfItems: plannedTransactions)
     ]
     
     private lazy var collectionView: UICollectionView = {
@@ -36,9 +41,9 @@ final class HomeViewController: UIViewController {
         collectionView.register(HomeCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionViewHeader.identifier)
         collectionView.register(HomeCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: HomeCollectionViewFooter.identifier)
         collectionView.register(AccountCollectionViewCell.self, forCellWithReuseIdentifier: AccountCollectionViewCell.identifier)
-        collectionView.register(ProgressCollectionViewCell.self, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
-        collectionView.register(EmptyCollectionViewCell.self, forCellWithReuseIdentifier: EmptyCollectionViewCell.identifier)
-        collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
+        collectionView.register(InfoCollectionViewCell.self, forCellWithReuseIdentifier: InfoCollectionViewCell.identifier)
+        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
+        collectionView.register(TransactionCollectionViewCell.self, forCellWithReuseIdentifier: TransactionCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -62,6 +67,7 @@ final class HomeViewController: UIViewController {
     }()
     
     // MARK: - Init
+    
     init(presenter: HomePresenterProtocol) {
         self.presenter = presenter
         
@@ -73,23 +79,37 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSections()
         setupView()
     }
     
     // MARK: - Public methods
+    
     @objc public func handleSeeAll(sender: UIButton) {
-        if sender.tag == 1 {
+        if sender.tag == 2 {
             // TODO: Open all goals module
-        } else {
+        } else if sender.tag == 3 {
             // TODO: Open all budgets module
+        } else if sender.tag == 4 {
+            // TODO: Open all planned operations
+        }
+    }
+    
+    @objc public func handleAdding(sender: UIButton) {
+        if sender.tag == 2 {
+            // TODO: Add goal
+        } else if sender.tag == 3 {
+            // TODO: Add budget
+        } else if sender.tag == 4 {
+            // TODO: Add planned operation
         }
     }
     
     // MARK: - Private methods
+    
     @objc private func openSettings() {
         presenter.openSettings()
     }
@@ -102,6 +122,27 @@ final class HomeViewController: UIViewController {
             sender.transform = CGAffineTransform.identity
         })
         presenter.addTransaction()
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .systemGroupedBackground
+        title = Texts.Home.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettings))
+        
+        view.addSubview(collectionView)
+        view.addSubview(addTransactionButton)
+        
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            addTransactionButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -4),
+            addTransactionButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -8),
+            addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
+            addTransactionButton.widthAnchor.constraint(equalToConstant: 60)
+        ])
     }
 }
 
@@ -146,40 +187,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             assert(false, "Unexpected element kind")
         }
     }
-}
-
-// MARK: - Helper methods
-private extension HomeViewController {
-    func setupSections() {
-        if (UserDefaults.showDailyBudget) {
-//            sections.insert(InfoSection(dailyBudget: 204), at: 2)
-        }
-        if (UserDefaults.showBudgets) {
-            sections.insert(numberOfBudgets > 0 ? ProgressSection(numberOfItems: numberOfBudgets) : EmptySection(), at: 1)
-        }
-        if (UserDefaults.showGoals) {
-            sections.insert(numberOfGoals > 0 ? ProgressSection(numberOfItems: numberOfGoals, isGoals: true) : EmptySection(isGoals: true), at: 1)
-        }
-    }
     
-    func setupView() {
-        view.backgroundColor = .systemGroupedBackground
-        title = Texts.Home.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.Home.settings, style: .plain, target: self, action: #selector(openSettings))
-        
-        view.addSubview(collectionView)
-        view.addSubview(addTransactionButton)
-        
-        NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            
-            addTransactionButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -4),
-            addTransactionButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -8),
-            addTransactionButton.heightAnchor.constraint(equalToConstant: 60),
-            addTransactionButton.widthAnchor.constraint(equalToConstant: 60)
-        ])
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        switch elementKind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let header = view as? HomeCollectionViewHeader else {
+                fatalError("Could not identify header at indexPath \(indexPath)")
+            }
+            header.setupButton(sectionHasCell: sections[indexPath.section].numberOfItems > 0)
+        default:
+            return
+        }
     }
 }

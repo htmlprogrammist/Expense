@@ -7,6 +7,12 @@
 
 import CoreData
 
+typealias CoreDataManagerProtocol = AccountsCoreDataManagerProtocol
+                                  & TransactionsCoreDataManagerProtocol
+                                  & CategoriesCoreDataManagerProtocol
+                                  & GoalsCoreDataManagerProtocol
+                                  & BudgetsCoreDataManagerProtocol
+
 protocol AccountsCoreDataManagerProtocol {
     func fetchAccounts() -> [Account]?
     func createAccount(with data: AccountInfo)
@@ -48,8 +54,6 @@ protocol BudgetsCoreDataManagerProtocol {
 
 final class CoreDataManager {
     
-    static let shared = CoreDataManager(containerName: "Expense")
-    
     // MARK: - Private Properties
     
     private let managedObjectContext: NSManagedObjectContext
@@ -63,7 +67,7 @@ final class CoreDataManager {
     // MARK: - Init
     
     /// Common init
-    private init(containerName: String) {
+    public init(containerName: String) {
         persistentContainer = NSPersistentContainer(name: containerName)
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {

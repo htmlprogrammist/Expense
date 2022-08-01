@@ -9,6 +9,11 @@ import UIKit
 
 final class AppCoordinator {
     
+    // MARK: - Public Properties
+    
+    /// Service is used for using Core Data in the project. It is `public` because it is being used in AppDelegate - when app enters background, Core Data manager will _save context_
+    public let coreDataManager = CoreDataManager(containerName: "Expense")
+    
     // MARK: - Private Properties
     
     /// `UIWindow` of the application, provided from the SceneDelegate

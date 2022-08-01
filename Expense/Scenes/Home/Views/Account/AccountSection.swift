@@ -10,6 +10,7 @@ import UIKit
 final class AccountSection: Section {
     public let numberOfItems: Int
     
+    /// Defines current (chosen) account. Need to implement fetching data on value changing
     private var lastItem = 0
     
     init(numberOfItems: Int) {
@@ -20,14 +21,16 @@ final class AccountSection: Section {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         if numberOfItems != 1 {
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 10, trailing: 4)
+        } else {
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
         }
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .absolute(108))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92), heightDimension: .absolute(118))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(28))
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(36))
         let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
         section.boundarySupplementaryItems = [footer]
         section.visibleItemsInvalidationHandler = { [weak self] (items, offset, environment) -> Void in

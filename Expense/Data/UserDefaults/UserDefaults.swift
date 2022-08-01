@@ -8,14 +8,6 @@
 import Foundation
 
 extension UserDefaults {
-    /// Defines whether to show or not _Goals_ section in the main screen
-    @UserDefault(key: "showGoals", defaultValue: true)
-    static var showGoals: Bool
-    
-    /// Defines whether to show or not _Budget_ section in the main screen
-    @UserDefault(key: "showBudgets", defaultValue: true)
-    static var showBudgets: Bool
-    
     /// Defines whether to show or not daily budget
     @UserDefault(key: "showDailyBudget", defaultValue: true)
     static var showDailyBudget: Bool

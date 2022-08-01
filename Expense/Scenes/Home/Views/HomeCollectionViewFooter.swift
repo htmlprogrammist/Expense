@@ -9,6 +9,8 @@ import UIKit
 
 final class HomeCollectionViewFooter: UICollectionReusableView {
     
+    // MARK: - Private Properties
+    
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = .appColor
@@ -18,6 +20,8 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,11 +34,16 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public Methods
+    
     public func configure(numberOfPages: Int) {
         pageControl.numberOfPages = numberOfPages
     }
     
+    // MARK: - Private Methods
+    
     private func setupView() {
+        backgroundColor = .mainBackgroundColor
         addSubview(pageControl)
         
         NSLayoutConstraint.activate([
@@ -43,8 +52,7 @@ final class HomeCollectionViewFooter: UICollectionReusableView {
         ])
     }
     
-    @objc
-    private func updateCurrentPageIndicator(notification: NSNotification) {
+    @objc private func updateCurrentPageIndicator(notification: NSNotification) {
         if let index = notification.userInfo?["accountIndex"] as? Int {
             pageControl.currentPage = index
         }

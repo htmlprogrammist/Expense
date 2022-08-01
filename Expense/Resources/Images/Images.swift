@@ -8,7 +8,6 @@
 import UIKit
 
 enum Images {
-    // Tab bar items
     enum TabBarItems {
         static let home = Image("creditcard.fill")
         static let history = Image("clock.fill")
@@ -18,12 +17,12 @@ enum Images {
     enum Home {
         static let settings = Image("gear")
         static let add = Image("plus").withConfiguration(UIImage.SymbolConfiguration(weight: .semibold))
-        static let calendar = Image("calendar")
-        static let dailyBudget = Image("banknote")
-        static let goals = Image("mappin")
-        static let budgets = Image("chart.pie.fill")
+//        static let calendar = Image("calendar")
+        static let dailyBudget = Image("banknote.fill")
+//        static let goals = Image("mappin")
+//        static let budgets = Image("chart.pie.fill")
         static let disclosureIndicator = Image("chevron.right").withConfiguration(UIImage.SymbolConfiguration(pointSize: 16, weight: .bold, scale: .small))
-        static let categoryMock = Image("bag.fill").withTintColor(.tertiarySystemGroupedBackground) // TODO: подобрать цвет!
+        static let categoryMock = Image("bag.fill")
     }
     
     enum History {
